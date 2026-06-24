@@ -10,9 +10,9 @@ const DEFAULT_ADMIN: UserProfile = {
   email: "admin@tucpb.com",
   password: "admin", // simple password for testing
   role: "admin",
-  cargoTerreiro: "Dirigente Espiritual",
-  dataAmaci: "10/10/2010",
-  photoUrl: ""
+  cargoTerreiro: "pai de santo",
+  photoUrl: "",
+  status: "aprovado"
 };
 
 export default function Integrantes() {
@@ -26,19 +26,55 @@ export default function Integrantes() {
   const [authEmail, setAuthEmail] = useState("");
   const [authPassword, setAuthPassword] = useState("");
   const [authName, setAuthName] = useState("");
-  const [authCargo, setAuthCargo] = useState("Médium de Incorporação");
-  const [authAmaci, setAuthAmaci] = useState("");
+  const [authCargo, setAuthCargo] = useState("médiuns/cambones");
+  const [authDataNascimento, setAuthDataNascimento] = useState("");
+  const [authCpf, setAuthCpf] = useState("");
+  const [authRg, setAuthRg] = useState("");
+  const [authTipoSanguineo, setAuthTipoSanguineo] = useState("");
+  const [authWhatsapp, setAuthWhatsapp] = useState("");
+  const [authEndereco, setAuthEndereco] = useState("");
+  const [authProfissao, setAuthProfissao] = useState("");
+  
+  const [authContatoEmergencia, setAuthContatoEmergencia] = useState("");
+  const [authAlergias, setAuthAlergias] = useState("");
+  const [authAcompPsicologico, setAuthAcompPsicologico] = useState<"Sim" | "Não" | "">("");
+  const [authTranstornoPsiquiatrico, setAuthTranstornoPsiquiatrico] = useState("");
+  const [authMedicamentos, setAuthMedicamentos] = useState("");
+
+  const [authTempoDesenvolvimento, setAuthTempoDesenvolvimento] = useState("");
+  const [authTerreirosAnteriores, setAuthTerreirosAnteriores] = useState("");
+  const [authIniciacoes, setAuthIniciacoes] = useState("");
+  const [authTiposMediunidade, setAuthTiposMediunidade] = useState("");
+  const [authGuiasConhecidos, setAuthGuiasConhecidos] = useState("");
+  
+  const [authBuscaCoracao, setAuthBuscaCoracao] = useState("");
+  
   const [authError, setAuthError] = useState("");
 
   // --- Dashboard States ---
   const [activeTab, setActiveTab] = useState<"perfil" | "minhas-tarefas" | "estudos" | "admin" | "curimba">("perfil");
   const [photoPreview, setPhotoPreview] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [isEditingProfile, setIsEditingProfile] = useState(false);
+  const [editProfileData, setEditProfileData] = useState<Partial<UserProfile>>({});
 
   // --- Admin States ---
+  const [activeAdminTab, setActiveAdminTab] = useState<"membros" | "tarefas" | "aprovacoes" | "curimba">("membros");
   const [newTaskText, setNewTaskText] = useState("");
   const [newAssignedTo, setNewAssignedTo] = useState("");
   const [newTaskArea, setNewTaskArea] = useState<MemberTask["area"]>("Terreiro / Gongá");
+
+  const [selectedMemberProfile, setSelectedMemberProfile] = useState<UserProfile | null>(null);
+
+  // --- Curimba Admin States ---
+  const [newPointTitle, setNewPointTitle] = useState("");
+  const [newPointOrixa, setNewPointOrixa] = useState("");
+  const [newPointType, setNewPointType] = useState<CurimbaPoint["type"]>("Saudação");
+  const [newPointLyrics, setNewPointLyrics] = useState("");
+  const [newPointYoutube, setNewPointYoutube] = useState("");
+  const [newPointAudio, setNewPointAudio] = useState("");
+  const [newPointVideo, setNewPointVideo] = useState("");
+  const [customPoints, setCustomPoints] = useState<CurimbaPoint[]>([]);
 
   // --- Study States ---
   const [activeEstudoTab, setActiveEstudoTab] = useState<"aulas" | "ervas">("aulas");
@@ -55,6 +91,7 @@ export default function Integrantes() {
   useEffect(() => {
     const storedUsers = localStorage.getItem("tucpb_users");
     const storedTasks = localStorage.getItem("tucpb_tasks");
+    const storedPoints = localStorage.getItem("tucpb_points");
     const loggedInUserId = localStorage.getItem("tucpb_logged_in_user");
 
     let loadedUsers: UserProfile[] = [];
@@ -71,6 +108,10 @@ export default function Integrantes() {
     } else {
       setTasks(initialTasks);
       localStorage.setItem("tucpb_tasks", JSON.stringify(initialTasks));
+    }
+
+    if (storedPoints) {
+      setCustomPoints(JSON.parse(storedPoints));
     }
 
     if (loggedInUserId) {
@@ -98,6 +139,13 @@ export default function Integrantes() {
       localStorage.setItem("tucpb_users", JSON.stringify(users));
     }
   }, [users]);
+
+  // Save Custom Points when updated
+  useEffect(() => {
+    if (customPoints.length > 0) {
+      localStorage.setItem("tucpb_points", JSON.stringify(customPoints));
+    }
+  }, [customPoints]);
 
   // --- Auth Handlers ---
   const handleLogin = (e: FormEvent) => {
@@ -133,8 +181,26 @@ export default function Integrantes() {
       password: authPassword,
       role: "membro",
       cargoTerreiro: authCargo,
-      dataAmaci: authAmaci,
-      photoUrl: ""
+      dataNascimento: authDataNascimento,
+      cpf: authCpf,
+      rg: authRg,
+      tipoSanguineo: authTipoSanguineo,
+      whatsapp: authWhatsapp,
+      endereco: authEndereco,
+      profissao: authProfissao,
+      contatoEmergencia: authContatoEmergencia,
+      alergias: authAlergias,
+      acompanhamentoPsicologico: authAcompPsicologico,
+      transtornoPsiquiatrico: authTranstornoPsiquiatrico,
+      medicamentosContinuos: authMedicamentos,
+      tempoDesenvolvimento: authTempoDesenvolvimento,
+      terreirosAnteriores: authTerreirosAnteriores,
+      iniciacoesRealizadas: authIniciacoes,
+      tiposMediunidade: authTiposMediunidade,
+      guiasConhecidos: authGuiasConhecidos,
+      buscaCoracao: authBuscaCoracao,
+      photoUrl: "",
+      status: "pendente"
     };
 
     const newUsers = [...users, newUser];
@@ -151,19 +217,48 @@ export default function Integrantes() {
     setAuthPassword("");
   };
 
-  // --- Profile Image Upload (Base64) ---
+  // --- Profile Image Upload (Base64 Compressed) ---
   const handlePhotoUpload = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
       const reader = new FileReader();
-      reader.onloadend = () => {
-        const base64String = reader.result as string;
-        setPhotoPreview(base64String);
-        if (currentUser) {
-          const updatedUser = { ...currentUser, photoUrl: base64String };
-          setCurrentUser(updatedUser);
-          setUsers(users.map(u => u.id === updatedUser.id ? updatedUser : u));
-        }
+      reader.onload = (event) => {
+        const img = new Image();
+        img.onload = () => {
+          const canvas = document.createElement("canvas");
+          const MAX_WIDTH = 400;
+          const MAX_HEIGHT = 400;
+          let width = img.width;
+          let height = img.height;
+
+          if (width > height) {
+            if (width > MAX_WIDTH) {
+              height *= MAX_WIDTH / width;
+              width = MAX_WIDTH;
+            }
+          } else {
+            if (height > MAX_HEIGHT) {
+              width *= MAX_HEIGHT / height;
+              height = MAX_HEIGHT;
+            }
+          }
+
+          canvas.width = width;
+          canvas.height = height;
+          const ctx = canvas.getContext("2d");
+          ctx?.drawImage(img, 0, 0, width, height);
+
+          // Compress to JPEG with 0.7 quality
+          const dataUrl = canvas.toDataURL("image/jpeg", 0.7);
+          
+          setPhotoPreview(dataUrl);
+          if (currentUser) {
+            const updatedUser = { ...currentUser, photoUrl: dataUrl };
+            setCurrentUser(updatedUser);
+            setUsers((prev) => prev.map(u => u.id === updatedUser.id ? updatedUser : u));
+          }
+        };
+        img.src = event.target?.result as string;
       };
       reader.readAsDataURL(file);
     }
@@ -203,6 +298,70 @@ export default function Integrantes() {
     setNewTaskText("");
   };
 
+  // --- Profile Editing Handlers ---
+  const handleSaveProfile = () => {
+    if (!currentUser) return;
+    const updatedUser = { ...currentUser, ...editProfileData };
+    setCurrentUser(updatedUser);
+    setUsers(users.map(u => u.id === updatedUser.id ? updatedUser : u));
+    setIsEditingProfile(false);
+  };
+
+  const handleCancelEditProfile = () => {
+    setIsEditingProfile(false);
+    setEditProfileData({});
+  };
+
+  const handleStartEditProfile = () => {
+    if (!currentUser) return;
+    setEditProfileData({
+      name: currentUser.name,
+      email: currentUser.email,
+      cargoTerreiro: currentUser.cargoTerreiro,
+      dataNascimento: currentUser.dataNascimento,
+      whatsapp: currentUser.whatsapp,
+      endereco: currentUser.endereco,
+      profissao: currentUser.profissao,
+      contatoEmergencia: currentUser.contatoEmergencia,
+      restricoesSaude: currentUser.restricoesSaude,
+    });
+    setIsEditingProfile(true);
+  };
+
+  // --- Admin Approval Handlers ---
+  const handleApproveMember = (userId: string) => {
+    setUsers(users.map(u => u.id === userId ? { ...u, status: "aprovado" } : u));
+  };
+
+  const handleRejectMember = (userId: string) => {
+    setUsers(users.filter(u => u.id !== userId));
+  };
+
+  // --- Admin Curimba Handlers ---
+  const handleAddPoint = (e: FormEvent) => {
+    e.preventDefault();
+    if (!newPointTitle || !newPointOrixa || !newPointLyrics) return;
+
+    const newPoint: CurimbaPoint = {
+      id: `pt-${Date.now()}`,
+      title: newPointTitle,
+      guideOrOrixa: newPointOrixa,
+      type: newPointType,
+      lyrics: newPointLyrics,
+      youtubeUrl: newPointYoutube,
+      audioUrl: newPointAudio,
+      videoUrl: newPointVideo
+    };
+
+    setCustomPoints([newPoint, ...customPoints]);
+    setNewPointTitle("");
+    setNewPointOrixa("");
+    setNewPointLyrics("");
+    setNewPointYoutube("");
+    setNewPointAudio("");
+    setNewPointVideo("");
+  };
+
   const myTasks = tasks.filter(t => currentUser && t.assignedTo.toLowerCase() === currentUser.name.toLowerCase());
 
   // --- Filters ---
@@ -217,7 +376,7 @@ export default function Integrantes() {
     return matchesSearch && matchesFilter;
   });
 
-  const filteredSongs = initialPoints.filter(s => 
+  const filteredSongs = [...customPoints, ...initialPoints].filter(s => 
     s.title.toLowerCase().includes(searchSong.toLowerCase()) || 
     s.guideOrOrixa.toLowerCase().includes(searchSong.toLowerCase()) ||
     s.lyrics.toLowerCase().includes(searchSong.toLowerCase())
@@ -292,32 +451,140 @@ export default function Integrantes() {
                 </div>
               </form>
             ) : (
-              <form onSubmit={handleRegister} className="space-y-4">
-                <div className="space-y-1">
-                  <label className="text-xs font-semibold text-gray-700 block">Nome Completo</label>
-                  <input type="text" required value={authName} onChange={(e) => setAuthName(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha" />
-                </div>
-                <div className="space-y-1">
-                  <label className="text-xs font-semibold text-gray-700 block">E-mail</label>
-                  <input type="email" required value={authEmail} onChange={(e) => setAuthEmail(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha" />
-                </div>
-                <div className="space-y-1">
-                  <label className="text-xs font-semibold text-gray-700 block">Senha</label>
-                  <input type="password" required value={authPassword} onChange={(e) => setAuthPassword(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha" />
-                </div>
-                <div className="grid grid-cols-2 gap-4">
+              <form onSubmit={handleRegister} className="space-y-6">
+                
+                {/* 1. Dados Civis e Identidade */}
+                <div className="space-y-4">
+                  <div className="border-b border-areia-escura pb-2">
+                     <h3 className="text-lg font-serif font-bold text-marrom-terra">1. Dados Civis e Identidade</h3>
+                  </div>
                   <div className="space-y-1">
-                    <label className="text-xs font-semibold text-gray-700 block">Cargo no Terreiro</label>
-                    <select value={authCargo} onChange={(e) => setAuthCargo(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-xs outline-none focus:ring-2 focus:ring-verde-folha">
-                      <option value="Médium de Incorporação">Médium de Incorporação</option>
-                      <option value="Cambone">Cambone</option>
-                      <option value="Ogã">Ogã</option>
-                      <option value="Membro em Desenvolvimento">Desenvolvimento</option>
+                    <label className="text-xs font-semibold text-gray-700 block">Nome Completo</label>
+                    <input type="text" required value={authName} onChange={(e) => setAuthName(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-1">
+                      <label className="text-xs font-semibold text-gray-700 block">CPF</label>
+                      <input type="text" required value={authCpf} onChange={(e) => setAuthCpf(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha" />
+                    </div>
+                    <div className="space-y-1">
+                      <label className="text-xs font-semibold text-gray-700 block">RG</label>
+                      <input type="text" required value={authRg} onChange={(e) => setAuthRg(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha" />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-1">
+                      <label className="text-xs font-semibold text-gray-700 block">Data de Nascimento</label>
+                      <input type="date" required value={authDataNascimento} onChange={(e) => setAuthDataNascimento(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-xs outline-none focus:ring-2 focus:ring-verde-folha" />
+                    </div>
+                    <div className="space-y-1">
+                      <label className="text-xs font-semibold text-gray-700 block">Tipo Sanguíneo</label>
+                      <input type="text" placeholder="Ex: O+" value={authTipoSanguineo} onChange={(e) => setAuthTipoSanguineo(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-xs outline-none focus:ring-2 focus:ring-verde-folha" />
+                    </div>
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-700 block">WhatsApp</label>
+                    <input type="text" placeholder="(DD) 90000-0000" required value={authWhatsapp} onChange={(e) => setAuthWhatsapp(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-xs outline-none focus:ring-2 focus:ring-verde-folha" />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-700 block">Endereço Completo</label>
+                    <input type="text" required value={authEndereco} onChange={(e) => setAuthEndereco(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha" />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-700 block">Profissão</label>
+                    <input type="text" required value={authProfissao} onChange={(e) => setAuthProfissao(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-xs outline-none focus:ring-2 focus:ring-verde-folha" />
+                  </div>
+                </div>
+
+                {/* 2. Saúde Integrativa */}
+                <div className="space-y-4">
+                  <div className="border-b border-areia-escura pb-2">
+                     <h3 className="text-lg font-serif font-bold text-marrom-terra">2. Saúde Integrativa</h3>
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-700 block">Contato de Emergência</label>
+                    <input type="text" placeholder="Nome e Telefone" required value={authContatoEmergencia} onChange={(e) => setAuthContatoEmergencia(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-xs outline-none focus:ring-2 focus:ring-verde-folha" />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-700 block">Alergias (ervas/alimentos)</label>
+                    <textarea rows={2} value={authAlergias} onChange={(e) => setAuthAlergias(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha"></textarea>
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-700 block">Faz acompanhamento psicológico ou psiquiátrico atual?</label>
+                    <select required value={authAcompPsicologico} onChange={(e) => setAuthAcompPsicologico(e.target.value as any)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-xs outline-none focus:ring-2 focus:ring-verde-folha">
+                      <option value="">Selecione...</option>
+                      <option value="Sim">Sim</option>
+                      <option value="Não">Não</option>
                     </select>
                   </div>
                   <div className="space-y-1">
-                    <label className="text-xs font-semibold text-gray-700 block">Data de Amaci (Aprox.)</label>
-                    <input type="text" placeholder="Ex: Março 2023" value={authAmaci} onChange={(e) => setAuthAmaci(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-xs outline-none focus:ring-2 focus:ring-verde-folha" />
+                    <label className="text-xs font-semibold text-gray-700 block">Possui algum transtorno psiquiátrico diagnosticado? Qual?</label>
+                    <textarea rows={2} value={authTranstornoPsiquiatrico} onChange={(e) => setAuthTranstornoPsiquiatrico(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha"></textarea>
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-700 block">Uso de medicamentos contínuos</label>
+                    <textarea rows={2} value={authMedicamentos} onChange={(e) => setAuthMedicamentos(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha"></textarea>
+                  </div>
+                </div>
+
+                {/* 3. Trajetória Espiritual */}
+                <div className="space-y-4">
+                  <div className="border-b border-areia-escura pb-2">
+                     <h3 className="text-lg font-serif font-bold text-marrom-terra">3. Trajetória Espiritual</h3>
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-700 block">Tempo de desenvolvimento na religião</label>
+                    <input type="text" value={authTempoDesenvolvimento} onChange={(e) => setAuthTempoDesenvolvimento(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha" />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-700 block">Terreiros anteriores (quantos e motivo da saída)</label>
+                    <textarea rows={2} value={authTerreirosAnteriores} onChange={(e) => setAuthTerreirosAnteriores(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha"></textarea>
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-700 block">Iniciações/Obrigações já realizadas (ex: Amaci, Bori)</label>
+                    <textarea rows={2} value={authIniciacoes} onChange={(e) => setAuthIniciacoes(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha"></textarea>
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-700 block">Tipos de mediunidade afloradas</label>
+                    <input type="text" value={authTiposMediunidade} onChange={(e) => setAuthTiposMediunidade(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha" />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-700 block">Guias e Orixás conhecidos</label>
+                    <textarea rows={2} value={authGuiasConhecidos} onChange={(e) => setAuthGuiasConhecidos(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha"></textarea>
+                  </div>
+                </div>
+
+                {/* 4. Sentido Existencial */}
+                <div className="space-y-4">
+                  <div className="border-b border-areia-escura pb-2">
+                     <h3 className="text-lg font-serif font-bold text-marrom-terra">4. Sentido Existencial</h3>
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-700 block">O que o seu coração busca ao adentrar as portas do TUCPB?</label>
+                    <textarea required rows={4} value={authBuscaCoracao} onChange={(e) => setAuthBuscaCoracao(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha"></textarea>
+                  </div>
+                </div>
+
+                {/* Acesso */}
+                <div className="space-y-4 pt-2">
+                  <div className="border-b border-areia-escura pb-2">
+                     <h3 className="text-lg font-serif font-bold text-marrom-terra">Acesso</h3>
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-700 block">E-mail</label>
+                    <input type="email" required value={authEmail} onChange={(e) => setAuthEmail(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha" />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-700 block">Senha</label>
+                    <input type="password" required value={authPassword} onChange={(e) => setAuthPassword(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha" />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="text-xs font-semibold text-gray-700 block">Cargo no Terreiro</label>
+                    <select value={authCargo} onChange={(e) => setAuthCargo(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-xs outline-none focus:ring-2 focus:ring-verde-folha">
+                      <option value="médiuns/cambones">Médiuns/Cambones</option>
+                      <option value="pai ou mãe pequena">Pai ou Mãe Pequena</option>
+                      <option value="pai de santo">Pai de Santo</option>
+                    </select>
                   </div>
                 </div>
 
@@ -333,6 +600,26 @@ export default function Integrantes() {
                 </div>
               </form>
             )}
+          </div>
+        </section>
+      ) : currentUser.status === "pendente" ? (
+        <section className="mx-auto max-w-md px-4 mt-12">
+          <div className="bg-white rounded-2xl border border-areia-escura p-8 shadow-md text-center space-y-6">
+            <div className="h-16 w-16 bg-amber-50 text-amber-500 rounded-full flex items-center justify-center mx-auto">
+              <Clock className="h-8 w-8" />
+            </div>
+            <div className="space-y-2">
+              <h2 className="font-serif text-2xl font-bold text-gray-900">Aguardando Aprovação</h2>
+              <p className="text-sm text-gray-600">
+                Olá, {currentUser.name}! Seu cadastro foi recebido e está em análise pela direção do terreiro.
+              </p>
+              <p className="text-xs text-gray-500">
+                Assim que for autorizado, você terá acesso completo à plataforma.
+              </p>
+            </div>
+            <button onClick={handleLogout} className="text-sm text-gray-500 hover:underline">
+              Sair da conta
+            </button>
           </div>
         </section>
       ) : (
@@ -373,7 +660,17 @@ export default function Integrantes() {
           {/* TAB: Perfil */}
           {activeTab === "perfil" && (
             <div className="max-w-3xl mx-auto bg-white rounded-2xl border border-areia-escura shadow-sm p-6 md:p-10 animate-fade-in-quick">
-              <h2 className="font-serif text-2xl font-bold text-gray-900 mb-6 border-b border-areia-escura pb-4">Seus Dados no Terreiro</h2>
+              <div className="flex justify-between items-center mb-6 border-b border-areia-escura pb-4">
+                <h2 className="font-serif text-2xl font-bold text-gray-900">Seus Dados no Terreiro</h2>
+                {!isEditingProfile ? (
+                  <button onClick={handleStartEditProfile} className="text-xs font-bold bg-areia-suave hover:bg-gray-200 text-gray-700 px-3 py-1.5 rounded">Editar Perfil</button>
+                ) : (
+                  <div className="flex gap-2">
+                    <button onClick={handleCancelEditProfile} className="text-xs font-bold bg-gray-100 hover:bg-gray-200 text-gray-600 px-3 py-1.5 rounded">Cancelar</button>
+                    <button onClick={handleSaveProfile} className="text-xs font-bold bg-verde-mata hover:bg-verde-folha text-white px-3 py-1.5 rounded flex items-center gap-1"><Check className="h-3 w-3"/> Salvar</button>
+                  </div>
+                )}
+              </div>
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="flex flex-col items-center gap-4">
                   <div className="h-32 w-32 rounded-full border-4 border-areia-escura bg-areia-suave overflow-hidden flex items-center justify-center relative group">
@@ -391,27 +688,211 @@ export default function Integrantes() {
                   <input type="file" accept="image/*" ref={fileInputRef} onChange={handlePhotoUpload} className="hidden" />
                 </div>
                 <div className="flex-1 space-y-4">
-                  <div>
-                    <label className="text-xs text-gray-500 uppercase font-bold tracking-wider">Nome de Registro</label>
-                    <p className="text-lg font-medium text-gray-900">{currentUser.name}</p>
+                  {/* 1. Dados Civis e Identidade */}
+                  <div className="space-y-4">
+                    <h3 className="text-sm font-serif font-bold text-marrom-terra border-b border-areia-escura pb-1">1. Dados Civis e Identidade</h3>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="col-span-2">
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Nome Completo</label>
+                        {isEditingProfile ? (
+                          <input type="text" value={editProfileData.name || ""} onChange={e => setEditProfileData({...editProfileData, name: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"/>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900">{currentUser.name}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">E-mail</label>
+                        {isEditingProfile ? (
+                          <input type="email" value={editProfileData.email || ""} onChange={e => setEditProfileData({...editProfileData, email: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"/>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900">{currentUser.email}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Cargo Litúrgico</label>
+                        {isEditingProfile ? (
+                          <select value={editProfileData.cargoTerreiro || ""} onChange={e => setEditProfileData({...editProfileData, cargoTerreiro: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none">
+                            <option value="médiuns/cambones">Médiuns/Cambones</option>
+                            <option value="pai ou mãe pequena">Pai ou Mãe Pequena</option>
+                            <option value="pai de santo">Pai de Santo</option>
+                          </select>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900 bg-verde-folha/10 text-verde-folha inline-block px-2 py-0.5 rounded mt-1 capitalize">{currentUser.cargoTerreiro}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Nascimento</label>
+                        {isEditingProfile ? (
+                          <input type="date" value={editProfileData.dataNascimento || ""} onChange={e => setEditProfileData({...editProfileData, dataNascimento: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"/>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900">{currentUser.dataNascimento ? new Date(currentUser.dataNascimento).toLocaleDateString('pt-BR') : "Não informada"}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Tipo Sanguíneo</label>
+                        {isEditingProfile ? (
+                          <input type="text" value={editProfileData.tipoSanguineo || ""} onChange={e => setEditProfileData({...editProfileData, tipoSanguineo: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"/>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900">{currentUser.tipoSanguineo || "Não informado"}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">CPF</label>
+                        {isEditingProfile ? (
+                          <input type="text" value={editProfileData.cpf || ""} onChange={e => setEditProfileData({...editProfileData, cpf: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"/>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900">{currentUser.cpf || "Não informado"}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">RG</label>
+                        {isEditingProfile ? (
+                          <input type="text" value={editProfileData.rg || ""} onChange={e => setEditProfileData({...editProfileData, rg: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"/>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900">{currentUser.rg || "Não informado"}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">WhatsApp</label>
+                        {isEditingProfile ? (
+                          <input type="text" value={editProfileData.whatsapp || ""} onChange={e => setEditProfileData({...editProfileData, whatsapp: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"/>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900">{currentUser.whatsapp || "Não informado"}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Profissão</label>
+                        {isEditingProfile ? (
+                          <input type="text" value={editProfileData.profissao || ""} onChange={e => setEditProfileData({...editProfileData, profissao: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"/>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900">{currentUser.profissao || "Não informada"}</p>
+                        )}
+                      </div>
+                      <div className="col-span-2">
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Endereço</label>
+                        {isEditingProfile ? (
+                          <input type="text" value={editProfileData.endereco || ""} onChange={e => setEditProfileData({...editProfileData, endereco: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"/>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900 truncate">{currentUser.endereco || "Não informado"}</p>
+                        )}
+                      </div>
+                    </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="text-xs text-gray-500 uppercase font-bold tracking-wider">E-mail</label>
-                      <p className="text-sm font-medium text-gray-900">{currentUser.email}</p>
+
+                  {/* 2. Saúde Integrativa */}
+                  <div className="space-y-4">
+                    <h3 className="text-sm font-serif font-bold text-marrom-terra border-b border-areia-escura pb-1">2. Saúde Integrativa</h3>
+                    <div className="grid grid-cols-1 gap-4">
+                      <div>
+                        <label className="text-[10px] text-red-700 uppercase font-bold tracking-wider">Contato de Emergência</label>
+                        {isEditingProfile ? (
+                          <input type="text" value={editProfileData.contatoEmergencia || ""} onChange={e => setEditProfileData({...editProfileData, contatoEmergencia: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"/>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900 truncate">{currentUser.contatoEmergencia || "Não informado"}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Alergias (ervas/alimentos)</label>
+                        {isEditingProfile ? (
+                          <textarea value={editProfileData.alergias || ""} onChange={e => setEditProfileData({...editProfileData, alergias: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"></textarea>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900 bg-gray-50 p-2 rounded border border-gray-100">{currentUser.alergias || "Nenhuma observação."}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Acompanhamento Psicológico/Psiquiátrico?</label>
+                        {isEditingProfile ? (
+                          <select value={editProfileData.acompanhamentoPsicologico || ""} onChange={e => setEditProfileData({...editProfileData, acompanhamentoPsicologico: e.target.value as any})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none">
+                            <option value="">Selecione...</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                          </select>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900">{currentUser.acompanhamentoPsicologico || "Não informado"}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Transtorno Psiquiátrico Diagnosticado</label>
+                        {isEditingProfile ? (
+                          <textarea value={editProfileData.transtornoPsiquiatrico || ""} onChange={e => setEditProfileData({...editProfileData, transtornoPsiquiatrico: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"></textarea>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900 bg-gray-50 p-2 rounded border border-gray-100">{currentUser.transtornoPsiquiatrico || "Nenhuma observação."}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Uso de Medicamentos Contínuos</label>
+                        {isEditingProfile ? (
+                          <textarea value={editProfileData.medicamentosContinuos || ""} onChange={e => setEditProfileData({...editProfileData, medicamentosContinuos: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"></textarea>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900 bg-gray-50 p-2 rounded border border-gray-100">{currentUser.medicamentosContinuos || "Nenhuma observação."}</p>
+                        )}
+                      </div>
                     </div>
-                    <div>
-                      <label className="text-xs text-gray-500 uppercase font-bold tracking-wider">Cargo Litúrgico</label>
-                      <p className="text-sm font-medium text-gray-900 bg-verde-folha/10 text-verde-folha inline-block px-2 py-0.5 rounded mt-1">{currentUser.cargoTerreiro}</p>
+                  </div>
+
+                  {/* 3. Trajetória Espiritual */}
+                  <div className="space-y-4">
+                    <h3 className="text-sm font-serif font-bold text-marrom-terra border-b border-areia-escura pb-1">3. Trajetória Espiritual</h3>
+                    <div className="grid grid-cols-1 gap-4">
+                      <div>
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Tempo de desenvolvimento na religião</label>
+                        {isEditingProfile ? (
+                          <input type="text" value={editProfileData.tempoDesenvolvimento || ""} onChange={e => setEditProfileData({...editProfileData, tempoDesenvolvimento: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"/>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900">{currentUser.tempoDesenvolvimento || "Não informado"}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Terreiros anteriores (quantos e motivo da saída)</label>
+                        {isEditingProfile ? (
+                          <textarea value={editProfileData.terreirosAnteriores || ""} onChange={e => setEditProfileData({...editProfileData, terreirosAnteriores: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"></textarea>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900 bg-gray-50 p-2 rounded border border-gray-100">{currentUser.terreirosAnteriores || "Não informado"}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Iniciações/Obrigações já realizadas (ex: Amaci, Bori)</label>
+                        {isEditingProfile ? (
+                          <textarea value={editProfileData.iniciacoesRealizadas || ""} onChange={e => setEditProfileData({...editProfileData, iniciacoesRealizadas: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"></textarea>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900 bg-gray-50 p-2 rounded border border-gray-100">{currentUser.iniciacoesRealizadas || "Não informado"}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Tipos de mediunidade afloradas</label>
+                        {isEditingProfile ? (
+                          <input type="text" value={editProfileData.tiposMediunidade || ""} onChange={e => setEditProfileData({...editProfileData, tiposMediunidade: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"/>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900">{currentUser.tiposMediunidade || "Não informado"}</p>
+                        )}
+                      </div>
+                      <div>
+                        <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Guias e Orixás conhecidos</label>
+                        {isEditingProfile ? (
+                          <textarea value={editProfileData.guiasConhecidos || ""} onChange={e => setEditProfileData({...editProfileData, guiasConhecidos: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"></textarea>
+                        ) : (
+                          <p className="text-sm font-medium text-gray-900 bg-gray-50 p-2 rounded border border-gray-100">{currentUser.guiasConhecidos || "Não informado"}</p>
+                        )}
+                      </div>
                     </div>
+                  </div>
+
+                  {/* 4. Sentido Existencial */}
+                  <div className="space-y-4">
+                    <h3 className="text-sm font-serif font-bold text-marrom-terra border-b border-areia-escura pb-1">4. Sentido Existencial</h3>
                     <div>
-                      <label className="text-xs text-gray-500 uppercase font-bold tracking-wider flex items-center gap-1"><CalendarIcon className="h-3 w-3"/> Data do Amaci</label>
-                      <p className="text-sm font-medium text-gray-900">{currentUser.dataAmaci || "Não informada"}</p>
+                      <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">O que o seu coração busca ao adentrar as portas do TUCPB?</label>
+                      {isEditingProfile ? (
+                        <textarea value={editProfileData.buscaCoracao || ""} onChange={e => setEditProfileData({...editProfileData, buscaCoracao: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none"></textarea>
+                      ) : (
+                        <p className="text-sm font-medium text-gray-900 bg-verde-folha/5 p-4 rounded-xl border border-verde-folha/20 italic">{currentUser.buscaCoracao || "Não informado"}</p>
+                      )}
                     </div>
-                    <div>
-                      <label className="text-xs text-gray-500 uppercase font-bold tracking-wider flex items-center gap-1"><Shield className="h-3 w-3"/> Nível de Acesso</label>
-                      <p className="text-sm font-medium text-gray-900 uppercase">{currentUser.role}</p>
-                    </div>
+                  </div>
+
+                  <div>
+                    <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider flex items-center gap-1 mt-6 pt-4 border-t border-gray-100"><Shield className="h-3 w-3"/> Nível de Acesso (Não editável)</label>
+                    <p className="text-[10px] font-bold text-gray-900 uppercase bg-gray-100 inline-block px-2 py-1 rounded">{currentUser.role}</p>
                   </div>
                 </div>
               </div>
@@ -462,32 +943,68 @@ export default function Integrantes() {
 
           {/* TAB: Admin Dashboard */}
           {activeTab === "admin" && currentUser.role === "admin" && (
-            <div className="space-y-8 animate-fade-in-quick">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                
-                {/* Admin - Members List */}
-                <div className="lg:col-span-2 bg-white rounded-2xl border border-areia-escura shadow-sm overflow-hidden">
+            <div className="space-y-6 animate-fade-in-quick">
+              
+              <div className="flex gap-2 border-b border-areia-escura pb-4">
+                <button onClick={() => setActiveAdminTab("membros")} className={`px-4 py-2 rounded text-xs font-bold transition ${activeAdminTab === "membros" ? "bg-verde-mata text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}>Gerenciar Membros</button>
+                <button onClick={() => setActiveAdminTab("aprovacoes")} className={`px-4 py-2 rounded text-xs font-bold transition flex items-center gap-1 ${activeAdminTab === "aprovacoes" ? "bg-amber-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}>Aprovações Pendentes <span className="bg-amber-100 text-amber-800 rounded-full px-1.5 py-0.5 text-[9px]">{users.filter(u => u.status === "pendente").length}</span></button>
+                <button onClick={() => setActiveAdminTab("tarefas")} className={`px-4 py-2 rounded text-xs font-bold transition ${activeAdminTab === "tarefas" ? "bg-verde-mata text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}>Gestão de Tarefas</button>
+                <button onClick={() => setActiveAdminTab("curimba")} className={`px-4 py-2 rounded text-xs font-bold transition ${activeAdminTab === "curimba" ? "bg-verde-mata text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}>Adicionar Pontos</button>
+              </div>
+
+              {activeAdminTab === "membros" && (
+                <div className="bg-white rounded-2xl border border-areia-escura shadow-sm overflow-hidden">
                   <div className="bg-marrom-terra px-6 py-4 text-white">
-                    <h2 className="font-serif font-bold flex items-center gap-2"><Users className="h-5 w-5"/> Filhos Cadastrados na Casa ({users.length})</h2>
+                    <h2 className="font-serif font-bold flex items-center gap-2"><Users className="h-5 w-5"/> Filhos Ativos na Casa ({users.filter(u => u.status !== "pendente").length})</h2>
                   </div>
                   <div className="divide-y divide-gray-100 max-h-[500px] overflow-y-auto">
-                    {users.map(user => (
-                      <div key={user.id} className="p-4 flex items-center gap-4 hover:bg-gray-50">
+                    {users.filter(u => u.status !== "pendente").map(user => (
+                      <div key={user.id} className="p-4 flex items-center gap-4 hover:bg-gray-50 cursor-pointer" onClick={() => setSelectedMemberProfile(user)}>
                         <div className="h-10 w-10 rounded-full bg-gray-200 overflow-hidden flex-shrink-0">
                           {user.photoUrl ? <img src={user.photoUrl} alt="" className="w-full h-full object-cover"/> : <UserIcon className="h-6 w-6 m-auto mt-2 text-gray-400"/>}
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-bold text-gray-900 text-sm">{user.name} <span className="text-[10px] font-normal text-gray-500">({user.email})</span></h4>
-                          <p className="text-xs text-gray-500">{user.cargoTerreiro} • Amaci: {user.dataAmaci || 'N/A'}</p>
+                          <h4 className="font-bold text-gray-900 text-sm hover:underline">{user.name} <span className="text-[10px] font-normal text-gray-500">({user.email})</span></h4>
+                          <p className="text-xs text-gray-500 capitalize">{user.cargoTerreiro}</p>
                         </div>
                         {user.role === "admin" && <Shield className="h-4 w-4 text-red-700"/>}
                       </div>
                     ))}
                   </div>
                 </div>
+              )}
 
-                {/* Admin - Add Task */}
-                <div className="space-y-6">
+              {activeAdminTab === "aprovacoes" && (
+                <div className="bg-white rounded-2xl border border-areia-escura shadow-sm overflow-hidden">
+                  <div className="bg-amber-600 px-6 py-4 text-white">
+                    <h2 className="font-serif font-bold flex items-center gap-2"><Clock className="h-5 w-5"/> Cadastros Aguardando Aprovação</h2>
+                  </div>
+                  <div className="divide-y divide-gray-100 max-h-[500px] overflow-y-auto">
+                    {users.filter(u => u.status === "pendente").length === 0 ? (
+                       <div className="p-8 text-center text-gray-500 text-sm">Não há aprovações pendentes.</div>
+                    ) : (
+                      users.filter(u => u.status === "pendente").map(user => (
+                        <div key={user.id} className="p-4 flex items-center gap-4 hover:bg-gray-50">
+                          <div className="h-10 w-10 rounded-full bg-gray-200 overflow-hidden flex-shrink-0 cursor-pointer" onClick={() => setSelectedMemberProfile(user)}>
+                            {user.photoUrl ? <img src={user.photoUrl} alt="" className="w-full h-full object-cover"/> : <UserIcon className="h-6 w-6 m-auto mt-2 text-gray-400"/>}
+                          </div>
+                          <div className="flex-1 cursor-pointer" onClick={() => setSelectedMemberProfile(user)}>
+                            <h4 className="font-bold text-gray-900 text-sm hover:underline">{user.name} <span className="text-[10px] font-normal text-gray-500">({user.email})</span></h4>
+                            <p className="text-xs text-gray-500 capitalize">{user.cargoTerreiro}</p>
+                          </div>
+                          <div className="flex gap-2">
+                            <button onClick={() => handleApproveMember(user.id)} className="px-3 py-1.5 bg-emerald-100 hover:bg-emerald-200 text-emerald-800 text-xs font-bold rounded">Autorizar Entrada</button>
+                            <button onClick={() => handleRejectMember(user.id)} className="px-3 py-1.5 bg-red-100 hover:bg-red-200 text-red-800 text-xs font-bold rounded">Recusar</button>
+                          </div>
+                        </div>
+                      ))
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {activeAdminTab === "tarefas" && (
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <form onSubmit={handleAddTask} className="bg-white rounded-2xl border border-areia-escura shadow-sm p-6">
                     <h2 className="font-serif font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">Delegar Nova Tarefa</h2>
                     <div className="space-y-3">
@@ -499,7 +1016,7 @@ export default function Integrantes() {
                         <label className="text-[11px] font-bold text-gray-700 uppercase">Selecione o Membro</label>
                         <select required value={newAssignedTo} onChange={(e) => setNewAssignedTo(e.target.value)} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha">
                           <option value="">Selecione...</option>
-                          {users.map(u => <option key={u.id} value={u.name}>{u.name}</option>)}
+                          {users.filter(u => u.status !== "pendente").map(u => <option key={u.id} value={u.name}>{u.name}</option>)}
                         </select>
                       </div>
                       <div>
@@ -518,7 +1035,6 @@ export default function Integrantes() {
                     </div>
                   </form>
                   
-                  {/* Global Task List Summary */}
                   <div className="bg-white rounded-2xl border border-areia-escura shadow-sm p-6">
                      <h2 className="font-serif font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">Status Geral de Tarefas</h2>
                      <div className="space-y-3 max-h-[300px] overflow-y-auto">
@@ -533,8 +1049,58 @@ export default function Integrantes() {
                      </div>
                   </div>
                 </div>
+              )}
 
-              </div>
+              {activeAdminTab === "curimba" && (
+                <div className="bg-white rounded-2xl border border-areia-escura shadow-sm p-6 max-w-2xl mx-auto">
+                   <h2 className="font-serif font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">Publicar Novo Ponto Cantado</h2>
+                   <form onSubmit={handleAddPoint} className="space-y-4">
+                     <div className="grid grid-cols-2 gap-4">
+                       <div>
+                         <label className="text-[11px] font-bold text-gray-700 uppercase">Título do Ponto</label>
+                         <input type="text" required value={newPointTitle} onChange={(e) => setNewPointTitle(e.target.value)} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                       </div>
+                       <div>
+                         <label className="text-[11px] font-bold text-gray-700 uppercase">Guia ou Orixá</label>
+                         <input type="text" required placeholder="Ex: Caboclo Pena Branca" value={newPointOrixa} onChange={(e) => setNewPointOrixa(e.target.value)} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                       </div>
+                     </div>
+                     <div>
+                       <label className="text-[11px] font-bold text-gray-700 uppercase">Tipo / Momento</label>
+                       <select value={newPointType} onChange={(e) => setNewPointType(e.target.value as CurimbaPoint["type"])} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha">
+                         <option value="Abertura">Abertura</option>
+                         <option value="Saudação">Saudação</option>
+                         <option value="Defumação">Defumação</option>
+                         <option value="Chamada">Chamada</option>
+                         <option value="Subida">Subida</option>
+                       </select>
+                     </div>
+                     <div>
+                        <label className="text-[11px] font-bold text-gray-700 uppercase">Letra do Ponto</label>
+                        <textarea required rows={4} value={newPointLyrics} onChange={(e) => setNewPointLyrics(e.target.value)} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha"></textarea>
+                     </div>
+                     <div className="p-4 bg-gray-50 border border-gray-200 rounded-lg space-y-3">
+                       <h3 className="text-xs font-bold text-gray-900 uppercase">Mídias (Opcional)</h3>
+                       <div>
+                         <label className="text-[11px] font-bold text-gray-700 uppercase">Link do YouTube</label>
+                         <input type="url" placeholder="https://youtube.com/watch?v=..." value={newPointYoutube} onChange={(e) => setNewPointYoutube(e.target.value)} className="w-full px-3 py-2 bg-white border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                       </div>
+                       <div>
+                         <label className="text-[11px] font-bold text-gray-700 uppercase">URL de Áudio (MP3)</label>
+                         <input type="url" placeholder="https://.../audio.mp3" value={newPointAudio} onChange={(e) => setNewPointAudio(e.target.value)} className="w-full px-3 py-2 bg-white border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                       </div>
+                       <div>
+                         <label className="text-[11px] font-bold text-gray-700 uppercase">URL de Vídeo (MP4)</label>
+                         <input type="url" placeholder="https://.../video.mp4" value={newPointVideo} onChange={(e) => setNewPointVideo(e.target.value)} className="w-full px-3 py-2 bg-white border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                       </div>
+                     </div>
+                     <button type="submit" className="w-full bg-verde-mata text-white py-2 rounded text-sm font-bold mt-2 hover:bg-verde-folha transition flex justify-center items-center gap-2">
+                        Salvar Ponto Cantado <Plus className="h-4 w-4"/>
+                     </button>
+                   </form>
+                </div>
+              )}
+
             </div>
           )}
 
@@ -622,6 +1188,37 @@ export default function Integrantes() {
                        <h3 className="font-serif text-2xl font-bold text-gray-900 mt-1">{selectedSong.title}</h3>
                      </div>
                      <pre className="font-serif text-sm sm:text-base text-gray-800 whitespace-pre-wrap leading-loose">{selectedSong.lyrics}</pre>
+
+                     {/* Media Rendering */}
+                     {(selectedSong.youtubeUrl || selectedSong.audioUrl || selectedSong.videoUrl) && (
+                       <div className="pt-6 border-t border-areia-escura space-y-4">
+                         <h4 className="font-bold text-sm text-gray-900 uppercase">Mídia de Estudo</h4>
+                         
+                         {selectedSong.youtubeUrl && (
+                           <div className="aspect-video w-full rounded-xl overflow-hidden bg-black">
+                             <iframe 
+                               src={selectedSong.youtubeUrl.replace("watch?v=", "embed/")} 
+                               title="YouTube video player" 
+                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                               allowFullScreen 
+                               className="w-full h-full border-0"
+                             ></iframe>
+                           </div>
+                         )}
+
+                         {selectedSong.videoUrl && !selectedSong.youtubeUrl && (
+                           <div className="aspect-video w-full rounded-xl overflow-hidden bg-black">
+                             <video src={selectedSong.videoUrl} controls className="w-full h-full object-contain" />
+                           </div>
+                         )}
+
+                         {selectedSong.audioUrl && (
+                           <div className="w-full bg-areia-suave p-4 rounded-xl border border-areia-escura">
+                             <audio src={selectedSong.audioUrl} controls className="w-full" />
+                           </div>
+                         )}
+                       </div>
+                     )}
                    </div>
                  ) : (
                    <div className="h-full flex items-center justify-center text-gray-400"><BookOpen className="h-12 w-12 opacity-20" /></div>
@@ -661,6 +1258,151 @@ export default function Integrantes() {
               <div><strong>Uso Ritual:</strong><br/>{selectedHerb.ritualUse}</div>
               <div><strong>Preparo:</strong><br/>{selectedHerb.preparation}</div>
             </div>
+          </div>
+        </div>
+      )}
+
+      {selectedMemberProfile && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in-quick">
+          <div className="relative w-full max-w-2xl bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col max-h-[90vh]">
+            <div className="bg-marrom-terra px-6 py-4 flex items-center justify-between sticky top-0 z-10">
+              <h2 className="font-serif text-xl font-bold text-white flex items-center gap-2"><ClipboardList className="h-5 w-5"/> Ficha Cadastral do Membro</h2>
+              <button onClick={() => setSelectedMemberProfile(null)} className="p-1 rounded hover:bg-marrom-tronco text-white"><X className="h-5 w-5" /></button>
+            </div>
+            <div className="p-6 overflow-y-auto flex-1">
+               <div className="flex flex-col md:flex-row gap-6">
+                 <div className="flex-shrink-0 flex flex-col items-center gap-3">
+                   <div className="h-24 w-24 rounded-full bg-gray-200 border-4 border-gray-100 overflow-hidden">
+                     {selectedMemberProfile.photoUrl ? <img src={selectedMemberProfile.photoUrl} alt="" className="w-full h-full object-cover"/> : <UserIcon className="h-12 w-12 m-auto mt-4 text-gray-400"/>}
+                   </div>
+                   <div className="text-center">
+                     <span className={`inline-block px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider ${selectedMemberProfile.status === "pendente" ? "bg-amber-100 text-amber-800" : selectedMemberProfile.status === "aprovado" ? "bg-emerald-100 text-emerald-800" : "bg-red-100 text-red-800"}`}>
+                       {selectedMemberProfile.status || "N/A"}
+                     </span>
+                   </div>
+                 </div>
+                 <div className="flex-1 space-y-4">
+                    <div className="space-y-6">
+                      {/* 1. Dados Civis e Identidade */}
+                      <div>
+                        <h4 className="font-serif font-bold text-marrom-terra border-b border-areia-escura pb-1 mb-3 text-sm">1. Dados Civis e Identidade</h4>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                          <div>
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Nome Completo</label>
+                            <p className="text-sm font-medium text-gray-900">{selectedMemberProfile.name}</p>
+                          </div>
+                          <div>
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Cargo Litúrgico</label>
+                            <p className="text-sm font-medium text-gray-900 capitalize">{selectedMemberProfile.cargoTerreiro}</p>
+                          </div>
+                          <div>
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">E-mail</label>
+                            <p className="text-sm font-medium text-gray-900">{selectedMemberProfile.email}</p>
+                          </div>
+                          <div>
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">WhatsApp</label>
+                            <p className="text-sm font-medium text-gray-900">{selectedMemberProfile.whatsapp || "N/A"}</p>
+                          </div>
+                          <div>
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">CPF</label>
+                            <p className="text-sm font-medium text-gray-900">{selectedMemberProfile.cpf || "N/A"}</p>
+                          </div>
+                          <div>
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">RG</label>
+                            <p className="text-sm font-medium text-gray-900">{selectedMemberProfile.rg || "N/A"}</p>
+                          </div>
+                          <div>
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Data de Nascimento</label>
+                            <p className="text-sm font-medium text-gray-900">{selectedMemberProfile.dataNascimento ? new Date(selectedMemberProfile.dataNascimento).toLocaleDateString('pt-BR') : "N/A"}</p>
+                          </div>
+                          <div>
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Tipo Sanguíneo</label>
+                            <p className="text-sm font-medium text-gray-900">{selectedMemberProfile.tipoSanguineo || "N/A"}</p>
+                          </div>
+                          <div className="sm:col-span-2">
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Profissão</label>
+                            <p className="text-sm font-medium text-gray-900">{selectedMemberProfile.profissao || "N/A"}</p>
+                          </div>
+                          <div className="sm:col-span-2">
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Endereço Completo</label>
+                            <p className="text-sm font-medium text-gray-900">{selectedMemberProfile.endereco || "N/A"}</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* 2. Saúde Integrativa */}
+                      <div>
+                        <h4 className="font-serif font-bold text-marrom-terra border-b border-areia-escura pb-1 mb-3 text-sm">2. Saúde Integrativa</h4>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                          <div className="sm:col-span-2">
+                            <label className="text-[10px] text-red-700 uppercase font-bold tracking-wider">Contato de Emergência</label>
+                            <p className="text-sm font-medium text-gray-900">{selectedMemberProfile.contatoEmergencia || "N/A"}</p>
+                          </div>
+                          <div className="sm:col-span-2">
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Alergias (ervas/alimentos)</label>
+                            <p className="text-sm font-medium text-gray-900 whitespace-pre-wrap bg-gray-50 p-2 rounded border border-gray-100">{selectedMemberProfile.alergias || "N/A"}</p>
+                          </div>
+                          <div className="sm:col-span-2">
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Acompanhamento Psicológico/Psiquiátrico?</label>
+                            <p className="text-sm font-medium text-gray-900">{selectedMemberProfile.acompanhamentoPsicologico || "N/A"}</p>
+                          </div>
+                          <div className="sm:col-span-2">
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Transtorno Psiquiátrico Diagnosticado</label>
+                            <p className="text-sm font-medium text-gray-900 whitespace-pre-wrap bg-gray-50 p-2 rounded border border-gray-100">{selectedMemberProfile.transtornoPsiquiatrico || "N/A"}</p>
+                          </div>
+                          <div className="sm:col-span-2">
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Uso de Medicamentos Contínuos</label>
+                            <p className="text-sm font-medium text-gray-900 whitespace-pre-wrap bg-gray-50 p-2 rounded border border-gray-100">{selectedMemberProfile.medicamentosContinuos || "N/A"}</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* 3. Trajetória Espiritual */}
+                      <div>
+                        <h4 className="font-serif font-bold text-marrom-terra border-b border-areia-escura pb-1 mb-3 text-sm">3. Trajetória Espiritual</h4>
+                        <div className="grid grid-cols-1 gap-4">
+                          <div>
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Tempo de desenvolvimento na religião</label>
+                            <p className="text-sm font-medium text-gray-900">{selectedMemberProfile.tempoDesenvolvimento || "N/A"}</p>
+                          </div>
+                          <div>
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Terreiros anteriores (quantos e motivo da saída)</label>
+                            <p className="text-sm font-medium text-gray-900 whitespace-pre-wrap bg-gray-50 p-2 rounded border border-gray-100">{selectedMemberProfile.terreirosAnteriores || "N/A"}</p>
+                          </div>
+                          <div>
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Iniciações/Obrigações já realizadas (ex: Amaci, Bori)</label>
+                            <p className="text-sm font-medium text-gray-900 whitespace-pre-wrap bg-gray-50 p-2 rounded border border-gray-100">{selectedMemberProfile.iniciacoesRealizadas || "N/A"}</p>
+                          </div>
+                          <div>
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Tipos de mediunidade afloradas</label>
+                            <p className="text-sm font-medium text-gray-900">{selectedMemberProfile.tiposMediunidade || "N/A"}</p>
+                          </div>
+                          <div>
+                            <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">Guias e Orixás conhecidos</label>
+                            <p className="text-sm font-medium text-gray-900 whitespace-pre-wrap bg-gray-50 p-2 rounded border border-gray-100">{selectedMemberProfile.guiasConhecidos || "N/A"}</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* 4. Sentido Existencial */}
+                      <div>
+                        <h4 className="font-serif font-bold text-marrom-terra border-b border-areia-escura pb-1 mb-3 text-sm">4. Sentido Existencial</h4>
+                        <div>
+                          <label className="text-[10px] text-gray-500 uppercase font-bold tracking-wider">O que o seu coração busca ao adentrar as portas do TUCPB?</label>
+                          <p className="text-sm font-medium text-gray-900 whitespace-pre-wrap bg-verde-folha/5 p-4 rounded-xl border border-verde-folha/20 italic">{selectedMemberProfile.buscaCoracao || "N/A"}</p>
+                        </div>
+                      </div>
+
+                    </div>
+                 </div>
+               </div>
+            </div>
+            {selectedMemberProfile.status === "pendente" && (
+              <div className="border-t border-gray-100 bg-gray-50 p-4 flex gap-3 justify-end rounded-b-2xl">
+                 <button onClick={() => { handleRejectMember(selectedMemberProfile.id); setSelectedMemberProfile(null); }} className="px-4 py-2 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 text-sm font-bold rounded">Recusar</button>
+                 <button onClick={() => { handleApproveMember(selectedMemberProfile.id); setSelectedMemberProfile({ ...selectedMemberProfile, status: "aprovado" }); }} className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold rounded flex items-center gap-2"><CheckCircle className="h-4 w-4"/> Aprovar e Autorizar Entrada</button>
+              </div>
+            )}
           </div>
         </div>
       )}

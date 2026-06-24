@@ -66,8 +66,26 @@ export interface UserProfile {
   password?: string;
   role: "admin" | "membro";
   cargoTerreiro: string;
-  dataAmaci: string;
   photoUrl: string;
+  status?: "pendente" | "aprovado" | "recusado";
+  dataNascimento?: string;
+  cpf?: string;
+  rg?: string;
+  tipoSanguineo?: string;
+  whatsapp?: string;
+  endereco?: string;
+  profissao?: string;
+  contatoEmergencia?: string;
+  alergias?: string;
+  acompanhamentoPsicologico?: "Sim" | "Não" | "";
+  transtornoPsiquiatrico?: string;
+  medicamentosContinuos?: string;
+  tempoDesenvolvimento?: string;
+  terreirosAnteriores?: string;
+  iniciacoesRealizadas?: string;
+  tiposMediunidade?: string;
+  guiasConhecidos?: string;
+  buscaCoracao?: string;
 }
 
 export interface CurimbaPoint {
@@ -77,4 +95,8 @@ export interface CurimbaPoint {
   type: "Abertura" | "Saudação" | "Defumação" | "Chamada" | "Subida";
   lyrics: string;
   author?: string;
+  rhythm?: string;
+  audioUrl?: string;
+  videoUrl?: string;
+  youtubeUrl?: string;
 }
