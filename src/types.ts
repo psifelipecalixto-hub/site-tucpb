@@ -59,6 +59,17 @@ export interface MemberTask {
   date: string;
 }
 
+export interface UserProfile {
+  id: string;
+  name: string;
+  email: string;
+  password?: string;
+  role: "admin" | "membro";
+  cargoTerreiro: string;
+  dataAmaci: string;
+  photoUrl: string;
+}
+
 export interface CurimbaPoint {
   id: string;
   title: string;

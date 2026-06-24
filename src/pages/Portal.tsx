@@ -6,7 +6,7 @@ const publicArticles: BlogArticle[] = [
   {
     id: "art-1",
     title: "O Sentido Existencial do Terreiro",
-    category: "Filosofia",
+    category: "Fundamentos",
     snippet: "O terreiro transcende o espaço físico e se torna um hospital de almas, onde o encontro com o sagrado ilumina a nossa experiência de vida e o sentido de estarmos aqui.",
     content: "O terreiro transcende o espaço físico e se torna um hospital de almas, onde o encontro com o sagrado ilumina a nossa experiência de vida e o sentido de estarmos aqui.\n\nA Umbanda nos convida a olhar para dentro, reconhecendo a nossa própria natureza divina e a conexão profunda com todas as coisas. Ao pisarmos descalços no chão de terra, lembramos de onde viemos e para onde vamos, resgatando a humildade e a reverência diante do mistério da existência.\n\nCada passe, cada canto e cada defumação são convites para o despertar da consciência, para a cura das feridas emocionais e para a reconexão com a nossa essência mais pura. O terreiro é, portanto, um espaço de transformação alquímica, onde a dor se transmuta em sabedoria e o medo cede lugar à fé.",
     date: "20 de Junho de 2026",
@@ -28,7 +28,7 @@ const publicArticles: BlogArticle[] = [
   {
     id: "art-3",
     title: "Introdução aos Fundamentos da Umbanda",
-    category: "Doutrina",
+    category: "Fundamentos",
     snippet: "Um guia de acolhimento para aqueles que dão os primeiros passos na religião. Entenda as linhas, a caridade e o respeito à mironga.",
     content: "Um guia de acolhimento para aqueles que dão os primeiros passos na religião. Entenda as linhas, a caridade e o respeito à mironga.\n\nA Umbanda é uma religião de matriz africana, nascida no Brasil, que sincretiza elementos do catolicismo, do espiritismo kardecista e das tradições indígenas. Seus pilares fundamentais são a caridade, a humildade e o amor ao próximo.\n\nNeste artigo, exploraremos os conceitos básicos da Umbanda, como a organização das sete linhas, o papel dos Orixás e dos Guias Espirituais, a importância da mediunidade e os rituais que compõem a nossa prática religiosa. Seja você um iniciante ou alguém que busca aprofundar seus conhecimentos, este guia oferecerá uma visão abrangente e respeitosa sobre os fundamentos da nossa fé.",
     date: "10 de Junho de 2026",
