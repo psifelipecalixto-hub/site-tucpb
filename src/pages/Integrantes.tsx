@@ -1,7 +1,7 @@
 import { useState, FormEvent, useEffect, useRef, ChangeEvent } from "react";
-import { Lock, Unlock, Users, ClipboardList, BookOpen, Bell, CheckCircle, Search, PlayCircle, TreePine, X, GraduationCap, Upload, Shield, User as UserIcon, Calendar as CalendarIcon, LogOut, Plus, Check, Clock } from "lucide-react";
-import { initialPoints, initialLessons, initialHerbs, initialTasks } from "../data";
-import { MemberTask, CurimbaPoint, Lesson, Herb, UserProfile } from "../types";
+import { Lock, Unlock, Users, ClipboardList, BookOpen, Bell, CheckCircle, Search, PlayCircle, TreePine, X, GraduationCap, Upload, Shield, User as UserIcon, Calendar as CalendarIcon, LogOut, Plus, Check, Clock, Trash2, Edit2 } from "lucide-react";
+import { initialPoints, initialLessons, initialHerbs, initialTasks, initialArticles } from "../data";
+import { MemberTask, CurimbaPoint, Lesson, Herb, UserProfile, BlogArticle } from "../types";
 
 // Default admin user for demonstration
 const DEFAULT_ADMIN: UserProfile = {
@@ -59,7 +59,7 @@ export default function Integrantes() {
   const [editProfileData, setEditProfileData] = useState<Partial<UserProfile>>({});
 
   // --- Admin States ---
-  const [activeAdminTab, setActiveAdminTab] = useState<"membros" | "tarefas" | "aprovacoes" | "curimba">("membros");
+  const [activeAdminTab, setActiveAdminTab] = useState<"membros" | "tarefas" | "aprovacoes" | "curimba" | "blog" | "aulas" | "ervas">("membros");
   const [newTaskText, setNewTaskText] = useState("");
   const [newAssignedTo, setNewAssignedTo] = useState("");
   const [newTaskArea, setNewTaskArea] = useState<MemberTask["area"]>("Terreiro / Gongá");
@@ -75,6 +75,16 @@ export default function Integrantes() {
   const [newPointAudio, setNewPointAudio] = useState("");
   const [newPointVideo, setNewPointVideo] = useState("");
   const [customPoints, setCustomPoints] = useState<CurimbaPoint[]>([]);
+
+  // --- Content Admin States ---
+  const [articles, setArticles] = useState<BlogArticle[]>([]);
+  const [lessons, setLessons] = useState<Lesson[]>([]);
+  const [herbs, setHerbs] = useState<Herb[]>([]);
+
+  // --- Content Form States (New/Edit) ---
+  const [editArticle, setEditArticle] = useState<Partial<BlogArticle> | null>(null);
+  const [editLesson, setEditLesson] = useState<Partial<Lesson> | null>(null);
+  const [editHerb, setEditHerb] = useState<Partial<Herb> | null>(null);
 
   // --- Study States ---
   const [activeEstudoTab, setActiveEstudoTab] = useState<"aulas" | "ervas">("aulas");
@@ -92,6 +102,9 @@ export default function Integrantes() {
     const storedUsers = localStorage.getItem("tucpb_users");
     const storedTasks = localStorage.getItem("tucpb_tasks");
     const storedPoints = localStorage.getItem("tucpb_points");
+    const storedArticles = localStorage.getItem("tucpb_articles");
+    const storedLessons = localStorage.getItem("tucpb_lessons");
+    const storedHerbs = localStorage.getItem("tucpb_herbs");
     const loggedInUserId = localStorage.getItem("tucpb_logged_in_user");
 
     let loadedUsers: UserProfile[] = [];
@@ -112,6 +125,27 @@ export default function Integrantes() {
 
     if (storedPoints) {
       setCustomPoints(JSON.parse(storedPoints));
+    }
+
+    if (storedArticles) {
+      setArticles(JSON.parse(storedArticles));
+    } else {
+      setArticles(initialArticles);
+      localStorage.setItem("tucpb_articles", JSON.stringify(initialArticles));
+    }
+
+    if (storedLessons) {
+      setLessons(JSON.parse(storedLessons));
+    } else {
+      setLessons(initialLessons);
+      localStorage.setItem("tucpb_lessons", JSON.stringify(initialLessons));
+    }
+
+    if (storedHerbs) {
+      setHerbs(JSON.parse(storedHerbs));
+    } else {
+      setHerbs(initialHerbs);
+      localStorage.setItem("tucpb_herbs", JSON.stringify(initialHerbs));
     }
 
     if (loggedInUserId) {
@@ -146,6 +180,24 @@ export default function Integrantes() {
       localStorage.setItem("tucpb_points", JSON.stringify(customPoints));
     }
   }, [customPoints]);
+
+  useEffect(() => {
+    if (articles.length > 0) {
+      localStorage.setItem("tucpb_articles", JSON.stringify(articles));
+    }
+  }, [articles]);
+
+  useEffect(() => {
+    if (lessons.length > 0) {
+      localStorage.setItem("tucpb_lessons", JSON.stringify(lessons));
+    }
+  }, [lessons]);
+
+  useEffect(() => {
+    if (herbs.length > 0) {
+      localStorage.setItem("tucpb_herbs", JSON.stringify(herbs));
+    }
+  }, [herbs]);
 
   // --- Auth Handlers ---
   const handleLogin = (e: FormEvent) => {
@@ -362,15 +414,93 @@ export default function Integrantes() {
     setNewPointVideo("");
   };
 
+  // --- Content Admin Handlers ---
+  const handleSaveArticle = () => {
+    if (!editArticle || !editArticle.title || !editArticle.content) return;
+    
+    if (editArticle.id) {
+      setArticles(articles.map(a => a.id === editArticle.id ? { ...a, ...editArticle } as BlogArticle : a));
+    } else {
+      const newArticle: BlogArticle = {
+        id: `art-${Date.now()}`,
+        title: editArticle.title || "",
+        category: editArticle.category || "Fundamentos",
+        snippet: editArticle.snippet || "",
+        content: editArticle.content || "",
+        date: new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' }),
+        readTime: editArticle.readTime || "5 min",
+        author: currentUser?.name || "Administrador",
+        iconName: editArticle.iconName || "book"
+      };
+      setArticles([newArticle, ...articles]);
+    }
+    setEditArticle(null);
+  };
+
+  const handleDeleteArticle = (id: string) => {
+    setArticles(articles.filter(a => a.id !== id));
+  };
+
+  const handleSaveLesson = () => {
+    if (!editLesson || !editLesson.title || !editLesson.videoUrl) return;
+    
+    if (editLesson.id) {
+      setLessons(lessons.map(l => l.id === editLesson.id ? { ...l, ...editLesson } as Lesson : l));
+    } else {
+      const newLesson: Lesson = {
+        id: `les-${Date.now()}`,
+        title: editLesson.title || "",
+        category: editLesson.category || "Doutrina",
+        description: editLesson.description || "",
+        duration: editLesson.duration || "1h",
+        instructor: editLesson.instructor || currentUser?.name || "Instrutor",
+        date: editLesson.date || new Date().toLocaleDateString('pt-BR'),
+        videoUrl: editLesson.videoUrl || "",
+        level: editLesson.level || "Iniciante"
+      };
+      setLessons([newLesson, ...lessons]);
+    }
+    setEditLesson(null);
+  };
+
+  const handleDeleteLesson = (id: string) => {
+    setLessons(lessons.filter(l => l.id !== id));
+  };
+
+  const handleSaveHerb = () => {
+    if (!editHerb || !editHerb.name || !editHerb.ritualUse) return;
+    
+    if (editHerb.id) {
+      setHerbs(herbs.map(h => h.id === editHerb.id ? { ...h, ...editHerb } as Herb : h));
+    } else {
+      const newHerb: Herb = {
+        id: `herb-${Date.now()}`,
+        name: editHerb.name || "",
+        scientificName: editHerb.scientificName || "",
+        orixa: editHerb.orixa || "",
+        ritualUse: editHerb.ritualUse || "",
+        medicinalUse: editHerb.medicinalUse || "",
+        classification: editHerb.classification || "Morna",
+        preparation: editHerb.preparation || ""
+      };
+      setHerbs([newHerb, ...herbs]);
+    }
+    setEditHerb(null);
+  };
+
+  const handleDeleteHerb = (id: string) => {
+    setHerbs(herbs.filter(h => h.id !== id));
+  };
+
   const myTasks = tasks.filter(t => currentUser && t.assignedTo.toLowerCase() === currentUser.name.toLowerCase());
 
   // --- Filters ---
-  const filteredLessons = initialLessons.filter(les => 
+  const filteredLessons = lessons.filter(les => 
     les.title.toLowerCase().includes(searchEstudoQuery.toLowerCase()) ||
     les.description.toLowerCase().includes(searchEstudoQuery.toLowerCase())
   );
   
-  const filteredHerbs = initialHerbs.filter(herb => {
+  const filteredHerbs = herbs.filter(herb => {
     const matchesSearch = herb.name.toLowerCase().includes(searchEstudoQuery.toLowerCase());
     const matchesFilter = herbFilter === "Todas" || herb.classification === herbFilter;
     return matchesSearch && matchesFilter;
@@ -945,11 +1075,14 @@ export default function Integrantes() {
           {activeTab === "admin" && currentUser.role === "admin" && (
             <div className="space-y-6 animate-fade-in-quick">
               
-              <div className="flex gap-2 border-b border-areia-escura pb-4">
+              <div className="flex gap-2 border-b border-areia-escura pb-4 flex-wrap">
                 <button onClick={() => setActiveAdminTab("membros")} className={`px-4 py-2 rounded text-xs font-bold transition ${activeAdminTab === "membros" ? "bg-verde-mata text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}>Gerenciar Membros</button>
-                <button onClick={() => setActiveAdminTab("aprovacoes")} className={`px-4 py-2 rounded text-xs font-bold transition flex items-center gap-1 ${activeAdminTab === "aprovacoes" ? "bg-amber-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}>Aprovações Pendentes <span className="bg-amber-100 text-amber-800 rounded-full px-1.5 py-0.5 text-[9px]">{users.filter(u => u.status === "pendente").length}</span></button>
-                <button onClick={() => setActiveAdminTab("tarefas")} className={`px-4 py-2 rounded text-xs font-bold transition ${activeAdminTab === "tarefas" ? "bg-verde-mata text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}>Gestão de Tarefas</button>
-                <button onClick={() => setActiveAdminTab("curimba")} className={`px-4 py-2 rounded text-xs font-bold transition ${activeAdminTab === "curimba" ? "bg-verde-mata text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}>Adicionar Pontos</button>
+                <button onClick={() => setActiveAdminTab("aprovacoes")} className={`px-4 py-2 rounded text-xs font-bold transition flex items-center gap-1 ${activeAdminTab === "aprovacoes" ? "bg-amber-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}>Aprovações <span className="bg-amber-100 text-amber-800 rounded-full px-1.5 py-0.5 text-[9px]">{users.filter(u => u.status === "pendente").length}</span></button>
+                <button onClick={() => setActiveAdminTab("tarefas")} className={`px-4 py-2 rounded text-xs font-bold transition ${activeAdminTab === "tarefas" ? "bg-verde-mata text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}>Tarefas</button>
+                <button onClick={() => setActiveAdminTab("curimba")} className={`px-4 py-2 rounded text-xs font-bold transition ${activeAdminTab === "curimba" ? "bg-verde-mata text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}>Pontos</button>
+                <button onClick={() => setActiveAdminTab("blog")} className={`px-4 py-2 rounded text-xs font-bold transition ${activeAdminTab === "blog" ? "bg-verde-mata text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}>Blog/Portal</button>
+                <button onClick={() => setActiveAdminTab("aulas")} className={`px-4 py-2 rounded text-xs font-bold transition ${activeAdminTab === "aulas" ? "bg-verde-mata text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}>Aulas</button>
+                <button onClick={() => setActiveAdminTab("ervas")} className={`px-4 py-2 rounded text-xs font-bold transition ${activeAdminTab === "ervas" ? "bg-verde-mata text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}>Ervas</button>
               </div>
 
               {activeAdminTab === "membros" && (
@@ -1098,6 +1231,223 @@ export default function Integrantes() {
                         Salvar Ponto Cantado <Plus className="h-4 w-4"/>
                      </button>
                    </form>
+                </div>
+              )}
+
+              {activeAdminTab === "blog" && (
+                <div className="space-y-6">
+                  <div className="bg-white rounded-2xl border border-areia-escura shadow-sm p-6">
+                    <h2 className="font-serif font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">{editArticle ? 'Editar Artigo' : 'Publicar Novo Artigo'}</h2>
+                    <div className="space-y-4">
+                      <div>
+                        <label className="text-[11px] font-bold text-gray-700 uppercase">Título</label>
+                        <input type="text" value={editArticle?.title || ""} onChange={(e) => setEditArticle({...editArticle, title: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                      </div>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <label className="text-[11px] font-bold text-gray-700 uppercase">Categoria</label>
+                          <select value={editArticle?.category || "Fundamentos"} onChange={(e) => setEditArticle({...editArticle, category: e.target.value as any})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha">
+                            <option value="Orixás">Orixás</option>
+                            <option value="Guias">Guias</option>
+                            <option value="Ervas">Ervas</option>
+                            <option value="Fundamentos">Fundamentos</option>
+                            <option value="História">História</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label className="text-[11px] font-bold text-gray-700 uppercase">Tempo de Leitura</label>
+                          <input type="text" value={editArticle?.readTime || ""} onChange={(e) => setEditArticle({...editArticle, readTime: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                        </div>
+                      </div>
+                      <div>
+                        <label className="text-[11px] font-bold text-gray-700 uppercase">Resumo (Snippet)</label>
+                        <textarea rows={2} value={editArticle?.snippet || ""} onChange={(e) => setEditArticle({...editArticle, snippet: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha"></textarea>
+                      </div>
+                      <div>
+                        <label className="text-[11px] font-bold text-gray-700 uppercase">Conteúdo</label>
+                        <textarea rows={6} value={editArticle?.content || ""} onChange={(e) => setEditArticle({...editArticle, content: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha whitespace-pre-wrap"></textarea>
+                      </div>
+                      <div className="flex gap-2">
+                        <button onClick={handleSaveArticle} className="flex-1 bg-verde-mata text-white py-2 rounded text-sm font-bold hover:bg-verde-folha transition flex justify-center items-center gap-2">
+                          {editArticle?.id ? 'Atualizar Artigo' : 'Criar Artigo'} <Check className="h-4 w-4"/>
+                        </button>
+                        {editArticle && (
+                          <button onClick={() => setEditArticle(null)} className="px-4 bg-gray-100 text-gray-700 py-2 rounded text-sm font-bold hover:bg-gray-200 transition">
+                            Cancelar
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-2xl border border-areia-escura shadow-sm overflow-hidden">
+                    <div className="bg-marrom-terra px-6 py-4 text-white">
+                      <h2 className="font-serif font-bold flex items-center gap-2"><BookOpen className="h-5 w-5"/> Artigos Publicados</h2>
+                    </div>
+                    <div className="divide-y divide-gray-100 max-h-[500px] overflow-y-auto">
+                      {articles.map(art => (
+                        <div key={art.id} className="p-4 flex items-center justify-between hover:bg-gray-50">
+                          <div>
+                            <h4 className="font-bold text-gray-900 text-sm">{art.title}</h4>
+                            <p className="text-xs text-gray-500">{art.category} • {art.date}</p>
+                          </div>
+                          <div className="flex gap-2">
+                            <button onClick={() => setEditArticle(art)} className="p-1.5 bg-blue-50 text-blue-600 rounded hover:bg-blue-100"><Edit2 className="h-4 w-4"/></button>
+                            <button onClick={() => handleDeleteArticle(art.id)} className="p-1.5 bg-red-50 text-red-600 rounded hover:bg-red-100"><Trash2 className="h-4 w-4"/></button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeAdminTab === "aulas" && (
+                <div className="space-y-6">
+                  <div className="bg-white rounded-2xl border border-areia-escura shadow-sm p-6">
+                    <h2 className="font-serif font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">{editLesson ? 'Editar Aula' : 'Cadastrar Nova Aula'}</h2>
+                    <div className="space-y-4">
+                      <div>
+                        <label className="text-[11px] font-bold text-gray-700 uppercase">Título da Aula</label>
+                        <input type="text" value={editLesson?.title || ""} onChange={(e) => setEditLesson({...editLesson, title: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                      </div>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <label className="text-[11px] font-bold text-gray-700 uppercase">Categoria</label>
+                          <select value={editLesson?.category || "Doutrina"} onChange={(e) => setEditLesson({...editLesson, category: e.target.value as any})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha">
+                            <option value="Doutrina">Doutrina</option>
+                            <option value="Curimba">Curimba</option>
+                            <option value="Desenvolvimento">Desenvolvimento</option>
+                            <option value="Ervas e Banhos">Ervas e Banhos</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label className="text-[11px] font-bold text-gray-700 uppercase">Duração</label>
+                          <input type="text" value={editLesson?.duration || ""} onChange={(e) => setEditLesson({...editLesson, duration: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <label className="text-[11px] font-bold text-gray-700 uppercase">URL do Vídeo</label>
+                          <input type="text" value={editLesson?.videoUrl || ""} onChange={(e) => setEditLesson({...editLesson, videoUrl: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                        </div>
+                        <div>
+                          <label className="text-[11px] font-bold text-gray-700 uppercase">Nível</label>
+                          <select value={editLesson?.level || "Iniciante"} onChange={(e) => setEditLesson({...editLesson, level: e.target.value as any})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha">
+                            <option value="Iniciante">Iniciante</option>
+                            <option value="Intermediário">Intermediário</option>
+                            <option value="Avançado">Avançado</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div>
+                        <label className="text-[11px] font-bold text-gray-700 uppercase">Descrição</label>
+                        <textarea rows={2} value={editLesson?.description || ""} onChange={(e) => setEditLesson({...editLesson, description: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha"></textarea>
+                      </div>
+                      <div className="flex gap-2">
+                        <button onClick={handleSaveLesson} className="flex-1 bg-verde-mata text-white py-2 rounded text-sm font-bold hover:bg-verde-folha transition flex justify-center items-center gap-2">
+                          {editLesson?.id ? 'Atualizar Aula' : 'Cadastrar Aula'} <Check className="h-4 w-4"/>
+                        </button>
+                        {editLesson && (
+                          <button onClick={() => setEditLesson(null)} className="px-4 bg-gray-100 text-gray-700 py-2 rounded text-sm font-bold hover:bg-gray-200 transition">
+                            Cancelar
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-2xl border border-areia-escura shadow-sm overflow-hidden">
+                    <div className="bg-marrom-terra px-6 py-4 text-white">
+                      <h2 className="font-serif font-bold flex items-center gap-2"><PlayCircle className="h-5 w-5"/> Aulas Cadastradas</h2>
+                    </div>
+                    <div className="divide-y divide-gray-100 max-h-[500px] overflow-y-auto">
+                      {lessons.map(les => (
+                        <div key={les.id} className="p-4 flex items-center justify-between hover:bg-gray-50">
+                          <div>
+                            <h4 className="font-bold text-gray-900 text-sm">{les.title}</h4>
+                            <p className="text-xs text-gray-500">{les.category} • {les.level}</p>
+                          </div>
+                          <div className="flex gap-2">
+                            <button onClick={() => setEditLesson(les)} className="p-1.5 bg-blue-50 text-blue-600 rounded hover:bg-blue-100"><Edit2 className="h-4 w-4"/></button>
+                            <button onClick={() => handleDeleteLesson(les.id)} className="p-1.5 bg-red-50 text-red-600 rounded hover:bg-red-100"><Trash2 className="h-4 w-4"/></button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeAdminTab === "ervas" && (
+                <div className="space-y-6">
+                  <div className="bg-white rounded-2xl border border-areia-escura shadow-sm p-6">
+                    <h2 className="font-serif font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">{editHerb ? 'Editar Erva' : 'Cadastrar Nova Erva'}</h2>
+                    <div className="space-y-4">
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <label className="text-[11px] font-bold text-gray-700 uppercase">Nome Popular</label>
+                          <input type="text" value={editHerb?.name || ""} onChange={(e) => setEditHerb({...editHerb, name: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                        </div>
+                        <div>
+                          <label className="text-[11px] font-bold text-gray-700 uppercase">Nome Científico</label>
+                          <input type="text" value={editHerb?.scientificName || ""} onChange={(e) => setEditHerb({...editHerb, scientificName: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <label className="text-[11px] font-bold text-gray-700 uppercase">Orixá/Vibração</label>
+                          <input type="text" value={editHerb?.orixa || ""} onChange={(e) => setEditHerb({...editHerb, orixa: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                        </div>
+                        <div>
+                          <label className="text-[11px] font-bold text-gray-700 uppercase">Classificação</label>
+                          <select value={editHerb?.classification || "Morna"} onChange={(e) => setEditHerb({...editHerb, classification: e.target.value as any})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha">
+                            <option value="Fria">Fria</option>
+                            <option value="Morna">Morna</option>
+                            <option value="Quente">Quente</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div>
+                        <label className="text-[11px] font-bold text-gray-700 uppercase">Uso Ritual / Descarrego</label>
+                        <textarea rows={2} value={editHerb?.ritualUse || ""} onChange={(e) => setEditHerb({...editHerb, ritualUse: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha"></textarea>
+                      </div>
+                      <div>
+                        <label className="text-[11px] font-bold text-gray-700 uppercase">Modo de Preparo</label>
+                        <textarea rows={2} value={editHerb?.preparation || ""} onChange={(e) => setEditHerb({...editHerb, preparation: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha"></textarea>
+                      </div>
+                      <div className="flex gap-2">
+                        <button onClick={handleSaveHerb} className="flex-1 bg-verde-mata text-white py-2 rounded text-sm font-bold hover:bg-verde-folha transition flex justify-center items-center gap-2">
+                          {editHerb?.id ? 'Atualizar Erva' : 'Cadastrar Erva'} <Check className="h-4 w-4"/>
+                        </button>
+                        {editHerb && (
+                          <button onClick={() => setEditHerb(null)} className="px-4 bg-gray-100 text-gray-700 py-2 rounded text-sm font-bold hover:bg-gray-200 transition">
+                            Cancelar
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-2xl border border-areia-escura shadow-sm overflow-hidden">
+                    <div className="bg-marrom-terra px-6 py-4 text-white">
+                      <h2 className="font-serif font-bold flex items-center gap-2"><TreePine className="h-5 w-5"/> Ervas Cadastradas</h2>
+                    </div>
+                    <div className="divide-y divide-gray-100 max-h-[500px] overflow-y-auto">
+                      {herbs.map(herb => (
+                        <div key={herb.id} className="p-4 flex items-center justify-between hover:bg-gray-50">
+                          <div>
+                            <h4 className="font-bold text-gray-900 text-sm">{herb.name} <span className="font-normal text-xs text-gray-500 italic">({herb.scientificName})</span></h4>
+                            <p className="text-xs text-gray-500">Vibração: {herb.orixa} • Classe: {herb.classification}</p>
+                          </div>
+                          <div className="flex gap-2">
+                            <button onClick={() => setEditHerb(herb)} className="p-1.5 bg-blue-50 text-blue-600 rounded hover:bg-blue-100"><Edit2 className="h-4 w-4"/></button>
+                            <button onClick={() => handleDeleteHerb(herb.id)} className="p-1.5 bg-red-50 text-red-600 rounded hover:bg-red-100"><Trash2 className="h-4 w-4"/></button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               )}
 

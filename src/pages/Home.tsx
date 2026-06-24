@@ -8,6 +8,7 @@ import { Feather, Heart, TreePine, Sparkles, HelpCircle, ArrowRight, Sun, Flame,
 import { initialGiras } from "../data";
 import Logo from "../components/Logo";
 import AtendimentosParticulares from "../components/AtendimentosParticulares";
+import InstagramFeed from "../components/InstagramFeed";
 
 interface HomeProps {
   onNavigate: (route: string) => void;
@@ -227,6 +228,9 @@ export default function Home({ onNavigate }: HomeProps) {
 
         </div>
       </section>
+
+      {/* Instagram Feed Section */}
+      <InstagramFeed />
 
       {/* Atendimentos Particulares Section */}
       <AtendimentosParticulares />

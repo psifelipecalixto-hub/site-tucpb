@@ -1,52 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Search, BookOpen, ArrowRight, User, Clock, X } from "lucide-react";
 import { BlogArticle } from "../types";
-
-const publicArticles: BlogArticle[] = [
-  {
-    id: "art-1",
-    title: "O Sentido Existencial do Terreiro",
-    category: "Fundamentos",
-    snippet: "O terreiro transcende o espaço físico e se torna um hospital de almas, onde o encontro com o sagrado ilumina a nossa experiência de vida e o sentido de estarmos aqui.",
-    content: "O terreiro transcende o espaço físico e se torna um hospital de almas, onde o encontro com o sagrado ilumina a nossa experiência de vida e o sentido de estarmos aqui.\n\nA Umbanda nos convida a olhar para dentro, reconhecendo a nossa própria natureza divina e a conexão profunda com todas as coisas. Ao pisarmos descalços no chão de terra, lembramos de onde viemos e para onde vamos, resgatando a humildade e a reverência diante do mistério da existência.\n\nCada passe, cada canto e cada defumação são convites para o despertar da consciência, para a cura das feridas emocionais e para a reconexão com a nossa essência mais pura. O terreiro é, portanto, um espaço de transformação alquímica, onde a dor se transmuta em sabedoria e o medo cede lugar à fé.",
-    date: "20 de Junho de 2026",
-    readTime: "5 min",
-    author: "Pai Felipe",
-    iconName: "gonga"
-  },
-  {
-    id: "art-2",
-    title: "As Forças da Natureza e o Caboclo Pena Branca",
-    category: "Guias",
-    snippet: "Compreendendo a energia curadora das matas e como a vibração pura de Pena Branca nos ensina sobre a simplicidade e a firmeza no caminhar.",
-    content: "Compreendendo a energia curadora das matas e como a vibração pura de Pena Branca nos ensina sobre a simplicidade e a firmeza no caminhar.\n\nOs Caboclos representam a força primordial da natureza, a sabedoria ancestral daqueles que vivem em harmonia com a terra, a água, o fogo e o ar. Caboclo Pena Branca, em especial, traz a medicina da floresta, a cura através das ervas, dos banhos e dos passes magnéticos.\n\nSua presença no terreiro nos inspira a buscar a cura não apenas do corpo físico, mas também da alma. Ele nos ensina a respeitar os ciclos da natureza, a cultivar a paciência e a confiar na providência divina. Através de sua orientação amorosa, aprendemos a lidar com os desafios da vida com coragem, discernimento e compaixão.",
-    date: "15 de Junho de 2026",
-    readTime: "7 min",
-    author: "Pai Felipe",
-    iconName: "feather"
-  },
-  {
-    id: "art-3",
-    title: "Introdução aos Fundamentos da Umbanda",
-    category: "Fundamentos",
-    snippet: "Um guia de acolhimento para aqueles que dão os primeiros passos na religião. Entenda as linhas, a caridade e o respeito à mironga.",
-    content: "Um guia de acolhimento para aqueles que dão os primeiros passos na religião. Entenda as linhas, a caridade e o respeito à mironga.\n\nA Umbanda é uma religião de matriz africana, nascida no Brasil, que sincretiza elementos do catolicismo, do espiritismo kardecista e das tradições indígenas. Seus pilares fundamentais são a caridade, a humildade e o amor ao próximo.\n\nNeste artigo, exploraremos os conceitos básicos da Umbanda, como a organização das sete linhas, o papel dos Orixás e dos Guias Espirituais, a importância da mediunidade e os rituais que compõem a nossa prática religiosa. Seja você um iniciante ou alguém que busca aprofundar seus conhecimentos, este guia oferecerá uma visão abrangente e respeitosa sobre os fundamentos da nossa fé.",
-    date: "10 de Junho de 2026",
-    readTime: "8 min",
-    author: "Pai Felipe",
-    iconName: "book"
-  }
-];
+import { initialArticles } from "../data";
 
 export default function Portal() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedArticle, setSelectedArticle] = useState<BlogArticle | null>(null);
+  const [articles, setArticles] = useState<BlogArticle[]>([]);
 
-  const filteredArticles = publicArticles.filter(art => 
+  useEffect(() => {
+    const storedArticles = localStorage.getItem("tucpb_articles");
+    if (storedArticles) {
+      setArticles(JSON.parse(storedArticles));
+    } else {
+      setArticles(initialArticles);
+      localStorage.setItem("tucpb_articles", JSON.stringify(initialArticles));
+    }
+  }, []);
+
+  const filteredArticles = articles.filter(art => 
     art.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     art.snippet.toLowerCase().includes(searchQuery.toLowerCase()) ||
     art.category.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
 
   return (
     <div className="animate-fade-in space-y-12 pb-16" id="portal-page">

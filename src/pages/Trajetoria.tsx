@@ -6,6 +6,8 @@
 import { useState } from "react";
 import { Compass, BookOpen, User, Star, Quote, ArrowRight, TreePine, Sparkles } from "lucide-react";
 
+import InstagramFeed from "../components/InstagramFeed";
+
 export default function Trajetoria() {
   const [activeMilestone, setActiveMilestone] = useState<number>(0);
 
@@ -242,6 +244,9 @@ export default function Trajetoria() {
           </div>
         </div>
       </section>
+
+      {/* Instagram Feed Section */}
+      <InstagramFeed />
 
       {/* Sacred Message Section (Caboclo Pena Branca) */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6">
