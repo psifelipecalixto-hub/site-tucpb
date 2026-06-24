@@ -1,0 +1,6 @@
+{
+  "name": "TUCPB - Caboclo Pena Branca",
+  "description": "Site oficial do Templo Umbandista Caboclo Pena Branca (TUCPB) com história, giras, área de membros e portal de estudos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
