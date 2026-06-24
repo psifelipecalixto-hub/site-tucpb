@@ -7,6 +7,7 @@ import { useState, FormEvent } from "react";
 import { Calendar, Clock, Landmark, Heart, User, Sparkles, Check, AlertCircle, FileText, ChevronRight } from "lucide-react";
 import { initialGiras } from "../data";
 import { GiraEvent } from "../types";
+import AtendimentosParticulares from "../components/AtendimentosParticulares";
 
 export default function Agenda() {
   const [girasList] = useState<GiraEvent[]>(initialGiras);
@@ -58,7 +59,7 @@ export default function Agenda() {
             <Calendar className="h-6 w-6" />
           </div>
           <h1 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl">
-            Giras & Agendamentos
+            Agenda e Consultas
           </h1>
           <p className="mx-auto max-w-2xl text-xs sm:text-sm text-areia-escura font-light leading-relaxed">
             Consulte o cronograma de trabalhos espirituais de sábado e solicite sua ficha de consulta fraterna gratuita.
@@ -68,6 +69,27 @@ export default function Agenda() {
 
       {/* Main Section */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Instagram Highlights Block */}
+        <div className="bg-gradient-to-r from-marrom-terra to-marrom-tronco text-pena-branca p-6 rounded-2xl shadow-md mb-12 flex flex-col md:flex-row items-center justify-between gap-4 border border-areia-escura">
+          <div className="flex items-center gap-4">
+             <div className="h-12 w-12 bg-white/10 rounded-full flex items-center justify-center">
+                <Sparkles className="h-6 w-6 text-verde-folha" />
+             </div>
+             <div>
+                <h3 className="font-serif text-xl font-bold">Avisos do Terreiro</h3>
+                <p className="text-areia-escura text-sm font-light mt-1">Acompanhe nossas atualizações nas redes sociais.</p>
+             </div>
+          </div>
+          <div className="flex flex-col md:flex-row gap-4">
+             <div className="bg-white/10 px-6 py-3 rounded-full text-sm font-semibold flex items-center gap-2">
+                Giras aos sábados 🪘
+             </div>
+             <div className="bg-white/10 px-6 py-3 rounded-full text-sm font-semibold flex items-center gap-2">
+                Consultas e trabalhos espirituais 🔮
+             </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Column Left: Schedule Giras (7 cols) */}
@@ -278,6 +300,48 @@ export default function Agenda() {
             )}
           </div>
 
+        </div>
+      </section>
+
+      {/* Atendimentos Particulares Section */}
+      <AtendimentosParticulares />
+
+      {/* Interactive Location / Map Block */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="bg-white rounded-2xl border border-areia-escura p-6 sm:p-8 shadow-sm flex flex-col lg:flex-row items-center gap-8">
+          <div className="flex-1 space-y-4">
+            <h2 className="font-serif text-2xl font-bold tracking-tight text-marrom-terra border-l-4 border-verde-folha pl-4">
+              Nossa Localização
+            </h2>
+            <p className="text-sm text-gray-600 leading-relaxed max-w-md">
+              O Templo Umbandista Caboclo Pena Branca está de portas abertas para te receber. O terreiro é facilmente acessível de carro ou transporte público na região.
+            </p>
+            <div className="bg-areia-suave inline-block p-4 rounded-xl border border-areia-escura space-y-1">
+               <p className="text-xs font-bold text-gray-500 uppercase tracking-widest">Endereço Principal</p>
+               <p className="text-sm font-semibold text-gray-900">Jardim Zuleika</p>
+               <p className="text-sm text-gray-600">Luziânia - GO, Brasil</p>
+            </div>
+            <button className="block w-full sm:w-auto bg-verde-mata text-pena-branca px-6 py-3 rounded-lg text-sm font-semibold hover:bg-verde-folha shadow-sm transition-colors text-center mt-4">
+              Abrir rota no Google Maps
+            </button>
+          </div>
+          
+          <div className="flex-1 w-full">
+            {/* Simulated Map Visual */}
+            <div className="relative aspect-video lg:aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 border border-areia-escura shadow-inner">
+               <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1000&auto=format&fit=crop" alt="Mapa" className="w-full h-full object-cover opacity-60 mix-blend-multiply" />
+               <div className="absolute inset-0 bg-verde-mata/10"></div>
+               {/* Map Pin */}
+               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+                 <div className="h-10 w-10 bg-marrom-terra rounded-full border-4 border-white shadow-lg flex items-center justify-center animate-bounce">
+                    <Landmark className="h-5 w-5 text-pena-branca" />
+                 </div>
+                 <div className="mt-2 bg-white/90 backdrop-blur px-3 py-1 rounded-md shadow text-xs font-bold text-marrom-terra">
+                   TUCPB
+                 </div>
+               </div>
+            </div>
+          </div>
         </div>
       </section>
 

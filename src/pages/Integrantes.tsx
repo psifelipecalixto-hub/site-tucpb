@@ -1,16 +1,10 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import { useState, FormEvent } from "react";
-import { Lock, Unlock, Users, ClipboardList, BookOpen, Bell, CheckCircle, Search, Feather, Plus, LogOut, ArrowRight } from "lucide-react";
-import { initialTasks, initialPoints } from "../data";
-import { MemberTask, CurimbaPoint } from "../types";
+import { Lock, Unlock, Users, ClipboardList, BookOpen, Bell, CheckCircle, Search, PlayCircle, TreePine, X, HelpCircle, GraduationCap } from "lucide-react";
+import { initialTasks, initialPoints, initialLessons, initialHerbs } from "../data";
+import { MemberTask, CurimbaPoint, Lesson, Herb } from "../types";
 
 export default function Integrantes() {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-  const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [loginError, setLoginError] = useState<string>("");
 
@@ -25,27 +19,32 @@ export default function Integrantes() {
   const [newAssignedTo, setNewAssignedTo] = useState("");
   const [newTaskArea, setNewTaskArea] = useState<MemberTask["area"]>("Terreiro / Gongá");
 
-  const [activeTab, setActiveTab] = useState<"escala" | "curimba" | "avisos">("escala");
+  const [activeTab, setActiveTab] = useState<"escala" | "curimba" | "estudos" | "avisos">("escala");
+  
+  // Studies tab states
+  const [activeEstudoTab, setActiveEstudoTab] = useState<"aulas" | "ervas">("aulas");
+  const [searchEstudoQuery, setSearchEstudoQuery] = useState("");
+  const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
+  const [selectedHerb, setSelectedHerb] = useState<Herb | null>(null);
+  const [herbFilter, setHerbFilter] = useState<string>("Todas");
 
   const handleLogin = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (email.trim().toLowerCase() === "membro@tucpb.com" && password === "oxala") {
+    if (password === "tucpb2026") {
       setIsLoggedIn(true);
       setLoginError("");
-    } else if (email.trim() === "" || password === "") {
-      setLoginError("Por favor, preencha todos os campos.");
+    } else if (password === "") {
+      setLoginError("Por favor, digite a senha.");
     } else {
-      setLoginError("Credenciais inválidas. Para testar o preview, digite o e-mail: membro@tucpb.com e senha: oxala");
+      setLoginError("Acesso restrito aos filhos da casa.");
     }
   };
 
   const handleLogout = () => {
     setIsLoggedIn(false);
-    setEmail("");
     setPassword("");
   };
 
-  // Toggle task completion
   const handleToggleTask = (taskId: string) => {
     setTasks(
       tasks.map((t) => {
@@ -62,7 +61,6 @@ export default function Integrantes() {
     );
   };
 
-  // Add new task
   const handleAddTask = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!newTaskText.trim() || !newAssignedTo.trim()) return;
@@ -81,16 +79,29 @@ export default function Integrantes() {
     setNewAssignedTo("");
   };
 
-  // Filter tasks based on Area selection
   const uniqueAreas = ["Todas", "Terreiro / Gongá", "Cozinha", "Portaria / Harmonização", "Defumação", "Curimba"];
   const filteredTasks = tasks.filter(t => filterArea === "Todas" || t.area === filterArea);
 
-  // Filter songs based on search
   const filteredSongs = initialPoints.filter(s => 
     s.title.toLowerCase().includes(searchSong.toLowerCase()) || 
     s.guideOrOrixa.toLowerCase().includes(searchSong.toLowerCase()) ||
     s.lyrics.toLowerCase().includes(searchSong.toLowerCase())
   );
+
+  const filteredLessons = initialLessons.filter(les => 
+    les.title.toLowerCase().includes(searchEstudoQuery.toLowerCase()) ||
+    les.description.toLowerCase().includes(searchEstudoQuery.toLowerCase()) ||
+    les.category.toLowerCase().includes(searchEstudoQuery.toLowerCase())
+  );
+
+  const filteredHerbs = initialHerbs.filter(herb => {
+    const matchesSearch = herb.name.toLowerCase().includes(searchEstudoQuery.toLowerCase()) ||
+      herb.orixa.toLowerCase().includes(searchEstudoQuery.toLowerCase()) ||
+      herb.ritualUse.toLowerCase().includes(searchEstudoQuery.toLowerCase());
+    
+    const matchesFilter = herbFilter === "Todas" || herb.classification === herbFilter;
+    return matchesSearch && matchesFilter;
+  });
 
   const internalBulletins = [
     {
@@ -126,10 +137,10 @@ export default function Integrantes() {
             <Users className="h-6 w-6" />
           </div>
           <h1 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl">
-            Área de Integrantes
+            Área Restrita de Estudos
           </h1>
           <p className="mx-auto max-w-2xl text-xs sm:text-sm text-areia-escura font-light leading-relaxed">
-            Portal exclusivo para médiuns, cambones, ogãs e colaboradores do Templo Umbandista Caboclo Pena Branca.
+            Portal exclusivo para médiuns, cambones, ogãs e filhos do Templo Umbandista Caboclo Pena Branca.
           </p>
         </div>
       </section>
@@ -144,23 +155,11 @@ export default function Integrantes() {
               </div>
               <h2 className="font-serif text-xl font-bold text-gray-900">Acesso Restrito</h2>
               <p className="text-xs text-gray-500">
-                Entre com suas credenciais de médium cadastrado para ver tarefas, avisos e a apostila de curimba.
+                Digite a senha da casa para ver tarefas, avisos e acessar estudos profundos sobre a mironga, Ibás dos Orixás e regras da corrente.
               </p>
             </div>
 
             <form onSubmit={handleLogin} className="space-y-4" id="login-form">
-              <div className="space-y-1">
-                <label className="text-xs font-semibold text-gray-700 block">E-mail do Integrante</label>
-                <input
-                  type="email"
-                  placeholder="membro@tucpb.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm focus:outline-none focus:ring-2 focus:ring-verde-folha"
-                  id="login-email"
-                />
-              </div>
-
               <div className="space-y-1">
                 <label className="text-xs font-semibold text-gray-700 block">Senha de Acesso</label>
                 <input
@@ -179,12 +178,6 @@ export default function Integrantes() {
                 </div>
               )}
 
-              {/* Informative credentials hint as requested by instructions */}
-              <div className="p-3.5 bg-verde-folha/5 border border-verde-folha/20 text-verde-folha rounded-lg text-xs leading-relaxed space-y-1">
-                <span className="font-bold flex items-center gap-1">🔑 Acesso de Teste (Preview):</span>
-                <p>Use o e-mail <strong>membro@tucpb.com</strong> e a senha <strong>oxala</strong> para acessar os painéis de tarefas e materiais de estudo.</p>
-              </div>
-
               <button
                 type="submit"
                 className="w-full bg-verde-mata text-pena-branca py-2.5 rounded-lg text-sm font-semibold hover:bg-verde-folha shadow-sm transition-colors flex items-center justify-center gap-2"
@@ -198,155 +191,120 @@ export default function Integrantes() {
         </section>
       ) : (
         /* Member Dashboard (If Logged In) */
-        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-12 space-y-8">
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-8">
           
-          {/* Dashboard Header Bar */}
-          <div className="bg-white rounded-xl border border-areia-escura p-6 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <div className="flex items-center gap-4">
-              <div className="h-12 w-12 rounded-full bg-verde-folha/15 text-verde-folha flex items-center justify-center font-serif font-bold text-xl">
-                L
-              </div>
-              <div>
-                <h2 className="font-serif text-lg font-bold text-gray-900">Lucas de Ogum</h2>
-                <div className="flex flex-wrap gap-2 mt-1">
-                  <span className="text-[10px] font-mono bg-verde-folha/10 text-verde-folha px-2 py-0.5 rounded-full font-semibold">
-                    Corrente Ativa
-                  </span>
-                  <span className="text-[10px] font-mono bg-marrom-terra/10 text-marrom-terra px-2 py-0.5 rounded-full font-semibold">
-                    Médium de Incorporação
-                  </span>
-                </div>
-              </div>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4 border-b border-areia-escura pb-4">
+            <div className="flex gap-2 w-full overflow-x-auto pb-1 sm:pb-0" id="member-tabs">
+              <button
+                onClick={() => setActiveTab("escala")}
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold whitespace-nowrap transition-all ${
+                  activeTab === "escala"
+                    ? "bg-marrom-terra text-pena-branca shadow-sm"
+                    : "bg-white text-gray-600 border border-areia-escura hover:bg-areia-suave"
+                }`}
+              >
+                <ClipboardList className="h-4 w-4" />
+                Escala & Regras
+              </button>
+              <button
+                onClick={() => setActiveTab("curimba")}
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold whitespace-nowrap transition-all ${
+                  activeTab === "curimba"
+                    ? "bg-marrom-terra text-pena-branca shadow-sm"
+                    : "bg-white text-gray-600 border border-areia-escura hover:bg-areia-suave"
+                }`}
+              >
+                <BookOpen className="h-4 w-4" />
+                Apostilas do Terreiro
+              </button>
+              <button
+                onClick={() => setActiveTab("estudos")}
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold whitespace-nowrap transition-all ${
+                  activeTab === "estudos"
+                    ? "bg-marrom-terra text-pena-branca shadow-sm"
+                    : "bg-white text-gray-600 border border-areia-escura hover:bg-areia-suave"
+                }`}
+              >
+                <GraduationCap className="h-4 w-4" />
+                Estudos Profundos
+              </button>
+              <button
+                onClick={() => setActiveTab("avisos")}
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold whitespace-nowrap transition-all ${
+                  activeTab === "avisos"
+                    ? "bg-marrom-terra text-pena-branca shadow-sm"
+                    : "bg-white text-gray-600 border border-areia-escura hover:bg-areia-suave"
+                }`}
+              >
+                <Bell className="h-4 w-4" />
+                Mural de Avisos
+              </button>
             </div>
-
             <button
               onClick={handleLogout}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-red-200 text-red-600 hover:bg-red-50 text-xs font-semibold transition-all"
-              id="logout-btn"
+              className="text-xs text-red-600 hover:text-red-800 font-semibold flex items-center gap-1 bg-red-50 hover:bg-red-100 px-3 py-1.5 rounded-md transition-colors"
             >
-              <LogOut className="h-3.5 w-3.5" />
-              Sair do Portal
+              Sair
             </button>
           </div>
 
-          {/* Tab Selection */}
-          <div className="flex border-b border-areia-escura gap-2" id="member-tabs">
-            <button
-              onClick={() => setActiveTab("escala")}
-              className={`pb-3 px-4 font-serif text-sm font-bold flex items-center gap-2 border-b-2 transition-all ${
-                activeTab === "escala"
-                  ? "border-verde-folha text-verde-folha"
-                  : "border-transparent text-gray-500 hover:text-gray-900"
-              }`}
-              id="tab-btn-escala"
-            >
-              <ClipboardList className="h-4 w-4" />
-              Escala de Gira
-            </button>
-            <button
-              onClick={() => setActiveTab("curimba")}
-              className={`pb-3 px-4 font-serif text-sm font-bold flex items-center gap-2 border-b-2 transition-all ${
-                activeTab === "curimba"
-                  ? "border-verde-folha text-verde-folha"
-                  : "border-transparent text-gray-500 hover:text-gray-900"
-              }`}
-              id="tab-btn-curimba"
-            >
-              <BookOpen className="h-4 w-4" />
-              Apostila de Pontos
-            </button>
-            <button
-              onClick={() => setActiveTab("avisos")}
-              className={`pb-3 px-4 font-serif text-sm font-bold flex items-center gap-2 border-b-2 transition-all ${
-                activeTab === "avisos"
-                  ? "border-verde-folha text-verde-folha"
-                  : "border-transparent text-gray-500 hover:text-gray-900"
-              }`}
-              id="tab-btn-avisos"
-            >
-              <Bell className="h-4 w-4" />
-              Avisos Internos
-            </button>
-          </div>
-
-          {/* TAB 1: Escala de Gira (Tasks Manager) */}
+          {/* TAB 1: Escala e Regras */}
           {activeTab === "escala" && (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start animate-fade-in-quick">
-              
-              {/* Filter & Task List */}
               <div className="lg:col-span-8 space-y-6">
-                <div className="bg-white rounded-xl border border-areia-escura p-6 shadow-sm space-y-4">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                    <h3 className="font-serif text-base font-bold text-marrom-terra">
-                      Quadro de Escalas e Limpeza
-                    </h3>
-                    
-                    {/* Area Filters */}
+                <div className="bg-white rounded-xl border border-areia-escura shadow-sm overflow-hidden">
+                  <div className="bg-areia-suave px-6 py-4 border-b border-areia-escura flex justify-between items-center">
+                    <h2 className="font-serif font-bold text-gray-900 flex items-center gap-2">
+                      <ClipboardList className="h-5 w-5 text-verde-folha" />
+                      Escala de Trabalhos (Sábado)
+                    </h2>
                     <select
                       value={filterArea}
                       onChange={(e) => setFilterArea(e.target.value)}
-                      className="text-xs bg-areia-suave border border-areia-escura px-2.5 py-1.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-verde-folha"
+                      className="text-xs px-2 py-1 rounded bg-white border border-areia-escura focus:outline-none"
                     >
-                      {uniqueAreas.map((area) => (
-                        <option key={area} value={area}>{area}</option>
-                      ))}
+                      {uniqueAreas.map(area => <option key={area} value={area}>{area}</option>)}
                     </select>
                   </div>
-
-                  {/* Tasks list */}
-                  <div className="space-y-3">
+                  
+                  <div className="divide-y divide-areia-escura max-h-[600px] overflow-y-auto">
                     {filteredTasks.length === 0 ? (
-                      <p className="text-center py-8 text-xs text-gray-500">Nenhuma escala encontrada para esta área.</p>
+                      <div className="p-8 text-center text-gray-500 text-sm">Nenhuma tarefa designada para esta área.</div>
                     ) : (
-                      filteredTasks.map((t) => (
-                        <div
-                          key={t.id}
-                          onClick={() => handleToggleTask(t.id)}
-                          className={`p-4 rounded-xl border flex items-start gap-4 cursor-pointer transition-all ${
-                            t.status === "Concluido"
-                              ? "bg-gray-50 border-gray-200 text-gray-400"
-                              : "bg-white border-areia-escura hover:border-marrom-claro hover:shadow-sm"
-                          }`}
-                        >
-                          <div className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border ${
-                            t.status === "Concluido"
-                              ? "bg-verde-folha border-verde-folha text-white"
-                              : t.status === "Em Andamento"
-                              ? "border-amber-400 bg-amber-50 text-amber-500"
-                              : "border-gray-300"
-                          }`}>
-                            {t.status === "Concluido" && <CheckCircle className="h-4 w-4" />}
-                          </div>
-
-                          <div className="flex-1 space-y-1">
-                            <p className={`text-sm font-semibold leading-tight ${t.status === "Concluido" ? "line-through" : "text-gray-900"}`}>
-                              {t.task}
-                            </p>
-                            <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs">
-                              <span className="font-medium text-marrom-tronco">👤 {t.assignedTo}</span>
-                              <span className="text-gray-400 font-mono">📅 {t.date}</span>
-                              <span className={`px-1.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${
-                                t.area === "Curimba" ? "bg-amber-100 text-amber-800" :
-                                t.area === "Cozinha" ? "bg-purple-100 text-purple-800" :
-                                t.area === "Defumação" ? "bg-rose-100 text-rose-800" :
+                      filteredTasks.map((task) => (
+                        <div key={task.id} className="p-4 sm:p-6 flex items-start gap-4 hover:bg-gray-50 transition-colors">
+                          <button 
+                            onClick={() => handleToggleTask(task.id)}
+                            className="mt-1 shrink-0"
+                          >
+                            {task.status === "Concluido" ? (
+                              <CheckCircle className="h-6 w-6 text-emerald-500" />
+                            ) : task.status === "Em Andamento" ? (
+                              <div className="h-6 w-6 rounded-full border-2 border-amber-500 bg-amber-100 flex items-center justify-center">
+                                <div className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
+                              </div>
+                            ) : (
+                              <div className="h-6 w-6 rounded-full border-2 border-gray-300 hover:border-verde-folha transition-colors"></div>
+                            )}
+                          </button>
+                          
+                          <div className="flex-1 space-y-1.5">
+                            <h3 className={`text-sm font-semibold ${task.status === "Concluido" ? "text-gray-400 line-through" : "text-gray-900"}`}>
+                              {task.task}
+                            </h3>
+                            <div className="flex flex-wrap items-center gap-3 text-[11px] font-mono">
+                              <span className="bg-marrom-terra/5 text-marrom-terra px-2 py-0.5 rounded font-bold">
+                                {task.area}
+                              </span>
+                              <span className="text-gray-500">Membro: {task.assignedTo}</span>
+                              <span className={`px-2 py-0.5 rounded ${
+                                task.status === "Pendente" ? "bg-gray-100 text-gray-600" :
+                                task.status === "Em Andamento" ? "bg-amber-100 text-amber-800" :
                                 "bg-emerald-100 text-emerald-800"
                               }`}>
-                                {t.area}
+                                {task.status}
                               </span>
                             </div>
-                          </div>
-
-                          <div className="text-right shrink-0">
-                            <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full ${
-                              t.status === "Concluido"
-                                ? "bg-green-100 text-green-800"
-                                : t.status === "Em Andamento"
-                                ? "bg-amber-100 text-amber-800"
-                                : "bg-gray-100 text-gray-800"
-                            }`}>
-                              {t.status}
-                            </span>
-                            <p className="text-[9px] text-gray-400 mt-1">Clique para mudar</p>
                           </div>
                         </div>
                       ))
@@ -355,26 +313,20 @@ export default function Integrantes() {
                 </div>
               </div>
 
-              {/* Add New Duty Form */}
-              <div className="lg:col-span-4 bg-white rounded-xl border border-areia-escura p-6 shadow-sm space-y-4">
-                <h3 className="font-serif text-base font-bold text-marrom-terra flex items-center gap-1.5">
-                  <Plus className="h-4 w-4 text-verde-folha" />
-                  Escalar Nova Tarefa
-                </h3>
-                <p className="text-xs text-gray-500">
-                  Adicione afazeres de preparação ou assistência para as giras de sábado.
-                </p>
-
-                <form onSubmit={handleAddTask} className="space-y-3" id="add-task-form">
+              <div className="lg:col-span-4 space-y-6">
+                <form onSubmit={handleAddTask} className="bg-white rounded-xl border border-areia-escura p-6 shadow-sm space-y-4">
+                  <h3 className="font-serif font-bold text-gray-900 text-sm border-b border-areia-escura pb-2">
+                    Designar Nova Tarefa Litúrgica
+                  </h3>
+                  
                   <div className="space-y-1">
-                    <label className="text-[11px] font-bold text-gray-700 block">Qual é o afazer?</label>
+                    <label className="text-[11px] font-bold text-gray-700 block">Descrição da Tarefa</label>
                     <input
                       type="text"
-                      placeholder="Ex: Buscar arruda na horta do terreiro"
+                      placeholder="Ex: Preparar amaci de Oxalá"
                       value={newTaskText}
                       onChange={(e) => setNewTaskText(e.target.value)}
                       className="w-full px-3 py-2 border border-areia-escura bg-areia-suave text-xs rounded-lg focus:outline-none focus:ring-1 focus:ring-verde-folha"
-                      id="new-task-text"
                     />
                   </div>
 
@@ -386,7 +338,6 @@ export default function Integrantes() {
                       value={newAssignedTo}
                       onChange={(e) => setNewAssignedTo(e.target.value)}
                       className="w-full px-3 py-2 border border-areia-escura bg-areia-suave text-xs rounded-lg focus:outline-none focus:ring-1 focus:ring-verde-folha"
-                      id="new-task-assignee"
                     />
                   </div>
 
@@ -396,7 +347,6 @@ export default function Integrantes() {
                       value={newTaskArea}
                       onChange={(e) => setNewTaskArea(e.target.value as MemberTask["area"])}
                       className="w-full px-3 py-2 border border-areia-escura bg-areia-suave text-xs rounded-lg focus:outline-none focus:ring-1 focus:ring-verde-folha"
-                      id="new-task-area"
                     >
                       <option value="Terreiro / Gongá">Terreiro / Gongá</option>
                       <option value="Cozinha">Cozinha</option>
@@ -409,7 +359,6 @@ export default function Integrantes() {
                   <button
                     type="submit"
                     className="w-full bg-marrom-terra text-pena-branca py-2 rounded-lg text-xs font-semibold hover:bg-marrom-tronco shadow-sm transition-colors"
-                    id="add-task-btn"
                   >
                     Escalar Integrante
                   </button>
@@ -419,7 +368,7 @@ export default function Integrantes() {
             </div>
           )}
 
-          {/* TAB 2: Apostila de Pontos (Curimba) */}
+          {/* TAB 2: Apostilas do Terreiro */}
           {activeTab === "curimba" && (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start animate-fade-in-quick">
               
@@ -433,7 +382,6 @@ export default function Integrantes() {
                     value={searchSong}
                     onChange={(e) => setSearchSong(e.target.value)}
                     className="w-full pl-9 pr-4 py-2 border border-areia-escura bg-areia-suave text-xs rounded-lg focus:outline-none focus:ring-1 focus:ring-verde-folha"
-                    id="search-song-input"
                   />
                 </div>
 
@@ -478,76 +426,206 @@ export default function Integrantes() {
                         </h3>
                       </div>
                       <span className="px-3 py-1 bg-marrom-terra text-pena-branca text-xs font-semibold rounded-full">
-                        Toque / Classificação: {selectedSong.type}
+                        Toque: {selectedSong.rhythm}
                       </span>
                     </div>
 
-                    <div className="bg-[#fcfbfa] rounded-xl p-6 border border-areia-escura/60 shadow-inner">
-                      <pre className="font-sans text-sm text-gray-800 leading-relaxed whitespace-pre-line text-center">
-                        {selectedSong.lyrics}
-                      </pre>
+                    <div className="p-6 bg-areia-suave border border-areia-escura rounded-lg relative">
+                       <div className="absolute top-4 right-4 opacity-10">
+                          <BookOpen className="h-24 w-24 text-marrom-terra" />
+                       </div>
+                       <pre className="font-serif text-sm sm:text-base text-gray-800 whitespace-pre-wrap leading-loose relative z-10">
+                         {selectedSong.lyrics}
+                       </pre>
                     </div>
 
-                    <div className="p-3.5 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-800 flex items-start gap-2">
-                      <Feather className="h-4 w-4 shrink-0 mt-0.5 text-amber-500" />
-                      <p>
-                        <strong>Sustentação na Gira:</strong> Este ponto cantado deve ser entoado com vibração alegre e forte batida dos atabaques. Cambones e médiuns devem apoiar o coro com palmas harmoniosas.
-                      </p>
-                    </div>
+                    {selectedSong.audioUrl && (
+                      <div className="mt-4 p-4 bg-gray-50 rounded-lg border border-gray-200 flex items-center justify-between">
+                         <span className="text-xs font-bold text-gray-600 flex items-center gap-2">
+                           <PlayCircle className="h-4 w-4" />
+                           Áudio de Referência (Simulado)
+                         </span>
+                         <div className="h-2 w-32 bg-gray-200 rounded-full overflow-hidden">
+                           <div className="h-full w-1/3 bg-verde-folha rounded-full"></div>
+                         </div>
+                      </div>
+                    )}
                   </div>
                 ) : (
-                  <p className="text-center py-12 text-xs text-gray-500">Selecione um ponto à esquerda para ler a letra.</p>
+                  <div className="h-full min-h-[300px] flex flex-col items-center justify-center text-gray-400 space-y-4">
+                    <BookOpen className="h-12 w-12 opacity-20" />
+                    <p className="text-sm">Selecione um ponto na lista para ver a letra e o toque.</p>
+                  </div>
                 )}
               </div>
-
             </div>
           )}
 
-          {/* TAB 3: Avisos Internos */}
-          {activeTab === "avisos" && (
-            <div className="mx-auto max-w-4xl space-y-6 animate-fade-in-quick">
-              
-              <div className="flex items-center gap-2 border-b border-areia-escura pb-3">
-                <Bell className="h-5 w-5 text-verde-folha" />
-                <h3 className="font-serif text-base font-bold text-marrom-terra">
-                  Painel de Avisos Doutrinários
-                </h3>
-              </div>
-
-              <div className="grid grid-cols-1 gap-6">
-                {internalBulletins.map((item) => (
-                  <div
-                    key={item.id}
-                    className={`p-6 rounded-2xl border ${
-                      item.important
-                        ? "bg-rose-50/50 border-rose-200 ring-1 ring-rose-300/40"
-                        : "bg-white border-areia-escura shadow-sm"
+          {/* TAB 3: Estudos Profundos */}
+          {activeTab === "estudos" && (
+            <div className="space-y-6 animate-fade-in-quick">
+              <div className="bg-white rounded-2xl border border-areia-escura p-4 shadow-sm flex flex-col sm:flex-row items-center gap-4">
+                <div className="flex gap-2 w-full sm:w-auto overflow-x-auto pb-1 sm:pb-0">
+                  <button
+                    onClick={() => setActiveEstudoTab("aulas")}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${
+                      activeEstudoTab === "aulas"
+                        ? "bg-verde-mata text-white shadow-sm"
+                        : "bg-areia-suave text-gray-600 hover:bg-areia-escura"
                     }`}
                   >
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="space-y-1">
-                        <div className="flex items-center gap-2 flex-wrap">
-                          <h4 className="font-serif text-base font-bold text-gray-900">{item.title}</h4>
-                          {item.important && (
-                            <span className="text-[9px] bg-rose-500 text-white px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">
-                              Importante / Urgente
-                            </span>
-                          )}
-                        </div>
-                        <p className="text-xs font-mono text-gray-400">Publicado para: {item.date}</p>
-                      </div>
-                    </div>
-                    <p className="text-sm text-gray-700 leading-relaxed mt-4">
-                      {item.content}
-                    </p>
-                  </div>
-                ))}
+                    <PlayCircle className="h-4 w-4" />
+                    Aulas de Fundamentos & Ibás
+                  </button>
+                  <button
+                    onClick={() => setActiveEstudoTab("ervas")}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${
+                      activeEstudoTab === "ervas"
+                        ? "bg-verde-mata text-white shadow-sm"
+                        : "bg-areia-suave text-gray-600 hover:bg-areia-escura"
+                    }`}
+                  >
+                    <TreePine className="h-4 w-4" />
+                    Catálogo de Ervas
+                  </button>
+                </div>
+                <div className="relative w-full sm:w-64 sm:ml-auto">
+                  <Search className="absolute left-3 top-2 h-4 w-4 text-gray-400" />
+                  <input
+                    type="text"
+                    placeholder="Pesquisar estudos..."
+                    value={searchEstudoQuery}
+                    onChange={(e) => setSearchEstudoQuery(e.target.value)}
+                    className="w-full pl-9 pr-4 py-1.5 border border-areia-escura bg-areia-suave text-xs rounded-lg focus:outline-none focus:ring-1 focus:ring-verde-folha"
+                  />
+                </div>
               </div>
 
+              {activeEstudoTab === "aulas" && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {filteredLessons.length === 0 ? (
+                    <p className="col-span-2 text-center py-16 text-gray-500">Nenhuma aula encontrada.</p>
+                  ) : (
+                    filteredLessons.map((lesson) => (
+                      <div key={lesson.id} className="bg-white rounded-xl border border-areia-escura overflow-hidden shadow-sm flex flex-col h-full">
+                        <div className="relative bg-gradient-to-br from-marrom-terra to-marrom-tronco aspect-video flex items-center justify-center group overflow-hidden">
+                          <PlayCircle className="h-12 w-12 text-white/50 group-hover:scale-110 group-hover:text-white transition-all cursor-pointer z-10" onClick={() => setSelectedLesson(lesson)}/>
+                          <div className="absolute bottom-2 left-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded font-mono">{lesson.duration}</div>
+                          <div className="absolute top-2 right-2 bg-verde-folha text-white text-[10px] px-2 py-0.5 rounded uppercase font-bold">{lesson.level}</div>
+                        </div>
+                        <div className="p-4 flex-1 space-y-2">
+                          <span className="text-[10px] font-mono text-gray-500 uppercase">Módulo: {lesson.category}</span>
+                          <h3 className="font-serif font-bold text-gray-900 leading-tight">{lesson.title}</h3>
+                          <p className="text-xs text-gray-600 line-clamp-2">{lesson.description}</p>
+                        </div>
+                      </div>
+                    ))
+                  )}
+                </div>
+              )}
+
+              {activeEstudoTab === "ervas" && (
+                <div className="space-y-4">
+                  <div className="flex flex-wrap gap-2">
+                    {["Todas", "Fria", "Morna", "Quente"].map((cls) => (
+                      <button
+                        key={cls}
+                        onClick={() => setHerbFilter(cls)}
+                        className={`px-3 py-1 text-xs font-bold rounded-full border transition-colors ${
+                          herbFilter === cls ? "bg-verde-folha text-white border-verde-folha" : "bg-white text-gray-600 border-areia-escura"
+                        }`}
+                      >
+                        {cls}
+                      </button>
+                    ))}
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {filteredHerbs.map((herb) => (
+                      <div key={herb.id} className="bg-white rounded-xl border border-areia-escura p-4 shadow-sm flex flex-col hover:border-verde-folha/50 transition-colors">
+                        <div className="flex justify-between items-start mb-2">
+                          <TreePine className="h-5 w-5 text-verde-folha" />
+                          <span className="text-[10px] bg-gray-100 text-gray-800 px-2 py-0.5 rounded font-bold uppercase">{herb.classification}</span>
+                        </div>
+                        <h3 className="font-serif font-bold text-gray-900">{herb.name}</h3>
+                        <p className="text-[10px] text-gray-500 font-mono mb-2">Vibração: {herb.orixa}</p>
+                        <button onClick={() => setSelectedHerb(herb)} className="mt-auto w-full py-1.5 bg-areia-suave hover:bg-areia-escura text-gray-800 text-xs font-semibold rounded-lg transition-colors">Ver Fundamento</button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           )}
 
+          {/* TAB 4: Mural de Avisos */}
+          {activeTab === "avisos" && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in-quick">
+              {internalBulletins.map((bulletin) => (
+                <div key={bulletin.id} className={`rounded-xl p-6 border shadow-sm flex flex-col space-y-3 ${
+                  bulletin.important ? "bg-red-50 border-red-200" : "bg-white border-areia-escura"
+                }`}>
+                  <div className="flex items-center justify-between">
+                    <span className={`text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-sm ${
+                      bulletin.important ? "bg-red-100 text-red-800" : "bg-areia-suave text-gray-600"
+                    }`}>
+                      {bulletin.important ? "Urgente" : "Informativo"}
+                    </span>
+                    <span className="text-[10px] text-gray-500 font-mono">{bulletin.date}</span>
+                  </div>
+                  
+                  <h3 className={`font-serif text-lg font-bold ${bulletin.important ? "text-red-900" : "text-gray-900"}`}>
+                    {bulletin.title}
+                  </h3>
+                  
+                  <p className={`text-sm leading-relaxed ${bulletin.important ? "text-red-800" : "text-gray-600"}`}>
+                    {bulletin.content}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
         </section>
+      )}
+
+      {/* MODAL: Video Lesson */}
+      {selectedLesson && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in-quick">
+          <div className="relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden border border-areia-escura flex flex-col max-h-[90vh]">
+            <div className="flex items-center justify-between p-4 border-b border-areia-escura bg-areia-suave">
+              <div className="flex items-center gap-3">
+                <PlayCircle className="h-5 w-5 text-verde-mata" />
+                <h3 className="font-bold text-sm text-gray-900">{selectedLesson.title}</h3>
+              </div>
+              <button onClick={() => setSelectedLesson(null)} className="p-2 rounded-full hover:bg-gray-200 text-gray-500">
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+            <div className="bg-black aspect-video relative flex items-center justify-center">
+              <PlayCircle className="h-16 w-16 text-white/30" />
+            </div>
+            <div className="p-6 overflow-y-auto">
+              <p className="text-sm text-gray-700">{selectedLesson.description}</p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* MODAL: Herb Details */}
+      {selectedHerb && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in-quick">
+          <div className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl p-6 border border-areia-escura">
+            <button onClick={() => setSelectedHerb(null)} className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 text-gray-500">
+              <X className="h-5 w-5" />
+            </button>
+            <h2 className="font-serif text-2xl font-bold text-marrom-terra mb-1">{selectedHerb.name}</h2>
+            <p className="text-xs text-gray-500 font-mono mb-4">Classificação: {selectedHerb.classification}</p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div><strong>Vibração:</strong> {selectedHerb.orixa}</div>
+              <div><strong>Uso Ritual:</strong> {selectedHerb.ritualUse}</div>
+              <div><strong>Preparo:</strong> {selectedHerb.preparation}</div>
+            </div>
+          </div>
+        </div>
       )}
 
     </div>

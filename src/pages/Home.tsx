@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Feather, Heart, TreePine, Sparkles, HelpCircle, ArrowRight, Sun, Flame, Droplets, Landmark } from "lucide-react";
 import { initialGiras } from "../data";
 import Logo from "../components/Logo";
+import AtendimentosParticulares from "../components/AtendimentosParticulares";
 
 interface HomeProps {
   onNavigate: (route: string) => void;
@@ -53,41 +54,34 @@ export default function Home({ onNavigate }: HomeProps) {
     <div className="animate-fade-in space-y-16 pb-16" id="home-page">
       
       {/* Hero Banner Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-verde-mata to-verde-folha py-24 text-center px-4 sm:px-6 lg:px-8 shadow-inner">
-        {/* Abstract Spiritual Background Patterns */}
+      <section className="relative overflow-hidden bg-verde-mata py-32 text-center px-4 sm:px-6 lg:px-8 shadow-inner" style={{ backgroundImage: 'linear-gradient(to bottom, rgba(28, 43, 30, 0.85), rgba(28, 43, 30, 0.95)), url("https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2000&auto=format&fit=crop")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#e8e2d5_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-pena-branca/5 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div className="relative mx-auto max-w-4xl space-y-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pena-branca/10 text-areia-escura text-xs font-mono uppercase tracking-widest">
-            <Sparkles className="h-3 w-3 text-areia-escura animate-pulse" />
-            Templo de Caridade Espiritual
-          </div>
+        <div className="relative mx-auto max-w-4xl space-y-8">
           
-          <h1 className="font-serif text-3xl font-bold tracking-wider text-pena-branca sm:text-5xl md:text-6xl">
-            Templo Umbandista <br />
-            <span className="text-areia-escura font-normal">Caboclo Pena Branca</span>
+          <h1 className="font-serif text-4xl font-bold tracking-wider text-pena-branca sm:text-5xl md:text-6xl leading-tight">
+            Aqui, o tempo suspende seu passo e a ancestralidade toma corpo.
           </h1>
           
           <p className="mx-auto max-w-2xl text-base text-areia-escura sm:text-lg md:text-xl font-light leading-relaxed">
-            Bem-vindo ao nosso terreiro de fé. Sob as bençãos de Oxalá e a tutela do Caboclo Pena Branca, trabalhamos na caridade gratuita, no passe de cura e na palavra que conforta.
+            Bem-vindo ao Templo Umbandista Caboclo Pena Branca. Um espaço sagrado de caridade, cura e conexão espiritual sob as bênçãos de Oxalá.
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 pt-4">
             <a
               href="#agenda"
               onClick={(e) => { e.preventDefault(); onNavigate("#agenda"); window.location.hash = "#agenda"; }}
-              className="flex items-center gap-2 rounded-full bg-marrom-terra px-6 py-3 text-sm font-semibold text-pena-branca shadow-md hover:bg-marrom-tronco transition-all hover:scale-[1.02]"
+              className="flex items-center gap-2 rounded-full bg-marrom-terra px-8 py-3 text-sm font-semibold text-pena-branca shadow-md hover:bg-marrom-tronco transition-all hover:scale-[1.02]"
             >
-              Consultar Agenda
+              Nossa Agenda
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="#trajetoria"
-              onClick={(e) => { e.preventDefault(); onNavigate("#trajetoria"); window.location.hash = "#trajetoria"; }}
-              className="flex items-center gap-2 rounded-full bg-pena-branca/10 px-6 py-3 text-sm font-semibold text-pena-branca border border-pena-branca/20 hover:bg-pena-branca/20 transition-all"
+              href="#portal"
+              onClick={(e) => { e.preventDefault(); onNavigate("#portal"); window.location.hash = "#portal"; }}
+              className="flex items-center gap-2 rounded-full bg-pena-branca/10 px-8 py-3 text-sm font-semibold text-pena-branca border border-pena-branca/20 hover:bg-pena-branca/20 transition-all"
             >
-              Nossa História
+              Portal de Conhecimento
             </a>
           </div>
         </div>
@@ -233,6 +227,9 @@ export default function Home({ onNavigate }: HomeProps) {
 
         </div>
       </section>
+
+      {/* Atendimentos Particulares Section */}
+      <AtendimentosParticulares />
 
       {/* Next Saturday Highlight Banner */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

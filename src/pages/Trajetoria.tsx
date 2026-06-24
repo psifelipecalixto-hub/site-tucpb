@@ -59,16 +59,16 @@ export default function Trajetoria() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="font-serif text-2xl font-bold tracking-tight text-marrom-terra sm:text-3xl border-l-4 border-verde-folha pl-4">
-              A Origem do Terreiro
+              A Raiz (O Terreiro)
             </h2>
             <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-              O TUCPB nasceu de uma faísca de fé em meio às adversidades da vida. Em um período em que a busca por respostas espirituais se mostrava urgente, o **Caboclo Pena Branca** manifestou-se na mediunidade de nosso dirigente com uma promessa simples e firme: **“Traga-me os que sofrem, e eu trarei a seiva das matas para curá-los. Não cobrem nada, deem apenas o amor que receberam do Pai.”**
+              O Templo Umbandista Caboclo Pena Branca fincou suas raízes no Jardim Zuleika, em Luziânia. Nascido da fé e do chamado para servir, o terreiro ergueu-se como um farol de caridade e cura para a comunidade. Em um mundo onde o sofrimento se faz presente, o Templo oferece um porto seguro para almas sedentas de conforto e direcionamento espiritual.
             </p>
             <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-              A partir dessa semente de obediência evangélica e ritualística, ergueu-se o nosso espaço. No início, velas eram fixadas em pratos simples e o chão batido de terra servia de altar. Hoje, com um Gongá estruturado sob a égide dos quatro elementos, mantemos exatamente o mesmo fervor, amor e simplicidade que regiam aquelas primeiras reuniões domésticas.
+              Nossa fundação baseia-se no tripé da simplicidade, amor ao próximo e respeito profundo aos guias e Orixás. Não buscamos o espetáculo, mas a transformação sincera que ocorre quando os pés tocam o chão do sagrado e o coração se abre para a energia curadora das matas.
             </p>
             <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-              Atendemos de forma regular centenas de famílias de Cabedelo, João Pessoa e cidades vizinhas, oferecendo atendimento mediúnico qualificado, passe magnético, fitoenergética por meio de banhos de ervas, doutrinação espiritual e desobsessão de forma totalmente voluntária e gratuita.
+              Atendemos famílias da região oferecendo passes magnéticos, fitoenergética, desobsessão e a escuta amorosa, sempre sob as bênçãos e a coordenação de nosso amado Caboclo Pena Branca, de forma totalmente gratuita e voluntária.
             </p>
           </div>
 
@@ -179,10 +179,10 @@ export default function Trajetoria() {
 
           <div className="lg:col-span-8 space-y-6">
             <h2 className="font-serif text-2xl font-bold tracking-tight text-marrom-terra sm:text-3xl border-l-4 border-verde-folha pl-4">
-              O Dirigente: Pai Felipe de Oxóssi
+              O Tronco (O Dirigente)
             </h2>
             <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-              Felipe Calixto (iniciado na espiritualidade de terreiro há mais de uma década) assumiu a direção espiritual da casa após uma intensa jornada de desenvolvimento, estudos kardecistas, juremeiros e umbandistas ortodoxos. Sob a coroa de Oxóssi e a proteção direta do Caboclo Pena Branca, ele conduz a corrente mediúnica do TUCPB com pulso firme e coração acolhedor.
+              A condução espiritual da casa está sob a responsabilidade de Pai Felipe. Sua jornada é marcada pela união de dois pilares fundamentais: a tradição de <strong>Babalorixá</strong>, com seu profundo respeito à mironga, ao sagrado e ao fundamento dos Orixás e Guias, e a <strong>Psicologia Existencial-Fenomenológica</strong>, focada na experiência vivida, na escuta acolhedora e na busca pelo sentido da existência.
             </p>
             
             {/* Elegant Quotation block */}
@@ -192,15 +192,54 @@ export default function Trajetoria() {
                 &ldquo;A Umbanda não é um caminho de facilidades mágicas ou de barganhas com o sagrado. É uma estrada estreita de autoconhecimento, reforma íntima e caridade ativa. Estar de branco descalço no Gongá é lembrar que viemos da poeira da terra e que nossa missão é acender a centelha de luz divina na vida de quem está em trevas.&rdquo;
               </p>
               <div className="mt-2 font-serif text-xs font-semibold text-marrom-terra not-italic text-right">
-                — Pai Felipe de Oxóssi, Dirigente do TUCPB
+                — Pai Felipe
               </div>
             </div>
 
             <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-              Sua filosofia de trabalho baseia-se na **Doutrina Espírita Racional**, aplicando passes magnéticos sob conhecimentos fluidoterapêuticos e zelando pela saúde física e mental dos médiuns através de orientações, palestras e seminários regulares na casa.
+              Essa fusão entre a sabedoria ancestral das matas e o rigor do cuidado psicológico garante que cada consulente e cada médium seja visto em sua totalidade. O terreiro torna-se, assim, um hospital de almas, onde o acolhimento humano caminha lado a lado com a intervenção espiritual, zelando pela saúde física, mental e espiritual de todos que cruzam nossas portas.
             </p>
           </div>
 
+        </div>
+      </section>
+
+      {/* Elegant Photo Gallery Section */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 border-t border-areia-escura">
+        <div className="text-center mb-10">
+           <h2 className="font-serif text-2xl font-bold tracking-tight text-marrom-terra sm:text-3xl">
+             Memórias do Gongá
+           </h2>
+           <p className="text-sm text-gray-600 mt-2">Vislumbres de nossa casa, de nossa fé e de nossa caminhada.</p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Gallery Item 1 */}
+          <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-sm relative group cursor-pointer border border-areia-escura">
+            <div className="absolute inset-0 bg-marrom-terra/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1544896265-d01fcf2ed71f?q=80&w=1000&auto=format&fit=crop" alt="Detalhe de velas e ervas" className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20">
+              <span className="text-pena-branca text-sm font-serif">A Força das Velas</span>
+            </div>
+          </div>
+          
+          {/* Gallery Item 2 */}
+          <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-sm relative group cursor-pointer border border-areia-escura">
+             <div className="absolute inset-0 bg-marrom-terra/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=1000&auto=format&fit=crop" alt="Atabaques" className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20">
+              <span className="text-pena-branca text-sm font-serif">O Som da Curimba</span>
+            </div>
+          </div>
+
+          {/* Gallery Item 3 */}
+          <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-sm relative group cursor-pointer border border-areia-escura">
+             <div className="absolute inset-0 bg-marrom-terra/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1517415446006-258169d519b7?q=80&w=1000&auto=format&fit=crop" alt="Elementos da natureza" className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20">
+              <span className="text-pena-branca text-sm font-serif">A Seiva das Matas</span>
+            </div>
+          </div>
         </div>
       </section>
 
