@@ -29,9 +29,9 @@ function GalleryYouTube({ videoId, title }: { videoId: string; title: string }) 
       </button>
 
       <iframe 
-        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=${isMuted ? 1 : 0}&loop=1&playlist=${videoId}&controls=0`}
+        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=${isMuted ? 1 : 0}&loop=1&playlist=${videoId}&controls=0&playsinline=1`}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 border-none scale-[1.3]" 
+        className="w-full h-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 border-none pointer-events-none" 
       />
       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20 pointer-events-none">
         <span className="text-pena-branca text-base font-serif font-medium tracking-wide">{title}</span>
@@ -249,9 +249,9 @@ export default function Trajetoria() {
           />
 
           {/* Gallery Item 4 */}
-          <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-sm relative group cursor-pointer border border-areia-escura">
+          <div className="aspect-[9/16] rounded-3xl overflow-hidden shadow-sm relative group cursor-pointer border border-areia-escura">
             <div className="absolute inset-0 bg-marrom-terra/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-            <img src="/Imagem do WhatsApp de 2024-05-12 à(s) 23.30.39_febd4a3f.jpg" alt="Firmeza no Gongá" className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+            <img src="/Imagem do WhatsApp de 2024-05-12 à(s) 23.30.39_febd4a3f.jpg" alt="Firmeza no Gongá" className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20">
               <span className="text-pena-branca text-base font-serif font-medium tracking-wide">Firmeza Sagrada</span>
             </div>
@@ -264,9 +264,9 @@ export default function Trajetoria() {
           />
 
           {/* Gallery Item 6 */}
-          <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-sm relative group cursor-pointer border border-areia-escura">
+          <div className="aspect-[9/16] rounded-3xl overflow-hidden shadow-sm relative group cursor-pointer border border-areia-escura">
              <div className="absolute inset-0 bg-marrom-terra/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-            <img src="/SaveClip.App_519556405_672527209142230_3586110890263026244_n.jpg" alt="Detalhe do Terreiro" className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+            <img src="/SaveClip.App_519556405_672527209142230_3586110890263026244_n.jpg" alt="Detalhe do Terreiro" className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20">
               <span className="text-pena-branca text-base font-serif font-medium tracking-wide">Memórias do Terreiro</span>
             </div>
