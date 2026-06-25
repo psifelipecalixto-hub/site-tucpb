@@ -9,7 +9,7 @@ const DEFAULT_ADMIN: UserProfile = {
   id: "admin-1",
   name: "Pai Felipe",
   email: "admin@tucpb.com",
-  password: "admin", // simple password for testing
+  password: "admin123", // simple password for testing
   role: "admin",
   cargoTerreiro: "pai de santo",
   photoUrl: "",
@@ -217,6 +217,16 @@ export default function Integrantes() {
         .single();
         
       if (error || !data) {
+        // Fallback for default admin
+        const fallbackUser = users.find(u => u.email === authEmail && u.password === authPassword);
+        if (fallbackUser) {
+          setCurrentUser(fallbackUser);
+          setPhotoPreview(fallbackUser.photoUrl || null);
+          localStorage.setItem("tucpb_logged_in_user", fallbackUser.id);
+          setActiveTab(fallbackUser.role === "admin" ? "admin" : "perfil");
+          return;
+        }
+
         setAuthError("E-mail ou senha incorretos.");
         return;
       }
