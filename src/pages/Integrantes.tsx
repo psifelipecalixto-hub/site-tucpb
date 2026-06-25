@@ -238,6 +238,15 @@ export default function Integrantes() {
       setActiveTab(user.role === "admin" ? "admin" : "perfil");
     } catch (err) {
       console.error(err);
+      // Fallback for default admin
+      const fallbackUser = users.find(u => u.email === authEmail && u.password === authPassword);
+      if (fallbackUser) {
+        setCurrentUser(fallbackUser);
+        setPhotoPreview(fallbackUser.photoUrl || null);
+        localStorage.setItem("tucpb_logged_in_user", fallbackUser.id);
+        setActiveTab(fallbackUser.role === "admin" ? "admin" : "perfil");
+        return;
+      }
       setAuthError("Erro interno ao tentar fazer login.");
     }
   };
