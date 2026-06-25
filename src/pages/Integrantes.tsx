@@ -2,6 +2,7 @@ import { useState, FormEvent, useEffect, useRef, ChangeEvent } from "react";
 import { Lock, Unlock, Users, ClipboardList, BookOpen, Bell, CheckCircle, Search, PlayCircle, TreePine, X, GraduationCap, Upload, Shield, User as UserIcon, Calendar as CalendarIcon, LogOut, Plus, Check, Clock, Trash2, Edit2 } from "lucide-react";
 import { initialPoints, initialLessons, initialHerbs, initialTasks, initialArticles } from "../data";
 import { MemberTask, CurimbaPoint, Lesson, Herb, UserProfile, BlogArticle } from "../types";
+import { supabase } from "../lib/supabase";
 
 // Default admin user for demonstration
 const DEFAULT_ADMIN: UserProfile = {
@@ -97,24 +98,45 @@ export default function Integrantes() {
   const [searchSong, setSearchSong] = useState<string>("");
   const [selectedSong, setSelectedSong] = useState<CurimbaPoint | null>(initialPoints[0]);
 
-  // Load from LocalStorage on mount
+  // Load from LocalStorage and Supabase on mount
   useEffect(() => {
-    const storedUsers = localStorage.getItem("tucpb_users");
+    const fetchUsers = async () => {
+      try {
+        const { data, error } = await supabase.from('membros').select('*');
+        if (error) {
+          console.error("Error fetching users from Supabase:", error);
+          return;
+        }
+        
+        if (data && data.length > 0) {
+          setUsers(data as UserProfile[]);
+          const loggedInUserId = localStorage.getItem("tucpb_logged_in_user");
+          if (loggedInUserId) {
+            const user = data.find(u => u.id === loggedInUserId) as UserProfile;
+            if (user) {
+              setCurrentUser(user);
+              setPhotoPreview(user.photoUrl || null);
+              if (user.role === "admin") {
+                setActiveTab("admin");
+              }
+            }
+          }
+        } else {
+          // Fallback if table is empty (will be replaced by actual registration)
+          setUsers([DEFAULT_ADMIN]);
+        }
+      } catch (err) {
+        console.error("Supabase error:", err);
+      }
+    };
+
+    fetchUsers();
+
     const storedTasks = localStorage.getItem("tucpb_tasks");
     const storedPoints = localStorage.getItem("tucpb_points");
     const storedArticles = localStorage.getItem("tucpb_articles");
     const storedLessons = localStorage.getItem("tucpb_lessons");
     const storedHerbs = localStorage.getItem("tucpb_herbs");
-    const loggedInUserId = localStorage.getItem("tucpb_logged_in_user");
-
-    let loadedUsers: UserProfile[] = [];
-    if (storedUsers) {
-      loadedUsers = JSON.parse(storedUsers);
-    } else {
-      loadedUsers = [DEFAULT_ADMIN];
-      localStorage.setItem("tucpb_users", JSON.stringify(loadedUsers));
-    }
-    setUsers(loadedUsers);
 
     if (storedTasks) {
       setTasks(JSON.parse(storedTasks));
@@ -147,17 +169,6 @@ export default function Integrantes() {
       setHerbs(initialHerbs);
       localStorage.setItem("tucpb_herbs", JSON.stringify(initialHerbs));
     }
-
-    if (loggedInUserId) {
-      const user = loadedUsers.find(u => u.id === loggedInUserId);
-      if (user) {
-        setCurrentUser(user);
-        setPhotoPreview(user.photoUrl);
-        if (user.role === "admin") {
-          setActiveTab("admin");
-        }
-      }
-    }
   }, []);
 
   // Save Tasks when updated
@@ -166,13 +177,6 @@ export default function Integrantes() {
       localStorage.setItem("tucpb_tasks", JSON.stringify(tasks));
     }
   }, [tasks]);
-
-  // Save Users when updated
-  useEffect(() => {
-    if (users.length > 0) {
-      localStorage.setItem("tucpb_users", JSON.stringify(users));
-    }
-  }, [users]);
 
   // Save Custom Points when updated
   useEffect(() => {
@@ -200,21 +204,35 @@ export default function Integrantes() {
   }, [herbs]);
 
   // --- Auth Handlers ---
-  const handleLogin = (e: FormEvent) => {
+  const handleLogin = async (e: FormEvent) => {
     e.preventDefault();
     setAuthError("");
-    const user = users.find(u => u.email === authEmail && u.password === authPassword);
-    if (user) {
+    
+    try {
+      const { data, error } = await supabase
+        .from('membros')
+        .select('*')
+        .eq('email', authEmail)
+        .eq('password', authPassword)
+        .single();
+        
+      if (error || !data) {
+        setAuthError("E-mail ou senha incorretos.");
+        return;
+      }
+
+      const user = data as UserProfile;
       setCurrentUser(user);
-      setPhotoPreview(user.photoUrl);
+      setPhotoPreview(user.photoUrl || null);
       localStorage.setItem("tucpb_logged_in_user", user.id);
       setActiveTab(user.role === "admin" ? "admin" : "perfil");
-    } else {
-      setAuthError("E-mail ou senha incorretos.");
+    } catch (err) {
+      console.error(err);
+      setAuthError("Erro interno ao tentar fazer login.");
     }
   };
 
-  const handleRegister = (e: FormEvent) => {
+  const handleRegister = async (e: FormEvent) => {
     e.preventDefault();
     setAuthError("");
     if (!authEmail || !authPassword || !authName) {
@@ -255,11 +273,23 @@ export default function Integrantes() {
       status: "pendente"
     };
 
-    const newUsers = [...users, newUser];
-    setUsers(newUsers);
-    setCurrentUser(newUser);
-    localStorage.setItem("tucpb_logged_in_user", newUser.id);
-    setActiveTab("perfil");
+    try {
+      const { error } = await supabase.from('membros').insert([newUser]);
+      if (error) {
+        console.error("Supabase insert error:", error);
+        setAuthError("Erro ao salvar no banco de dados. Tente novamente.");
+        return;
+      }
+      
+      const newUsers = [...users, newUser];
+      setUsers(newUsers);
+      setCurrentUser(newUser);
+      localStorage.setItem("tucpb_logged_in_user", newUser.id);
+      setActiveTab("perfil");
+    } catch (err) {
+      console.error(err);
+      setAuthError("Erro interno ao tentar salvar membro.");
+    }
   };
 
   const handleLogout = () => {
@@ -306,6 +336,15 @@ export default function Integrantes() {
           setPhotoPreview(dataUrl);
           if (currentUser) {
             const updatedUser = { ...currentUser, photoUrl: dataUrl };
+            
+            // Background update to Supabase
+            supabase.from('membros')
+              .update({ photoUrl: dataUrl })
+              .eq('id', currentUser.id)
+              .then(({ error }) => {
+                if (error) console.error("Error updating photoUrl in Supabase:", error);
+              });
+
             setCurrentUser(updatedUser);
             setUsers((prev) => prev.map(u => u.id === updatedUser.id ? updatedUser : u));
           }
@@ -351,12 +390,24 @@ export default function Integrantes() {
   };
 
   // --- Profile Editing Handlers ---
-  const handleSaveProfile = () => {
+  const handleSaveProfile = async () => {
     if (!currentUser) return;
     const updatedUser = { ...currentUser, ...editProfileData };
-    setCurrentUser(updatedUser);
-    setUsers(users.map(u => u.id === updatedUser.id ? updatedUser : u));
-    setIsEditingProfile(false);
+    
+    try {
+      const { error } = await supabase.from('membros').update(updatedUser).eq('id', updatedUser.id);
+      if (error) {
+        console.error("Supabase update error:", error);
+        alert("Erro ao salvar no banco de dados.");
+        return;
+      }
+      setCurrentUser(updatedUser);
+      setUsers(users.map(u => u.id === updatedUser.id ? updatedUser : u));
+      setIsEditingProfile(false);
+    } catch (err) {
+      console.error(err);
+      alert("Erro interno ao tentar atualizar perfil.");
+    }
   };
 
   const handleCancelEditProfile = () => {
@@ -381,12 +432,32 @@ export default function Integrantes() {
   };
 
   // --- Admin Approval Handlers ---
-  const handleApproveMember = (userId: string) => {
-    setUsers(users.map(u => u.id === userId ? { ...u, status: "aprovado" } : u));
+  const handleApproveMember = async (userId: string) => {
+    try {
+      const { error } = await supabase.from('membros').update({ status: 'aprovado' }).eq('id', userId);
+      if (error) {
+        console.error("Supabase update error:", error);
+        alert("Erro ao aprovar membro.");
+        return;
+      }
+      setUsers(users.map(u => u.id === userId ? { ...u, status: "aprovado" } : u));
+    } catch (err) {
+      console.error(err);
+    }
   };
 
-  const handleRejectMember = (userId: string) => {
-    setUsers(users.filter(u => u.id !== userId));
+  const handleRejectMember = async (userId: string) => {
+    try {
+      const { error } = await supabase.from('membros').delete().eq('id', userId);
+      if (error) {
+        console.error("Supabase delete error:", error);
+        alert("Erro ao recusar membro.");
+        return;
+      }
+      setUsers(users.filter(u => u.id !== userId));
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   // --- Admin Curimba Handlers ---
