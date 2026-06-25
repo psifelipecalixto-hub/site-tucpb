@@ -32,7 +32,7 @@ export default function Admin() {
   const fetchMembers = async () => {
     const { data, error } = await supabase.from("membros").select("*");
     if (error) {
-      console.error("Erro ao buscar membros:", error);
+      console.warn("Erro ao buscar membros:", error);
     } else {
       setMembers(data as UserProfile[]);
     }

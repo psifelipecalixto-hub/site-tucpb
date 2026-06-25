@@ -4,17 +4,7 @@ import { initialPoints, initialLessons, initialHerbs, initialTasks, initialArtic
 import { MemberTask, CurimbaPoint, Lesson, Herb, UserProfile, BlogArticle } from "../types";
 import { supabase } from "../lib/supabase";
 
-// Default admin user for demonstration
-const DEFAULT_ADMIN: UserProfile = {
-  id: "admin-1",
-  name: "Pai Felipe",
-  email: "admin@tucpb.com",
-  password: "admin123", // simple password for testing
-  role: "admin",
-  cargoTerreiro: "pai de santo",
-  photoUrl: "",
-  status: "aprovado"
-};
+// (Empty for cleanup)
 
 export default function Integrantes() {
   // --- Local Storage Database States ---
@@ -25,7 +15,7 @@ export default function Integrantes() {
   const [currentUser, setCurrentUser] = useState<UserProfile | null>(null);
   const [authMode, setAuthMode] = useState<"login" | "register" | "forgot-password">("login");
   const [showPassword, setShowPassword] = useState(false);
-  const [authEmail, setAuthEmail] = useState("");
+  const [authEmail, setAuthEmail] = useState("baba.ajo.tucpb@gmail.com");
   const [authPassword, setAuthPassword] = useState("");
   const [authName, setAuthName] = useState("");
   const [authCargo, setAuthCargo] = useState("médiuns/cambones");
@@ -105,8 +95,8 @@ export default function Integrantes() {
       try {
         const { data, error } = await supabase.from('membros').select('*');
         if (error) {
-          console.error("Error fetching users from Supabase:", error);
-          setUsers([DEFAULT_ADMIN]);
+          console.warn("Error fetching users from Supabase:", error);
+          setUsers([]);
           return;
         }
         
@@ -125,7 +115,7 @@ export default function Integrantes() {
           }
         } else {
           // Fallback if table is empty (will be replaced by actual registration)
-          setUsers([DEFAULT_ADMIN]);
+          setUsers([]);
         }
       } catch (err) {
         console.error("Supabase error:", err);
@@ -211,47 +201,63 @@ export default function Integrantes() {
     setAuthError("");
     
     try {
-      const { data, error } = await supabase
-        .from('membros')
-        .select('*')
-        .eq('email', authEmail)
-        .eq('password', authPassword)
-        .single();
-        
-      if (error || !data) {
-        // Fallback for default admin
-        const fallbackUser = users.find(u => u.email === authEmail && u.password === authPassword) || 
-                             (DEFAULT_ADMIN.email === authEmail && DEFAULT_ADMIN.password === authPassword ? DEFAULT_ADMIN : undefined);
-        if (fallbackUser) {
-          setCurrentUser(fallbackUser);
-          setPhotoPreview(fallbackUser.photoUrl || null);
-          localStorage.setItem("tucpb_logged_in_user", fallbackUser.id);
-          setActiveTab(fallbackUser.role === "admin" ? "admin" : "perfil");
+      // 1. Tentar login real via Supabase Auth
+      const { data: authData, error: authErrorMsg } = await supabase.auth.signInWithPassword({
+        email: authEmail,
+        password: authPassword,
+      });
+
+      if (authErrorMsg) {
+        console.warn("Supabase Auth error:", authErrorMsg.message);
+      }
+
+      if (!authErrorMsg && authData.user) {
+        // Se logou com sucesso, busca o perfil na tabela membros
+        const { data: profileData, error: profileError } = await supabase
+          .from('membros')
+          .select('*')
+          .eq('email', authEmail)
+          .single();
+          
+        if (!profileError && profileData) {
+          const user = profileData as UserProfile;
+          setCurrentUser(user);
+          setPhotoPreview(user.photoUrl || null);
+          localStorage.setItem("tucpb_logged_in_user", user.id);
+          setActiveTab(user.role === "admin" ? "admin" : "perfil");
           return;
+        } else {
+          // Se autenticou no Supabase Auth mas não está na tabela membros
+          if (authEmail === 'baba.ajo.tucpb@gmail.com') {
+            const adminUser: UserProfile = {
+              id: authData.user.id,
+              name: "Pai Felipe",
+              email: authEmail,
+              password: "", // A senha real fica no Auth
+              role: "admin",
+              cargoTerreiro: "pai de santo",
+              photoUrl: "",
+              status: "aprovado"
+            };
+            
+            // Tenta criar o registro na tabela de membros automaticamente
+            await supabase.from('membros').insert([adminUser]);
+            
+            setCurrentUser(adminUser);
+            localStorage.setItem("tucpb_logged_in_user", adminUser.id);
+            setActiveTab("admin");
+            return;
+          } else {
+            setAuthError("Usuário autenticado, mas perfil não encontrado na tabela de membros. Solicite cadastro.");
+            return;
+          }
         }
-
-        setAuthError("E-mail ou senha incorretos.");
-        return;
       }
 
-      const user = data as UserProfile;
-      setCurrentUser(user);
-      setPhotoPreview(user.photoUrl || null);
-      localStorage.setItem("tucpb_logged_in_user", user.id);
-      setActiveTab(user.role === "admin" ? "admin" : "perfil");
-    } catch (err) {
+      setAuthError(authErrorMsg ? `Erro Auth: ${authErrorMsg.message}` : "E-mail ou senha incorretos.");
+    } catch (err: any) {
       console.error(err);
-      // Fallback for default admin
-      const fallbackUser = users.find(u => u.email === authEmail && u.password === authPassword) || 
-                           (DEFAULT_ADMIN.email === authEmail && DEFAULT_ADMIN.password === authPassword ? DEFAULT_ADMIN : undefined);
-      if (fallbackUser) {
-        setCurrentUser(fallbackUser);
-        setPhotoPreview(fallbackUser.photoUrl || null);
-        localStorage.setItem("tucpb_logged_in_user", fallbackUser.id);
-        setActiveTab(fallbackUser.role === "admin" ? "admin" : "perfil");
-        return;
-      }
-      setAuthError("Erro interno ao tentar fazer login.");
+      setAuthError("Erro interno ao tentar fazer login: " + err.message);
     }
   };
 
@@ -262,9 +268,22 @@ export default function Integrantes() {
       setAuthError("Preencha o e-mail para recuperar a senha.");
       return;
     }
-    // Simulate sending an email
-    alert(`Instruções de recuperação de senha enviadas para: ${authEmail}. (Se o e-mail estiver cadastrado)`);
-    setAuthMode("login");
+    
+    try {
+      const { error } = await supabase.auth.resetPasswordForEmail(authEmail, {
+        redirectTo: window.location.origin,
+      });
+
+      if (error) {
+        setAuthError(error.message);
+      } else {
+        alert(`Instruções de recuperação de senha enviadas para: ${authEmail}. (Verifique sua caixa de spam)`);
+        setAuthMode("login");
+      }
+    } catch (err) {
+      console.error(err);
+      setAuthError("Erro ao tentar recuperar a senha.");
+    }
   };
 
   const handleRegister = async (e: FormEvent) => {
@@ -328,11 +347,12 @@ export default function Integrantes() {
     }
   };
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
     setCurrentUser(null);
     localStorage.removeItem("tucpb_logged_in_user");
     setAuthEmail("");
     setAuthPassword("");
+    await supabase.auth.signOut();
   };
 
   // --- Profile Image Upload (Base64 Compressed) ---
@@ -714,9 +734,6 @@ export default function Integrantes() {
                   <button type="button" onClick={() => { setAuthMode("register"); setAuthError(""); }} className="text-xs text-verde-folha font-semibold hover:underline">
                     Não tem conta? Solicite cadastro.
                   </button>
-                </div>
-                <div className="mt-4 p-3 bg-gray-50 rounded text-[11px] text-gray-500 text-center border border-gray-200">
-                   <strong>Acesso Admin (Demonstração):</strong><br/>Email: admin@tucpb.com | Senha: admin123
                 </div>
               </form>
             ) : (
