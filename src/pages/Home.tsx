@@ -4,7 +4,7 @@
  */
 
 import { useState } from "react";
-import { Feather, Heart, TreePine, Sparkles, HelpCircle, ArrowRight, Sun, Flame, Droplets, Landmark } from "lucide-react";
+import { Feather, Heart, TreePine, Sparkles, HelpCircle, ArrowRight, Sun, Flame, Droplets, Landmark, MapPin, Clock, ScrollText, Flower2 } from "lucide-react";
 import { initialGiras } from "../data";
 import Logo from "../components/Logo";
 import AtendimentosParticulares from "../components/AtendimentosParticulares";
@@ -226,6 +226,81 @@ export default function Home({ onNavigate }: HomeProps) {
             </p>
           </div>
 
+        </div>
+      </section>
+
+      {/* Informações ao Visitante Section */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 my-12 sm:my-16">
+        <div className="bg-white rounded-2xl p-8 sm:p-12 shadow-sm border border-[#d4af37]/30 space-y-8">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <h2 className="font-serif text-2xl font-bold tracking-tight text-[#1b5e20] sm:text-3xl">
+              Informações ao Visitante
+            </h2>
+            <p className="text-sm text-gray-600">
+              Orientações importantes para quem deseja conhecer nossa casa e participar de nossas giras.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+            
+            {/* Onde Estamos */}
+            <div className="flex flex-col h-full items-center text-center p-6 rounded-xl border border-areia-escura hover:border-[#2e7d32] transition-colors bg-areia-suave/50">
+              <div className="p-4 rounded-full bg-[#1b5e20]/10 text-[#2e7d32] mb-4">
+                <MapPin className="h-6 w-6" />
+              </div>
+              <h3 className="font-serif font-bold text-gray-900 mb-2">Onde Estamos</h3>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Rua Caçapava, Qd 03, Lt 25, Casa 02<br />
+                Jardim Zuleika - Luziânia, GO<br />
+                CEP: 72850-615
+              </p>
+            </div>
+
+            {/* Nossas Giras */}
+            <div className="flex flex-col h-full items-center text-center p-6 rounded-xl border border-areia-escura hover:border-[#2e7d32] transition-colors bg-areia-suave/50">
+              <div className="p-4 rounded-full bg-[#1b5e20]/10 text-[#2e7d32] mb-4">
+                <Clock className="h-6 w-6" />
+              </div>
+              <h3 className="font-serif font-bold text-gray-900 mb-2">Nossas Giras</h3>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                <strong>Trabalhos de Cura:</strong><br/>
+                Todas as segundas às 18h.<br/><br/>
+                <strong>Giras de Desenvolvimento e Atendimento:</strong><br/>
+                Sábados (quinzenalmente) às 19h.
+              </p>
+            </div>
+
+            {/* Regras da Casa */}
+            <div className="flex flex-col h-full items-center text-center p-6 rounded-xl border border-areia-escura hover:border-[#2e7d32] transition-colors bg-areia-suave/50">
+              <div className="p-4 rounded-full bg-[#1b5e20]/10 text-[#2e7d32] mb-4">
+                <ScrollText className="h-6 w-6" />
+              </div>
+              <h3 className="font-serif font-bold text-gray-900 mb-2">Regras da Casa</h3>
+              <ul className="text-sm text-gray-700 leading-relaxed text-left list-disc list-inside space-y-2">
+                <li>Usar roupa clara/branca</li>
+                <li>Evitar decotes</li>
+                <li>Manter o silêncio no terreiro</li>
+                <li>Proibido filmar ou tirar fotos</li>
+                <li>Incorporação apenas com autorização prévia do dirigente</li>
+              </ul>
+            </div>
+
+            {/* Doações */}
+            <div className="flex flex-col h-full items-center text-center p-6 rounded-xl border border-[#d4af37]/40 hover:border-[#d4af37] transition-colors bg-[#d4af37]/5">
+              <div className="p-4 rounded-full bg-[#d4af37]/10 text-[#d4af37] mb-4">
+                <Flower2 className="h-6 w-6" />
+              </div>
+              <h3 className="font-serif font-bold text-gray-900 mb-2">Doações</h3>
+              <p className="text-sm text-gray-700 leading-relaxed mb-4">
+                Nossos trabalhos são gratuitos. Caso sinta no coração o desejo de ajudar na manutenção do nosso terreiro, aceitamos doações voluntárias.
+              </p>
+              <div className="bg-white px-3 py-3 rounded-lg border border-[#d4af37]/20 w-full mt-auto">
+                <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Chave PIX (E-mail)</p>
+                <p className="text-sm text-[#1b5e20] font-mono font-bold break-all">Tucpbpenabranca@gmail.com</p>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 

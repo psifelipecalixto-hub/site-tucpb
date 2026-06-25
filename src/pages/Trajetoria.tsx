@@ -3,243 +3,272 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState } from "react";
-import { Compass, BookOpen, User, Star, Quote, ArrowRight, TreePine, Sparkles } from "lucide-react";
-
+import { useState, useRef } from "react";
+import { Compass, BookOpen, User, Star, Leaf, Flame, Heart, Users, TreePine, Volume2, VolumeX } from "lucide-react";
 import InstagramFeed from "../components/InstagramFeed";
 
-export default function Trajetoria() {
-  const [activeMilestone, setActiveMilestone] = useState<number>(0);
+function GalleryYouTube({ videoId, title }: { videoId: string; title: string }) {
+  const [isMuted, setIsMuted] = useState(true);
 
-  const milestones = [
-    {
-      year: "2018",
-      title: "O Chamado e os Primeiros Passos",
-      subtitle: "Mesa Branca e Estudos de Lar",
-      description: "Tudo começou com reuniões de estudo e caridade de mesa em uma modesta sala residencial em João Pessoa, PB. Sob a incorporação inicial e ordens diretas do Caboclo Pena Branca, as bases de amor e disciplina doutrinária começaram a se desenhar para um pequeno grupo de 7 médiuns fundadores."
-    },
-    {
-      year: "2020",
-      title: "Consagração do Gongá Oficial",
-      subtitle: "Fundação do Templo em Cabedelo",
-      description: "Mesmo diante de desafios, no dia 15 de Outubro de 2020, foi consagrado o nosso Gongá oficial no atual barracão em Cabedelo, PB. Os atabaques soaram pela primeira vez no terreiro, abrindo as giras de caridade pública quinzenais para a comunidade local."
-    },
-    {
-      year: "2022",
-      title: "Consagração da Curimba e Coroações",
-      subtitle: "A Força do Couro e do Desenvolvimento",
-      description: "Sob a batuta de Ogãs preparados, a Curimba ganhou voz própria na sustentação das Giras. Foi realizada também a primeira coroação de médiuns de desenvolvimento, estabelecendo a escala oficial de camboneamento e a primeira linha ativa de passes de cura."
-    },
-    {
-      year: "2024",
-      title: "Expansão do Barracão e do Social",
-      subtitle: "Acolhendo Mais Almas",
-      description: "Inauguração das obras de ampliação do terreiro, com um salão de assistência expandido para comportar mais de 120 consulentes sentados, salas dedicadas para preparação de banhos de ervas, cozinha ritualística para amassis e ampliação dos projetos de doação de cestas básicas."
-    }
-  ];
+  const toggleMute = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsMuted(!isMuted);
+  };
 
   return (
-    <div className="animate-fade-in space-y-16 pb-16" id="trajetoria-page">
+    <div className="aspect-[9/16] rounded-3xl overflow-hidden shadow-sm relative group border border-areia-escura">
+      <div className="absolute inset-0 bg-marrom-terra/20 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none"></div>
+      
+      <button 
+        onClick={toggleMute}
+        className="absolute top-4 right-4 z-30 bg-black/50 hover:bg-black/80 text-white p-2.5 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
+        title={isMuted ? "Ativar som" : "Desativar som"}
+      >
+        {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+      </button>
+
+      <iframe 
+        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=${isMuted ? 1 : 0}&loop=1&playlist=${videoId}&controls=0`}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 border-none scale-[1.3]" 
+      />
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20 pointer-events-none">
+        <span className="text-pena-branca text-base font-serif font-medium tracking-wide">{title}</span>
+      </div>
+    </div>
+  );
+}
+
+export default function Trajetoria() {
+  return (
+    <div className="animate-fade-in space-y-20 pb-20" id="trajetoria-page">
       
       {/* Intro Hero Section */}
-      <section className="bg-gradient-to-b from-marrom-terra to-marrom-tronco py-16 text-center text-pena-branca px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl space-y-4">
-          <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-pena-branca/10 text-areia-escura mb-2">
-            <Compass className="h-6 w-6" />
+      <section className="bg-gradient-to-b from-marrom-terra to-marrom-tronco py-20 text-center text-pena-branca px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl space-y-6">
+          <div className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-pena-branca/10 text-areia-escura mb-2">
+            <Compass className="h-7 w-7" />
           </div>
-          <h1 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+          <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-[#d4af37]">
             Nossa Trajetória
           </h1>
-          <p className="mx-auto max-w-2xl text-sm sm:text-base text-areia-escura font-light leading-relaxed">
+          <p className="mx-auto max-w-2xl text-base sm:text-lg text-areia-escura font-light leading-relaxed">
             Conheça as raízes do Templo Umbandista Caboclo Pena Branca (TUCPB) e a caminhada espiritual daqueles que sustentam esta tenda de caridade.
           </p>
         </div>
       </section>
 
-      {/* The Story / Foundations of the Temple */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h2 className="font-serif text-2xl font-bold tracking-tight text-marrom-terra sm:text-3xl border-l-4 border-verde-folha pl-4">
-              A Raiz (O Terreiro)
-            </h2>
-            <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-              O Templo Umbandista Caboclo Pena Branca fincou suas raízes no Jardim Zuleika, em Luziânia. Nascido da fé e do chamado para servir, o terreiro ergueu-se como um farol de caridade e cura para a comunidade. Em um mundo onde o sofrimento se faz presente, o Templo oferece um porto seguro para almas sedentas de conforto e direcionamento espiritual.
-            </p>
-            <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-              Nossa fundação baseia-se no tripé da simplicidade, amor ao próximo e respeito profundo aos guias e Orixás. Não buscamos o espetáculo, mas a transformação sincera que ocorre quando os pés tocam o chão do sagrado e o coração se abre para a energia curadora das matas.
-            </p>
-            <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-              Atendemos famílias da região oferecendo passes magnéticos, fitoenergética, desobsessão e a escuta amorosa, sempre sob as bênçãos e a coordenação de nosso amado Caboclo Pena Branca, de forma totalmente gratuita e voluntária.
-            </p>
+      {/* 1. The Story / Foundations of the Temple */}
+      <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center space-y-8">
+        <div className="space-y-4">
+          <div className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#d4af37]/10 text-[#d4af37] mb-2">
+            <BookOpen className="h-7 w-7" />
           </div>
-
-          <div className="bg-white p-8 rounded-2xl border border-areia-escura shadow-sm space-y-6">
-            <h3 className="font-serif text-lg font-bold text-marrom-terra flex items-center gap-2">
-              <Star className="h-5 w-5 text-verde-folha fill-verde-folha" />
-              Nossas Linhas de Trabalho
-            </h3>
-            <p className="text-sm text-gray-600">
-              O terreiro opera sob a coordenação do Caboclo Pena Branca, mas abre suas correntes para a atuação fraterna das diversas linhas tradicionais da Umbanda:
-            </p>
-            <div className="space-y-4">
-              <div className="border-b border-areia-escura pb-3">
-                <h4 className="font-semibold text-sm text-gray-900">Caboclos (Oxóssi, Ogum, Xangô)</h4>
-                <p className="text-xs text-gray-500">Energias curadoras das florestas, firmeza de caráter, abertura de caminhos e justiça.</p>
-              </div>
-              <div className="border-b border-areia-escura pb-3">
-                <h4 className="font-semibold text-sm text-gray-900">Pretos Velhos (Yorimá / Almas)</h4>
-                <p className="text-xs text-gray-500">Aconselhamento, paciência, sabedoria de vida, quebra de magias densas e conforto.</p>
-              </div>
-              <div className="border-b border-areia-escura pb-3">
-                <h4 className="font-semibold text-sm text-gray-900">Crianças / Ibeijada</h4>
-                <p className="text-xs text-gray-500">Pureza, restauração da alegria interna, cura psíquica e harmonização dos lares.</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-sm text-gray-900">Povo de Esquerda (Exus e Pombagiras)</h4>
-                <p className="text-xs text-gray-500">Guardiões da Lei e da Ordem nas dimensões inferiores. Limpeza pesada, defesa e caminhos materiais.</p>
-              </div>
-            </div>
-          </div>
+          <h2 className="font-serif text-3xl font-bold tracking-tight text-[#2e7d32] sm:text-4xl">
+            A Semente Plantada em 2015
+          </h2>
+        </div>
+        <div className="mt-8 space-y-6 text-gray-700 leading-relaxed text-base sm:text-lg text-justify md:text-center">
+          <p>
+            O Templo Umbandista Caboclo Pena Branca (TUCPB) lançou as suas primeiras raízes em Brasília, no ano de 2015, sob a força e a luz da manifestação do nosso Guia Chefe, o Caboclo Pena Branca. A nossa história começou de forma humilde e genuína: num pequeno quarto emprestado por uma consulente que, profundamente tocada pelo Axé, viria a tornar-se uma das primeiras filhas de santo da casa.
+          </p>
+          <p>
+            Movidos pelo amor e pela urgência da caridade, o pequeno espaço rapidamente se revelou estreito para o tamanho da missão. As nossas correntes de atendimento começavam às 18h das sextas-feiras e estendiam-se, ininterruptamente, até às 9h ou 10h da manhã do dia seguinte. Eram madrugadas inteiras dedicadas ao pronto-socorro espiritual e ao amparo dos aflitos.
+          </p>
+          <p>
+            Desde o nosso primeiro dia de fundação, a cura foi tratada de forma integral. Enquanto a espiritualidade atuava firmemente nos trabalhos de desobsessão, abertura de caminhos e quebra de amarras, os nossos filhos de fé somavam forças aplicando Reiki e princípios da Medicina Chinesa. Uma união perfeita entre saberes, onde cada pessoa que cruzava a nossa porta era (e continua a ser) envolvida e tratada com o mais absoluto amor, respeito e acolhimento.
+          </p>
         </div>
       </section>
 
-      {/* Interactive History Timeline */}
-      <section className="bg-[#f2ede2] py-16 border-y border-areia-escura">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
-            <h2 className="font-serif text-2xl font-bold tracking-tight text-marrom-terra sm:text-3xl">
-              Linha do Tempo: Marcos de Fé
-            </h2>
-            <p className="text-sm text-gray-600">
-              Clique em cada ano para acompanhar como a espiritualidade construiu nossa casa passo a passo:
-            </p>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            {milestones.map((milestone, index) => (
-              <button
-                key={milestone.year}
-                onClick={() => setActiveMilestone(index)}
-                className={`px-5 py-3 rounded-full font-mono font-bold text-sm border transition-all ${
-                  activeMilestone === index
-                    ? "bg-verde-mata border-verde-mata text-pena-branca shadow-md scale-105"
-                    : "bg-white border-areia-escura text-marrom-terra hover:bg-areia-suave"
-                }`}
-                id={`milestone-btn-${milestone.year}`}
-              >
-                {milestone.year}
-              </button>
-            ))}
-          </div>
-
-          {/* Active Timeline Card */}
-          <div className="mx-auto max-w-3xl bg-white rounded-xl p-8 border border-areia-escura shadow-sm animate-fade-in-quick">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="font-mono text-3xl font-extrabold text-marrom-terra">
-                  {milestones[activeMilestone].year}
-                </span>
-                <span className="text-xs font-semibold text-verde-folha bg-verde-folha/10 px-3 py-1 rounded-full uppercase tracking-wider">
-                  {milestones[activeMilestone].subtitle}
-                </span>
-              </div>
-              <h3 className="font-serif text-xl font-bold text-gray-900 border-b border-areia-escura pb-2">
-                {milestones[activeMilestone].title}
-              </h3>
-              <p className="text-sm text-gray-700 leading-relaxed">
-                {milestones[activeMilestone].description}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Dirigente Biography section */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          <div className="lg:col-span-4 flex justify-center">
-            {/* Elegant bio avatar design, with a natural warm aura frame */}
-            <div className="relative w-64 h-80 rounded-2xl bg-gradient-to-t from-marrom-terra to-marrom-tronco overflow-hidden shadow-lg border-4 border-white flex flex-col items-center justify-end p-6 text-center">
-              {/* Spiritual backdrop details */}
-              <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:12px_12px]"></div>
-              
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
-                <User className="h-28 w-28 text-white/25" />
-              </div>
-
-              {/* Glowing ring */}
-              <div className="absolute inset-4 rounded-xl border border-white/20"></div>
-              
-              <div className="relative z-10 space-y-1">
-                <div className="text-pena-branca font-serif font-bold text-lg">Pai Felipe de Oxóssi</div>
-                <div className="text-xs font-mono text-areia-escura uppercase tracking-widest">Dirigente Espiritual</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="lg:col-span-8 space-y-6">
-            <h2 className="font-serif text-2xl font-bold tracking-tight text-marrom-terra sm:text-3xl border-l-4 border-verde-folha pl-4">
-              O Tronco (O Dirigente)
-            </h2>
-            <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-              A condução espiritual da casa está sob a responsabilidade de Pai Felipe. Sua jornada é marcada pela união de dois pilares fundamentais: a tradição de <strong>Babalorixá</strong>, com seu profundo respeito à mironga, ao sagrado e ao fundamento dos Orixás e Guias, e a <strong>Psicologia Existencial-Fenomenológica</strong>, focada na experiência vivida, na escuta acolhedora e na busca pelo sentido da existência.
-            </p>
+      {/* 2. Dirigente Biography section */}
+      <section className="bg-[#f2ede2] py-20 border-y border-areia-escura">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
-            {/* Elegant Quotation block */}
-            <div className="bg-[#fcfbfa] p-6 rounded-xl border-l-4 border-marrom-terra italic text-sm text-gray-700 shadow-inner relative">
-              <Quote className="absolute -top-3 -left-1 h-8 w-8 text-marrom-terra/15 rotate-180" />
-              <p className="relative z-10 leading-relaxed">
-                &ldquo;A Umbanda não é um caminho de facilidades mágicas ou de barganhas com o sagrado. É uma estrada estreita de autoconhecimento, reforma íntima e caridade ativa. Estar de branco descalço no Gongá é lembrar que viemos da poeira da terra e que nossa missão é acender a centelha de luz divina na vida de quem está em trevas.&rdquo;
-              </p>
-              <div className="mt-2 font-serif text-xs font-semibold text-marrom-terra not-italic text-right">
-                — Pai Felipe
+            <div className="lg:col-span-4 flex justify-center lg:justify-end">
+              {/* Elegant bio avatar design, with a natural warm aura frame */}
+              <div className="relative w-72 h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-white flex flex-col items-center justify-end p-6 text-center transform hover:scale-105 transition-transform duration-500 group">
+                <div className="absolute inset-0 bg-marrom-terra/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                <img src="/SaveClip.App_581942069_17904889521273292_5595332920639976122_n.jpg" alt="Pai Felipe" className="absolute inset-0 w-full h-full object-cover object-top" />
+                
+                {/* Glowing ring */}
+                <div className="absolute inset-4 rounded-2xl border border-white/20 z-20"></div>
+                
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-6 pt-12 z-20">
+                  <div className="relative z-30 space-y-1">
+                    <div className="text-white font-serif font-bold text-2xl">Pai Felipe</div>
+                    <div className="text-xs font-mono text-[#d4af37] uppercase tracking-widest mt-1">Dirigente Espiritual</div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-              Essa fusão entre a sabedoria ancestral das matas e o rigor do cuidado psicológico garante que cada consulente e cada médium seja visto em sua totalidade. O terreiro torna-se, assim, um hospital de almas, onde o acolhimento humano caminha lado a lado com a intervenção espiritual, zelando pela saúde física, mental e espiritual de todos que cruzam nossas portas.
+            <div className="lg:col-span-8 space-y-8">
+              <h2 className="font-serif text-3xl font-bold tracking-tight text-[#d4af37] sm:text-4xl border-l-4 border-[#2e7d32] pl-6">
+                O Tronco: Bàbá Aláàrìnrin Àjò (Pai Felipe)
+              </h2>
+              <div className="space-y-5">
+                <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+                  Algumas pessoas são chamadas pela espiritualidade ao longo da vida. Outras, já nascem com ela a pulsar nas veias.
+                </p>
+                <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+                  Desde os primeiros anos de vida, Pai Felipe sentia que habitava mundos paralelos. A sua infância foi marcada por sonhos intensos e memórias de existências passadas que, na época, traziam inquietação. Mas a resposta para esse mistério não tardaria a ser confirmada pelos grandes oráculos: ele não se estava a iniciar no sacerdócio nesta vida; ele apenas estava a despertar. Era o retorno do Viajante dos Sonhos — o significado literal do seu nome sagrado iorubá, <strong>Bàbá Aláàrìnrin Àjò</strong>.
+                </p>
+                <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+                  Mas o dom puro não lhe bastava; ele precisava de fundamentos profundos. Inquieto e sedento pela verdadeira raiz da magia e do sagrado, construiu uma trajetória raríssima e impressionante. Embrenhou-se nas terras de Roraima e do Amazonas, vivenciando a força das etnias Macuxi e Yanomami, até ser iniciado como Pajé Xamã Patxe na milenar tradição <strong>Wapichana</strong>. Na matriz africana, foi consagrado e assentado como Babalorixá na imponente nação <strong>Ketu</strong>. E na Umbanda, a sua árvore bebeu direto da fonte, firmando raízes na histórica <strong>Tenda Espírita Mirim</strong>, uma das casas fundadoras e mais velhas da história da Umbanda no Brasil.
+                </p>
+                <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+                  A sua jornada passou ainda por iniciações na Alquimia Hermética e no Ocultismo, amparado por mestres que o ajudaram a lapidar a sua mediunidade. Contudo, o que torna o seu trabalho no TUCPB um verdadeiro divisor de águas é a sua visão como Psicólogo e Cientista.
+                </p>
+                <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+                  Pai Felipe compreendeu, através dos seus estudos em fenomenologia e hermenêutica, que a magia e a ciência não são inimigas. Para ele, o líder religioso é a terra que deve nutrir a árvore, que são os médiuns e consulentes. Se a terra for pobre em conhecimento, a árvore cresce frágil.
+                </p>
+                <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+                  Por isso, no nosso terreiro, não há espaço para a cegueira dogmática. A missão de Pai Felipe é usar a força do Orixá e o entendimento clínico da mente humana para libertar quem o procura. Ele ensina que o primeiro e mais poderoso ato mágico é a consciência. Sob a sua liderança, a Umbanda de Caboclo não procura apenas curar o corpo, mas emancipar a alma, para que cada pessoa se torne, finalmente, o mestre do seu próprio destino.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Nossas Linhas */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-2xl mx-auto space-y-4 mb-14">
+          <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#1b5e20]/10 text-[#2e7d32]">
+            <Star className="h-6 w-6" />
+          </div>
+          <h2 className="font-serif text-3xl font-bold tracking-tight text-[#d4af37] sm:text-4xl">
+            A Nossa Essência
+          </h2>
+          <p className="text-gray-600 text-lg">
+            Os pilares que fundamentam a nossa prática espiritual
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          {/* Pilar 1 */}
+          <div className="bg-white p-8 md:p-10 rounded-3xl border border-areia-escura shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#1b5e20] group">
+            <div className="flex items-center gap-5 mb-6">
+              <div className="p-4 rounded-2xl bg-[#1b5e20]/10 text-[#1b5e20] group-hover:bg-[#1b5e20] group-hover:text-white transition-colors duration-300">
+                <Leaf className="h-8 w-8" />
+              </div>
+              <h3 className="font-serif text-2xl font-bold text-[#d4af37]">Umbanda de Caboclo</h3>
+            </div>
+            <p className="text-base text-gray-700 leading-relaxed">
+              O Templo Umbandista Caboclo Pena Branca fundamenta os seus trabalhos numa vertente profunda e enraizada nas forças da natureza: a Umbanda de Caboclo. Guiados pela sabedoria dos povos originários e pela energia curadora das matas, o nosso culto não se prende apenas à incorporação, mas à vivência prática da espiritualidade e da magia natural.
             </p>
           </div>
 
+          {/* Pilar 2 */}
+          <div className="bg-white p-8 md:p-10 rounded-3xl border border-areia-escura shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#1b5e20] group">
+            <div className="flex items-center gap-5 mb-6">
+              <div className="p-4 rounded-2xl bg-[#1b5e20]/10 text-[#1b5e20] group-hover:bg-[#1b5e20] group-hover:text-white transition-colors duration-300">
+                <Flame className="h-8 w-8" />
+              </div>
+              <h3 className="font-serif text-2xl font-bold text-[#d4af37]">Fundamentos Xamânicos</h3>
+            </div>
+            <p className="text-base text-gray-700 leading-relaxed">
+              No TUCPB, não nos prendemos a dogmas rígidos. A nossa prática é a Umbanda de Caboclo, que bebe naturalmente das fontes do xamanismo e da pajelança. Através do uso litúrgico das forças da natureza — com ervas, defumações, cristais e o preparo das puçangas (medicinas ancestrais) —, manipulamos o Axé para a cura. É uma Umbanda flexível e viva, que honra os espíritos da natureza e une a força dos Orixás à sabedoria curadora da floresta.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Nossa Forma de Trabalhar */}
+      <section className="bg-gradient-to-b from-white to-[#f2ede2] py-20 border-t border-areia-escura">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-14">
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <h2 className="font-serif text-3xl font-bold tracking-tight text-[#d4af37] sm:text-4xl">
+              Nossa Forma de Trabalhar
+            </h2>
+            <p className="text-lg text-gray-600 font-light">
+              Uma Umbanda Completa e Integrativa
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            {/* Card 1 */}
+            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-areia-escura hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+              <div className="flex items-center gap-5 mb-6">
+                <div className="p-4 rounded-2xl bg-[#d4af37]/10 text-[#d4af37] group-hover:bg-[#d4af37] group-hover:text-white transition-colors duration-300">
+                  <Users className="h-8 w-8" />
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-[#2e7d32]">As Giras de Atendimento</h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed text-base">
+                Trabalhamos com a Umbanda em toda a sua plenitude. Nas nossas giras, honramos os Pretos Velhos, Caboclos, Erês, Boiadeiros, Caboclos de Ogum, Ciganos, Malandros, Marinheiros e Baianos, além da força vital do nosso Povo de Esquerda (Exu, Pombagira e Exu Mirim). Cada gira inicia-se com o chamado das linhas do dia e com rituais específicos, sempre guiados pela intuição dos guias e do nosso dirigente, abrindo-se depois para o sagrado e acolhedor momento do atendimento fraterno.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-areia-escura hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+              <div className="flex items-center gap-5 mb-6">
+                <div className="p-4 rounded-2xl bg-[#1b5e20]/10 text-[#1b5e20] group-hover:bg-[#1b5e20] group-hover:text-white transition-colors duration-300">
+                  <Heart className="h-8 w-8" />
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-[#d4af37]">Giras de Cura</h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed text-base">
+                As nossas Giras de Cura possuem uma energia e estrutura únicas. Sob a condução amorosa e sábia dos Pretos Velhos, o terreiro transforma-se num verdadeiro hospital espiritual. Aqui, o tratamento transcende o invisível: enquanto ocorrem cirurgias astrais manifestadas pelos nossos médiuns de cura, filhos da casa aplicam terapias integrativas, unindo o passe magnético ao Reiki e à Medicina Chinesa (como a acupuntura). É a união de todas as ferramentas de luz e ciência em prol do alívio e da cura integral do ser humano.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Elegant Photo Gallery Section */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 border-t border-areia-escura">
-        <div className="text-center mb-10">
-           <h2 className="font-serif text-2xl font-bold tracking-tight text-marrom-terra sm:text-3xl">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-12">
+           <h2 className="font-serif text-3xl font-bold tracking-tight text-[#d4af37]">
              Memórias do Gongá
            </h2>
-           <p className="text-sm text-gray-600 mt-2">Vislumbres de nossa casa, de nossa fé e de nossa caminhada.</p>
+           <p className="text-base text-gray-600 mt-3">Vislumbres de nossa casa, de nossa fé e de nossa caminhada.</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Gallery Item 1 */}
-          <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-sm relative group cursor-pointer border border-areia-escura">
-            <div className="absolute inset-0 bg-marrom-terra/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-            <img src="https://images.unsplash.com/photo-1544896265-d01fcf2ed71f?q=80&w=1000&auto=format&fit=crop" alt="Detalhe de velas e ervas" className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20">
-              <span className="text-pena-branca text-sm font-serif">A Força das Velas</span>
-            </div>
-          </div>
+          <GalleryYouTube 
+            videoId="sIJRw2AmSUY" 
+            title="Força da Curimba" 
+          />
           
           {/* Gallery Item 2 */}
-          <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-sm relative group cursor-pointer border border-areia-escura">
-             <div className="absolute inset-0 bg-marrom-terra/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-            <img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?q=80&w=1000&auto=format&fit=crop" alt="Atabaques" className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
-             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20">
-              <span className="text-pena-branca text-sm font-serif">O Som da Curimba</span>
+          <GalleryYouTube 
+            videoId="qR9rmjK8UW0" 
+            title="Força da Cura" 
+          />
+
+          {/* Gallery Item 3 */}
+          <GalleryYouTube 
+            videoId="5lIcBVhdH4E" 
+            title="Povo Cigano" 
+          />
+
+          {/* Gallery Item 4 */}
+          <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-sm relative group cursor-pointer border border-areia-escura">
+            <div className="absolute inset-0 bg-marrom-terra/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+            <img src="/Imagem do WhatsApp de 2024-05-12 à(s) 23.30.39_febd4a3f.jpg" alt="Firmeza no Gongá" className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20">
+              <span className="text-pena-branca text-base font-serif font-medium tracking-wide">Firmeza Sagrada</span>
             </div>
           </div>
 
-          {/* Gallery Item 3 */}
-          <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-sm relative group cursor-pointer border border-areia-escura">
+          {/* Gallery Item 5 */}
+          <GalleryYouTube 
+            videoId="rZpCNmcVdkY" 
+            title="Nossa Corrente" 
+          />
+
+          {/* Gallery Item 6 */}
+          <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-sm relative group cursor-pointer border border-areia-escura">
              <div className="absolute inset-0 bg-marrom-terra/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-            <img src="https://images.unsplash.com/photo-1517415446006-258169d519b7?q=80&w=1000&auto=format&fit=crop" alt="Elementos da natureza" className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
-             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20">
-              <span className="text-pena-branca text-sm font-serif">A Seiva das Matas</span>
+            <img src="/SaveClip.App_519556405_672527209142230_3586110890263026244_n.jpg" alt="Detalhe do Terreiro" className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20">
+              <span className="text-pena-branca text-base font-serif font-medium tracking-wide">Memórias do Terreiro</span>
             </div>
           </div>
         </div>
@@ -249,25 +278,35 @@ export default function Trajetoria() {
       <InstagramFeed />
 
       {/* Sacred Message Section (Caboclo Pena Branca) */}
-      <section className="mx-auto max-w-4xl px-4 sm:px-6">
-        <div className="bg-gradient-to-br from-verde-mata to-verde-folha rounded-3xl p-8 sm:p-12 text-center text-pena-branca relative overflow-hidden shadow-lg border-2 border-areia-escura/15">
-          <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#ffffff_2px,transparent_2px)] [background-size:24px_24px]"></div>
+      <section className="mx-auto max-w-5xl px-4 sm:px-6 mt-12">
+        <div className="bg-gradient-to-br from-[#1b5e20] to-[#2e7d32] rounded-[2.5rem] p-10 sm:p-16 text-center text-white relative overflow-hidden shadow-xl border border-[#d4af37]/20">
+          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_2px,transparent_2px)] [background-size:32px_32px]"></div>
           
-          <div className="relative z-10 space-y-6">
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-white/10 text-areia-escura">
-              <TreePine className="h-6 w-6 text-white" />
+          <div className="relative z-10 space-y-8">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm border border-white/20">
+              <TreePine className="h-8 w-8 text-white" />
             </div>
             
-            <h3 className="font-serif text-2xl font-bold tracking-tight sm:text-3xl">
+            <h3 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl text-[#d4af37]">
               Mensagem do Caboclo Pena Branca
             </h3>
             
-            <p className="text-sm sm:text-base text-areia-escura leading-relaxed italic max-w-2xl mx-auto font-light">
-              &ldquo;Filho de fé, não temas o vento que balança as copas das árvores da mata. O vento limpa as folhas secas para que novos brotos nasçam. Quando a jornada parecer pesada e seus pés cansarem de pisar nos espinhos da estrada da vida, senta-te sob a sombra do meu cocar. <br /><br />
-              Trago a pena branca da paz para acalmar o teu peito e a flecha sagrada de Oxóssi para caçar as tuas dores. Não carregues mágoas; a água corrente lava tudo. Mantém teus olhos no alto e a tua fé firmada na luz de Oxalá, pois a floresta inteira trabalha em silêncio pela tua vitória.&rdquo;
-            </p>
+            <div className="space-y-6 text-base sm:text-xl text-white/90 leading-relaxed italic max-w-3xl mx-auto font-light">
+              <p>
+                &ldquo;Coisa boa, meu filho! Coisa boa é saber que o vento forte que balança a mata não vem para derrubar a árvore de raiz firme, mas apenas para levar embora a folha seca que já não te serve mais.
+              </p>
+              <p>
+                Muitas vezes chegas aqui com o passo pesado, achando que a estrada da vida só tem espinhos. Mas senta-te aqui, sob a sombra do meu cocar. Respira o cheiro sagrado da erva. Deixa que a água corrente leve as tuas mágoas e que o fumo do meu cachimbo eleve as tuas dores aos pés de Zambi.
+              </p>
+              <p>
+                Não tenhas medo das noites escuras, pois até a coruja precisa da escuridão para enxergar longe. Eu trago a pena branca para pacificar o teu coração e a flecha de Oxóssi para garantir o teu sustento e abrir os teus caminhos. A cura verdadeira, meu filho, começa quando aprendes a perdoar a ti mesmo.
+              </p>
+              <p>
+                Levanta a cabeça, firma a tua fé na luz de Oxalá e segue. A floresta inteira trabalha em silêncio pela tua vitória. E ver a tua alma curada, leve e de pé... ah, isso é coisa boa, meu filho!&rdquo;
+              </p>
+            </div>
             
-            <div className="font-serif text-xs text-areia-escura font-semibold tracking-wider uppercase">
+            <div className="pt-4 font-serif text-sm text-[#d4af37] font-bold tracking-widest uppercase">
               — Okê Caboclo! Okê Pena Branca!
             </div>
           </div>
