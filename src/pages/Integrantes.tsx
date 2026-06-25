@@ -234,6 +234,7 @@ export default function Integrantes() {
 
   const handleRegister = async (e: FormEvent) => {
     e.preventDefault();
+    console.log('Testando banco de dados');
     setAuthError("");
     if (!authEmail || !authPassword || !authName) {
       setAuthError("Preencha todos os campos obrigatórios.");
