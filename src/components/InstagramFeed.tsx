@@ -1,6 +1,27 @@
 import { Instagram } from "lucide-react";
+import { useEffect } from "react";
 
 export default function InstagramFeed() {
+  // COLE SEU ID DO WIDGET DO ELFSIGHT AQUI:
+  // Exemplo: "ed72a123-1234-1234-1234-1234567890ab"
+  const elfsightWidgetId = "db5926c2-dc2e-4748-9332-9e4adfd856ed"; 
+
+  useEffect(() => {
+    if (elfsightWidgetId) {
+      // Remover script anterior se existir para forçar recarregamento
+      const existingScript = document.getElementById("elfsight-script");
+      if (existingScript) {
+        existingScript.remove();
+      }
+      
+      const script = document.createElement("script");
+      script.id = "elfsight-script";
+      script.src = "https://elfsightcdn.com/platform.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, [elfsightWidgetId]);
+
   const placeholders = [
     "https://images.unsplash.com/photo-1603704253164-90f33d725fb6?q=80&w=600&h=600&fit=crop", // Velas / Altar
     "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=600&h=600&fit=crop", // Natureza / Folhas
@@ -18,34 +39,39 @@ export default function InstagramFeed() {
           Um pouco da nossa vivência, nossa fé e do contato com as forças da natureza.
         </p>
         
-        {/* Container preparado para Widget do Instagram (iframe/script futuro) */}
-        <div id="instagram-widget-container" className="w-full">
-          {/* Fallback temporário (Mockup do Feed) */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 mb-8">
-            {placeholders.map((src, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-xl bg-gray-100 group relative cursor-pointer shadow-sm border border-gray-100">
-                <img 
-                  src={src} 
-                  alt={`Momento no terreiro ${index + 1}`} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-marrom-terra/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <Instagram className="text-white h-8 w-8" />
+        {/* Container preparado para Widget do Instagram (Elfsight) */}
+        <div id="instagram-widget-container" className="w-full min-h-[400px]">
+          {elfsightWidgetId ? (
+            <div className={`elfsight-app-${elfsightWidgetId}`} data-elfsight-app-lazy></div>
+          ) : (
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 mb-8">
+              {placeholders.map((src, index) => (
+                <div key={index} className="aspect-square overflow-hidden rounded-xl bg-gray-100 group relative cursor-pointer shadow-sm border border-gray-100">
+                  <img 
+                    src={src} 
+                    alt={`Momento no terreiro ${index + 1}`} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-marrom-terra/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <Instagram className="text-white h-8 w-8" />
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
 
-        <a 
-          href="https://instagram.com/caboclo.penabranca" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-verde-mata text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-verde-mata/20 hover:bg-verde-folha hover:scale-105 transition-all duration-300"
-        >
-          <Instagram className="h-5 w-5" />
-          Acompanhe nossa vivência no @caboclo.penabranca
-        </a>
+        <div className="mt-0">
+          <a 
+            href="https://instagram.com/caboclo.penabranca" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-verde-mata text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-verde-mata/20 hover:bg-verde-folha hover:scale-105 transition-all duration-300"
+          >
+            <Instagram className="h-5 w-5" />
+            Acompanhe nossa vivência no @caboclo.penabranca
+          </a>
+        </div>
       </div>
     </div>
   );
