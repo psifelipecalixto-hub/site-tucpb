@@ -57,6 +57,7 @@ export default function Integrantes() {
   const [newTaskArea, setNewTaskArea] = useState<MemberTask["area"]>("Terreiro / Gongá");
 
   const [selectedMemberProfile, setSelectedMemberProfile] = useState<UserProfile | null>(null);
+  const [memberToDelete, setMemberToDelete] = useState<UserProfile | null>(null);
 
   // --- Curimba Admin States ---
   const [newPointTitle, setNewPointTitle] = useState("");
@@ -248,13 +249,52 @@ export default function Integrantes() {
             setActiveTab("admin");
             return;
           } else {
-            setAuthError("Usuário autenticado, mas perfil não encontrado na tabela de membros. Solicite cadastro.");
+            setAuthError("Seu cadastro foi iniciado, mas seu perfil não foi salvo. Por favor, vá na aba 'Solicitar Cadastro', preencha seus dados novamente com a MESMA senha e tente cadastrar para concluir.");
             return;
           }
         }
       }
 
-      setAuthError(authErrorMsg ? `Erro Auth: ${authErrorMsg.message}` : "E-mail ou senha incorretos.");
+      // 2. Fallback: verificar senha em texto puro na tabela membros (para cadastros antigos ou cadastrados via formulario e que ainda nao tem auth)
+      const { data: fallbackData, error: fallbackError } = await supabase
+        .from('membros')
+        .select('*')
+        .eq('email', authEmail)
+        .eq('password', authPassword)
+        .single();
+        
+      if (!fallbackError && fallbackData) {
+        // Tenta migrar o usuário para o Supabase Auth para que a recuperação de senha funcione no futuro
+        const { error: signUpError } = await supabase.auth.signUp({
+          email: authEmail,
+          password: authPassword,
+        });
+        
+        if (!signUpError) {
+           console.log("Usuário migrado para o Supabase Auth com sucesso.");
+        }
+
+        const user = fallbackData as UserProfile;
+        setCurrentUser(user);
+        setPhotoPreview(user.photoUrl || null);
+        localStorage.setItem("tucpb_logged_in_user", user.id);
+        setActiveTab(user.role === "admin" ? "admin" : "perfil");
+        return;
+      }
+
+      if (authErrorMsg) {
+        let translatedError = authErrorMsg.message;
+        if (translatedError === "Invalid login credentials") {
+          translatedError = "E-mail ou senha incorretos.";
+        } else if (translatedError === "Email not confirmed") {
+          translatedError = "E-mail não confirmado. Verifique sua caixa de entrada.";
+        } else if (translatedError === "User already registered") {
+          translatedError = "Usuário já cadastrado.";
+        }
+        setAuthError(translatedError);
+      } else {
+        setAuthError("E-mail ou senha incorretos.");
+      }
     } catch (err: any) {
       console.error(err);
       setAuthError("Erro interno ao tentar fazer login: " + err.message);
@@ -270,6 +310,15 @@ export default function Integrantes() {
     }
     
     try {
+      // Se o usuário existir apenas na tabela membros (cadastro antigo), tenta migrá-lo para o Auth
+      const { data: profile } = await supabase.from('membros').select('email, password').eq('email', authEmail).single();
+      if (profile && profile.password) {
+        await supabase.auth.signUp({
+          email: profile.email,
+          password: profile.password,
+        });
+      }
+
       const { error } = await supabase.auth.resetPasswordForEmail(authEmail, {
         redirectTo: window.location.origin,
       });
@@ -299,40 +348,87 @@ export default function Integrantes() {
       return;
     }
 
-    const newUser: UserProfile = {
-      id: `usr-${Date.now()}`,
-      name: authName,
-      email: authEmail,
-      password: authPassword,
-      role: "membro",
-      cargoTerreiro: authCargo,
-      dataNascimento: authDataNascimento,
-      cpf: authCpf,
-      rg: authRg,
-      tipoSanguineo: authTipoSanguineo,
-      whatsapp: authWhatsapp,
-      endereco: authEndereco,
-      profissao: authProfissao,
-      contatoEmergencia: authContatoEmergencia,
-      alergias: authAlergias,
-      acompanhamentoPsicologico: authAcompPsicologico,
-      transtornoPsiquiatrico: authTranstornoPsiquiatrico,
-      medicamentosContinuos: authMedicamentos,
-      tempoDesenvolvimento: authTempoDesenvolvimento,
-      terreirosAnteriores: authTerreirosAnteriores,
-      iniciacoesRealizadas: authIniciacoes,
-      tiposMediunidade: authTiposMediunidade,
-      guiasConhecidos: authGuiasConhecidos,
-      buscaCoracao: authBuscaCoracao,
-      photoUrl: "",
-      status: "pendente"
-    };
-
     try {
+      // 1. Cadastrar ou logar no Supabase Auth
+      let userId = "";
+      
+      const { data: authData, error: authError } = await supabase.auth.signUp({
+        email: authEmail,
+        password: authPassword,
+      });
+
+      if (authError) {
+        if (authError.message === "User already registered") {
+          // Usuário já tem conta no Auth. Vamos tentar logar para ver se ele não tem perfil na tabela membros.
+          const { data: loginData, error: loginError } = await supabase.auth.signInWithPassword({
+            email: authEmail,
+            password: authPassword,
+          });
+          
+          if (loginError) {
+            setAuthError("E-mail já cadastrado. Tente fazer login na aba de Login.");
+            return;
+          }
+          
+          // Verifica se já tem perfil
+          const { data: existingProfile } = await supabase.from('membros').select('id').eq('id', loginData.user.id).single();
+          if (existingProfile) {
+            setAuthError("E-mail já cadastrado. Tente fazer login na aba de Login.");
+            return;
+          }
+          
+          // Se não tem perfil, segue para inserção
+          userId = loginData.user.id;
+        } else {
+          let translatedError = authError.message;
+          if (translatedError.includes("Password should be at least")) translatedError = "A senha deve ter pelo menos 6 caracteres.";
+          setAuthError(translatedError);
+          return;
+        }
+      } else {
+        userId = authData.user?.id || "";
+      }
+      
+      if (!userId) {
+        setAuthError("Falha ao obter o ID do usuário após o cadastro.");
+        return;
+      }
+
+      console.log("Sessão após signup:", await supabase.auth.getSession());
+
+      const newUser: UserProfile = {
+        id: userId,
+        name: authName,
+        email: authEmail,
+        password: authPassword,
+        role: "membro",
+        cargoTerreiro: authCargo,
+        dataNascimento: authDataNascimento,
+        cpf: authCpf,
+        rg: authRg,
+        tipoSanguineo: authTipoSanguineo,
+        whatsapp: authWhatsapp,
+        endereco: authEndereco,
+        profissao: authProfissao,
+        contatoEmergencia: authContatoEmergencia,
+        alergias: authAlergias,
+        acompanhamentoPsicologico: authAcompPsicologico,
+        transtornoPsiquiatrico: authTranstornoPsiquiatrico,
+        medicamentosContinuos: authMedicamentos,
+        tempoDesenvolvimento: authTempoDesenvolvimento,
+        terreirosAnteriores: authTerreirosAnteriores,
+        iniciacoesRealizadas: authIniciacoes,
+        tiposMediunidade: authTiposMediunidade,
+        guiasConhecidos: authGuiasConhecidos,
+        buscaCoracao: authBuscaCoracao,
+        photoUrl: "",
+        status: "pendente"
+      };
+
       const { error } = await supabase.from('membros').insert([newUser]);
       if (error) {
         console.error("Supabase insert error:", error);
-        setAuthError("Erro ao salvar no banco de dados. Tente novamente.");
+        setAuthError(`Erro ao salvar no banco de dados: ${error.message}`);
         return;
       }
       
@@ -493,10 +589,13 @@ export default function Integrantes() {
       const { error } = await supabase.from('membros').update({ status: 'aprovado' }).eq('id', userId);
       if (error) {
         console.error("Supabase update error:", error);
-        alert("Erro ao aprovar membro.");
+        alert("Erro ao aprovar membro: " + error.message);
         return;
       }
       setUsers(users.map(u => u.id === userId ? { ...u, status: "aprovado" } : u));
+      if (currentUser?.id === userId) {
+        setCurrentUser({ ...currentUser, status: "aprovado" });
+      }
     } catch (err) {
       console.error(err);
     }
@@ -511,6 +610,24 @@ export default function Integrantes() {
         return;
       }
       setUsers(users.filter(u => u.id !== userId));
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleDeleteMember = async (userId: string) => {
+    try {
+      const { error } = await supabase.from('membros').delete().eq('id', userId);
+      if (error) {
+        console.error("Supabase delete error:", error);
+        setAuthError("Erro ao deletar membro: " + error.message);
+        return;
+      }
+      setUsers(users.filter(u => u.id !== userId));
+      if (selectedMemberProfile?.id === userId) {
+        setSelectedMemberProfile(null);
+      }
+      setMemberToDelete(null);
     } catch (err) {
       console.error(err);
     }
@@ -873,6 +990,8 @@ export default function Integrantes() {
                     <label className="text-xs font-semibold text-gray-700 block">Cargo no Terreiro</label>
                     <select value={authCargo} onChange={(e) => setAuthCargo(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-xs outline-none focus:ring-2 focus:ring-verde-folha">
                       <option value="médiuns/cambones">Médiuns/Cambones</option>
+                      <option value="ogam">Ogam</option>
+                      <option value="membro externo">Membro Externo</option>
                       <option value="pai ou mãe pequena">Pai ou Mãe Pequena</option>
                       <option value="pai de santo">Pai de Santo</option>
                     </select>
@@ -1004,6 +1123,8 @@ export default function Integrantes() {
                         {isEditingProfile ? (
                           <select value={editProfileData.cargoTerreiro || ""} onChange={e => setEditProfileData({...editProfileData, cargoTerreiro: e.target.value})} className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded mt-1 focus:ring-1 focus:ring-verde-folha outline-none">
                             <option value="médiuns/cambones">Médiuns/Cambones</option>
+                            <option value="ogam">Ogam</option>
+                            <option value="membro externo">Membro Externo</option>
                             <option value="pai ou mãe pequena">Pai ou Mãe Pequena</option>
                             <option value="pai de santo">Pai de Santo</option>
                           </select>
@@ -1253,15 +1374,20 @@ export default function Integrantes() {
                   </div>
                   <div className="divide-y divide-gray-100 max-h-[500px] overflow-y-auto">
                     {users.filter(u => u.status !== "pendente").map(user => (
-                      <div key={user.id} className="p-4 flex items-center gap-4 hover:bg-gray-50 cursor-pointer" onClick={() => setSelectedMemberProfile(user)}>
-                        <div className="h-10 w-10 rounded-full bg-gray-200 overflow-hidden flex-shrink-0">
+                      <div key={user.id} className="p-4 flex items-center gap-4 hover:bg-gray-50">
+                        <div className="h-10 w-10 rounded-full bg-gray-200 overflow-hidden flex-shrink-0 cursor-pointer" onClick={() => setSelectedMemberProfile(user)}>
                           {user.photoUrl ? <img src={user.photoUrl} alt="" className="w-full h-full object-cover"/> : <UserIcon className="h-6 w-6 m-auto mt-2 text-gray-400"/>}
                         </div>
-                        <div className="flex-1">
+                        <div className="flex-1 cursor-pointer" onClick={() => setSelectedMemberProfile(user)}>
                           <h4 className="font-bold text-gray-900 text-sm hover:underline">{user.name} <span className="text-[10px] font-normal text-gray-500">({user.email})</span></h4>
                           <p className="text-xs text-gray-500 capitalize">{user.cargoTerreiro}</p>
                         </div>
                         {user.role === "admin" && <Shield className="h-4 w-4 text-red-700"/>}
+                        {user.role !== "admin" && (
+                          <button onClick={(e) => { e.stopPropagation(); setMemberToDelete(user); }} className="px-3 py-1.5 bg-red-50 hover:bg-red-100 text-red-700 text-[10px] font-bold rounded">
+                            Deletar
+                          </button>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -1908,12 +2034,35 @@ export default function Integrantes() {
                  </div>
                </div>
             </div>
-            {selectedMemberProfile.status === "pendente" && (
+            {selectedMemberProfile.status === "pendente" ? (
               <div className="border-t border-gray-100 bg-gray-50 p-4 flex gap-3 justify-end rounded-b-2xl">
                  <button onClick={() => { handleRejectMember(selectedMemberProfile.id); setSelectedMemberProfile(null); }} className="px-4 py-2 bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 text-sm font-bold rounded">Recusar</button>
                  <button onClick={() => { handleApproveMember(selectedMemberProfile.id); setSelectedMemberProfile({ ...selectedMemberProfile, status: "aprovado" }); }} className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold rounded flex items-center gap-2"><CheckCircle className="h-4 w-4"/> Aprovar e Autorizar Entrada</button>
               </div>
+            ) : selectedMemberProfile.role !== "admin" && (
+              <div className="border-t border-gray-100 bg-gray-50 p-4 flex justify-end rounded-b-2xl">
+                 <button onClick={() => setMemberToDelete(selectedMemberProfile)} className="px-4 py-2 bg-red-50 hover:bg-red-100 text-red-700 text-sm font-bold rounded">Deletar Membro</button>
+              </div>
             )}
+          </div>
+        </div>
+      )}
+
+      {/* Member Deletion Confirmation Modal */}
+      {memberToDelete && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-3xl w-full max-w-md p-6 shadow-xl relative animate-in fade-in zoom-in duration-200">
+            <button onClick={() => setMemberToDelete(null)} className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors">
+              <X className="h-5 w-5" />
+            </button>
+            <h3 className="font-serif text-xl font-bold text-gray-900 mb-2">Excluir Membro</h3>
+            <p className="text-sm text-gray-600 mb-6">
+              Tem certeza que deseja deletar o membro <span className="font-bold">{memberToDelete.name}</span>? Esta ação não pode ser desfeita.
+            </p>
+            <div className="flex gap-3 justify-end">
+              <button onClick={() => setMemberToDelete(null)} className="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-bold rounded">Cancelar</button>
+              <button onClick={() => handleDeleteMember(memberToDelete.id)} className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold rounded">Sim, Deletar</button>
+            </div>
           </div>
         </div>
       )}
