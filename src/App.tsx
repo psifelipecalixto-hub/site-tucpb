@@ -13,6 +13,8 @@ import Integrantes from "./pages/Integrantes";
 import Portal from "./pages/Portal";
 import Agenda from "./pages/Agenda";
 
+import Admin from "./pages/Admin";
+
 export default function App() {
   const [currentRoute, setCurrentRoute] = useState<string>("#home");
 
@@ -50,6 +52,8 @@ export default function App() {
         return <Portal />;
       case "#agenda":
         return <Agenda />;
+      case "#admin":
+        return <Admin />;
       default:
         return <Home onNavigate={handleNavigate} />;
     }
