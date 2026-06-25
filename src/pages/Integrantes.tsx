@@ -1,5 +1,5 @@
 import { useState, FormEvent, useEffect, useRef, ChangeEvent } from "react";
-import { Lock, Unlock, Users, ClipboardList, BookOpen, Bell, CheckCircle, Search, PlayCircle, TreePine, X, GraduationCap, Upload, Shield, User as UserIcon, Calendar as CalendarIcon, LogOut, Plus, Check, Clock, Trash2, Edit2 } from "lucide-react";
+import { Lock, Unlock, Users, ClipboardList, BookOpen, Bell, CheckCircle, Search, PlayCircle, TreePine, X, GraduationCap, Upload, Shield, User as UserIcon, Calendar as CalendarIcon, LogOut, Plus, Check, Clock, Trash2, Edit2, Eye, EyeOff } from "lucide-react";
 import { initialPoints, initialLessons, initialHerbs, initialTasks, initialArticles } from "../data";
 import { MemberTask, CurimbaPoint, Lesson, Herb, UserProfile, BlogArticle } from "../types";
 import { supabase } from "../lib/supabase";
@@ -23,7 +23,8 @@ export default function Integrantes() {
   
   // --- Auth States ---
   const [currentUser, setCurrentUser] = useState<UserProfile | null>(null);
-  const [authMode, setAuthMode] = useState<"login" | "register">("login");
+  const [authMode, setAuthMode] = useState<"login" | "register" | "forgot-password">("login");
+  const [showPassword, setShowPassword] = useState(false);
   const [authEmail, setAuthEmail] = useState("");
   const [authPassword, setAuthPassword] = useState("");
   const [authName, setAuthName] = useState("");
@@ -105,6 +106,7 @@ export default function Integrantes() {
         const { data, error } = await supabase.from('membros').select('*');
         if (error) {
           console.error("Error fetching users from Supabase:", error);
+          setUsers([DEFAULT_ADMIN]);
           return;
         }
         
@@ -218,7 +220,8 @@ export default function Integrantes() {
         
       if (error || !data) {
         // Fallback for default admin
-        const fallbackUser = users.find(u => u.email === authEmail && u.password === authPassword);
+        const fallbackUser = users.find(u => u.email === authEmail && u.password === authPassword) || 
+                             (DEFAULT_ADMIN.email === authEmail && DEFAULT_ADMIN.password === authPassword ? DEFAULT_ADMIN : undefined);
         if (fallbackUser) {
           setCurrentUser(fallbackUser);
           setPhotoPreview(fallbackUser.photoUrl || null);
@@ -239,7 +242,8 @@ export default function Integrantes() {
     } catch (err) {
       console.error(err);
       // Fallback for default admin
-      const fallbackUser = users.find(u => u.email === authEmail && u.password === authPassword);
+      const fallbackUser = users.find(u => u.email === authEmail && u.password === authPassword) || 
+                           (DEFAULT_ADMIN.email === authEmail && DEFAULT_ADMIN.password === authPassword ? DEFAULT_ADMIN : undefined);
       if (fallbackUser) {
         setCurrentUser(fallbackUser);
         setPhotoPreview(fallbackUser.photoUrl || null);
@@ -249,6 +253,18 @@ export default function Integrantes() {
       }
       setAuthError("Erro interno ao tentar fazer login.");
     }
+  };
+
+  const handleForgotPassword = async (e: FormEvent) => {
+    e.preventDefault();
+    setAuthError("");
+    if (!authEmail) {
+      setAuthError("Preencha o e-mail para recuperar a senha.");
+      return;
+    }
+    // Simulate sending an email
+    alert(`Instruções de recuperação de senha enviadas para: ${authEmail}. (Se o e-mail estiver cadastrado)`);
+    setAuthMode("login");
   };
 
   const handleRegister = async (e: FormEvent) => {
@@ -627,14 +643,36 @@ export default function Integrantes() {
           <div className="bg-white rounded-2xl border border-areia-escura p-8 shadow-md space-y-6">
             <div className="text-center space-y-2">
               <h2 className="font-serif text-2xl font-bold text-gray-900">
-                {authMode === "login" ? "Acesso Restrito" : "Novo Cadastro"}
+                {authMode === "forgot-password" ? "Recuperar Senha" : authMode === "login" ? "Acesso Restrito" : "Novo Cadastro"}
               </h2>
               <p className="text-xs text-gray-500">
-                {authMode === "login" ? "Entre com suas credenciais para acessar os estudos e tarefas da casa." : "Preencha os dados para criar seu perfil de membro."}
+                {authMode === "forgot-password" ? "Enviaremos instruções para o seu e-mail." : authMode === "login" ? "Entre com suas credenciais para acessar os estudos e tarefas da casa." : "Preencha os dados para criar seu perfil de membro."}
               </p>
             </div>
 
-            {authMode === "login" ? (
+            {authMode === "forgot-password" ? (
+              <form onSubmit={handleForgotPassword} className="space-y-4">
+                <div className="space-y-1">
+                  <label className="text-xs font-semibold text-gray-700 block">E-mail</label>
+                  <input
+                    type="email"
+                    required
+                    value={authEmail}
+                    onChange={(e) => setAuthEmail(e.target.value)}
+                    className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm focus:ring-2 focus:ring-verde-folha outline-none"
+                  />
+                </div>
+                {authError && <div className="text-xs text-red-600 bg-red-50 p-2 rounded">{authError}</div>}
+                <button type="submit" className="w-full bg-verde-mata text-white py-2.5 rounded-lg text-sm font-semibold hover:bg-verde-folha transition">
+                  Recuperar Senha
+                </button>
+                <div className="text-center pt-2">
+                  <button type="button" onClick={() => { setAuthMode("login"); setAuthError(""); }} className="text-xs text-gray-500 font-semibold hover:underline">
+                    Voltar para o login
+                  </button>
+                </div>
+              </form>
+            ) : authMode === "login" ? (
               <form onSubmit={handleLogin} className="space-y-4">
                 <div className="space-y-1">
                   <label className="text-xs font-semibold text-gray-700 block">E-mail</label>
@@ -647,14 +685,24 @@ export default function Integrantes() {
                   />
                 </div>
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-gray-700 block">Senha</label>
-                  <input
-                    type="password"
-                    required
-                    value={authPassword}
-                    onChange={(e) => setAuthPassword(e.target.value)}
-                    className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm focus:ring-2 focus:ring-verde-folha outline-none"
-                  />
+                  <div className="flex items-center justify-between">
+                    <label className="text-xs font-semibold text-gray-700 block">Senha</label>
+                    <button type="button" onClick={() => { setAuthMode("forgot-password"); setAuthError(""); }} className="text-[10px] text-verde-folha font-semibold hover:underline">
+                      Esqueceu a senha?
+                    </button>
+                  </div>
+                  <div className="relative">
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      required
+                      value={authPassword}
+                      onChange={(e) => setAuthPassword(e.target.value)}
+                      className="w-full px-3 py-2 pr-10 rounded-lg border border-areia-escura bg-areia-suave text-sm focus:ring-2 focus:ring-verde-folha outline-none"
+                    />
+                    <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                      {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                    </button>
+                  </div>
                 </div>
 
                 {authError && <div className="text-xs text-red-600 bg-red-50 p-2 rounded">{authError}</div>}
@@ -668,7 +716,7 @@ export default function Integrantes() {
                   </button>
                 </div>
                 <div className="mt-4 p-3 bg-gray-50 rounded text-[11px] text-gray-500 text-center border border-gray-200">
-                   <strong>Acesso Admin (Demonstração):</strong><br/>Email: admin@tucpb.com | Senha: admin
+                   <strong>Acesso Admin (Demonstração):</strong><br/>Email: admin@tucpb.com | Senha: admin123
                 </div>
               </form>
             ) : (
@@ -797,7 +845,12 @@ export default function Integrantes() {
                   </div>
                   <div className="space-y-1">
                     <label className="text-xs font-semibold text-gray-700 block">Senha</label>
-                    <input type="password" required value={authPassword} onChange={(e) => setAuthPassword(e.target.value)} className="w-full px-3 py-2 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha" />
+                    <div className="relative">
+                      <input type={showPassword ? "text" : "password"} required value={authPassword} onChange={(e) => setAuthPassword(e.target.value)} className="w-full px-3 py-2 pr-10 rounded-lg border border-areia-escura bg-areia-suave text-sm outline-none focus:ring-2 focus:ring-verde-folha" />
+                      <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                        {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                      </button>
+                    </div>
                   </div>
                   <div className="space-y-1">
                     <label className="text-xs font-semibold text-gray-700 block">Cargo no Terreiro</label>
