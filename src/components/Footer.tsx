@@ -97,18 +97,27 @@ export default function Footer({ onNavigate }: FooterProps) {
             <ul className="space-y-3 text-sm text-areia-escura">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 text-verde-folha shrink-0" />
+                <a 
+                  href="https://maps.app.goo.gl/JjXBzkLqysP7xufq9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-verde-folha transition-colors"
+                >
+                  Rua Caçapava, Qd 03, Lt 25, Casa 02 <br />
+                  Jardim Zuleika - Luziânia, GO<br />
+                  CEP: 72850-615
+                </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <Clock className="h-4 w-4 mt-0.5 text-verde-folha shrink-0" />
                 <span>
-                  Rua das Almas Sagradas, 120 <br />
-                  Cabedelo - PB, CEP 58100-000
+                  Segundas às 18h <br />
+                  Sábados (quinzenalmente) às 19h
                 </span>
               </li>
               <li className="flex items-center gap-2">
-                <Clock className="h-4 w-4 text-verde-folha shrink-0" />
-                <span>Sábados de Giras: a partir das 17h</span>
-              </li>
-              <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-verde-folha shrink-0" />
-                <span className="break-all text-xs">contato@tucpb.com.br</span>
+                <span className="break-all text-xs">baba.ajo.tucpb@gmail.com</span>
               </li>
             </ul>
           </div>

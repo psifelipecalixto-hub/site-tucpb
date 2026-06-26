@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Compass, BookOpen, User, Star, Leaf, Flame, Heart, Users, TreePine, Volume2, VolumeX } from "lucide-react";
 import InstagramFeed from "../components/InstagramFeed";
 

@@ -103,29 +103,43 @@ export default function Home({ onNavigate }: HomeProps) {
               O Terreiro de Pena Branca
             </h2>
             <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-              Fundado com o objetivo de servir de farol de caridade em nossa região, o **Templo Umbandista Caboclo Pena Branca (TUCPB)** é uma casa de acolhimento e cura. Guiados pela egrégora iluminada dos Caboclos da Mata, praticamos a Umbanda de forma tradicional, prezando pela ritualística pura, respeito incondicional aos Orixás e aos guias espirituais.
+              O Templo Umbandista Caboclo Pena Branca (TUCPB) é mais do que um espaço de culto; é um solo sagrado de acolhimento, colo e cura profunda. Nascido sob o sopro da pura caridade, a nossa casa preserva a ritualística tradicional e os fundamentos enraizados da Umbanda de Caboclo. Guiados pela egrégora viva e curadora das matas, caminhamos com os pés no chão e o coração aberto, reverenciando a força dos Orixás e a sabedoria dos nossos guias espirituais.
             </p>
             <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-              Acreditamos que o terreiro é um hospital do espírito, onde as dores da alma encontram alívio através do passe, do descarrego das ervas e do aconselhamento fraterno com os espíritos protetores.
+              Aqui, o terreiro opera como um verdadeiro hospital para o espírito. Sabemos que as dores que pesam no corpo muitas vezes começam no cansaço da alma. É por isso que abrimos as nossas portas para ser um porto seguro, onde as amarras são quebradas e o sofrimento encontra alívio através do passe magnético, do mistério curador das ervas sagradas e do conselho amigo e fraterno dos nossos protetores.
             </p>
+            
+            <blockquote className="my-8 text-center italic font-serif text-lg text-[#d4af37]">
+              "Coisa boa, meu filho! Quando a jornada pesar, senta-te sob a sombra do meu cocar. Trago a pena branca da paz para acalmar o teu peito." <br/>
+              <span className="text-sm not-italic font-sans text-gray-500 mt-2 block">— Caboclo Pena Branca</span>
+            </blockquote>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               <div className="flex gap-3 items-start">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-verde-folha/10 text-verde-folha mt-1">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-verde-folha/10 text-verde-folha mt-1">
                   <Heart className="h-4 w-4" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-sm text-gray-900">Caridade Sem Custo</h4>
-                  <p className="text-xs text-gray-500">Nenhum trabalho espiritual é cobrado. A caridade é doada gratuitamente.</p>
+                  <h4 className="font-semibold text-sm text-gray-900">A Prática da Caridade</h4>
+                  <p className="text-xs text-gray-500">A caridade é o nosso compromisso maior. Movidos pelo amor e pela missão espiritual que recebemos, os atendimentos de giro e passes são realizados como doação sagrada, sem qualquer cobrança. Nossa casa vive da fé e da dedicação daqueles que buscam o alívio na espiritualidade.</p>
                 </div>
               </div>
               <div className="flex gap-3 items-start">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-marrom-terra/10 text-marrom-terra mt-1">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-marrom-terra/10 text-marrom-terra mt-1">
                   <TreePine className="h-4 w-4" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-sm text-gray-900">Respeito às Ervas</h4>
-                  <p className="text-xs text-gray-500">As forças da natureza são usadas de forma sustentável para o banho e fitoenergética.</p>
+                  <h4 className="font-semibold text-sm text-gray-900">O Poder e Respeito às Ervas</h4>
+                  <p className="text-xs text-gray-500">Reverenciamos o sangue verde das matas. Extraímos o Axé das folhas, raízes e sementes de forma sagrada e sustentável para o preparo de banhos, defumações e puçangas (medicinas ancestrais) que limpam, curam e reequilibram o corpo energético.</p>
+                </div>
+              </div>
+              <div className="flex gap-3 items-start sm:col-span-2">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#d4af37]/10 text-[#d4af37] mt-1">
+                  <Sparkles className="h-4 w-4" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-sm text-gray-900">Hospital de Almas</h4>
+                  <p className="text-xs text-gray-500">Somos um verdadeiro pronto-socorro espiritual. Unimos a força curadora dos Pretos Velhos e Caboclos a terapias integrativas como o Reiki, Acupuntura e passes magnéticos, tratando corpo, mente e espírito em total profundidade.</p>
                 </div>
               </div>
             </div>
@@ -142,7 +156,7 @@ export default function Home({ onNavigate }: HomeProps) {
               O Gongá Sagrado
             </h2>
             <p className="text-sm text-gray-600">
-              O Gongá é o condensador de energias do terreiro. Clique em cada um dos elementos consagrados no altar para entender sua força espiritual:
+              O Axé é a força vital, a energia e o princípio da vida. No nosso Gongá, essa força é movimentada através da união sagrada dos quatro elementos. Clique em cada um abaixo para entender como manipulamos a natureza para a sua cura:
             </p>
           </div>
 
@@ -249,11 +263,19 @@ export default function Home({ onNavigate }: HomeProps) {
                 <MapPin className="h-6 w-6" />
               </div>
               <h3 className="font-serif font-bold text-gray-900 mb-2">Onde Estamos</h3>
-              <p className="text-sm text-gray-700 leading-relaxed">
+              <p className="text-sm text-gray-700 leading-relaxed mb-4">
                 Rua Caçapava, Qd 03, Lt 25, Casa 02<br />
                 Jardim Zuleika - Luziânia, GO<br />
                 CEP: 72850-615
               </p>
+              <a 
+                href="https://maps.app.goo.gl/JjXBzkLqysP7xufq9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto text-sm text-[#2e7d32] font-semibold hover:underline flex items-center gap-1"
+              >
+                Abrir no Google Maps <MapPin className="h-3 w-3" />
+              </a>
             </div>
 
             {/* Nossas Giras */}
@@ -338,7 +360,7 @@ export default function Home({ onNavigate }: HomeProps) {
             className="shrink-0 bg-pena-branca text-marrom-terra hover:bg-areia-escura px-6 py-3.5 rounded-full text-sm font-semibold shadow-md hover:scale-105 transition-all text-center"
             id="home-gira-btn"
           >
-            Quero Participar / Agendar
+            Ver Calendário
           </button>
         </div>
       </section>

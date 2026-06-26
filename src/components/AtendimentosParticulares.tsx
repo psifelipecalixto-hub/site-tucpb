@@ -20,7 +20,7 @@ export default function AtendimentosParticulares() {
             
             <div className="flex flex-col gap-4 pt-4">
               <a
-                href="https://wa.me/seunumerodewhatsapp" 
+                href="https://w.app/tucpb" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center justify-center gap-3 bg-emerald-600 text-white px-8 py-4 rounded-xl font-semibold shadow-md hover:bg-emerald-700 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto"

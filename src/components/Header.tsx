@@ -20,7 +20,7 @@ export default function Header({ currentRoute, onNavigate }: HeaderProps) {
     { label: "Trajetória", hash: "#trajetoria", icon: Compass },
     { label: "Área de Membros", hash: "#integrantes", icon: Users },
     { label: "Portal de Estudos", hash: "#portal", icon: GraduationCap },
-    { label: "Agenda & Consultas", hash: "#agenda", icon: Calendar },
+    { label: "Agenda de Giras", hash: "#agenda", icon: Calendar },
   ];
 
   return (

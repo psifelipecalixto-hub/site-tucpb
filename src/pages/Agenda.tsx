@@ -3,51 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState, FormEvent } from "react";
+import { useState } from "react";
 import { Calendar, Clock, Landmark, Heart, User, Sparkles, Check, AlertCircle, FileText, ChevronRight } from "lucide-react";
-import { initialGiras } from "../data";
+import { initialGiras, girasDeCura } from "../data";
 import { GiraEvent } from "../types";
 import AtendimentosParticulares from "../components/AtendimentosParticulares";
 
 export default function Agenda() {
   const [girasList] = useState<GiraEvent[]>(initialGiras);
-  
-  // Booking Form States
-  const [selectedGiraId, setSelectedGiraId] = useState<string>(initialGiras[0].id);
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [consultationType, setConsultationType] = useState("Conselhos / Passes Gerais");
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [ticketNumber, setTicketNumber] = useState("");
-  const [queueNumber, setQueueNumber] = useState(0);
-
-  const handleBooking = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (!fullName.trim() || !email.trim() || !phone.trim()) {
-      alert("Por favor, preencha todos os campos do agendamento.");
-      return;
-    }
-
-    // Generate simulated ticket
-    const randomTicket = "TUCPB-" + Math.floor(100000 + Math.random() * 900000);
-    const randomQueue = Math.floor(15 + Math.random() * 45); // Queue number simulation
-    
-    setTicketNumber(randomTicket);
-    setQueueNumber(randomQueue);
-    setIsSubmitted(true);
-  };
-
-  const handleReset = () => {
-    setFullName("");
-    setEmail("");
-    setPhone("");
-    setConsultationType("Conselhos / Passes Gerais");
-    setIsSubmitted(false);
-  };
-
-  // Find currently selected gira details for the ticket summary
-  const selectedGira = girasList.find(g => g.id === selectedGiraId);
+  const [activeTab, setActiveTab] = useState<"sabado" | "segunda">("sabado");
 
   return (
     <div className="animate-fade-in space-y-16 pb-16" id="agenda-page">
@@ -59,10 +23,10 @@ export default function Agenda() {
             <Calendar className="h-6 w-6" />
           </div>
           <h1 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl">
-            Agenda e Consultas
+            Agenda de Giras
           </h1>
           <p className="mx-auto max-w-2xl text-xs sm:text-sm text-areia-escura font-light leading-relaxed">
-            Consulte o cronograma de trabalhos espirituais de sábado e solicite sua ficha de consulta fraterna gratuita.
+            Consulte o cronograma de trabalhos espirituais e saiba como participar.
           </p>
         </div>
       </section>
@@ -94,210 +58,132 @@ export default function Agenda() {
           
           {/* Column Left: Schedule Giras (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
-            <h2 className="font-serif text-2xl font-bold tracking-tight text-marrom-terra border-l-4 border-verde-folha pl-4">
-              Cronograma de Sábado
-            </h2>
-            <p className="text-sm text-gray-600">
-              As sessões de caridade pública ocorrem regularmente nos fins de semana. Chegue no horário para garantir a sua acomodação na assistência e harmonização espiritual:
-            </p>
-
-            <div className="space-y-4" id="giras-list">
-              {girasList.map((gira) => (
-                <div 
-                  key={gira.id}
-                  className="bg-white rounded-xl border border-areia-escura p-6 shadow-sm hover:border-verde-folha/40 transition-all flex flex-col sm:flex-row gap-6 justify-between items-start"
-                >
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <span className="bg-marrom-terra/10 text-marrom-terra px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase tracking-wider">
-                        {gira.orixaGuide}
-                      </span>
-                      <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${
-                        gira.status === "Confirmada" ? "bg-emerald-100 text-emerald-800" : "bg-blue-100 text-blue-800"
-                      }`}>
-                        {gira.status}
-                      </span>
-                    </div>
-
-                    <h3 className="font-serif text-lg font-bold text-gray-900 leading-tight">
-                      {gira.title}
-                    </h3>
-                    
-                    <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">
-                      {gira.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-4 text-xs font-mono text-gray-400">
-                      <span className="flex items-center gap-1">📅 {gira.date}</span>
-                      <span className="flex items-center gap-1">⏰ {gira.time}h</span>
-                    </div>
-                  </div>
-
-                  {gira.hasConsultation && (
-                    <button
-                      onClick={() => setSelectedGiraId(gira.id)}
-                      className={`shrink-0 text-xs font-semibold px-4 py-2 rounded-lg border transition-all w-full sm:w-auto text-center ${
-                        selectedGiraId === gira.id
-                          ? "bg-verde-folha border-verde-folha text-white shadow-sm"
-                          : "border-areia-escura text-gray-600 hover:bg-gray-50"
-                      }`}
-                    >
-                      {selectedGiraId === gira.id ? "Selecionada" : "Agendar Ficha"}
-                    </button>
-                  )}
-                </div>
-              ))}
+            
+            <div className="flex bg-areia-suave p-1 rounded-lg border border-areia-escura inline-flex">
+              <button 
+                onClick={() => setActiveTab("sabado")}
+                className={`px-4 py-2 text-sm font-semibold rounded-md transition-colors ${activeTab === "sabado" ? "bg-white shadow-sm text-marrom-terra" : "text-gray-500 hover:text-gray-700"}`}
+              >
+                Giras de Sábado
+              </button>
+              <button 
+                onClick={() => setActiveTab("segunda")}
+                className={`px-4 py-2 text-sm font-semibold rounded-md transition-colors ${activeTab === "segunda" ? "bg-white shadow-sm text-marrom-terra" : "text-gray-500 hover:text-gray-700"}`}
+              >
+                Giras de Segunda (Cura)
+              </button>
             </div>
-          </div>
 
-          {/* Column Right: Interactive Booking Form (5 cols) */}
-          <div className="lg:col-span-5 bg-white rounded-2xl border border-areia-escura p-6 sm:p-8 shadow-sm space-y-6">
-            {!isSubmitted ? (
-              <>
-                <div className="space-y-2 border-b border-areia-escura pb-4">
-                  <h3 className="font-serif text-xl font-bold text-marrom-terra">
-                    Ficha de Consulta Gratuita
-                  </h3>
-                  <p className="text-xs text-gray-500 leading-relaxed">
-                    Evite filas preenchendo sua reserva de atendimento fraterno antecipada. A caridade do TUCPB é totalmente sem custos.
-                  </p>
-                </div>
-
-                <form onSubmit={handleBooking} className="space-y-4" id="booking-form">
-                  <div className="space-y-1">
-                    <label className="text-[11px] font-bold text-gray-700 block">Selecione a Gira Desejada</label>
-                    <select
-                      value={selectedGiraId}
-                      onChange={(e) => setSelectedGiraId(e.target.value)}
-                      className="w-full px-3 py-2 border border-areia-escura bg-areia-suave text-xs sm:text-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-verde-folha"
-                    >
-                      {girasList.filter(g => g.hasConsultation).map((g) => (
-                        <option key={g.id} value={g.id}>{g.title} ({g.date})</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div className="space-y-1">
-                    <label className="text-[11px] font-bold text-gray-700 block">Nome Completo do Consulente</label>
-                    <input
-                      type="text"
-                      placeholder="Seu nome"
-                      required
-                      value={fullName}
-                      onChange={(e) => setFullName(e.target.value)}
-                      className="w-full px-3 py-2 border border-areia-escura bg-areia-suave text-xs sm:text-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-verde-folha text-gray-900"
-                      id="book-fullname"
-                    />
-                  </div>
-
-                  <div className="space-y-1">
-                    <label className="text-[11px] font-bold text-gray-700 block">E-mail para Contato</label>
-                    <input
-                      type="email"
-                      placeholder="Ex: consulente@email.com"
-                      required
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="w-full px-3 py-2 border border-areia-escura bg-areia-suave text-xs sm:text-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-verde-folha text-gray-900"
-                      id="book-email"
-                    />
-                  </div>
-
-                  <div className="space-y-1">
-                    <label className="text-[11px] font-bold text-gray-700 block">Telefone / WhatsApp</label>
-                    <input
-                      type="tel"
-                      placeholder="Ex: (83) 99999-0000"
-                      required
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      className="w-full px-3 py-2 border border-areia-escura bg-areia-suave text-xs sm:text-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-verde-folha text-gray-900"
-                      id="book-phone"
-                    />
-                  </div>
-
-                  <div className="space-y-1">
-                    <label className="text-[11px] font-bold text-gray-700 block">Tipo de Orientação Necessária</label>
-                    <select
-                      value={consultationType}
-                      onChange={(e) => setConsultationType(e.target.value)}
-                      className="w-full px-3 py-2 border border-areia-escura bg-areia-suave text-xs sm:text-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-verde-folha"
-                      id="book-type"
-                    >
-                      <option value="Conselhos / Passes Gerais">Conselhos / Passes Gerais (Família, Equilíbrio)</option>
-                      <option value="Passe de Cura e Saúde">Passe de Cura e Saúde Física / Mental</option>
-                      <option value="Desobsessão e Limpeza Astral">Desobsessão e Limpeza Astral Profunda</option>
-                    </select>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-verde-mata text-pena-branca py-3 rounded-lg text-sm font-semibold hover:bg-verde-folha shadow-sm transition-colors flex items-center justify-center gap-2 cursor-pointer"
-                    id="submit-booking-btn"
+            {activeTab === "sabado" ? (
+              <div className="space-y-4 animate-fade-in-quick" id="giras-list-sabado">
+                <h2 className="font-serif text-2xl font-bold tracking-tight text-marrom-terra border-l-4 border-verde-folha pl-4">
+                  Cronograma de Sábado
+                </h2>
+                <p className="text-sm text-gray-600 mb-6">
+                  As sessões de caridade pública ocorrem regularmente nos fins de semana. Chegue no horário para garantir a sua acomodação na assistência e harmonização espiritual:
+                </p>
+                {girasList.map((gira) => (
+                  <div 
+                    key={gira.id}
+                    className="bg-white rounded-xl border border-areia-escura p-6 shadow-sm hover:border-verde-folha/40 transition-all flex flex-col sm:flex-row gap-6 justify-between items-start"
                   >
-                    Confirmar Ficha de Atendimento
-                    <Check className="h-4 w-4" />
-                  </button>
-                </form>
-              </>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="bg-marrom-terra/10 text-marrom-terra px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase tracking-wider">
+                          {gira.orixaGuide}
+                        </span>
+                        <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${
+                          gira.status === "Confirmada" ? "bg-emerald-100 text-emerald-800" : "bg-blue-100 text-blue-800"
+                        }`}>
+                          {gira.status}
+                        </span>
+                      </div>
+
+                      <h3 className="font-serif text-lg font-bold text-gray-900 leading-tight">
+                        {gira.title}
+                      </h3>
+                      
+                      <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">
+                        {gira.description}
+                      </p>
+
+                      <div className="flex flex-wrap gap-4 text-xs font-mono text-gray-400">
+                        <span className="flex items-center gap-1">📅 {gira.date}</span>
+                        <span className="flex items-center gap-1">⏰ {gira.time}h</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             ) : (
-              /* Simulated Ticket Voucher Result */
-              <div className="space-y-6 animate-fade-in-quick">
-                <div className="text-center space-y-2 border-b border-areia-escura pb-4">
-                  <div className="mx-auto h-12 w-12 rounded-full bg-green-100 text-green-700 flex items-center justify-center">
-                    <Check className="h-6 w-6" />
-                  </div>
-                  <h3 className="font-serif text-lg font-bold text-gray-900">Agendamento Realizado!</h3>
-                  <p className="text-xs text-gray-500">Salve o comprovante abaixo e apresente-o na entrada do terreiro.</p>
+              <div className="space-y-4 animate-fade-in-quick" id="giras-list-segunda">
+                <h2 className="font-serif text-2xl font-bold tracking-tight text-marrom-terra border-l-4 border-verde-folha pl-4">
+                  Giras de Cura (Segundas)
+                </h2>
+                <p className="text-sm text-gray-600 mb-6">
+                  Atendimentos voltados exclusivamente para passes de cura, desobsessão e equilíbrio espiritual.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {girasDeCura.map((gira) => (
+                    <div 
+                      key={gira.id}
+                      className="bg-white rounded-xl border border-areia-escura p-5 shadow-sm hover:border-verde-folha/40 transition-all flex flex-col gap-2"
+                    >
+                      <div className="flex justify-between items-start">
+                        <span className="text-xs font-mono font-bold text-verde-folha bg-verde-mata/10 px-2 py-0.5 rounded">
+                          {gira.date}
+                        </span>
+                        <span className="text-[10px] text-gray-400 font-mono">
+                          {gira.time}h
+                        </span>
+                      </div>
+                      <h3 className="font-serif text-sm font-bold text-gray-900 leading-tight">
+                        {gira.title}
+                      </h3>
+                      <p className="text-xs text-gray-500 leading-relaxed">
+                        {gira.description}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-
-                {/* Printable styled Ticket Voucher */}
-                <div className="bg-[#fcfbfa] border-2 border-dashed border-marrom-claro/50 rounded-xl p-5 space-y-4 shadow-inner relative overflow-hidden">
-                  {/* Circle cutouts for vintage tickets effect */}
-                  <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-white border border-marrom-claro/20 rounded-full"></div>
-                  <div className="absolute -right-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-white border border-marrom-claro/20 rounded-full"></div>
-
-                  <div className="flex justify-between items-center text-[10px] font-mono text-gray-400 font-bold tracking-wider">
-                    <span>TUCPB • CARIDADE</span>
-                    <span>FICHA DIGITAL</span>
-                  </div>
-
-                  <div className="text-center py-2 border-y border-areia-escura">
-                    <span className="text-[10px] font-mono text-gray-400 uppercase tracking-widest block">Senha de Atendimento</span>
-                    <span className="text-3xl font-serif font-extrabold text-marrom-terra tracking-wider">
-                      Nº {queueNumber}
-                    </span>
-                    <span className="text-xs font-mono text-verde-folha font-bold block mt-1">
-                      Código: {ticketNumber}
-                    </span>
-                  </div>
-
-                  <div className="space-y-2 text-xs">
-                    <p><strong>Consulente:</strong> <span className="text-gray-700">{fullName}</span></p>
-                    <p><strong>Gira:</strong> <span className="text-gray-700">{selectedGira?.title}</span></p>
-                    <p><strong>Firmeza/Data:</strong> <span className="text-gray-700">{selectedGira?.date} às {selectedGira?.time}h</span></p>
-                    <p><strong>Doutrina:</strong> <span className="text-gray-700">{consultationType}</span></p>
-                  </div>
-                </div>
-
-                <div className="space-y-3 p-4 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-800">
-                  <span className="font-bold flex items-center gap-1">🙏 Preparo Espiritual Recomendado:</span>
-                  <ul className="space-y-1 list-disc list-inside">
-                    <li>Use roupas claras (evite vermelho, preto, roupas curtas ou transparentes).</li>
-                    <li>Faça jejum de álcool e carnes 24 horas antes do início da gira.</li>
-                    <li>Chegue de 20 a 30 minutos antes para recolhimento e recepção.</li>
-                  </ul>
-                </div>
-
-                <button
-                  onClick={handleReset}
-                  className="w-full py-2.5 rounded-lg border border-marrom-terra text-marrom-terra text-xs font-semibold hover:bg-gray-50 transition-colors"
-                  id="reset-booking-btn"
-                >
-                  Agendar Outra Ficha
-                </button>
               </div>
             )}
+          </div>
+
+          {/* Column Right: Information (5 cols) */}
+          <div className="lg:col-span-5 bg-white rounded-2xl border border-areia-escura p-6 sm:p-8 shadow-sm space-y-6">
+            <div className="space-y-4">
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-verde-mata/10 text-verde-folha mb-2">
+                <Heart className="h-6 w-6" />
+              </div>
+              <h3 className="font-serif text-xl font-bold text-marrom-terra">
+                Atendimento por Ordem de Chegada
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Nossos atendimentos são gratuitos e realizados por ordem de chegada. Não é necessário agendamento prévio.
+              </p>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Pedimos apenas que os consulentes cheguem com pelo menos 30 minutos de antecedência do início dos trabalhos para garantir a ficha na recepção do terreiro, pois as vagas são limitadas à capacidade de atendimento do dia.
+              </p>
+              
+              <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 text-xs text-amber-800 space-y-2 mt-4">
+                <span className="font-bold flex items-center gap-1">🙏 Lembretes:</span>
+                <ul className="space-y-1 list-disc list-inside">
+                  <li>O portão é aberto 1h antes do início.</li>
+                  <li>As fichas são distribuídas presencialmente.</li>
+                  <li>A caridade do TUCPB é totalmente sem custos.</li>
+                </ul>
+              </div>
+
+              <a
+                href="https://w.app/tucpb" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 flex items-center justify-center gap-2 w-full bg-emerald-600 text-white py-3.5 rounded-lg text-sm font-semibold hover:bg-emerald-700 shadow-sm transition-colors cursor-pointer"
+              >
+                Dúvidas? Fale no WhatsApp
+              </a>
+            </div>
           </div>
 
         </div>
@@ -318,12 +204,18 @@ export default function Agenda() {
             </p>
             <div className="bg-areia-suave inline-block p-4 rounded-xl border border-areia-escura space-y-1">
                <p className="text-xs font-bold text-gray-500 uppercase tracking-widest">Endereço Principal</p>
-               <p className="text-sm font-semibold text-gray-900">Jardim Zuleika</p>
-               <p className="text-sm text-gray-600">Luziânia - GO, Brasil</p>
+               <p className="text-sm font-semibold text-gray-900">Rua Caçapava, Qd 03, Lt 25, Casa 02</p>
+               <p className="text-sm text-gray-600">Jardim Zuleika - Luziânia, GO</p>
+               <p className="text-sm text-gray-600">CEP: 72850-615</p>
             </div>
-            <button className="block w-full sm:w-auto bg-verde-mata text-pena-branca px-6 py-3 rounded-lg text-sm font-semibold hover:bg-verde-folha shadow-sm transition-colors text-center mt-4">
+            <a 
+              href="https://maps.app.goo.gl/JjXBzkLqysP7xufq9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full sm:w-auto bg-verde-mata text-pena-branca px-6 py-3 rounded-lg text-sm font-semibold hover:bg-verde-folha shadow-sm transition-colors text-center mt-4"
+            >
               Abrir rota no Google Maps
-            </button>
+            </a>
           </div>
           
           <div className="flex-1 w-full">
