@@ -93,7 +93,7 @@ export default function Trajetoria() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-black/30 to-transparent z-10 pointer-events-none"></div>
                 <div className="absolute inset-0 bg-[#d4af37]/10 mix-blend-color z-10 pointer-events-none"></div>
                 
-                <img src="/Gemini_Generated_Image_yte9zwyte9zwyte9.png" alt="Pai Felipe" className="absolute inset-0 w-full h-full object-cover grayscale-[20%] sepia-[10%] contrast-[1.05] brightness-[0.95] scale-[1.45] origin-[50%_40%] group-hover:grayscale-0 group-hover:sepia-0 group-hover:scale-[1.5] transition-all duration-1000" />
+                <img src="/Gemini_Generated_Image_gnisognisognisog.png" alt="Pai Felipe" className="absolute inset-0 w-full h-full object-cover object-top grayscale-[20%] sepia-[10%] contrast-[1.05] brightness-[0.95] group-hover:grayscale-0 group-hover:sepia-0 group-hover:scale-105 transition-all duration-1000" />
                 
                 {/* Elegant inner rings */}
                 <div className="absolute inset-3 rounded-3xl border border-[#d4af37]/30 z-20 pointer-events-none opacity-80"></div>
