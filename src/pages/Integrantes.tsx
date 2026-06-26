@@ -1869,17 +1869,50 @@ export default function Integrantes() {
 
       {/* MODALS */}
       {selectedLesson && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in-quick">
-          <div className="relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden">
-            <div className="flex items-center justify-between p-4 border-b border-areia-escura bg-areia-suave">
-              <h3 className="font-bold text-sm text-gray-900">{selectedLesson.title}</h3>
-              <button onClick={() => setSelectedLesson(null)} className="p-2 rounded-full hover:bg-gray-200 text-gray-500"><X className="h-5 w-5" /></button>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in-quick" onClick={() => setSelectedLesson(null)}>
+          <div className="relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col" onClick={e => e.stopPropagation()} style={{ maxHeight: "90vh" }}>
+            <div className="flex items-center justify-between p-4 border-b border-areia-escura bg-areia-suave shrink-0">
+              <h3 className="font-bold text-sm sm:text-base text-gray-900 truncate">{selectedLesson.title}</h3>
+              <button onClick={() => setSelectedLesson(null)} className="p-2 rounded-full hover:bg-gray-200 text-gray-500 transition-colors">
+                <X className="h-5 w-5" />
+              </button>
             </div>
-            <div className="bg-black aspect-video flex items-center justify-center">
-              <PlayCircle className="h-16 w-16 text-white/30" />
+            
+            <div className="overflow-y-auto flex-1 bg-white">
+              <div className="bg-black aspect-video w-full flex items-center justify-center">
+                {selectedLesson.videoUrl ? (
+                  <iframe 
+                    src={selectedLesson.videoUrl} 
+                    title="Video Player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen 
+                    className="w-full h-full border-0"
+                  ></iframe>
+                ) : (
+                  <PlayCircle className="h-16 w-16 text-white/30" />
+                )}
+              </div>
+              <div className="p-6">
+                <div className="flex gap-4 mb-4">
+                  <span className="bg-verde-folha/10 text-verde-folha px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">{selectedLesson.category}</span>
+                  <span className="bg-marrom-terra/10 text-marrom-terra px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">{selectedLesson.level}</span>
+                </div>
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{selectedLesson.description}</p>
+                <div className="mt-6 pt-4 border-t border-areia-escura flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-500 font-medium">
+                  <span className="flex items-center gap-1"><UserIcon className="h-4 w-4" /> Instrutor: {selectedLesson.instructor}</span>
+                  <span className="flex items-center gap-1"><Clock className="h-4 w-4" /> Duração: {selectedLesson.duration}</span>
+                  <span className="flex items-center gap-1"><CalendarIcon className="h-4 w-4" /> Data: {selectedLesson.date}</span>
+                </div>
+              </div>
             </div>
-            <div className="p-6">
-              <p className="text-sm text-gray-700">{selectedLesson.description}</p>
+
+            <div className="p-4 border-t border-areia-escura bg-gray-50 flex justify-end shrink-0">
+              <button 
+                onClick={() => setSelectedLesson(null)} 
+                className="px-6 py-2 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold text-sm rounded-lg transition-colors"
+              >
+                Fechar Vídeo
+              </button>
             </div>
           </div>
         </div>
