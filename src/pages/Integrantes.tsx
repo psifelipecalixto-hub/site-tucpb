@@ -84,6 +84,7 @@ export default function Integrantes() {
   const [searchEstudoQuery, setSearchEstudoQuery] = useState("");
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
   const [selectedHerb, setSelectedHerb] = useState<Herb | null>(null);
+  const [lessonTrailFilter, setLessonTrailFilter] = useState<string>("Todas as Trilhas");
   const [herbFilter, setHerbFilter] = useState<string>("Todas");
   const [herbGroupFilter, setHerbGroupFilter] = useState<string>("Todos os Grupos");
 
@@ -151,7 +152,17 @@ export default function Integrantes() {
     }
 
     if (storedLessons) {
-      setLessons(JSON.parse(storedLessons));
+      try {
+        const parsedLessons = JSON.parse(storedLessons);
+        const initialIds = initialLessons.map(l => l.id);
+        const customLessons = parsedLessons.filter((l: any) => !initialIds.includes(l.id));
+        const mergedLessons = [...initialLessons, ...customLessons];
+        setLessons(mergedLessons);
+        localStorage.setItem("tucpb_lessons", JSON.stringify(mergedLessons));
+      } catch (e) {
+        setLessons(initialLessons);
+        localStorage.setItem("tucpb_lessons", JSON.stringify(initialLessons));
+      }
     } else {
       setLessons(initialLessons);
       localStorage.setItem("tucpb_lessons", JSON.stringify(initialLessons));
@@ -681,7 +692,10 @@ export default function Integrantes() {
         date: new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' }),
         readTime: editArticle.readTime || "5 min",
         author: currentUser?.name || "Administrador",
-        iconName: editArticle.iconName || "book"
+        iconName: editArticle.iconName || "book",
+        imageUrl: editArticle.imageUrl || "",
+        videoUrl: editArticle.videoUrl || "",
+        tags: editArticle.tags || []
       };
       setArticles([newArticle, ...articles]);
     }
@@ -693,7 +707,7 @@ export default function Integrantes() {
   };
 
   const handleSaveLesson = () => {
-    if (!editLesson || !editLesson.title || !editLesson.videoUrl) return;
+    if (!editLesson || !editLesson.title) return;
     
     if (editLesson.id) {
       setLessons(lessons.map(l => l.id === editLesson.id ? { ...l, ...editLesson } as Lesson : l));
@@ -701,13 +715,15 @@ export default function Integrantes() {
       const newLesson: Lesson = {
         id: `les-${Date.now()}`,
         title: editLesson.title || "",
-        category: editLesson.category || "Doutrina",
+        category: editLesson.category || "TRILHA I: A RAIZ",
         description: editLesson.description || "",
         duration: editLesson.duration || "1h",
         instructor: editLesson.instructor || currentUser?.name || "Instrutor",
         date: editLesson.date || new Date().toLocaleDateString('pt-BR'),
         videoUrl: editLesson.videoUrl || "",
-        level: editLesson.level || "Iniciante"
+        imageUrl: editLesson.imageUrl || "",
+        level: editLesson.level || "Iniciante",
+        tags: editLesson.tags || []
       };
       setLessons([newLesson, ...lessons]);
     }
@@ -749,10 +765,16 @@ export default function Integrantes() {
   const myTasks = tasks.filter(t => currentUser && t.assignedTo.toLowerCase() === currentUser.name.toLowerCase());
 
   // --- Filters ---
-  const filteredLessons = lessons.filter(les => 
-    les.title.toLowerCase().includes(searchEstudoQuery.toLowerCase()) ||
-    les.description.toLowerCase().includes(searchEstudoQuery.toLowerCase())
-  );
+  const filteredLessons = lessons.filter(les => {
+    const matchesSearch = les.title.toLowerCase().includes(searchEstudoQuery.toLowerCase()) ||
+                          les.description.toLowerCase().includes(searchEstudoQuery.toLowerCase());
+    const matchesTrail = lessonTrailFilter === "Todas as Trilhas" || 
+                         (lessonTrailFilter === "Trilha 1" && les.category === "TRILHA I: A RAIZ") ||
+                         (lessonTrailFilter === "Trilha 2" && les.category === "TRILHA II: O TRONCO") ||
+                         (lessonTrailFilter === "Trilha 3" && les.category === "TRILHA III: A COPA") ||
+                         (lessonTrailFilter === "Outros" && !["TRILHA I: A RAIZ", "TRILHA II: O TRONCO", "TRILHA III: A COPA"].includes(les.category));
+    return matchesSearch && matchesTrail;
+  });
   
   const filteredHerbs = herbs.filter(herb => {
     const matchesSearch = herb.name.toLowerCase().includes(searchEstudoQuery.toLowerCase());
@@ -1564,6 +1586,20 @@ export default function Integrantes() {
                           <input type="text" value={editArticle?.readTime || ""} onChange={(e) => setEditArticle({...editArticle, readTime: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
                         </div>
                       </div>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <label className="text-[11px] font-bold text-gray-700 uppercase">URL da Imagem</label>
+                          <input type="text" value={editArticle?.imageUrl || ""} onChange={(e) => setEditArticle({...editArticle, imageUrl: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" placeholder="Opcional" />
+                        </div>
+                        <div>
+                          <label className="text-[11px] font-bold text-gray-700 uppercase">URL do Vídeo</label>
+                          <input type="text" value={editArticle?.videoUrl || ""} onChange={(e) => setEditArticle({...editArticle, videoUrl: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" placeholder="Opcional (YouTube, etc)" />
+                        </div>
+                      </div>
+                      <div>
+                        <label className="text-[11px] font-bold text-gray-700 uppercase">Tags (separadas por vírgula)</label>
+                        <input type="text" value={editArticle?.tags?.join(", ") || ""} onChange={(e) => setEditArticle({...editArticle, tags: e.target.value.split(",").map(t => t.trim()).filter(Boolean)})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" placeholder="Opcional" />
+                      </div>
                       <div>
                         <label className="text-[11px] font-bold text-gray-700 uppercase">Resumo (Snippet)</label>
                         <textarea rows={2} value={editArticle?.snippet || ""} onChange={(e) => setEditArticle({...editArticle, snippet: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha"></textarea>
@@ -1619,11 +1655,11 @@ export default function Integrantes() {
                       <div className="grid grid-cols-2 gap-4">
                         <div>
                           <label className="text-[11px] font-bold text-gray-700 uppercase">Categoria</label>
-                          <select value={editLesson?.category || "Doutrina"} onChange={(e) => setEditLesson({...editLesson, category: e.target.value as any})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha">
-                            <option value="Doutrina">Doutrina</option>
-                            <option value="Curimba">Curimba</option>
-                            <option value="Desenvolvimento">Desenvolvimento</option>
-                            <option value="Ervas e Banhos">Ervas e Banhos</option>
+                          <select value={editLesson?.category || "TRILHA I: A RAIZ"} onChange={(e) => setEditLesson({...editLesson, category: e.target.value as any})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha">
+                            <option value="TRILHA I: A RAIZ">Trilha 1: A Raiz</option>
+                            <option value="TRILHA II: O TRONCO">Trilha 2: O Tronco</option>
+                            <option value="TRILHA III: A COPA">Trilha 3: A Copa</option>
+                            <option value="Outros">Outros</option>
                           </select>
                         </div>
                         <div>
@@ -1634,8 +1670,14 @@ export default function Integrantes() {
                       <div className="grid grid-cols-2 gap-4">
                         <div>
                           <label className="text-[11px] font-bold text-gray-700 uppercase">URL do Vídeo</label>
-                          <input type="text" value={editLesson?.videoUrl || ""} onChange={(e) => setEditLesson({...editLesson, videoUrl: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                          <input type="text" value={editLesson?.videoUrl || ""} onChange={(e) => setEditLesson({...editLesson, videoUrl: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" placeholder="Opcional (YouTube, etc)" />
                         </div>
+                        <div>
+                          <label className="text-[11px] font-bold text-gray-700 uppercase">URL da Imagem</label>
+                          <input type="text" value={editLesson?.imageUrl || ""} onChange={(e) => setEditLesson({...editLesson, imageUrl: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" placeholder="Opcional" />
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-1 gap-4">
                         <div>
                           <label className="text-[11px] font-bold text-gray-700 uppercase">Nível</label>
                           <select value={editLesson?.level || "Iniciante"} onChange={(e) => setEditLesson({...editLesson, level: e.target.value as any})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha">
@@ -1644,6 +1686,10 @@ export default function Integrantes() {
                             <option value="Avançado">Avançado</option>
                           </select>
                         </div>
+                      </div>
+                      <div>
+                        <label className="text-[11px] font-bold text-gray-700 uppercase">Tags (separadas por vírgula)</label>
+                        <input type="text" value={editLesson?.tags?.join(", ") || ""} onChange={(e) => setEditLesson({...editLesson, tags: e.target.value.split(",").map(t => t.trim()).filter(Boolean)})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
                       </div>
                       <div>
                         <label className="text-[11px] font-bold text-gray-700 uppercase">Descrição</label>
@@ -1786,19 +1832,167 @@ export default function Integrantes() {
 
                {/* Aulas */}
                {activeEstudoTab === "aulas" && (
-                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                   {filteredLessons.map((lesson) => (
-                     <div key={lesson.id} className="bg-white rounded-xl border border-areia-escura overflow-hidden shadow-sm flex flex-col hover:-translate-y-1 transition-transform">
-                       <div className="relative bg-gradient-to-br from-marrom-terra to-marrom-tronco aspect-video flex items-center justify-center group overflow-hidden cursor-pointer" onClick={() => setSelectedLesson(lesson)}>
-                         <PlayCircle className="h-12 w-12 text-white/70 group-hover:scale-110 group-hover:text-white transition-all z-10"/>
-                         <div className="absolute bottom-2 left-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded font-mono">{lesson.duration}</div>
+                 <div className="space-y-10">
+                   <div className="flex flex-wrap gap-2 mb-2">
+                     {["Todas as Trilhas", "Trilha 1", "Trilha 2", "Trilha 3", "Outros"].map((trail) => {
+                       let activeClasses = "bg-verde-mata text-white border-verde-mata";
+                       if (trail === "Trilha 1") activeClasses = "bg-marrom-terra text-white border-marrom-terra";
+                       if (trail === "Trilha 2") activeClasses = "bg-verde-mata text-white border-verde-mata";
+                       if (trail === "Trilha 3") activeClasses = "bg-teal-700 text-white border-teal-700";
+                       if (trail === "Outros") activeClasses = "bg-gray-800 text-white border-gray-800";
+                       
+                       return (
+                         <button key={trail} onClick={() => setLessonTrailFilter(trail)} className={`px-4 py-1.5 text-xs font-bold rounded-full border transition-colors shadow-sm ${lessonTrailFilter === trail ? activeClasses : "bg-white text-gray-700 border-areia-escura hover:bg-gray-50"}`}>
+                           {trail}
+                         </button>
+                       );
+                     })}
+                   </div>
+
+                   {["TRILHA I: A RAIZ", "TRILHA II: O TRONCO", "TRILHA III: A COPA"].map((trail) => {
+                     const trailLessons = filteredLessons.filter(l => l.category === trail);
+                     if (trailLessons.length === 0) return null;
+                     
+                     let theme = {
+                       headerBg: "bg-verde-mata",
+                       titleColor: "text-dourado",
+                       descColor: "text-white/80",
+                       gradient: "from-verde-mata to-verde-folha",
+                       tagBg: "bg-verde-mata/10",
+                       tagText: "text-verde-mata",
+                       tagBorder: "border-verde-mata/20",
+                       titleText: "text-verde-escuro",
+                       btnBg: "bg-verde-mata hover:bg-verde-escuro",
+                       playIcon: "text-white/50 group-hover:text-white"
+                     };
+
+                     if (trail === "TRILHA I: A RAIZ") {
+                       theme = {
+                         headerBg: "bg-marrom-terra",
+                         titleColor: "text-dourado",
+                         descColor: "text-white/80",
+                         gradient: "from-marrom-terra to-marrom-tronco",
+                         tagBg: "bg-marrom-terra/10",
+                         tagText: "text-marrom-terra",
+                         tagBorder: "border-marrom-terra/20",
+                         titleText: "text-marrom-terra",
+                         btnBg: "bg-marrom-terra hover:bg-marrom-tronco",
+                         playIcon: "text-dourado/60 group-hover:text-dourado"
+                       };
+                     } else if (trail === "TRILHA II: O TRONCO") {
+                       theme = {
+                         headerBg: "bg-verde-mata",
+                         titleColor: "text-dourado",
+                         descColor: "text-white/80",
+                         gradient: "from-verde-mata to-verde-folha",
+                         tagBg: "bg-verde-mata/10",
+                         tagText: "text-verde-mata",
+                         tagBorder: "border-verde-mata/20",
+                         titleText: "text-verde-escuro",
+                         btnBg: "bg-verde-mata hover:bg-verde-escuro",
+                         playIcon: "text-dourado/60 group-hover:text-dourado"
+                       };
+                     } else if (trail === "TRILHA III: A COPA") {
+                       theme = {
+                         headerBg: "bg-teal-700",
+                         titleColor: "text-white",
+                         descColor: "text-white/90",
+                         gradient: "from-teal-600 to-cyan-800",
+                         tagBg: "bg-teal-700/10",
+                         tagText: "text-teal-700",
+                         tagBorder: "border-teal-700/20",
+                         titleText: "text-teal-800",
+                         btnBg: "bg-teal-700 hover:bg-teal-800",
+                         playIcon: "text-white/60 group-hover:text-white"
+                       };
+                     }
+
+                     return (
+                       <div key={trail} className="bg-white rounded-2xl border border-areia-escura shadow-sm overflow-hidden animate-fade-in-quick">
+                         <div className={`${theme.headerBg} p-5 sm:p-6 border-b-4 border-dourado`}>
+                           <h2 className={`text-xl sm:text-2xl font-serif font-bold ${theme.titleColor} tracking-wide`}>{trail}</h2>
+                           <p className={`${theme.descColor} text-sm mt-2 font-medium`}>
+                             {trail === "TRILHA I: A RAIZ" && "Foco na base invisível que sustenta o campo mágico"}
+                             {trail === "TRILHA II: O TRONCO" && "Foco na estrutura simbólica, litúrgica e performática do terreiro"}
+                             {trail === "TRILHA III: A COPA" && "Foco na ação, comportamento e manipulação do Axé pelos Guias"}
+                           </p>
+                         </div>
+                         <div className="p-6 bg-areia-suave/30">
+                           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+                             {trailLessons.map((lesson) => (
+                               <div key={lesson.id} className="bg-white rounded-xl border border-areia-escura overflow-hidden shadow-sm flex flex-col hover:-translate-y-1 transition-transform group">
+                                 <div className={`relative aspect-video flex items-center justify-center overflow-hidden cursor-pointer ${lesson.imageUrl ? 'bg-black' : `bg-gradient-to-br ${theme.gradient}`}`} onClick={() => setSelectedLesson(lesson)}>
+                                   {lesson.imageUrl && <img src={lesson.imageUrl} alt={lesson.title} className="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105" />}
+                                   <PlayCircle className={`h-14 w-14 ${theme.playIcon} group-hover:scale-110 transition-all z-10`}/>
+                                   <div className="absolute bottom-3 left-3 bg-black/60 text-white text-[10px] px-2 py-1 rounded font-mono z-10">{lesson.duration}</div>
+                                 </div>
+                                 <div className="p-5 flex-1 flex flex-col gap-3">
+                                   {lesson.tags && (
+                                     <div className="flex flex-wrap gap-2 mb-1">
+                                       {lesson.tags.map(tag => (
+                                         <span key={tag} className={`text-[10px] px-2.5 py-1 ${theme.tagBg} ${theme.tagText} border ${theme.tagBorder} rounded-full font-bold uppercase tracking-wider`}>
+                                           {tag}
+                                         </span>
+                                       ))}
+                                     </div>
+                                   )}
+                                   <h3 className={`font-serif text-[17px] font-bold ${theme.titleText} leading-tight`}>{lesson.title}</h3>
+                                   <p className="text-sm text-gray-600 line-clamp-3 leading-relaxed flex-1">{lesson.description}</p>
+                                   <button onClick={() => setSelectedLesson(lesson)} className={`mt-4 w-full py-2.5 ${theme.btnBg} text-white text-xs font-bold rounded-lg transition-colors shadow-sm`}>
+                                     Acessar Módulo
+                                   </button>
+                                 </div>
+                               </div>
+                             ))}
+                           </div>
+                         </div>
                        </div>
-                       <div className="p-4 flex-1 space-y-2">
-                         <h3 className="font-serif font-bold text-gray-900 leading-tight">{lesson.title}</h3>
-                         <p className="text-xs text-gray-600 line-clamp-2">{lesson.description}</p>
+                     );
+                   })}
+
+                   {/* Outras Aulas */}
+                   {filteredLessons.filter(l => !["TRILHA I: A RAIZ", "TRILHA II: O TRONCO", "TRILHA III: A COPA"].includes(l.category)).length > 0 && (
+                       <div className="bg-white rounded-2xl border border-areia-escura shadow-sm overflow-hidden animate-fade-in-quick mt-10">
+                         <div className="bg-gray-800 p-5 sm:p-6 border-b-4 border-gray-600">
+                           <h2 className="text-xl sm:text-2xl font-serif font-bold text-white tracking-wide">OUTRAS AULAS E ESTUDOS</h2>
+                           <p className="text-gray-300 text-sm mt-2 font-medium">
+                             Módulos complementares, apostilas e outros conteúdos do terreiro
+                           </p>
+                         </div>
+                         <div className="p-6 bg-areia-suave/30">
+                           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+                             {filteredLessons.filter(l => !["TRILHA I: A RAIZ", "TRILHA II: O TRONCO", "TRILHA III: A COPA"].includes(l.category)).map((lesson) => (
+                                <div key={lesson.id} className="bg-white rounded-xl border border-areia-escura overflow-hidden shadow-sm flex flex-col hover:-translate-y-1 transition-transform group">
+                                  <div className={`relative aspect-video flex items-center justify-center overflow-hidden cursor-pointer ${lesson.imageUrl ? 'bg-black' : 'bg-gradient-to-br from-gray-700 to-gray-900'}`} onClick={() => setSelectedLesson(lesson)}>
+                                    {lesson.imageUrl && <img src={lesson.imageUrl} alt={lesson.title} className="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105" />}
+                                    <PlayCircle className="h-14 w-14 text-white/50 group-hover:scale-110 group-hover:text-white transition-all z-10"/>
+                                    <div className="absolute bottom-3 left-3 bg-black/60 text-white text-[10px] px-2 py-1 rounded font-mono z-10">{lesson.duration}</div>
+                                  </div>
+                                  <div className="p-5 flex-1 flex flex-col gap-3">
+                                    {lesson.tags && (
+                                      <div className="flex flex-wrap gap-2 mb-1">
+                                        {lesson.tags.map(tag => (
+                                          <span key={tag} className="text-[10px] px-2.5 py-1 bg-gray-100 text-gray-700 border border-gray-200 rounded-full font-bold uppercase tracking-wider">
+                                            {tag}
+                                          </span>
+                                        ))}
+                                      </div>
+                                    )}
+                                    <span className="text-[10px] px-2.5 py-1 bg-gray-100 text-gray-700 border border-gray-200 rounded-full font-bold uppercase tracking-wider self-start">
+                                      {lesson.category}
+                                    </span>
+                                    <h3 className="font-serif text-[17px] font-bold text-gray-900 leading-tight">{lesson.title}</h3>
+                                    <p className="text-sm text-gray-600 line-clamp-3 leading-relaxed flex-1">{lesson.description}</p>
+                                    <button onClick={() => setSelectedLesson(lesson)} className="mt-4 w-full py-2.5 bg-gray-800 hover:bg-gray-900 text-white text-xs font-bold rounded-lg transition-colors shadow-sm">
+                                      Acessar Módulo
+                                    </button>
+                                  </div>
+                                </div>
+                             ))}
+                           </div>
+                         </div>
                        </div>
-                     </div>
-                   ))}
+                   )}
                  </div>
                )}
 
@@ -1822,12 +2016,12 @@ export default function Integrantes() {
                            <TreePine className="h-5 w-5 text-verde-folha" />
                            <div className="flex flex-wrap gap-1 justify-end">
                              {herb.tags?.map(tag => (
-                               <span key={tag} className={`text-[10px] px-2 py-0.5 rounded font-bold tracking-wider ${
+                               <span key={tag} className={`text-[10px] px-2.5 py-1 rounded-full font-bold uppercase tracking-wider ${
                                  (tag === "Fria" || tag === "Feminina") ? "bg-teal-50 text-teal-700 border border-teal-200" :
                                  (tag === "Quente" || tag === "Masculina") ? "bg-red-50 text-red-700 border border-amber-400" :
                                  "bg-gray-100 text-gray-800 border border-gray-200"
                                }`}>
-                                 [{tag}]
+                                 {tag}
                                </span>
                              ))}
                            </div>
@@ -1922,7 +2116,7 @@ export default function Integrantes() {
             </div>
             
             <div className="overflow-y-auto flex-1 bg-white">
-              <div className="bg-black aspect-video w-full flex items-center justify-center">
+              <div className="bg-black aspect-video w-full flex items-center justify-center overflow-hidden">
                 {selectedLesson.videoUrl ? (
                   <iframe 
                     src={selectedLesson.videoUrl} 
@@ -1931,14 +2125,21 @@ export default function Integrantes() {
                     allowFullScreen 
                     className="w-full h-full border-0"
                   ></iframe>
+                ) : selectedLesson.imageUrl ? (
+                  <img src={selectedLesson.imageUrl} alt={selectedLesson.title} className="w-full h-full object-cover" />
                 ) : (
                   <PlayCircle className="h-16 w-16 text-white/30" />
                 )}
               </div>
               <div className="p-6">
-                <div className="flex gap-4 mb-4">
-                  <span className="bg-verde-folha/10 text-verde-folha px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">{selectedLesson.category}</span>
-                  <span className="bg-marrom-terra/10 text-marrom-terra px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">{selectedLesson.level}</span>
+                <div className="flex flex-wrap gap-3 mb-4">
+                  <span className="bg-verde-folha/10 text-verde-folha px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-verde-folha/20">{selectedLesson.category}</span>
+                  <span className="bg-marrom-terra/10 text-marrom-terra px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-marrom-terra/20">{selectedLesson.level}</span>
+                  {selectedLesson.tags?.map(tag => (
+                    <span key={tag} className="bg-yellow-50 text-marrom-terra border border-dourado/50 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                      {tag}
+                    </span>
+                  ))}
                 </div>
                 <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{selectedLesson.description}</p>
                 <div className="mt-6 pt-4 border-t border-areia-escura flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-500 font-medium">
@@ -1969,12 +2170,12 @@ export default function Integrantes() {
             {selectedHerb.orixa && <p className="text-xs text-gray-500 mb-4 uppercase tracking-widest font-bold">Vibração: {selectedHerb.orixa}</p>}
             <div className="flex flex-wrap gap-1 mb-4">
                {selectedHerb.tags?.map(tag => (
-                 <span key={tag} className={`text-[10px] px-2 py-0.5 rounded font-bold tracking-wider ${
+                 <span key={tag} className={`text-[10px] px-2.5 py-1 rounded-full font-bold uppercase tracking-wider ${
                    (tag === "Fria" || tag === "Feminina") ? "bg-teal-50 text-teal-700 border border-teal-200" :
                    (tag === "Quente" || tag === "Masculina") ? "bg-red-50 text-red-700 border border-amber-400" :
                    "bg-gray-100 text-gray-800 border border-gray-200"
                  }`}>
-                   [{tag}]
+                   {tag}
                  </span>
                ))}
                {selectedHerb.grupo && (

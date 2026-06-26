@@ -53,49 +53,190 @@ export const initialArticles: BlogArticle[] = [
 ];
 
 export const initialLessons: Lesson[] = [
+  // TRILHA I: A RAIZ
   {
-    id: "les-1",
-    title: "Módulo I: Introdução à Doutrina de Umbanda",
-    category: "Doutrina",
-    description: "Estudo sobre as sete linhas de Umbanda, a cosmologia dos Orixás e as leis kármicas que regem as comunicações espirituais.",
+    id: "les-t1-1",
+    title: "Sub-Aula 1: O Mistério do Axé e as Três Cores Primordiais",
+    category: "TRILHA I: A RAIZ",
+    description: "O fluxo da força vital nas polaridades Funfun (Branco/Ancestral), Preto (Matéria) e Vermelho (Movimento/Fogo) nos reinos mineral, vegetal e animal.",
     duration: "45 min",
-    instructor: "Pai de Santo Felipe",
+    instructor: "Babá Felipe",
     date: "12 de Junho de 2026",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Exemplo
-    level: "Iniciante"
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    level: "Iniciante",
+    tags: ["Fundamento", "Energia"]
   },
   {
-    id: "les-2",
-    title: "Toques Fundamentais da Curimba: Samba Cabula e Ijexá",
-    category: "Curimba",
-    description: "Aula prática para ogãs e médiuns iniciantes. Como sintonizar com o couro do atabaque e conduzir a energia da Gira.",
-    duration: "52 min",
-    instructor: "Ogã Principal Douglas",
+    id: "les-t1-2",
+    title: "Sub-Aula 2: As Leis Universais da Magia Simpática",
+    category: "TRILHA I: A RAIZ",
+    description: "Domínio prático do Princípio de Correspondência (semelhante produz semelhante) e da Lei do Contágio (vínculos energéticos por objetos e fotos).",
+    duration: "40 min",
+    instructor: "Babá Felipe",
+    date: "15 de Junho de 2026",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    level: "Iniciante",
+    tags: ["Fundamento", "Magia"]
+  },
+  {
+    id: "les-t1-3",
+    title: "Sub-Aula 3: Anatomia Espiritual Iorubá",
+    category: "TRILHA I: A RAIZ",
+    description: "O entrelaçamento sagrado entre o Ara (corpo), Ojiji (sombra), Okan (coração), Emi (sopro) e Esè (pernas), e a regência dos Orixás nos órgãos.",
+    duration: "55 min",
+    instructor: "Babá Felipe",
     date: "18 de Junho de 2026",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    level: "Iniciante"
+    level: "Intermediário",
+    tags: ["Fundamento", "Anatomia"]
   },
   {
-    id: "les-3",
-    title: "Banhos de Ervas: Preparação, Imantação e Ritualística",
-    category: "Ervas e Banhos",
-    description: "Diferença entre banhos de cabeça (amaci) e banhos de pescoço para baixo. Classificação das ervas quentes, frias, masculinas e femininas.",
-    duration: "38 min",
-    instructor: "Mãe de Santo Clarice",
-    date: "20 de Junho de 2026",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    level: "Intermediário"
-  },
-  {
-    id: "les-4",
-    title: "O Processo de Incorporação e Sintonia Fina do Médium",
-    category: "Desenvolvimento",
-    description: "Técnicas de respiração, concentração e entrega mental para facilitar o acoplamento áurico e a psicofonia dos Guias.",
-    duration: "1h 10min",
-    instructor: "Pai de Santo Felipe",
+    id: "les-t1-4",
+    title: "Sub-Aula 4: A Ciência do Ori e os Quatro Cantos",
+    category: "TRILHA I: A RAIZ",
+    description: "Alinhamento elemental da cabeça física e espiritual (Ori Odé e Ori Inu) através dos quadrantes da testa, nuca e laterais, e o autoconhecimento pelo Espelho de Oxum.",
+    duration: "50 min",
+    instructor: "Babá Felipe",
     date: "22 de Junho de 2026",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    level: "Avançado"
+    level: "Avançado",
+    tags: ["Fundamento", "Ori"]
+  },
+  {
+    id: "les-t1-5",
+    title: "Sub-Aula 5: As 256 Encruzilhadas do Destino",
+    category: "TRILHA I: A RAIZ",
+    description: "O mapeamento das 16x16 ramificações elementais de Ori e o comportamento da alma pelas vias do Ar, Água, Terra e Fogo.",
+    duration: "60 min",
+    instructor: "Babá Felipe",
+    date: "25 de Junho de 2026",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    level: "Avançado",
+    tags: ["Fundamento", "Destino"]
+  },
+
+  // TRILHA II: O TRONCO
+  {
+    id: "les-t2-1",
+    title: "Sub-Aula 1: O Mito como Modelo e o Reset Ritual",
+    category: "TRILHA II: O TRONCO",
+    description: "Como a ritualística quebra o tempo profano, acede ao inconsciente atemporal e reatualiza a era primordial para trazer a cura ao presente.",
+    duration: "45 min",
+    instructor: "Babá Felipe",
+    date: "01 de Julho de 2026",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    level: "Iniciante",
+    tags: ["Fundamento", "Mito"]
+  },
+  {
+    id: "les-t2-2",
+    title: "Sub-Aula 2: Anatomia e Passos de uma Gira de Umbanda",
+    category: "TRILHA II: O TRONCO",
+    description: "A sequência lógica de começo, meio e fim: Preleção/Preparação, Defumação e Purificação, Invocação, Incorporação e o mistério da Desincorporação.",
+    duration: "55 min",
+    instructor: "Babá Felipe",
+    date: "05 de Julho de 2026",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    level: "Iniciante",
+    tags: ["Fundamento", "Ritual"]
+  },
+  {
+    id: "les-t2-3",
+    title: "Sub-Aula 3: Cosmologia e a Teia dos Orixás",
+    category: "TRILHA II: O TRONCO",
+    description: "O entendimento dos Orixás como fluxos contínuos de energia natural interligados numa grande rede vibracional.",
+    duration: "50 min",
+    instructor: "Babá Felipe",
+    date: "08 de Julho de 2026",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    level: "Intermediário",
+    tags: ["Fundamento", "Cosmologia"]
+  },
+  {
+    id: "les-t2-4",
+    title: "Sub-Aula 4: O Mistério Cósmico do Xirê",
+    category: "TRILHA II: O TRONCO",
+    description: "A roda sagrada e a dança circular que rege a evolução da matéria através dos 4 elementos fundamentais e as suas 16 divindades.",
+    duration: "48 min",
+    instructor: "Babá Felipe",
+    date: "12 de Julho de 2026",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    level: "Intermediário",
+    tags: ["Fundamento", "Xirê"]
+  },
+  {
+    id: "les-t2-5",
+    title: "Sub-Aula 5: As Sete Energias Arquetípicas no TUCPB",
+    category: "TRILHA II: O TRONCO",
+    description: "A aplicação litúrgica das forças volitivas: Primerva, Mental, Etérica, Eólica, Ígnea, Hídrica e Telúrica.",
+    duration: "65 min",
+    instructor: "Babá Felipe",
+    date: "15 de Julho de 2026",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    level: "Avançado",
+    tags: ["Fundamento", "Arquetípica"]
+  },
+
+  // TRILHA III: A COPA
+  {
+    id: "les-t3-1",
+    title: "Sub-Aula 1: A Lei do Sacrifício (Ebó) e as Trocas Energéticas",
+    category: "TRILHA III: A COPA",
+    description: "O segredo litúrgico das trocas e a manipulação do sangue animal (vermelho), mineral (branco) e vegetal (sangue verde das folhas).",
+    duration: "50 min",
+    instructor: "Babá Felipe",
+    date: "20 de Julho de 2026",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    level: "Intermediário",
+    tags: ["Fundamento", "Ebó"]
+  },
+  {
+    id: "les-t3-2",
+    title: "Sub-Aula 2: Classificação e Propósito dos Ebós",
+    category: "TRILHA III: A COPA",
+    description: "Estruturação e aplicação prática de rituais com finalidade Preventiva, Atrativa, Curativa e de Agradecimento.",
+    duration: "45 min",
+    instructor: "Babá Felipe",
+    date: "23 de Julho de 2026",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    level: "Intermediário",
+    tags: ["Fundamento", "Prática"]
+  },
+  {
+    id: "les-t3-3",
+    title: "Sub-Aula 3: Anatomia do Ebó no Tempo, Espaço e Corpo",
+    category: "TRILHA III: A COPA",
+    description: "O impacto das fases do dia (alvorada, sol, noite), os locais sagrados de despacho e o magnetismo gerado ao tocar partes específicas do corpo.",
+    duration: "60 min",
+    instructor: "Babá Felipe",
+    date: "27 de Julho de 2026",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    level: "Avançado",
+    tags: ["Fundamento", "Tempo/Espaço"]
+  },
+  {
+    id: "les-t3-4",
+    title: "Sub-Aula 4: Interrogando os Deuses (Obi e Orobo)",
+    category: "TRILHA III: A COPA",
+    description: "O uso litúrgico das sementes sagradas como canais de comunicação, instrução e confirmação dos trabalhos.",
+    duration: "55 min",
+    instructor: "Babá Felipe",
+    date: "30 de Julho de 2026",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    level: "Avançado",
+    tags: ["Fundamento", "Oráculo"]
+  },
+  {
+    id: "les-t3-5",
+    title: "Sub-Aula 5: Rituais de Firmeza e Defesa de Exu e Ogum",
+    category: "TRILHA III: A COPA",
+    description: "Execução prática de assentamentos, o mistério das pedras Iyangi, o uso protetor do Mariwô e rituais contra demandas e infortúnios.",
+    duration: "70 min",
+    instructor: "Babá Felipe",
+    date: "02 de Agosto de 2026",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    level: "Avançado",
+    tags: ["Fundamento", "Defesa"]
   }
 ];
 

@@ -73,13 +73,25 @@ export default function Portal() {
             filteredArticles.map((article) => (
               <article 
                 key={article.id}
-                className="bg-white rounded-2xl border border-areia-escura overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full"
+                className="bg-white rounded-2xl border border-areia-escura overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full group"
               >
+                {article.imageUrl && (
+                  <div className="h-48 w-full overflow-hidden bg-gray-100">
+                    <img src={article.imageUrl} alt={article.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  </div>
+                )}
                 <div className="p-6 sm:p-8 flex-1 space-y-4">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="text-xs font-semibold text-verde-folha bg-verde-folha/10 px-2.5 py-1 rounded-full">
-                      {article.category}
-                    </span>
+                  <div className="flex items-center justify-between gap-2 flex-wrap">
+                    <div className="flex gap-2 flex-wrap">
+                      <span className="text-xs font-semibold text-verde-folha bg-verde-folha/10 px-2.5 py-1 rounded-full">
+                        {article.category}
+                      </span>
+                      {article.tags?.map(tag => (
+                        <span key={tag} className="text-[10px] font-semibold text-gray-600 bg-gray-100 px-2 py-1 rounded-full uppercase tracking-wider">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                     <span className="text-xs text-gray-400 font-mono">
                       {article.date}
                     </span>
@@ -124,10 +136,38 @@ export default function Portal() {
             </button>
 
             <article className="space-y-6">
+              {selectedArticle.videoUrl ? (
+                selectedArticle.videoUrl.includes("youtube.com") || selectedArticle.videoUrl.includes("youtu.be") ? (
+                  <div className="w-full aspect-video rounded-xl overflow-hidden mb-6 bg-black">
+                    <iframe 
+                      src={selectedArticle.videoUrl.replace("watch?v=", "embed/").replace("youtu.be/", "youtube.com/embed/")}
+                      title="Video" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowFullScreen 
+                      className="w-full h-full border-0"
+                    ></iframe>
+                  </div>
+                ) : (
+                  <div className="w-full aspect-video rounded-xl overflow-hidden mb-6 bg-black">
+                    <video src={selectedArticle.videoUrl} controls className="w-full h-full object-contain" />
+                  </div>
+                )
+              ) : selectedArticle.imageUrl ? (
+                <div className="w-full h-64 sm:h-80 rounded-xl overflow-hidden mb-6 bg-gray-100">
+                  <img src={selectedArticle.imageUrl} alt={selectedArticle.title} className="w-full h-full object-cover" />
+                </div>
+              ) : null}
               <div className="space-y-4 border-b border-areia-escura pb-6">
-                <span className="text-xs font-semibold text-verde-folha bg-verde-folha/10 px-2.5 py-1 rounded-full">
-                  {selectedArticle.category}
-                </span>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="text-xs font-semibold text-verde-folha bg-verde-folha/10 px-2.5 py-1 rounded-full">
+                    {selectedArticle.category}
+                  </span>
+                  {selectedArticle.tags?.map(tag => (
+                    <span key={tag} className="text-[10px] font-semibold text-gray-600 bg-gray-100 px-2 py-1 rounded-full uppercase tracking-wider">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
                 <h2 className="font-serif text-3xl sm:text-4xl font-bold text-marrom-terra leading-tight">
                   {selectedArticle.title}
                 </h2>

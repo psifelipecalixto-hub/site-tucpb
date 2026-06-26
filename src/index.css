@@ -10,12 +10,14 @@
   --color-verde-mata: #1b4332;
   --color-verde-folha: #2d6a4f;
   --color-verde-musgo: #40916c;
+  --color-verde-escuro: #2e7d32;
   --color-marrom-terra: #4e3629;
   --color-marrom-tronco: #6c4f3d;
   --color-marrom-claro: #8d6e63;
   --color-areia-suave: #fcfbfa;
   --color-areia-escura: #e8e2d5;
   --color-pena-branca: #ffffff;
+  --color-dourado: #d4af37;
 }
 
 body {

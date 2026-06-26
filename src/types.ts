@@ -6,25 +6,30 @@
 export interface BlogArticle {
   id: string;
   title: string;
-  category: "Orixás" | "Guias" | "Ervas" | "Fundamentos" | "História";
+  category: "Orixás" | "Guias" | "Ervas" | "Fundamentos" | "História" | string;
   snippet: string;
   content: string;
   date: string;
   readTime: string;
   author: string;
   iconName?: string;
+  imageUrl?: string;
+  videoUrl?: string;
+  tags?: string[];
 }
 
 export interface Lesson {
   id: string;
   title: string;
-  category: "Doutrina" | "Curimba" | "Desenvolvimento" | "Ervas e Banhos";
+  category: string;
   description: string;
   duration: string;
   instructor: string;
   date: string;
   videoUrl: string;
-  level: "Iniciante" | "Intermediário" | "Avançado";
+  imageUrl?: string;
+  level: string;
+  tags?: string[];
 }
 
 export interface Herb {
