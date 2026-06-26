@@ -40,42 +40,6 @@ function GalleryYouTube({ videoId, title }: { videoId: string; title: string }) 
   );
 }
 
-function GalleryLocalVideo({ videoPath, title }: { videoPath: string; title: string }) {
-  const [isMuted, setIsMuted] = useState(true);
-
-  const toggleMute = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setIsMuted(!isMuted);
-  };
-
-  return (
-    <div className="aspect-[9/16] rounded-3xl overflow-hidden shadow-sm relative group border border-areia-escura bg-black">
-      <div className="absolute inset-0 bg-marrom-terra/20 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none"></div>
-      
-      <button 
-        onClick={toggleMute}
-        className="absolute top-4 right-4 z-30 bg-black/50 hover:bg-black/80 text-white p-2.5 rounded-full backdrop-blur-sm transition-all opacity-100 lg:opacity-0 lg:group-hover:opacity-100 focus:opacity-100"
-        title={isMuted ? "Ativar som" : "Desativar som"}
-      >
-        {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
-      </button>
-
-      <video 
-        src={videoPath}
-        autoPlay
-        muted={isMuted}
-        loop
-        playsInline
-        className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 pointer-events-none" 
-      />
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 translate-y-0 lg:translate-y-full lg:group-hover:translate-y-0 transition-transform duration-500 z-20 pointer-events-none">
-        <span className="text-pena-branca text-base font-serif font-medium tracking-wide">{title}</span>
-      </div>
-    </div>
-  );
-}
-
 export default function Trajetoria() {
   return (
     <div className="animate-fade-in space-y-20 pb-20" id="trajetoria-page">
@@ -271,8 +235,8 @@ export default function Trajetoria() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Gallery Item 1 */}
-          <GalleryLocalVideo 
-            videoPath="/gira_esquerda.mp4" 
+          <GalleryYouTube 
+            videoId="3S53IA2gym8" 
             title="Gira de Esquerda" 
           />
           
