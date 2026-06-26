@@ -45,7 +45,7 @@ export default function Integrantes() {
   const [currentUser, setCurrentUser] = useState<UserProfile | null>(null);
   const [authMode, setAuthMode] = useState<"login" | "register" | "forgot-password">("login");
   const [showPassword, setShowPassword] = useState(false);
-  const [authEmail, setAuthEmail] = useState("baba.ajo.tucpb@gmail.com");
+  const [authEmail, setAuthEmail] = useState("");
   const [authPassword, setAuthPassword] = useState("");
   const [authName, setAuthName] = useState("");
   const [authCargo, setAuthCargo] = useState("médiuns/cambones");
