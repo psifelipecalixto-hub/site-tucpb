@@ -182,6 +182,70 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
       </section>
 
+      {/* Three Pillars Cards */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          
+          <div className="bg-white rounded-xl p-8 border border-areia-escura hover:shadow-md transition-shadow flex flex-col h-full">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-verde-folha">Pilar I</span>
+            <h3 className="font-serif text-xl font-bold text-marrom-terra mt-2 mb-3">Caridade e Consciência</h3>
+            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
+              A caridade pura e consciente é o alicerce da nossa casa. Sob a luz do Caboclo Pena Branca, entregamos passes, palavras e acolhimento como ferramentas de cura espiritual. Tudo que ofertamos é fruto da devoção e do amor ao próximo, sem qualquer finalidade material, buscando apenas despertar a consciência e a paz em cada coração que nos procura.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl p-8 border border-areia-escura hover:shadow-md transition-shadow flex flex-col h-full">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-verde-folha">Pilar II</span>
+            <h3 className="font-serif text-xl font-bold text-marrom-terra mt-2 mb-3">Respeito à Natureza</h3>
+            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
+              As matas, rios e pedreiras são templos vivos dos Orixás e extensões do nosso sagrado. No TUCPB, firmamos o compromisso inegociável de preservação. Nosso uso ritualístico de ervas e oferendas é plenamente ecologicamente consciente. Não descartamos materiais poluentes e cuidamos para proteger a vitalidade, a fauna e a flora do nosso planeta em todas as práticas.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl p-8 border border-areia-escura hover:shadow-md transition-shadow flex flex-col h-full">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-verde-folha">Pilar III</span>
+            <h3 className="font-serif text-xl font-bold text-marrom-terra mt-2 mb-3">Humildade e União</h3>
+            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
+              No terreiro somos todos iguais perante o axé. Ao cruzarmos a porta, deixamos de lado vaidades materiais e honrarias do mundo. Vestimos o mesmo branco e pisamos descalços no chão do Gongá para mantermos a humildade e a conexão com a terra. Trabalhamos juntos, ombro a ombro, como verdadeiros irmãos irmanados na fé e no amor umbandista.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Next Saturday Highlight Banner */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-marrom-terra to-marrom-tronco p-8 sm:p-12 text-pena-branca shadow-md flex flex-col md:flex-row md:items-center justify-between gap-8">
+          {/* Decorative background shape */}
+          <div className="absolute right-0 top-0 w-64 h-64 bg-verde-folha/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div className="space-y-4 max-w-xl">
+            <span className="inline-block bg-verde-folha px-3 py-1 rounded-full text-xs font-mono font-semibold uppercase tracking-wider">
+              Próximo Encontro
+            </span>
+            <h3 className="font-serif text-2xl font-bold tracking-tight sm:text-3xl">
+              {nextGira.title}
+            </h3>
+            <p className="text-sm text-areia-escura leading-relaxed">
+              {nextGira.description} Venha de roupas claras, traga sua fé e sintonize com os curadores da floresta.
+            </p>
+            <div className="flex gap-6 text-xs text-areia-escura font-mono">
+              <div>📅 {nextGira.date}</div>
+              <div>⏰ {nextGira.time}h</div>
+              <div>💬 Consultas Disponíveis</div>
+            </div>
+          </div>
+
+          <button
+            onClick={() => { onNavigate("#agenda"); window.location.hash = "#agenda"; }}
+            className="shrink-0 bg-pena-branca text-marrom-terra hover:bg-areia-escura px-6 py-3.5 rounded-full text-sm font-semibold shadow-md hover:scale-105 transition-all text-center"
+            id="home-gira-btn"
+          >
+            Ver Calendário
+          </button>
+        </div>
+      </section>
+
       {/* The Gongá Interactive Simulation section */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="bg-gradient-to-br from-areia-suave to-areia-escura rounded-2xl p-8 sm:p-12 border border-areia-escura space-y-8">
@@ -246,36 +310,8 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
       </section>
 
-      {/* Three Pillars Cards */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-          
-          <div className="bg-white rounded-xl p-8 border border-areia-escura hover:shadow-md transition-shadow flex flex-col h-full">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-verde-folha">Pilar I</span>
-            <h3 className="font-serif text-xl font-bold text-marrom-terra mt-2 mb-3">Caridade e Consciência</h3>
-            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
-              A caridade pura e consciente é o alicerce da nossa casa. Sob a luz do Caboclo Pena Branca, entregamos passes, palavras e acolhimento como ferramentas de cura espiritual. Tudo que ofertamos é fruto da devoção e do amor ao próximo, sem qualquer finalidade material, buscando apenas despertar a consciência e a paz em cada coração que nos procura.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl p-8 border border-areia-escura hover:shadow-md transition-shadow flex flex-col h-full">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-verde-folha">Pilar II</span>
-            <h3 className="font-serif text-xl font-bold text-marrom-terra mt-2 mb-3">Respeito à Natureza</h3>
-            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
-              As matas, rios e pedreiras são templos vivos dos Orixás e extensões do nosso sagrado. No TUCPB, firmamos o compromisso inegociável de preservação. Nosso uso ritualístico de ervas e oferendas é plenamente ecologicamente consciente. Não descartamos materiais poluentes e cuidamos para proteger a vitalidade, a fauna e a flora do nosso planeta em todas as práticas.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl p-8 border border-areia-escura hover:shadow-md transition-shadow flex flex-col h-full">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-verde-folha">Pilar III</span>
-            <h3 className="font-serif text-xl font-bold text-marrom-terra mt-2 mb-3">Humildade e União</h3>
-            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
-              No terreiro somos todos iguais perante o axé. Ao cruzarmos a porta, deixamos de lado vaidades materiais e honrarias do mundo. Vestimos o mesmo branco e pisamos descalços no chão do Gongá para mantermos a humildade e a conexão com a terra. Trabalhamos juntos, ombro a ombro, como verdadeiros irmãos irmanados na fé e no amor umbandista.
-            </p>
-          </div>
-
-        </div>
-      </section>
+      {/* Atendimentos Particulares Section */}
+      <AtendimentosParticulares />
 
       {/* Informações ao Visitante Section */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 my-12 sm:my-16">
@@ -362,42 +398,6 @@ export default function Home({ onNavigate }: HomeProps) {
 
       {/* Instagram Feed Section */}
       <InstagramFeed />
-
-      {/* Atendimentos Particulares Section */}
-      <AtendimentosParticulares />
-
-      {/* Next Saturday Highlight Banner */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-marrom-terra to-marrom-tronco p-8 sm:p-12 text-pena-branca shadow-md flex flex-col md:flex-row md:items-center justify-between gap-8">
-          {/* Decorative background shape */}
-          <div className="absolute right-0 top-0 w-64 h-64 bg-verde-folha/10 rounded-full blur-3xl pointer-events-none"></div>
-
-          <div className="space-y-4 max-w-xl">
-            <span className="inline-block bg-verde-folha px-3 py-1 rounded-full text-xs font-mono font-semibold uppercase tracking-wider">
-              Próximo Encontro
-            </span>
-            <h3 className="font-serif text-2xl font-bold tracking-tight sm:text-3xl">
-              {nextGira.title}
-            </h3>
-            <p className="text-sm text-areia-escura leading-relaxed">
-              {nextGira.description} Venha de roupas claras, traga sua fé e sintonize com os curadores da floresta.
-            </p>
-            <div className="flex gap-6 text-xs text-areia-escura font-mono">
-              <div>📅 {nextGira.date}</div>
-              <div>⏰ {nextGira.time}h</div>
-              <div>💬 Consultas Disponíveis</div>
-            </div>
-          </div>
-
-          <button
-            onClick={() => { onNavigate("#agenda"); window.location.hash = "#agenda"; }}
-            className="shrink-0 bg-pena-branca text-marrom-terra hover:bg-areia-escura px-6 py-3.5 rounded-full text-sm font-semibold shadow-md hover:scale-105 transition-all text-center"
-            id="home-gira-btn"
-          >
-            Ver Calendário
-          </button>
-        </div>
-      </section>
 
     </div>
   );
