@@ -194,10 +194,10 @@ export const initialGiras: GiraEvent[] = [
     date: "Sábado (11/07)",
     time: "19:00",
     orixaGuide: "Caboclo / Baiano",
-    description: "Atenção às quartas de final da Copa. Gira de atendimento com Caboclos e Baianos.",
+    description: "Atenção: A gira poderá ser cancelada caso o Brasil passe para as quartas de final da Copa. Aguardando confirmação.",
     hasConsultation: true,
     maxConsultations: 60,
-    status: "Confirmada"
+    status: "A Confirmar"
   },
   {
     id: "gir-3",
@@ -208,6 +208,17 @@ export const initialGiras: GiraEvent[] = [
     description: "Festa em homenagem à linha de Exu Mirim.",
     hasConsultation: false,
     status: "Especial"
+  },
+  {
+    id: "gir-3-5",
+    title: "Gira de Malandragem",
+    date: "Sábado (08/08)",
+    time: "19:00",
+    orixaGuide: "Malandros",
+    description: "Gira de atendimento com a linha dos Malandros.",
+    hasConsultation: true,
+    maxConsultations: 60,
+    status: "Confirmada"
   },
   {
     id: "gir-4",

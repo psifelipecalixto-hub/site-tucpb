@@ -23,10 +23,10 @@ export default function Agenda() {
             <Calendar className="h-6 w-6" />
           </div>
           <h1 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl">
-            Agenda de Giras
+            Calendário de Giras
           </h1>
           <p className="mx-auto max-w-2xl text-xs sm:text-sm text-areia-escura font-light leading-relaxed">
-            Consulte o cronograma de trabalhos espirituais e saiba como participar.
+            Descubra os dias e horários para receber o passe, a orientação e o acolhimento espiritual que vão transformar a sua semana.
           </p>
         </div>
       </section>
@@ -41,7 +41,7 @@ export default function Agenda() {
              </div>
              <div>
                 <h3 className="font-serif text-xl font-bold">Avisos do Terreiro</h3>
-                <p className="text-areia-escura text-sm font-light mt-1">Acompanhe nossas atualizações nas redes sociais.</p>
+                <p className="text-areia-escura text-sm font-light mt-1">Fique por dentro das datas especiais e festividades acompanhando nosso Instagram.</p>
              </div>
           </div>
           <div className="flex flex-col md:flex-row gap-4">
@@ -77,10 +77,10 @@ export default function Agenda() {
             {activeTab === "sabado" ? (
               <div className="space-y-4 animate-fade-in-quick" id="giras-list-sabado">
                 <h2 className="font-serif text-2xl font-bold tracking-tight text-marrom-terra border-l-4 border-verde-folha pl-4">
-                  Cronograma de Sábado
+                  Giras Públicas (Aos Sábados)
                 </h2>
                 <p className="text-sm text-gray-600 mb-6">
-                  As sessões de caridade pública ocorrem regularmente nos fins de semana. Chegue no horário para garantir a sua acomodação na assistência e harmonização espiritual:
+                  Nossas portas se abrem nos finais de semana para receber você. Chegue cedo, garanta seu lugar na assistência e prepare seu coração para o acolhimento sagrado.
                 </p>
                 {girasList.map((gira) => (
                   <div 
@@ -93,7 +93,9 @@ export default function Agenda() {
                           {gira.orixaGuide}
                         </span>
                         <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${
-                          gira.status === "Confirmada" ? "bg-emerald-100 text-emerald-800" : "bg-blue-100 text-blue-800"
+                          gira.status === "Confirmada" ? "bg-emerald-100 text-emerald-800" :
+                          gira.status === "A Confirmar" ? "bg-amber-100 text-amber-800" :
+                          "bg-blue-100 text-blue-800"
                         }`}>
                           {gira.status}
                         </span>
@@ -118,10 +120,10 @@ export default function Agenda() {
             ) : (
               <div className="space-y-4 animate-fade-in-quick" id="giras-list-segunda">
                 <h2 className="font-serif text-2xl font-bold tracking-tight text-marrom-terra border-l-4 border-verde-folha pl-4">
-                  Giras de Cura (Segundas)
+                  Giras de Cura (Às Segundas)
                 </h2>
                 <p className="text-sm text-gray-600 mb-6">
-                  Atendimentos voltados exclusivamente para passes de cura, desobsessão e equilíbrio espiritual.
+                  Sessões dedicadas exclusivamente ao alívio de dores emocionais e físicas. Passes de cura profunda, desobsessão e resgate do seu equilíbrio.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {girasDeCura.map((gira) => (
@@ -157,21 +159,21 @@ export default function Agenda() {
                 <Heart className="h-6 w-6" />
               </div>
               <h3 className="font-serif text-xl font-bold text-marrom-terra">
-                Atendimento por Ordem de Chegada
+                Como Funciona Nosso Atendimento?
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Nossos atendimentos são gratuitos e realizados por ordem de chegada. Não é necessário agendamento prévio.
+                Toda a caridade prestada no TUCPB é 100% gratuita e feita por ordem de chegada. Você não precisa agendar previamente, basta vir de coração aberto.
               </p>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Pedimos apenas que os consulentes cheguem com pelo menos 30 minutos de antecedência do início dos trabalhos para garantir a ficha na recepção do terreiro, pois as vagas são limitadas à capacidade de atendimento do dia.
+                Para o seu conforto e para garantir a sua ficha, recomendamos chegar com pelo menos 30 minutos de antecedência do início da gira. As vagas são limitadas pela capacidade de atendimento dos guias em cada dia.
               </p>
               
               <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 text-xs text-amber-800 space-y-2 mt-4">
-                <span className="font-bold flex items-center gap-1">🙏 Lembretes:</span>
+                <span className="font-bold flex items-center gap-1">🙏 Lembretes Essenciais:</span>
                 <ul className="space-y-1 list-disc list-inside">
-                  <li>O portão é aberto 1h antes do início.</li>
+                  <li>O portão se abre 1 hora antes do início.</li>
                   <li>As fichas são distribuídas presencialmente.</li>
-                  <li>A caridade do TUCPB é totalmente sem custos.</li>
+                  <li>Não cobramos absolutamente nada pelo passe.</li>
                 </ul>
               </div>
 
@@ -181,7 +183,7 @@ export default function Agenda() {
                 rel="noopener noreferrer"
                 className="mt-6 flex items-center justify-center gap-2 w-full bg-emerald-600 text-white py-3.5 rounded-lg text-sm font-semibold hover:bg-emerald-700 shadow-sm transition-colors cursor-pointer"
               >
-                Dúvidas? Fale no WhatsApp
+                Ainda Tem Dúvidas? Fale Conosco!
               </a>
             </div>
           </div>
@@ -197,10 +199,10 @@ export default function Agenda() {
         <div className="bg-white rounded-2xl border border-areia-escura p-6 sm:p-8 shadow-sm flex flex-col lg:flex-row items-center gap-8">
           <div className="flex-1 space-y-4">
             <h2 className="font-serif text-2xl font-bold tracking-tight text-marrom-terra border-l-4 border-verde-folha pl-4">
-              Nossa Localização
+              Como Chegar ao Nosso Terreiro
             </h2>
             <p className="text-sm text-gray-600 leading-relaxed max-w-md">
-              O Templo Umbandista Caboclo Pena Branca está de portas abertas para te receber. O terreiro é facilmente acessível de carro ou transporte público na região.
+              O TUCPB está de portas abertas esperando sua visita. Localizado em Luziânia-GO, nosso espaço é tranquilo e de fácil acesso, tanto para quem vem de carro quanto de transporte público.
             </p>
             <div className="bg-areia-suave inline-block p-4 rounded-xl border border-areia-escura space-y-1">
                <p className="text-xs font-bold text-gray-500 uppercase tracking-widest">Endereço Principal</p>
@@ -243,31 +245,31 @@ export default function Agenda() {
           <div className="max-w-3xl space-y-6">
             <h3 className="font-serif text-xl font-bold text-marrom-terra flex items-center gap-2">
               <AlertCircle className="h-5 w-5 text-verde-folha" />
-              Regras e Condutas para Visitantes
+              Como se Preparar para a Gira
             </h3>
             <p className="text-sm text-gray-600 leading-relaxed">
-              O terreiro é um templo sagrado consagrado à espiritualidade de luz. Para manter o respeito e a harmonia durante os trabalhos, todos os consulentes e visitantes devem observar as seguintes condutas:
+              O terreiro é um templo sagrado. Para que você possa absorver o máximo de energia positiva e nos ajudar a manter a harmonia do ambiente, preparamos algumas orientações simples:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
               <div className="space-y-1">
                 <h4 className="font-bold text-xs uppercase tracking-wider text-marrom-terra">1. Vestimenta</h4>
                 <p className="text-xs text-gray-500 leading-relaxed">
-                  Vista roupas claras (branco ou bege são os mais indicados). Não são permitidas roupas curtas, decotes excessivos, shorts curtos ou saias curtas de assistência.
+                  Opte por roupas claras (branco ou bege). Para manter o respeito ao espaço sagrado, pedimos que evite roupas curtas, decotes excessivos ou peças muito justas.
                 </p>
               </div>
 
               <div className="space-y-1">
                 <h4 className="font-bold text-xs uppercase tracking-wider text-marrom-terra">2. Silêncio e Respeito</h4>
                 <p className="text-xs text-gray-500 leading-relaxed">
-                  Mantenha silêncio absoluto no salão de assistência. Desligue ou silencie telefones celulares. A concentração mental ajuda na captação das energias fluidoterapêuticas do passe.
+                  O silêncio é a prece da alma. Desligue seu celular e aproveite o momento na assistência para meditar, pedir e se conectar com as energias curadoras do terreiro.
                 </p>
               </div>
 
               <div className="space-y-1">
                 <h4 className="font-bold text-xs uppercase tracking-wider text-marrom-terra">3. Crianças e Animais</h4>
                 <p className="text-xs text-gray-500 leading-relaxed">
-                  Crianças de colo são bem-vindas, mas pedimos atenção para manter a calmaria do salão. Por motivos de segurança espiritual, animais domésticos não devem entrar no barracão principal.
+                  As crianças são muito bem-vindas, apenas pedimos atenção para manter a calmaria do salão. Por motivos de segurança espiritual, animais não devem adentrar o barracão.
                 </p>
               </div>
             </div>

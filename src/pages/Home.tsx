@@ -220,9 +220,20 @@ export default function Home({ onNavigate }: HomeProps) {
           <div className="absolute right-0 top-0 w-64 h-64 bg-verde-folha/10 rounded-full blur-3xl pointer-events-none"></div>
 
           <div className="space-y-4 max-w-xl">
-            <span className="inline-block bg-verde-folha px-3 py-1 rounded-full text-xs font-mono font-semibold uppercase tracking-wider">
-              Próximo Encontro
-            </span>
+            <div className="flex flex-wrap gap-2 items-center">
+              <span className="inline-block bg-verde-folha px-3 py-1 rounded-full text-xs font-mono font-semibold uppercase tracking-wider">
+                Próximo Encontro
+              </span>
+              {nextGira.status && (
+                <span className={`inline-block px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider ${
+                  nextGira.status === "Confirmada" ? "bg-emerald-500/20 text-emerald-100 border border-emerald-500/30" :
+                  nextGira.status === "A Confirmar" ? "bg-amber-500/20 text-amber-200 border border-amber-500/30" :
+                  "bg-blue-500/20 text-blue-100 border border-blue-500/30"
+                }`}>
+                  {nextGira.status}
+                </span>
+              )}
+            </div>
             <h3 className="font-serif text-2xl font-bold tracking-tight sm:text-3xl">
               {nextGira.title}
             </h3>
