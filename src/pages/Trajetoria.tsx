@@ -22,7 +22,7 @@ function GalleryYouTube({ videoId, title }: { videoId: string; title: string }) 
       
       <button 
         onClick={toggleMute}
-        className="absolute top-4 right-4 z-30 bg-black/50 hover:bg-black/80 text-white p-2.5 rounded-full backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
+        className="absolute top-4 right-4 z-30 bg-black/50 hover:bg-black/80 text-white p-2.5 rounded-full backdrop-blur-sm transition-all opacity-100 lg:opacity-0 lg:group-hover:opacity-100 focus:opacity-100"
         title={isMuted ? "Ativar som" : "Desativar som"}
       >
         {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
@@ -31,9 +31,9 @@ function GalleryYouTube({ videoId, title }: { videoId: string; title: string }) 
       <iframe 
         src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=${isMuted ? 1 : 0}&loop=1&playlist=${videoId}&controls=0&playsinline=1`}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        className="w-full h-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 border-none pointer-events-none" 
+        className="w-full h-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 border-none pointer-events-auto" 
       />
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20 pointer-events-none">
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 translate-y-0 lg:translate-y-full lg:group-hover:translate-y-0 transition-transform duration-500 z-20 pointer-events-none">
         <span className="text-pena-branca text-base font-serif font-medium tracking-wide">{title}</span>
       </div>
     </div>
