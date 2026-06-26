@@ -98,6 +98,7 @@ export default function Integrantes() {
   const [newPointAudio, setNewPointAudio] = useState("");
   const [newPointVideo, setNewPointVideo] = useState("");
   const [customPoints, setCustomPoints] = useState<CurimbaPoint[]>([]);
+  const [editPoint, setEditPoint] = useState<Partial<CurimbaPoint> | null>(null);
 
   // --- Content Admin States ---
   const [articles, setArticles] = useState<BlogArticle[]>([]);
@@ -174,6 +175,9 @@ export default function Integrantes() {
 
     if (storedPoints) {
       setCustomPoints(JSON.parse(storedPoints));
+    } else {
+      setCustomPoints(initialPoints);
+      localStorage.setItem("tucpb_points", JSON.stringify(initialPoints));
     }
 
     if (storedArticles) {
@@ -688,24 +692,67 @@ export default function Integrantes() {
     e.preventDefault();
     if (!newPointTitle || !newPointOrixa || !newPointLyrics) return;
 
-    const newPoint: CurimbaPoint = {
-      id: `pt-${Date.now()}`,
-      title: newPointTitle,
-      guideOrOrixa: newPointOrixa,
-      type: newPointType,
-      lyrics: newPointLyrics,
-      youtubeUrl: newPointYoutube,
-      audioUrl: newPointAudio,
-      videoUrl: newPointVideo
-    };
+    if (editPoint?.id) {
+       setCustomPoints(customPoints.map(p => p.id === editPoint.id ? {
+         ...p,
+         title: newPointTitle,
+         guideOrOrixa: newPointOrixa,
+         type: newPointType,
+         lyrics: newPointLyrics,
+         youtubeUrl: newPointYoutube,
+         audioUrl: newPointAudio,
+         videoUrl: newPointVideo
+       } : p));
+       setEditPoint(null);
+    } else {
+      const newPoint: CurimbaPoint = {
+        id: `pt-${Date.now()}`,
+        title: newPointTitle,
+        guideOrOrixa: newPointOrixa,
+        type: newPointType,
+        lyrics: newPointLyrics,
+        youtubeUrl: newPointYoutube,
+        audioUrl: newPointAudio,
+        videoUrl: newPointVideo
+      };
+      setCustomPoints([newPoint, ...customPoints]);
+    }
 
-    setCustomPoints([newPoint, ...customPoints]);
     setNewPointTitle("");
     setNewPointOrixa("");
     setNewPointLyrics("");
     setNewPointYoutube("");
     setNewPointAudio("");
     setNewPointVideo("");
+    setNewPointType("Saudação");
+  };
+
+  const handleEditPoint = (point: CurimbaPoint) => {
+    setEditPoint(point);
+    setNewPointTitle(point.title);
+    setNewPointOrixa(point.guideOrOrixa);
+    setNewPointType(point.type as any);
+    setNewPointLyrics(point.lyrics);
+    setNewPointYoutube(point.youtubeUrl || "");
+    setNewPointAudio(point.audioUrl || "");
+    setNewPointVideo(point.videoUrl || "");
+  };
+
+  const handleCancelEditPoint = () => {
+    setEditPoint(null);
+    setNewPointTitle("");
+    setNewPointOrixa("");
+    setNewPointType("Saudação");
+    setNewPointLyrics("");
+    setNewPointYoutube("");
+    setNewPointAudio("");
+    setNewPointVideo("");
+  };
+
+  const handleDeletePoint = (id: string) => {
+    if (confirm("Tem certeza que deseja apagar este ponto?")) {
+      setCustomPoints(customPoints.filter(p => p.id !== id));
+    }
   };
 
   // --- Content Admin Handlers ---
@@ -822,7 +869,7 @@ export default function Integrantes() {
     return matchesSearch && matchesFilter && matchesGroup;
   });
 
-  const filteredSongs = [...customPoints, ...initialPoints].filter(s => 
+  const filteredSongs = customPoints.filter(s => 
     s.title.toLowerCase().includes(searchSong.toLowerCase()) || 
     s.guideOrOrixa.toLowerCase().includes(searchSong.toLowerCase()) ||
     s.lyrics.toLowerCase().includes(searchSong.toLowerCase())
@@ -1565,7 +1612,7 @@ export default function Integrantes() {
 
               {activeAdminTab === "curimba" && (
                 <div className="bg-white rounded-2xl border border-areia-escura shadow-sm p-6 max-w-2xl mx-auto">
-                   <h2 className="font-serif font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">Publicar Novo Ponto Cantado</h2>
+                   <h2 className="font-serif font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">{editPoint ? 'Editar Ponto Cantado' : 'Publicar Novo Ponto Cantado'}</h2>
                    <form onSubmit={handleAddPoint} className="space-y-4">
                      <div className="grid grid-cols-2 gap-4">
                        <div>
@@ -1585,6 +1632,10 @@ export default function Integrantes() {
                          <option value="Defumação">Defumação</option>
                          <option value="Chamada">Chamada</option>
                          <option value="Subida">Subida</option>
+                         <option value="Sustentação">Sustentação</option>
+                         <option value="Louvação">Louvação</option>
+                         <option value="Firmeza">Firmeza</option>
+                         <option value="Descarrego">Descarrego</option>
                        </select>
                      </div>
                      <div>
@@ -1606,10 +1657,42 @@ export default function Integrantes() {
                          <input type="url" placeholder="https://.../video.mp4" value={newPointVideo} onChange={(e) => setNewPointVideo(e.target.value)} className="w-full px-3 py-2 bg-white border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
                        </div>
                      </div>
-                     <button type="submit" className="w-full bg-verde-mata text-white py-2 rounded text-sm font-bold mt-2 hover:bg-verde-folha transition flex justify-center items-center gap-2">
-                        Salvar Ponto Cantado <Plus className="h-4 w-4"/>
-                     </button>
+                     <div className="flex gap-2">
+                       <button type="submit" className="w-full bg-verde-mata text-white py-2 rounded text-sm font-bold hover:bg-verde-folha transition flex justify-center items-center gap-2">
+                          {editPoint ? 'Atualizar Ponto Cantado' : 'Salvar Ponto Cantado'} <Plus className="h-4 w-4"/>
+                       </button>
+                       {editPoint && (
+                         <button type="button" onClick={handleCancelEditPoint} className="px-4 bg-gray-100 text-gray-700 py-2 rounded text-sm font-bold hover:bg-gray-200 transition">
+                           Cancelar
+                         </button>
+                       )}
+                     </div>
                    </form>
+
+                   <div className="mt-12">
+                      <h3 className="font-serif font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">Pontos Cantados Publicados</h3>
+                      <div className="space-y-4 max-h-[500px] overflow-y-auto pr-2">
+                        {customPoints.map((point) => (
+                           <div key={point.id} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg border border-gray-100">
+                             <div className="flex-1 truncate pr-4">
+                               <h4 className="font-bold text-sm text-gray-900 truncate">{point.title}</h4>
+                               <p className="text-xs text-gray-500">{point.guideOrOrixa} • {point.type}</p>
+                             </div>
+                             <div className="flex gap-2 flex-shrink-0">
+                               <button onClick={() => handleEditPoint(point)} className="p-2 text-blue-600 hover:bg-blue-50 rounded transition" title="Editar">
+                                 <Edit2 className="h-4 w-4" />
+                               </button>
+                               <button onClick={() => handleDeletePoint(point.id)} className="p-2 text-red-600 hover:bg-red-50 rounded transition" title="Apagar">
+                                 <Trash2 className="h-4 w-4" />
+                               </button>
+                             </div>
+                           </div>
+                        ))}
+                        {customPoints.length === 0 && (
+                          <p className="text-sm text-gray-500 text-center py-4">Nenhum ponto publicado ainda.</p>
+                        )}
+                      </div>
+                   </div>
                 </div>
               )}
 
@@ -2104,7 +2187,7 @@ export default function Integrantes() {
 
                {(() => {
                  const playlist = initialPlaylists.find(p => p.guideOrOrixa === curimbaLinha);
-                 const pontos = [...customPoints, ...initialPoints].filter(p => p.guideOrOrixa === curimbaLinha);
+                 const pontos = customPoints.filter(p => p.guideOrOrixa === curimbaLinha);
                  
                  return (
                    <div className="space-y-6">
@@ -2142,8 +2225,19 @@ export default function Integrantes() {
                        {pontos.length > 0 ? (
                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                            {pontos.map(ponto => (
-                             <div key={ponto.id} className="border border-areia-escura rounded-xl p-4 bg-areia-suave">
-                               <h4 className="font-bold text-sm text-gray-900 mb-1">{ponto.title}</h4>
+                             <div key={ponto.id} className="border border-areia-escura rounded-xl p-4 bg-areia-suave relative group">
+                               <div className="absolute top-4 right-4 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                                 <button onClick={() => {
+                                   handleEditPoint(ponto);
+                                   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                                 }} className="p-1.5 bg-white text-blue-600 hover:bg-blue-50 rounded shadow-sm transition border border-gray-100" title="Editar">
+                                   <Edit2 className="h-3.5 w-3.5" />
+                                 </button>
+                                 <button onClick={() => handleDeletePoint(ponto.id)} className="p-1.5 bg-white text-red-600 hover:bg-red-50 rounded shadow-sm transition border border-gray-100" title="Apagar">
+                                   <Trash2 className="h-3.5 w-3.5" />
+                                 </button>
+                               </div>
+                               <h4 className="font-bold text-sm text-gray-900 mb-1 pr-16">{ponto.title}</h4>
                                <p className="text-xs text-gray-500 font-medium mb-3">Tipo: {ponto.type}</p>
                                <pre className="font-serif text-sm text-gray-800 whitespace-pre-wrap leading-relaxed bg-white p-3 rounded border border-gray-100">{ponto.lyrics}</pre>
                                {ponto.youtubeUrl && (
@@ -2160,7 +2254,7 @@ export default function Integrantes() {
                      </div>
 
                      <div className="bg-white rounded-2xl border border-areia-escura p-6 shadow-sm">
-                       <h3 className="font-serif text-xl font-bold text-gray-900 mb-4">Cadastrar Novo Ponto de {curimbaLinha}</h3>
+                       <h3 className="font-serif text-xl font-bold text-gray-900 mb-4">{editPoint ? 'Editar Ponto' : `Cadastrar Novo Ponto de ${curimbaLinha}`}</h3>
                        <form onSubmit={(e) => { 
                          setNewPointOrixa(curimbaLinha); 
                          handleAddPoint(e); 
@@ -2202,9 +2296,16 @@ export default function Integrantes() {
                              <input type="url" placeholder="https://.../video.mp4" value={newPointVideo} onChange={(e) => setNewPointVideo(e.target.value)} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
                            </div>
                          </div>
-                         <button type="submit" className="w-full bg-verde-mata text-white py-2 rounded text-sm font-bold hover:bg-verde-folha transition flex justify-center items-center gap-2">
-                            Salvar Ponto Cantado <Plus className="h-4 w-4"/>
-                         </button>
+                         <div className="flex gap-2">
+                           <button type="submit" className="w-full bg-verde-mata text-white py-2 rounded text-sm font-bold hover:bg-verde-folha transition flex justify-center items-center gap-2">
+                              {editPoint ? 'Atualizar Ponto Cantado' : 'Salvar Ponto Cantado'} <Plus className="h-4 w-4"/>
+                           </button>
+                           {editPoint && (
+                             <button type="button" onClick={handleCancelEditPoint} className="px-4 bg-gray-100 text-gray-700 py-2 rounded text-sm font-bold hover:bg-gray-200 transition">
+                               Cancelar
+                             </button>
+                           )}
+                         </div>
                        </form>
                      </div>
                    </div>

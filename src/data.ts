@@ -586,5 +586,42 @@ export const initialPoints: CurimbaPoint[] = [
     guideOrOrixa: "Pretos Velhos",
     type: "Saudação",
     lyrics: "Vovó Cambinda não pisa no chão\nEla pisa na folha de arruda na mão\n\nAdorei as Almas!\nO cachimbo da vovó tem mironga\nEla vem benzer filhos de Umbanda\nCom sua fumaça de paz na gira!"
+  },
+  {
+    id: "pnt-pdf-5",
+    title: "PONTO DE CABOCLO - OXALÁ MANDOU BUSCAR",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "[refrão]\nOXALÁ MANDOU\nELE MANDOU BUSCAR\nOS CABOCLOS DA JUREMA\nLÁ NO JUREMA\n[/refrão]\n\nPAI OXALÁ\nÉ REI DO MUNDO INTEIRO\nJÁ DEU ORDENS PRA JUREMA\nCHAMAR SEUS CAPANGUEIROS [2X]"
+  },
+  {
+    id: "pnt-pdf-6",
+    title: "BOIADEIRO - LINDO DIADEMA",
+    guideOrOrixa: "Boiadeiro",
+    type: "Chamada",
+    lyrics: "1- EU VI A MATA SE ABRIR\nE UM GRANDE GUERREIRO PASSAR (2X)\nE ELE VEIO COM UM LINDO DIADEMA\nCHETRUÁ PARA O CABOCLO BOIADEIRO DA JUREMA (2X)\n\n2- QUE LAÇO É ESSE MEU IRMÃO\nQUE TRAZ NO PEITO?\nQUE LAÇO É ESSE MEU IRMÃO\nDO QUE ELE É FEITO? (2X)\n\nOI ESSA LAÇO MEU IRMÃO É CIPÓ\nFOI BOIADEIRO MEU IRMÃO QUE DEU O NÓ (2X)"
+  },
+  {
+    id: "pnt-pdf-7",
+    title: "PONTO DE IBEJADA - COCADINHA PRA DOIS",
+    guideOrOrixa: "Erê",
+    type: "Sustentação",
+    lyrics: "DOUM DOUM DOUM MEU SANTINHO\nELE É FILHO DE OXALÁ\nCRSIPIM CRISPINIANO ABRE A RODA\nDEIXA COSMINHO ENTRAR\n\nCOCADINHA PRA DOIS DOIS DOIS\nCOCADINHA PRA DOIS"
+  },
+  {
+    id: "pnt-pdf-8",
+    title: "PONTO DE MARIA PADILHA - CHOVEU NA CALUNGA",
+    guideOrOrixa: "Pombagira",
+    type: "Chamada",
+    lyrics: "CHOVEU CHOVEU\nSÓ NA CALUNGA QUE NÃO CHOVEU\nCHOVEU CHOVEU\nSÓ NA CALUNGA QUE NÃO CHOVEU\n\nÉ QUE A DONA PADILHA DAS ALMAS\nPRESTA CONTA COM DEUS\nÉ QUE A DONA PADILHA DAS ALMAS\nPRESTA CONTA COM DEUS",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pdf-9",
+    title: "PONTO DE EXÚ - DÁ UMA VOLTA LÁ FORA",
+    guideOrOrixa: "Exú",
+    type: "Chamada",
+    lyrics: "EXÚ _________\nDÁ UMA VOLTA LÁ FORA [2X]\n\nQUEM FOR BOM, BOTA PRA DENTRO\nE QUEM NÃO FOR DEIXA LÁ FORA [2X]",
+    rhythm: "Samba Cabula"
   }
 ];
