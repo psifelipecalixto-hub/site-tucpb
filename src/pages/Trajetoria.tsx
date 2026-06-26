@@ -237,37 +237,37 @@ export default function Trajetoria() {
           {/* Gallery Item 1 */}
           <GalleryYouTube 
             videoId="sIJRw2AmSUY" 
-            title="Força da Curimba" 
+            title="Gira de Esquerda" 
           />
           
           {/* Gallery Item 2 */}
           <GalleryYouTube 
             videoId="qR9rmjK8UW0" 
-            title="Força da Cura" 
+            title="Sessão de Cura" 
           />
 
           {/* Gallery Item 3 */}
           <GalleryYouTube 
             videoId="5lIcBVhdH4E" 
-            title="Povo Cigano" 
+            title="Louvor ao Povo Cigano" 
           />
 
           {/* Gallery Item 4 */}
           <GalleryYouTube 
             videoId="blvIb5ilgnY" 
-            title="Trabalho de Cura" 
+            title="Trabalho de Cura Espiritual" 
           />
 
           {/* Gallery Item 5 */}
           <GalleryYouTube 
             videoId="ycSW6-yAvP4" 
-            title="Feitura de Banho" 
+            title="Preparo do Banho Sagrado" 
           />
 
           {/* Gallery Item 6 */}
           <GalleryYouTube 
             videoId="torQZG710A0" 
-            title="Memórias do Terreiro" 
+            title="Gira de Preto Velho" 
           />
         </div>
       </section>
