@@ -6,6 +6,36 @@ import { supabase } from "../lib/supabase";
 
 // (Empty for cleanup)
 
+// Helper function to format YouTube URLs for reliable embedding
+const getYouTubeEmbedUrl = (url: string) => {
+  if (!url) return "";
+  try {
+    const urlObj = new URL(url);
+    const list = urlObj.searchParams.get("list");
+    const v = urlObj.searchParams.get("v");
+    const index = urlObj.searchParams.get("index");
+    
+    let embedUrl = "";
+    if (v && list) {
+      embedUrl = `https://www.youtube-nocookie.com/embed/${v}?list=${list}`;
+    } else if (list) {
+      embedUrl = `https://www.youtube-nocookie.com/embed/videoseries?list=${list}`;
+    } else if (v) {
+      embedUrl = `https://www.youtube-nocookie.com/embed/${v}`;
+    }
+    
+    if (embedUrl) {
+      if (index) {
+        embedUrl += (embedUrl.includes('?') ? '&' : '?') + `index=${index}`;
+      }
+      return embedUrl;
+    }
+  } catch (e) {
+    // ignore
+  }
+  return url.replace("watch?v=", "embed/").replace(/&list=/, "?list=").replace(/&pp=[^&]+/, "");
+};
+
 export default function Integrantes() {
   // --- Local Storage Database States ---
   const [users, setUsers] = useState<UserProfile[]>([]);
@@ -2086,17 +2116,20 @@ export default function Integrantes() {
                          </h3>
                          <div className="aspect-video w-full rounded-xl overflow-hidden bg-black mx-auto">
                            <iframe 
-                             src={playlist.youtubeUrl.replace("watch?v=", "embed/").replace(/&list=/, "?list=")} 
+                             src={getYouTubeEmbedUrl(playlist.youtubeUrl)} 
                              title="YouTube playlist player" 
                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                              allowFullScreen 
                              className="w-full h-full border-0"
                            ></iframe>
                          </div>
-                         <div className="mt-4 flex justify-center">
+                         <div className="mt-4 flex flex-col items-center gap-3">
                            <a href={playlist.youtubeUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-6 py-2.5 bg-red-600 text-white rounded-lg text-sm font-bold hover:bg-red-700 transition shadow-sm">
                              <PlayCircle className="h-5 w-5"/> Abrir no YouTube
                            </a>
+                           <p className="text-[11px] text-gray-500 max-w-md text-center leading-relaxed">
+                              Nota: Alguns vídeos possuem restrições de direitos autorais que bloqueiam a reprodução aqui. Se aparecer "Vídeo indisponível", você pode clicar no botão <strong>Próximo (⏭)</strong> no próprio player de vídeo para pular para a próxima música, ou usar o botão acima para abrir no YouTube.
+                           </p>
                          </div>
                        </div>
                      )}

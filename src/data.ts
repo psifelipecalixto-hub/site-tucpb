@@ -520,7 +520,7 @@ export const initialPlaylists: CurimbaPlaylist[] = [
   { id: "pl-6", title: "Playlist de Boiadeiro", guideOrOrixa: "Boiadeiro", youtubeUrl: "https://www.youtube.com/watch?v=QH25xWNcsO4&list=PLlOqOVuQSG_araJcq-7n6mNtAGkgvwDkS&pp=gAQB0gcJCbAEOCosWNin" },
   { id: "pl-7", title: "Playlist de Baiano", guideOrOrixa: "Baiano", youtubeUrl: "https://www.youtube.com/watch?v=TsGKIYZl4ms&list=PLlOqOVuQSG_ZLy2ze07ORZYy0vbIOMmAo&pp=gAQB0gcJCbAEOCosWNin" },
   { id: "pl-8", title: "Playlist de Cigano", guideOrOrixa: "Cigano", youtubeUrl: "https://www.youtube.com/watch?v=eKuFioj2xXg&list=PLjosQXRCphFvODse4oy56HDZ0u80TU0Aa" },
-  { id: "pl-9", title: "Playlist de Erê", guideOrOrixa: "Erê", youtubeUrl: "https://www.youtube.com/watch?v=H5gqKoVJ-nc&list=PLlOqOVuQSG_bcE-Ag7XfusIuQVRnFQTDj&pp=gAQB" },
+  { id: "pl-9", title: "Playlist de Erê", guideOrOrixa: "Erê", youtubeUrl: "https://www.youtube.com/watch?v=K2Bee2rKhgQ&list=PLlOqOVuQSG_bcE-Ag7XfusIuQVRnFQTDj&index=2" },
   { id: "pl-10", title: "Playlist de Marinheiro", guideOrOrixa: "Marinheiro", youtubeUrl: "https://www.youtube.com/watch?v=ufYxW_dtCMM&list=PLTMKTJl-Sqikzlb_Q-BStvkWvFQ4Yo7EP" },
   { id: "pl-11", title: "Playlist de Exu Mirim", guideOrOrixa: "Exu Mirim", youtubeUrl: "https://www.youtube.com/watch?v=lRIQAXyVS_o&list=PLTMKTJl-Sqim1CHjPA3rHS9pBJEvITfJU" },
   { id: "pl-12", title: "Playlist de Malandro", guideOrOrixa: "Malandro", youtubeUrl: "https://www.youtube.com/watch?v=L2d_1MN5DM0&list=PLlOqOVuQSG_YubKj_yOqiuBF-xAJPspi5&pp=gAQB" }
