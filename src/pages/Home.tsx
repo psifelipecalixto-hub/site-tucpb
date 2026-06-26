@@ -4,7 +4,7 @@
  */
 
 import { useState } from "react";
-import { Feather, Heart, TreePine, Sparkles, HelpCircle, ArrowRight, Sun, Flame, Droplets, Landmark, MapPin, Clock, ScrollText, Flower2 } from "lucide-react";
+import { Feather, Heart, TreePine, Sparkles, HelpCircle, ArrowRight, Sun, Flame, Droplets, Landmark, MapPin, Clock, ScrollText, Flower2, Compass } from "lucide-react";
 import { initialGiras } from "../data";
 import Logo from "../components/Logo";
 import AtendimentosParticulares from "../components/AtendimentosParticulares";
@@ -78,9 +78,17 @@ export default function Home({ onNavigate }: HomeProps) {
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
+              href="#trajetoria"
+              onClick={(e) => { e.preventDefault(); onNavigate("#trajetoria"); window.location.hash = "#trajetoria"; }}
+              className="flex items-center gap-2 rounded-full bg-verde-mata/80 px-8 py-3 text-sm font-semibold text-pena-branca border border-verde-folha/50 shadow-md hover:bg-verde-mata transition-all hover:scale-[1.02] backdrop-blur-sm"
+            >
+              <Compass className="h-4 w-4" />
+              Nossa Trajetória
+            </a>
+            <a
               href="#portal"
               onClick={(e) => { e.preventDefault(); onNavigate("#portal"); window.location.hash = "#portal"; }}
-              className="flex items-center gap-2 rounded-full bg-pena-branca/10 px-8 py-3 text-sm font-semibold text-pena-branca border border-pena-branca/20 hover:bg-pena-branca/20 transition-all"
+              className="flex items-center gap-2 rounded-full bg-pena-branca/10 px-8 py-3 text-sm font-semibold text-pena-branca border border-pena-branca/20 hover:bg-pena-branca/20 transition-all hover:scale-[1.02] backdrop-blur-sm"
             >
               Portal de Conhecimento
             </a>
@@ -214,29 +222,29 @@ export default function Home({ onNavigate }: HomeProps) {
 
       {/* Three Pillars Cards */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           
-          <div className="bg-white rounded-xl p-8 border border-areia-escura hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-xl p-8 border border-areia-escura hover:shadow-md transition-shadow flex flex-col h-full">
             <span className="text-xs font-mono font-bold uppercase tracking-wider text-verde-folha">Pilar I</span>
-            <h3 className="font-serif text-xl font-bold text-marrom-terra mt-2 mb-3">Charidade Absoluta</h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              Damos de graça o que de graça recebemos. Sob as ordens do Caboclo Pena Branca, nenhuma consulta, passe, descarrego ou ritual de proteção possui qualquer custo financeiro ou troca de bens. A caridade pura é nossa única moeda.
+            <h3 className="font-serif text-xl font-bold text-marrom-terra mt-2 mb-3">Caridade e Consciência</h3>
+            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
+              A caridade pura e consciente é o alicerce da nossa casa. Sob a luz do Caboclo Pena Branca, entregamos passes, palavras e acolhimento como ferramentas de cura espiritual. Tudo que ofertamos é fruto da devoção e do amor ao próximo, sem qualquer finalidade material, buscando apenas despertar a consciência e a paz em cada coração que nos procura.
             </p>
           </div>
 
-          <div className="bg-white rounded-xl p-8 border border-areia-escura hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-xl p-8 border border-areia-escura hover:shadow-md transition-shadow flex flex-col h-full">
             <span className="text-xs font-mono font-bold uppercase tracking-wider text-verde-folha">Pilar II</span>
             <h3 className="font-serif text-xl font-bold text-marrom-terra mt-2 mb-3">Respeito à Natureza</h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              As matas, rios, pedreiras e mares são os templos vivos dos Orixás. No TUCPB, todo o uso ritualístico de ervas e oferendas é ecologicamente consciente, proibindo o descarte de materiais não-biodegradáveis e respeitando a fauna e a flora.
+            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
+              As matas, rios e pedreiras são templos vivos dos Orixás e extensões do nosso sagrado. No TUCPB, firmamos o compromisso inegociável de preservação. Nosso uso ritualístico de ervas e oferendas é plenamente ecologicamente consciente. Não descartamos materiais poluentes e cuidamos para proteger a vitalidade, a fauna e a flora do nosso planeta em todas as práticas.
             </p>
           </div>
 
-          <div className="bg-white rounded-xl p-8 border border-areia-escura hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-xl p-8 border border-areia-escura hover:shadow-md transition-shadow flex flex-col h-full">
             <span className="text-xs font-mono font-bold uppercase tracking-wider text-verde-folha">Pilar III</span>
             <h3 className="font-serif text-xl font-bold text-marrom-terra mt-2 mb-3">Humildade e União</h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              No terreiro, despojamo-nos de nossos cargos civis, vaidades acadêmicas ou orgulhos pessoais. Todos vestem o branco sagrado, descalçam-se para tocar a terra do Gongá e servem lado a lado como irmãos de caminhada espiritual.
+            <p className="text-sm text-gray-600 leading-relaxed flex-grow">
+              No terreiro somos todos iguais perante o axé. Ao cruzarmos a porta, deixamos de lado vaidades materiais e honrarias do mundo. Vestimos o mesmo branco e pisamos descalços no chão do Gongá para mantermos a humildade e a conexão com a terra. Trabalhamos juntos, ombro a ombro, como verdadeiros irmãos irmanados na fé e no amor umbandista.
             </p>
           </div>
 
