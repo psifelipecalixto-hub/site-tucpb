@@ -85,6 +85,7 @@ export default function Integrantes() {
   const [selectedLesson, setSelectedLesson] = useState<Lesson | null>(null);
   const [selectedHerb, setSelectedHerb] = useState<Herb | null>(null);
   const [herbFilter, setHerbFilter] = useState<string>("Todas");
+  const [herbGroupFilter, setHerbGroupFilter] = useState<string>("Todos os Grupos");
 
   // --- Curimba States ---
   const [searchSong, setSearchSong] = useState<string>("");
@@ -157,7 +158,13 @@ export default function Integrantes() {
     }
 
     if (storedHerbs) {
-      setHerbs(JSON.parse(storedHerbs));
+      const parsedHerbs = JSON.parse(storedHerbs);
+      if (parsedHerbs.length < initialHerbs.length) {
+        setHerbs(initialHerbs);
+        localStorage.setItem("tucpb_herbs", JSON.stringify(initialHerbs));
+      } else {
+        setHerbs(parsedHerbs);
+      }
     } else {
       setHerbs(initialHerbs);
       localStorage.setItem("tucpb_herbs", JSON.stringify(initialHerbs));
@@ -724,8 +731,11 @@ export default function Integrantes() {
         orixa: editHerb.orixa || "",
         ritualUse: editHerb.ritualUse || "",
         medicinalUse: editHerb.medicinalUse || "",
-        classification: editHerb.classification || "Morna",
-        preparation: editHerb.preparation || ""
+        tags: editHerb.tags || [],
+        preparation: editHerb.preparation || "",
+        verboAtuante: editHerb.verboAtuante || "",
+        ofo: editHerb.ofo || "",
+        grupo: editHerb.grupo || ""
       };
       setHerbs([newHerb, ...herbs]);
     }
@@ -746,8 +756,16 @@ export default function Integrantes() {
   
   const filteredHerbs = herbs.filter(herb => {
     const matchesSearch = herb.name.toLowerCase().includes(searchEstudoQuery.toLowerCase());
-    const matchesFilter = herbFilter === "Todas" || herb.classification === herbFilter;
-    return matchesSearch && matchesFilter;
+    const matchesFilter = herbFilter === "Todas" || 
+      (herbFilter === "Quentes (Excitatórias)" && herb.tags?.includes("Quente")) ||
+      (herbFilter === "Frias (Calmantes)" && herb.tags?.includes("Fria")) ||
+      (herbFilter === "Masculinas (Fálicas)" && herb.tags?.includes("Masculina")) ||
+      (herbFilter === "Femininas (Uterinas)" && herb.tags?.includes("Feminina"));
+    
+    const matchesGroup = herbGroupFilter === "Todos os Grupos" || 
+      (herb.grupo && herb.grupo.includes(herbGroupFilter));
+      
+    return matchesSearch && matchesFilter && matchesGroup;
   });
 
   const filteredSongs = [...customPoints, ...initialPoints].filter(s => 
@@ -1687,17 +1705,27 @@ export default function Integrantes() {
                           <input type="text" value={editHerb?.orixa || ""} onChange={(e) => setEditHerb({...editHerb, orixa: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
                         </div>
                         <div>
-                          <label className="text-[11px] font-bold text-gray-700 uppercase">Classificação</label>
-                          <select value={editHerb?.classification || "Morna"} onChange={(e) => setEditHerb({...editHerb, classification: e.target.value as any})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha">
-                            <option value="Fria">Fria</option>
-                            <option value="Morna">Morna</option>
-                            <option value="Quente">Quente</option>
-                          </select>
+                          <label className="text-[11px] font-bold text-gray-700 uppercase">Tags (separadas por vírgula)</label>
+                          <input type="text" value={editHerb?.tags?.join(', ') || ""} onChange={(e) => setEditHerb({...editHerb, tags: e.target.value.split(',').map(t => t.trim()).filter(Boolean)})} placeholder="Ex: Fria, Feminina" className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <label className="text-[11px] font-bold text-gray-700 uppercase">Grupo (Direção)</label>
+                          <input type="text" value={editHerb?.grupo || ""} onChange={(e) => setEditHerb({...editHerb, grupo: e.target.value})} placeholder="Ex: OÒGÚN (Cura e Paz)" className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                        </div>
+                        <div>
+                          <label className="text-[11px] font-bold text-gray-700 uppercase">Verbo Atuante</label>
+                          <input type="text" value={editHerb?.verboAtuante || ""} onChange={(e) => setEditHerb({...editHerb, verboAtuante: e.target.value})} placeholder="Ex: COLO / Acalantar" className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
                         </div>
                       </div>
                       <div>
-                        <label className="text-[11px] font-bold text-gray-700 uppercase">Uso Ritual / Descarrego</label>
+                        <label className="text-[11px] font-bold text-gray-700 uppercase">Fundamento / Uso Ritual</label>
                         <textarea rows={2} value={editHerb?.ritualUse || ""} onChange={(e) => setEditHerb({...editHerb, ritualUse: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha"></textarea>
+                      </div>
+                      <div>
+                        <label className="text-[11px] font-bold text-gray-700 uppercase">Ofò (Cântico/Reza)</label>
+                        <textarea rows={2} value={editHerb?.ofo || ""} onChange={(e) => setEditHerb({...editHerb, ofo: e.target.value})} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha"></textarea>
                       </div>
                       <div>
                         <label className="text-[11px] font-bold text-gray-700 uppercase">Modo de Preparo</label>
@@ -1725,7 +1753,7 @@ export default function Integrantes() {
                         <div key={herb.id} className="p-4 flex items-center justify-between hover:bg-gray-50">
                           <div>
                             <h4 className="font-bold text-gray-900 text-sm">{herb.name} <span className="font-normal text-xs text-gray-500 italic">({herb.scientificName})</span></h4>
-                            <p className="text-xs text-gray-500">Vibração: {herb.orixa} • Classe: {herb.classification}</p>
+                            <p className="text-xs text-gray-500">Vibração: {herb.orixa} • Tags: {herb.tags?.join(', ')}</p>
                           </div>
                           <div className="flex gap-2">
                             <button onClick={() => setEditHerb(herb)} className="p-1.5 bg-blue-50 text-blue-600 rounded hover:bg-blue-100"><Edit2 className="h-4 w-4"/></button>
@@ -1778,8 +1806,13 @@ export default function Integrantes() {
                {activeEstudoTab === "ervas" && (
                  <div className="space-y-4">
                    <div className="flex flex-wrap gap-2">
-                     {["Todas", "Fria", "Morna", "Quente"].map((cls) => (
-                       <button key={cls} onClick={() => setHerbFilter(cls)} className={`px-3 py-1 text-xs font-bold rounded-full border ${herbFilter === cls ? "bg-verde-folha text-white border-verde-folha" : "bg-white text-gray-600 border-areia-escura"}`}>{cls}</button>
+                     {["Todos os Grupos", "OÒGÚN", "ÀWÚRE", "IDÁÀBÒBÒ", "ÌṢẸ́GUN"].map((grp) => (
+                       <button key={grp} onClick={() => setHerbGroupFilter(grp)} className={`px-3 py-1 text-[11px] font-bold rounded-full border ${herbGroupFilter === grp ? "bg-marrom-terra text-white border-marrom-terra" : "bg-white text-gray-600 border-areia-escura hover:bg-gray-50"}`}>{grp}</button>
+                     ))}
+                   </div>
+                   <div className="flex flex-wrap gap-2">
+                     {["Todas", "Quentes (Excitatórias)", "Frias (Calmantes)", "Masculinas (Fálicas)", "Femininas (Uterinas)"].map((cls) => (
+                       <button key={cls} onClick={() => setHerbFilter(cls)} className={`px-3 py-1 text-[11px] font-bold rounded-full border ${herbFilter === cls ? "bg-verde-folha text-white border-verde-folha" : "bg-white text-gray-600 border-areia-escura hover:bg-gray-50"}`}>{cls}</button>
                      ))}
                    </div>
                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -1787,10 +1820,20 @@ export default function Integrantes() {
                        <div key={herb.id} className="bg-white rounded-xl border border-areia-escura p-4 shadow-sm flex flex-col hover:border-verde-folha/50">
                          <div className="flex justify-between items-start mb-2">
                            <TreePine className="h-5 w-5 text-verde-folha" />
-                           <span className="text-[10px] bg-gray-100 text-gray-800 px-2 py-0.5 rounded font-bold uppercase">{herb.classification}</span>
+                           <div className="flex flex-wrap gap-1 justify-end">
+                             {herb.tags?.map(tag => (
+                               <span key={tag} className={`text-[10px] px-2 py-0.5 rounded font-bold tracking-wider ${
+                                 (tag === "Fria" || tag === "Feminina") ? "bg-teal-50 text-teal-700 border border-teal-200" :
+                                 (tag === "Quente" || tag === "Masculina") ? "bg-red-50 text-red-700 border border-amber-400" :
+                                 "bg-gray-100 text-gray-800 border border-gray-200"
+                               }`}>
+                                 [{tag}]
+                               </span>
+                             ))}
+                           </div>
                          </div>
                          <h3 className="font-serif font-bold text-gray-900">{herb.name}</h3>
-                         <p className="text-[10px] text-gray-500 font-mono mb-2">Vibração: {herb.orixa}</p>
+                         {herb.orixa && <p className="text-[10px] text-gray-500 font-mono mb-2">Vibração: {herb.orixa}</p>}
                          <button onClick={() => setSelectedHerb(herb)} className="mt-auto w-full py-1.5 bg-areia-suave hover:bg-areia-escura text-gray-800 text-xs font-semibold rounded-lg transition-colors">Ver Fundamento</button>
                        </div>
                      ))}
@@ -1919,14 +1962,42 @@ export default function Integrantes() {
       )}
 
       {selectedHerb && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in-quick">
-          <div className="relative w-full max-w-lg bg-white rounded-2xl p-6">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in-quick" onClick={() => setSelectedHerb(null)}>
+          <div className="relative w-full max-w-lg bg-white rounded-2xl p-6" onClick={e => e.stopPropagation()}>
             <button onClick={() => setSelectedHerb(null)} className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 text-gray-500"><X className="h-5 w-5" /></button>
             <h2 className="font-serif text-xl font-bold text-marrom-terra mb-1">{selectedHerb.name}</h2>
-            <p className="text-xs text-gray-500 mb-4 uppercase tracking-widest font-bold">Vibração: {selectedHerb.orixa}</p>
+            {selectedHerb.orixa && <p className="text-xs text-gray-500 mb-4 uppercase tracking-widest font-bold">Vibração: {selectedHerb.orixa}</p>}
+            <div className="flex flex-wrap gap-1 mb-4">
+               {selectedHerb.tags?.map(tag => (
+                 <span key={tag} className={`text-[10px] px-2 py-0.5 rounded font-bold tracking-wider ${
+                   (tag === "Fria" || tag === "Feminina") ? "bg-teal-50 text-teal-700 border border-teal-200" :
+                   (tag === "Quente" || tag === "Masculina") ? "bg-red-50 text-red-700 border border-amber-400" :
+                   "bg-gray-100 text-gray-800 border border-gray-200"
+                 }`}>
+                   [{tag}]
+                 </span>
+               ))}
+               {selectedHerb.grupo && (
+                 <span className="text-[10px] px-2 py-0.5 rounded font-bold tracking-wider bg-purple-50 text-purple-700 border border-purple-200 uppercase">
+                   {selectedHerb.grupo}
+                 </span>
+               )}
+             </div>
             <div className="space-y-4 text-sm text-gray-700 bg-gray-50 p-4 rounded-xl border border-gray-100">
-              <div><strong>Uso Ritual:</strong><br/>{selectedHerb.ritualUse}</div>
-              <div><strong>Preparo:</strong><br/>{selectedHerb.preparation}</div>
+              {selectedHerb.verboAtuante && <div><strong className="text-marrom-terra">Verbo Atuante (Chave de Ignição):</strong> {selectedHerb.verboAtuante}</div>}
+              <div><strong className="text-marrom-terra">Fundamento Mágico:</strong><br/><span className="text-gray-600 leading-relaxed">{selectedHerb.ritualUse}</span></div>
+              {selectedHerb.ofo && <div><strong className="text-marrom-terra">Ofò (Encantamento / Sopro Vital):</strong><br/><em className="text-gray-600">"{selectedHerb.ofo.replace(/(^"|"$)/g, '')}"</em></div>}
+              
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <strong className="text-marrom-terra block mb-2">Manual de Laboratório Litúrgico (Preparo na Umbanda):</strong>
+                <div className="text-xs text-gray-600 space-y-2">
+                  <p><strong>A HORA E A LUA:</strong> {selectedHerb.tags?.includes("Quente") ? "Lua Minguante (Descarrego). Horário: Meio-dia ou Noite." : "Lua Nova (Cura) ou Crescente (Prosperidade). Horário: Manhã (Sol nascendo)."}</p>
+                  <p><strong>A ÁGUA (O SOLVENTE):</strong> {selectedHerb.tags?.includes("Quente") ? "Água de Mar ou Torneira (ressuscitada ao Sereno). Adicione Cachaça (Fogo Líquido) para extrair o axé de quebra." : "Água de Cachoeira, Rio ou Chuva fina. Adicione Mel para adoçar a cura (nunca ferva o mel)."}</p>
+                  <p><strong>A MACERAÇÃO (QUINAGEM):</strong> {selectedHerb.tags?.includes("Quente") ? "As Guerreiras. Rasgue e macere com força (Mòwó), quebrando as fibras enquanto pronuncia o verbo atuante com firmeza ('Quebra! Tira!')." : "As Curadoras. Macere com gentileza, pedindo paz e sussurrando o verbo suavemente ('Acalma...')."}</p>
+                  <p><strong>USO PRÁTICO:</strong> {selectedHerb.grupo?.includes("OÒGÚN") || selectedHerb.tags?.includes("Fria") ? "Permitida para banhos de cabeça (Amaci no Ori) e lavagem de guias para nutrição." : "<strong>NUNCA</strong> jogue no Ori (cabeça). Banho do pescoço para baixo. Excelente para Bate-Folha (Exorcismo Vegetal) ou Defumação de Descarrego (se seca)."}</p>
+                  {selectedHerb.preparation && <div className="mt-2 text-sm bg-white p-2 rounded border border-gray-200 text-gray-700"><strong>Observação Específica:</strong> {selectedHerb.preparation}</div>}
+                </div>
+              </div>
             </div>
           </div>
         </div>

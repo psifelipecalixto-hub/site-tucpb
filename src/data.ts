@@ -79,7 +79,7 @@ export const initialLessons: Lesson[] = [
     id: "les-3",
     title: "Banhos de Ervas: Preparação, Imantação e Ritualística",
     category: "Ervas e Banhos",
-    description: "Diferença entre banhos de cabeça (amaci) e banhos de pescoço para baixo. Classificação das ervas frias, mornas e quentes.",
+    description: "Diferença entre banhos de cabeça (amaci) e banhos de pescoço para baixo. Classificação das ervas quentes, frias, masculinas e femininas.",
     duration: "38 min",
     instructor: "Mãe de Santo Clarice",
     date: "20 de Junho de 2026",
@@ -100,56 +100,66 @@ export const initialLessons: Lesson[] = [
 ];
 
 export const initialHerbs: Herb[] = [
-  {
-    id: "herb-1",
-    name: "Arruda",
-    scientificName: "Ruta graveolens",
-    orixa: "Ogum / Exu",
-    ritualUse: "Descarrego de energias densas, inveja e mau-olhado. Muito usada em bate-folhas e defumações.",
-    medicinalUse: "Uso externo para alívio de dores reumáticas e varizes.",
-    classification: "Morna",
-    preparation: "Infusão ou maceração a frio. Usar do pescoço para baixo após banho de higiene."
-  },
-  {
-    id: "herb-2",
-    name: "Guiné",
-    scientificName: "Petiveria alliacea",
-    orixa: "Oxóssi / Ogum",
-    ritualUse: "Altamente protetora e cortadora de demandas negativas. Remove cordões energéticos parasitas.",
-    medicinalUse: "Uso medicinal tradicional muito restrito devido a toxicidade.",
-    classification: "Quente",
-    preparation: "Deve ser macerada em água fria. Recomendado o uso exclusivo do pescoço para baixo nas limpezas pesadas."
-  },
-  {
-    id: "herb-3",
-    name: "Alecrim",
-    scientificName: "Salvia rosmarinus",
-    orixa: "Oxalá / Oxóssi",
-    ritualUse: "Equilíbrio espiritual, atração de harmonia, alegria e clareza mental. Ótimo para banhos de cabeça (amaci).",
-    medicinalUse: "Chá digestivo, tônico capilar e calmante suave.",
-    classification: "Fria",
-    preparation: "Infusão com água quente. Pode ser derramado em todo o corpo, incluindo a cabeça."
-  },
-  {
-    id: "herb-4",
-    name: "Manjericão",
-    scientificName: "Ocimum basilicum",
-    orixa: "Oxalá",
-    ritualUse: "Paz espiritual extrema, alinhamento dos chacras superiores e calmaria mental.",
-    medicinalUse: "Antioxidante, melhora a imunidade e combate ansiedade leve.",
-    classification: "Fria",
-    preparation: "Maceração manual em água morna. Excelente para banhos de amaci antes de deitar."
-  },
-  {
-    id: "herb-5",
-    name: "Aroeira",
-    scientificName: "Schinus terebinthifolia",
-    orixa: "Exu / Ogum",
-    ritualUse: "Erva forte para quebra de feitiços pesados e desobsessão. Usada nos banhos de descarrego profundo.",
-    medicinalUse: "Ação anti-inflamatória e cicatrizante potente (uso externo).",
-    classification: "Quente",
-    preparation: "Cozimento das folhas por 5 minutos. Deixar esfriar e aplicar apenas do pescoço para baixo."
-  }
+  // GRUPO 1: OÒGÚN (PARA CURAR E ACALMAR)
+  { id: "h1", name: "Colônia", scientificName: "Alpinia zerumbet", orixa: "Oxum e Iemanjá", grupo: "OÒGÚN (Cura e Paz)", verboAtuante: "COLO / Acalantar", ritualUse: "O 'Colo de Mãe'. Acalma crises de ansiedade, pânico e histeria.", ofo: '\"Cheiro de Colônia, me dê seu Colo. Acalma a alma, tira o desconsolo. No teu braço eu encontro a paz, A dor de ontem não volta mais.\"', tags: ["Fria", "Feminina"] },
+  { id: "h2", name: "Boldo / Tapete de Oxalá", scientificName: "Plectranthus barbatus", orixa: "Oxalá", grupo: "OÒGÚN (Cura e Paz)", verboAtuante: "TAPAR (Cobrir) / Macio", ritualUse: "Amortecer choques espirituais. Conectar com o Alto. Limpar a mente (Ori) de pensamentos ruins.", ofo: '\"Tapete de Oxalá, venha me cobrir. Tapa a tristeza, me faz subir. Pisar macio, sentir o chão, Traz o silêncio pro meu coração.\"', tags: ["Fria", "Masculina"] },
+  { id: "h3", name: "Manjericão", scientificName: "Ocimum basilicum", orixa: "Oxalá e Oxum", grupo: "OÒGÚN (Cura e Paz)", verboAtuante: "MÃO (Toque) / Majestade", ritualUse: "Recompor a aura furada. Tirar o 'baixo astral' sem dar sono. É a erva coringa que corrige qualquer excesso.", ofo: '\"Manjericão que alegra o coração. Tira o peso com tua mão. Limpa a mente, cura a emoção, Deixa leve a minha oração.\"', tags: ["Fria", "Feminina"] },
+  { id: "h4", name: "Macaça / Catinga de Mulata", scientificName: "Aeollanthus suaveolens", orixa: "Oxum e Iemanjá", grupo: "OÒGÚN (Cura e Paz)", verboAtuante: "AMANSAR / CAÇA (Caçar a paz)", ritualUse: "Erva essencial de Amaci. Tem um perfume que 'amansa' o Santo e traz presença de espírito.", ofo: '\"Macaça cheirosa, amansa a dor. Traz a doçura do meu amor. Prepara a cabeça, prepara o congá, Para o meu Santo poder chegar.\"', tags: ["Fria", "Feminina"] },
+  { id: "h5", name: "Alfazema", scientificName: "Lavandula", orixa: "Iemanjá e Oxalá", grupo: "OÒGÚN (Cura e Paz)", verboAtuante: "ZELAR / FAZER (Paz)", ritualUse: "A 'Faxina da Alma'. Limpa sem agredir. Harmoniza brigas em casa.", ofo: '\"Alfazema de cheiro, vem zelar. Onde houve briga, tu vais acalmar. Onde houve ódio, tu vais perfumar. Faz a paz neste lar reinar.\"', tags: ["Fria", "Feminina"] },
+  { id: "h6", name: "Erva Cidreira / Melissa", scientificName: "Melissa officinalis", orixa: "Oxum", grupo: "OÒGÚN (Cura e Paz)", verboAtuante: "CEDER (Relaxar/Entregar)", ritualUse: "Para quem é controlador, tenso e não consegue dormir. Ajuda a 'ceder' ao sono e à incorporação.", ofo: '\"Erva Cidreira, a dor me cede. O medo cede, a insônia cede. Acalma o nervo, amansa a fera, Traz a doçura da primavera.\"', tags: ["Fria", "Feminina"] },
+  { id: "h7", name: "Camomila", scientificName: "Matricaria chamomilla", orixa: "Oxum (Ouro) e Caboclas", grupo: "OÒGÚN (Cura e Paz)", verboAtuante: "CAMA (Repouso) / MIL (Abundância suave)", ritualUse: "'Cama de Luz'. Acalma crianças agitadas e cura o estômago (o centro das emoções).", ofo: '\"Camomila, prepara a minha cama. Onde a dor queima e a raiva inflama, Tu trazes o mel, tu trazes a calma. Cura o corpo e niná a alma.\"', tags: ["Fria", "Feminina"] },
+  { id: "h8", name: "Goiaba", scientificName: "Psidium guajava", orixa: "Obaluaiê e Pretos Velhos", grupo: "OÒGÚN (Cura e Paz)", verboAtuante: "GUARDAR / AGARRAR (Segurar)", ritualUse: "Estancar vazamentos de energia. Fecha o corpo contra vampirismo e firma a saúde.", ofo: '\"Folha de Goiaba que sabe prender. Não deixa minha força desaparecer. Guarda meu corpo, fecha a porteira. Cura a doença e a canseira.\"', tags: ["Fria", "Feminina"] },
+  { id: "h9", name: "Babosa", scientificName: "Aloe vera", orixa: "Obaluaiê e Oxum", grupo: "OÒGÚN (Cura e Paz)", verboAtuante: "BABAR (Besuntar) / ACABAR", ritualUse: "Regeneração completa. Onde a aura está 'queimada', o gel cria uma segunda pele.", ofo: '\"Babosa santa, solta a tua Baba. Onde tu tocas, a ferida acaba. Besunta minha alma, fecha a lesão. Traz a cura com a tua unção.\"', tags: ["Fria", "Feminina"] },
+  { id: "h10", name: "Hortelã / Hortelã-Pimenta", scientificName: "Mentha sp.", orixa: "Oxum e Ibeji", grupo: "OÒGÚN (Cura e Paz)", verboAtuante: "ALENTAR / CLAREAR", ritualUse: "Tira o cansaço mental. Refresca, mas deixa a pessoa 'ligada' e focada. Também atrai sorte.", ofo: '\"Hortelã verde, cheiro de manhã. Venha meu espírito Alentar. Refresca a cabeça, faz o ar entrar. Tira o calor, pro meu Ori brilhar.\"', tags: ["Fria", "Feminina"] },
+
+  // GRUPO 2: ÀWÚRE (PARA PROSPERAR E BRILHAR)
+  { id: "h11", name: "Alecrim", scientificName: "Rosmarinus officinalis", orixa: "Oxalá (Solar) e Caboclos", grupo: "ÀWÚRE (Prosperidade)", verboAtuante: "ALEGRIA / Criar", ritualUse: "Antidepressivo. Tira a apatia e acorda a alma.", ofo: '\"Alecrim dourado, sol do jardim. Traga a Alegria e o Ouro pra mim. Tristeza vai embora, a porta se abriu, A sorte na vida agora sorriu.\"', tags: ["Quente", "Masculina"] },
+  { id: "h12", name: "Mirra", scientificName: "Commiphora myrrha", orixa: "Oxalá e Pretos Velhos", grupo: "ÀWÚRE (Prosperidade)", verboAtuante: "MIRAR (Elevar)", ritualUse: "Sobe a frequência vibratória. Conecta com planos superiores.", ofo: '\"Defumo com Mirra para o alto mirar. Que meus olhos possam a luz enxergar. Mira a verdade, mira o além, Traga do céu todo o bem.\"', tags: ["Quente", "Feminina"] },
+  { id: "h13", name: "Folha da Fortuna", scientificName: "Kalanchoe pinnata", orixa: "Orixás da Riqueza / Oxum", grupo: "ÀWÚRE (Prosperidade)", verboAtuante: "AFORTUNAR / Tornar", ritualUse: "O 'Efó' da riqueza. Fazer o dinheiro render. Fertilidade de projetos.", ofo: '\"Folha da Fortuna, faça a roda girar. Que o pouco se torne muito a somar. Onde tu brotas, a terra é boa, Traz a fortuna que me abençoa.\"', tags: ["Fria", "Feminina"] },
+  { id: "h14", name: "Pèrègún (Dracena) / Peregum Verde", scientificName: "Dracaena fragrans", orixa: "Ogum e Oxóssi", grupo: "ÀWÚRE (Prosperidade)", verboAtuante: "PEREGRINAR (Caminhar)", ritualUse: "Emblema de renovação vital e força curadora. Abrir estradas e ajudar a achar o rumo profissional.", ofo: '\"Senhor Peregum, rei do caminho. Eu peregrino e não estou sozinho. Abre a mata para eu passar, Leva meu passo ao meu Orixá.\"', tags: ["Fria", "Masculina"] },
+  { id: "h15", name: "Louro", scientificName: "Laurus nobilis", orixa: "Xangô e Ciganos", grupo: "ÀWÚRE (Prosperidade)", verboAtuante: "LOUVAR / OURO", ritualUse: "Vitória em disputas, atrair dinheiro, sucesso público.", ofo: '\"Folha de Louro vale Ouro. Traz para mim o teu tesouro. Eu hei de vencer, eu hei de ser louvado. Com a coroa do Rei, eu sou coroado.\"', tags: ["Quente", "Masculina"] },
+  { id: "h16", name: "Anis Estrelado", scientificName: "Illicium verum", orixa: "Oxum e Ciganos", grupo: "ÀWÚRE (Prosperidade)", verboAtuante: "ANINHAR / ESTRELA", ritualUse: "Potencializa a intuição e o magnetismo pessoal. Torna a pessoa atraente.", ofo: '\"Estrela de cheiro, vem me iluminar. Minha intuição tu vais despertar. Traz o encanto, traz o chamariz, Me faz brilhar e me faz feliz.\"', tags: ["Quente", "Feminina"] },
+  { id: "h17", name: "Canela", scientificName: "Cinnamomum verum", orixa: "Orixás do Amor e Ciganos", grupo: "ÀWÚRE (Prosperidade)", verboAtuante: "ENCANAR / ELAS", ritualUse: "'O Canal'. Aumenta libido e calor. Tira a frieza da vida.", ofo: '\"Canela fina, cheiro de amor. Encana a sorte, espanta a dor. Traz o dinheiro, traz o calor. Acende a vida com teu sabor.\"', tags: ["Quente", "Feminina"] },
+  { id: "h18", name: "Girassol", scientificName: "Helianthus annuus", orixa: "Oxum e Oxalá", grupo: "ÀWÚRE (Prosperidade)", verboAtuante: "GIRAR", ritualUse: "Mudar a sorte. Combate a timidez e o isolamento.", ofo: '\"Gira, gira, Girassol. Vira meu rosto para o Sol. A sombra fica atrás, a luz vem na frente. Gira a sorte da minha gente.\"', tags: ["Quente", "Feminina"] },
+  { id: "h19", name: "Laranja", scientificName: "Citrus sinensis", orixa: "Oxum e Oxalá", grupo: "ÀWÚRE (Prosperidade)", verboAtuante: "ARRANJAR", ritualUse: "Adoçar a vida e facilitar conquistas. Traz recursos.", ofo: '\"Laranja doce, fruto dourado. Traz o recurso que me foi negado. Arranja amor, arranja cliente. Deixa a minha vida contente.\"', tags: ["Quente", "Feminina"] },
+  { id: "h20", name: "Gengibre", scientificName: "Zingiber officinale", orixa: "Xangô e Iansã", grupo: "ÀWÚRE (Prosperidade)", verboAtuante: "VIBRAR / GERAR", ritualUse: "Esquenta relacionamentos, dá coragem e 'solta a voz'.", ofo: '\"Raiz de fogo, eu te faço chamar. Gengibre forte, faz a vida Vibrar. Aquece o sangue, Gera o calor. Traz o dinheiro e o fogo do amor.\"', tags: ["Quente", "Masculina"] },
+
+  // GRUPO 3: IDÁÀBÒBÒ (PARA LIMPAR E PROTEGER)
+  { id: "h21", name: "Arruda", scientificName: "Ruta graveolens", orixa: "Pretos Velhos e Exu", grupo: "IDÁÀBÒBÒ (Limpeza e Proteção)", verboAtuante: "ARRUMAR / Rude", ritualUse: "Desintegrar a inveja. Limpeza pesada de ambientes e auras.", ofo: '\"Arruda forte, venha arrumar. O que está torto, tu vais endireitar. Seja rude com o mal, seja forte na lida, Arruma a minha casa e a minha vida.\"', tags: ["Quente", "Feminina"] },
+  { id: "h22", name: "Guiné", scientificName: "Petiveria alliacea", orixa: "Oxóssi e Exu", grupo: "IDÁÀBÒBÒ (Limpeza e Proteção)", verboAtuante: "GUIAR / Seguir", ritualUse: "'Corta-Inveja'. Bloquear vibrações negativas de pessoas baixas.", ofo: '\"Quem tem Guiné, tem quem o Guie. Guia meus passos longe da dor. Corta a inveja, corta o medo, Onde eu não enxergo, a Guiné é meu segredo.\"', tags: ["Quente", "Masculina"] },
+  { id: "h23", name: "Cravo da Índia", scientificName: "Syzygium aromaticum", orixa: "Obaluaiê e Pretos Velhos", grupo: "IDÁÀBÒBÒ (Limpeza e Proteção)", verboAtuante: "CRAVAR / TRAVAR", ritualUse: "Limpeza profunda da aura (bactericida astral). Remove miasmas de doença.", ofo: '\"Cravo forte, prego de santo. Tira a doença, desmancha o encanto. Limpa a aura, crava a defesa. Traz a saúde e a firmeza.\"', tags: ["Quente", "Masculina"] },
+  { id: "h24", name: "Samambaia", scientificName: "Polypodiopsida", orixa: "Obaluaiê e Caboclos", grupo: "IDÁÀBÒBÒ (Limpeza e Proteção)", verboAtuante: "SEMEAR / Espalhar", ritualUse: "Filtro astral. Colocada na porta ou no banho, ela 'chupa' a negatividade.", ofo: '\"Verde Samambaia, venha espalhar. Filtra o veneno que está no ar. Cresce em volta e faz barreira, Protege a casa e a vida inteira.\"', tags: ["Fria", "Feminina"] },
+  { id: "h25", name: "Aroeira", scientificName: "Schinus terebinthifolia", orixa: "Exu e Ogum", grupo: "IDÁÀBÒBÒ (Limpeza e Proteção)", verboAtuante: "ROER (Destruir)", ritualUse: "'O Trator'. Remove miasmas antigos e grudados na aura.", ofo: '\"Aroeira de tronco forte. Muda o rumo da minha sorte. O mal que gruda, tu hás de roer. A coisa ruim não vai sobreviver.\"', tags: ["Quente", "Masculina"] },
+  { id: "h26", name: "Vassourinha de Relógio / Igreja", scientificName: "Sida carpinifolia", orixa: "Iansã e Oxum", grupo: "IDÁÀBÒBÒ (Limpeza e Proteção)", verboAtuante: "VARRER", ritualUse: "Sacudimento. Tirar a 'poeira' do dia a dia.", ofo: '\"Vassourinha verde, começa a varrer. Tira a sujeira pra eu não sofrer. Varre a inveja pra fora da porta. O que foi ruim, agora não importa.\"', tags: ["Quente", "Feminina"] },
+  { id: "h27", name: "Pitanga", scientificName: "Eugenia uniflora", orixa: "Iansã e Exu", grupo: "IDÁÀBÒBÒ (Limpeza e Proteção)", verboAtuante: "TANGAR (Mover)", ritualUse: "Colocar a vida em movimento. Direcionar os caminhos.", ofo: '\"Folha de Pitanga que sabe o caminho. Não me deixe andar sozinho. Tange o meu gado, tange a minha vida. Mostra a estrada, mostra a saída.\"', tags: ["Quente", "Feminina"] },
+  { id: "h28", name: "Limão", scientificName: "Citrus limon", orixa: "Exu e Iansã", grupo: "IDÁÀBÒBÒ (Limpeza e Proteção)", verboAtuante: "LIMAR / LIMPAR", ritualUse: "Cortar a 'gordura' astral. Dissolve energias pegajosas.", ofo: '\"Limão azedo, ácido santo. Corta a gordura, desfaz o encanto. O que é áspero, tu vais Limar. O que está sujo, tu vais Limpar.\"', tags: ["Quente", "Masculina"] },
+
+  // GRUPO 4: ÌṢẸ́GUN (JUSTIÇA E CORTE)
+  { id: "h29", name: "Espada de São Jorge", scientificName: "Sansevieria trifasciata", orixa: "Ogum", grupo: "ÌṢẸ́GUN (Combate e Justiça)", verboAtuante: "GUERREAR / Cortar", ritualUse: "A arma absoluta. Cortar cordões energéticos ruins.", ofo: '\"Tua folha é Espada, teu nome é Lei. Corta a demanda que eu não criei. Aço divino, ferro sagrado, Com tua ponta, estou guardado.\"', tags: ["Quente", "Masculina"] },
+  { id: "h30", name: "Dandá da Costa", scientificName: "Cyperus rotundus", orixa: "Exu e Ogum", grupo: "ÌṢẸ́GUN (Combate e Justiça)", verboAtuante: "DAR (Bater) / ANDA", ritualUse: "Raiz poderosa para quebrar feitiços enterrados e demandas antigas.", ofo: '\"Raiz de Dandá, rainha da terra. Vence o feitiço, vence a guerra. O mal que mandaram, tu vais quebrar. Faz minha vida voltar a andar.\"', tags: ["Quente", "Feminina"] },
+  { id: "h31", name: "Pinhão Roxo", scientificName: "Jatropha gossypiifolia", orixa: "Exu e Xangô", grupo: "ÌṢẸ́GUN (Combate e Justiça)", verboAtuante: "OPINHAR (Fincar pé) / Não", ritualUse: "Expulsar obsessores (Egun). Criar campo de força.", ofo: '\"Pinhão Roxo, forte como um pinhão. Ao mal que vier, tu dizes NÃO. Finca tua raiz, segura o chão, Quebra a demanda e a maldição.\"', tags: ["Quente", "Masculina"] },
+  { id: "h32", name: "Comigo-Ninguém-Pode", scientificName: "Dieffenbachia seguine", orixa: "Exu", grupo: "ÌṢẸ́GUN (Combate e Justiça)", verboAtuante: "PODER", ritualUse: "Defesa suprema. Anula a força do inimigo.", ofo: '\"É Comigo-Ninguém-Pode. E contra meus filhos, ninguém pode. Quem tentar o mal, a força sacode, Pois com a tua magia, a gente tudo pode.\"', tags: ["Quente", "Feminina"] },
+  { id: "h33", name: "Mamona", scientificName: "Ricinus communis", orixa: "Exu e Obaluaiê", grupo: "ÌṢẸ́GUN (Combate e Justiça)", verboAtuante: "MÃO (Tapa)", ritualUse: "Choque de retorno. Paralisar ações malignas.", ofo: '\"Mamona aberta é mão de defesa. Segura o golpe com tua firmeza. Devolve pra terra o que veio do chão, Para o inimigo com a tua mão.\"', tags: ["Quente", "Feminina"] },
+  { id: "h34", name: "Quebra-Pedra", scientificName: "Phyllanthus niruri", orixa: "Xangô e Egunitá", grupo: "ÌṢẸ́GUN (Combate e Justiça)", verboAtuante: "QUEBRAR", ritualUse: "Destruir situações 'petrificadas' (dívidas, ódio).", ofo: '\"Erva valente, eu venho te usar. A pedra dura, tu vais quebrar. A doença dura, tu vais quebrar. O caminho fechado, tu vais quebrar.\"', tags: ["Quente", "Masculina"] },
+  { id: "h35", name: "Peregum Roxo", scientificName: "Dracaena fragrans", orixa: "Iansã e Egun", grupo: "ÌṢẸ́GUN (Combate e Justiça)", verboAtuante: "PEREGRINAR (Mandar embora)", ritualUse: "Encaminhar espíritos mortos (Eguns). Cortar magia negra.", ofo: '\"Peregum Roxo da cor do mistério. Quem não é de luz, leve pro cemitério. Faça o mal peregrinar pra longe. Limpa minha alma, protege meu sangue.\"', tags: ["Quente", "Masculina"] },
+  { id: "h36", name: "Desata-Nó", scientificName: "Polygonum sp.", orixa: "Exu e Ogum", grupo: "ÌṢẸ́GUN (Combate e Justiça)", verboAtuante: "DESATAR", ritualUse: "Resolver problemas burocráticos e amarrações.", ofo: '\"Erva sagrada de Desata-Nó. Não me deixe na vida só. O nó que amarraram, tu vais desatar. A corda que prende, tu vais estourar.\"', tags: ["Quente", "Masculina"] },
+  { id: "h37", name: "Vence-Demanda", scientificName: "Justicia gendarussa", orixa: "Ogum", grupo: "ÌṢẸ́GUN (Combate e Justiça)", verboAtuante: "VENCER", ritualUse: "Vitória absoluta contra quem te ataca.", ofo: '\"Vence-Demanda, tu vens pra vencer. Quem está contra mim, há de perder. Ganho a batalha, ganho a guerra. Com a tua força, aqui nessa terra.\"', tags: ["Quente", "Masculina"] },
+  { id: "h38", name: "Pimenta", scientificName: "Capsicum", orixa: "Exu e Iansã", grupo: "ÌṢẸ́GUN (Combate e Justiça)", verboAtuante: "ARDER / Esquentar", ritualUse: "Acelerador. Queimar energias estagnadas.", ofo: '\"Pimenta vermelha, fogo que arde. Queima o inimigo, não seja covarde. Esquenta o sangue, esquenta o axé. Devolve a força pra quem tem fé.\"', tags: ["Quente", "Feminina"] },
+  { id: "h39", name: "Mangueira", scientificName: "Mangifera indica", orixa: "Ogum e Ibeji", grupo: "ÌṢẸ́GUN (Combate e Justiça)", verboAtuante: "MANDAR / MANGA (de Espada)", ritualUse: "Autoridade máxima. Liderança e Justiça.", ofo: '\"Folha de Manga, lança do Rei. Eu assumo o comando, eu dito a lei. Onde eu pisar, eu vou Mandar. Onde tu apontas, a vitória há de estar.\"', tags: ["Quente", "Masculina"] },
+  { id: "h40", name: "Bambu", scientificName: "Bambusa vulgaris", orixa: "Iansã e Egun", grupo: "ÌṢẸ́GUN (Combate e Justiça)", verboAtuante: "BAMBEAR (Tornar frouxo)", ritualUse: "Guerra estratégica. Tirar estabilidade do inimigo.", ofo: '\"Bambu que balança e não cai no chão. Balança o inimigo, tira a visão. Faz o mal Bambear, faz a terra tremer. Só a justiça de Iansã vai valer.\"', tags: ["Quente", "Masculina"] },
+
+  // Extensões da lista anterior (que também são fundamentais)
+  { id: "h41", name: "Vitória-Régia", scientificName: "Victoria amazonica", orixa: "Oxum", grupo: "OÒGÚN (Cura e Paz)", verboAtuante: "TRIUNFAR", ritualUse: "As folhas funcionam como um poderoso ímã para o triunfo e a superação. A sua energia uterina acolhe e purifica as dores da alma.", ofo: "", tags: ["Fria", "Feminina"] },
+  { id: "h42", name: "Flor de Lótus", scientificName: "Nelumbo nucifera", orixa: "Oxum", grupo: "OÒGÚN (Cura e Paz)", verboAtuante: "PACIFICAR", ritualUse: "Forte aliado contra adversários. Quando em união mágica com a vitória-régia, combate maldições, infortúnios e hostilidades, trazendo a paz.", ofo: "", tags: ["Fria", "Feminina"] },
+  { id: "h43", name: "Folha de Bananeira", scientificName: "Musa", orixa: "Oxalá e Omolu", grupo: "OÒGÚN (Cura e Paz)", verboAtuante: "ROMPER", ritualUse: "Instrumento litúrgico fundamental para romper laços com energias negativas. Permite a recuperação imediata e o fortalecimento astral.", ofo: "", tags: ["Fria", "Feminina"] },
+  { id: "h44", name: "Folha da Costa (Ewé Iyeyé)", scientificName: "Spondias mombin", orixa: "Oxalá", grupo: "OÒGÚN (Cura e Paz)", verboAtuante: "CONCRETIZAR", ritualUse: "A folha da costa possui uma força transformadora única e silenciosa, sendo essencial para concretizar desejos.", ofo: "", tags: ["Fria", "Feminina"] },
+  { id: "h45", name: "Caruru (Bredo)", scientificName: "Amaranthus viridis", orixa: "Oxalá e Xangô", grupo: "OÒGÚN (Cura e Paz)", verboAtuante: "PROTEGER", ritualUse: "Atua como um verdadeiro escudo contra-ataques astrais. Promove a saúde, a autenticidade e a prosperidade.", ofo: "", tags: ["Fria", "Feminina"] },
+  { id: "h46", name: "Folha de Batata-Doce", scientificName: "Ipomoea batatas", orixa: "Oxumaré", grupo: "OÒGÚN (Cura e Paz)", verboAtuante: "ACALMAR", ritualUse: "Com o seu formato de coração, é sinônimo de contentamento e bem-estar. Traz alegria, suavidade e acalma o Ori.", ofo: "", tags: ["Fria", "Feminina"] },
+  { id: "h47", name: "Inhame (Folha e Raiz)", scientificName: "Dioscorea sp.", orixa: "Oxalá e Ogum", grupo: "ÀWÚRE (Prosperidade)", verboAtuante: "RENOVAR", ritualUse: "Elemento de força vital intensa. É um poderoso atrativo para o progresso, a sustentação e a renovação material.", ofo: "", tags: ["Quente", "Masculina"] },
+  { id: "h48", name: "Mariwô (Folha de Dendezeiro)", scientificName: "Elaeis guineensis", orixa: "Ogum", grupo: "ÌṢẸ́GUN (Combate e Justiça)", verboAtuante: "REPELIR", ritualUse: "Folha sagrada que veste Ogum. Usada desfiada para repelir espíritos perturbadores e afastar o mal.", ofo: "", tags: ["Quente", "Masculina"] },
+  { id: "h49", name: "Abre-Caminho", scientificName: "Justicia gendarussa", orixa: "Ogum", grupo: "ÀWÚRE (Prosperidade)", verboAtuante: "ABRIR", ritualUse: "Remove obstáculos, propiciando vitórias, progresso e a abertura de novas oportunidades.", ofo: "", tags: ["Quente", "Masculina"] },
+  { id: "h50", name: "Folha de Fogo", scientificName: "Clidemia hirta", orixa: "Exu", grupo: "ÌṢẸ́GUN (Combate e Justiça)", verboAtuante: "QUEIMAR", ritualUse: "Erva excitatória de Exu. Queima energias estagnadas e traz o movimento rápido e a transformação para a vida.", ofo: "", tags: ["Quente", "Masculina"] },
+  { id: "h51", name: "Urtiga", scientificName: "Urtica dioica", orixa: "Exu", grupo: "ÌṢẸ́GUN (Combate e Justiça)", verboAtuante: "DESTRUIR", ritualUse: "Erva de Exu, de natureza agressiva e excitatória. Usada para destruir negatividades densas e afastar energias contrárias.", ofo: "", tags: ["Quente", "Masculina"] }
 ];
 
 export const girasDeCura = [

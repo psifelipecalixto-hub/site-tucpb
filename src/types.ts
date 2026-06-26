@@ -31,11 +31,14 @@ export interface Herb {
   id: string;
   name: string;
   scientificName?: string;
-  orixa: string;
+  orixa?: string;
   ritualUse: string;
   medicinalUse?: string;
-  classification: "Fria" | "Morna" | "Quente";
-  preparation: string;
+  tags: string[];
+  preparation?: string;
+  verboAtuante?: string;
+  ofo?: string;
+  grupo?: string;
 }
 
 export interface GiraEvent {
@@ -47,7 +50,7 @@ export interface GiraEvent {
   description: string;
   hasConsultation: boolean;
   maxConsultations?: number;
-  status: "Confirmada" | "Especial" | "Suspenso";
+  status: "Confirmada" | "Especial" | "Suspenso" | "A Confirmar";
 }
 
 export interface MemberTask {
