@@ -40,7 +40,7 @@ function GalleryYouTube({ videoId, title }: { videoId: string; title: string }) 
   );
 }
 
-function GalleryDriveVideo({ videoId, title }: { videoId: string; title: string }) {
+function GalleryLocalVideo({ videoPath, title }: { videoPath: string; title: string }) {
   const [isMuted, setIsMuted] = useState(true);
 
   const toggleMute = (e: React.MouseEvent) => {
@@ -62,7 +62,7 @@ function GalleryDriveVideo({ videoId, title }: { videoId: string; title: string 
       </button>
 
       <video 
-        src={`https://drive.google.com/uc?export=download&id=${videoId}`}
+        src={videoPath}
         autoPlay
         muted={isMuted}
         loop
@@ -271,8 +271,8 @@ export default function Trajetoria() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Gallery Item 1 */}
-          <GalleryDriveVideo 
-            videoId="1lpaDYo9r4UINDKCbiX008E1xb4fUZ0em" 
+          <GalleryLocalVideo 
+            videoPath="/gira_esquerda.mp4" 
             title="Gira de Esquerda" 
           />
           
