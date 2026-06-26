@@ -1046,5 +1046,1514 @@ export const initialPoints: CurimbaPoint[] = [
     type: "Subida",
     lyrics: "É HORA, É HORA\nO GALO CANTA É HORA É HORA (BIS)\n\nSEU BOIADEIRO JÁ VAI EMBORA\nCOM DEUS E NOSSA SENHORA",
     youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08"
+  },
+  {
+    id: "pnt-caboclo-1",
+    title: "Ponto de Caboclo - Oxalá mandou buscar",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "[refrão]\nOXALÁ MANDOU\nELE MANDOU BUSCAR\nOS CABOCLOS DA JUREMA\nLÁ NO JUREMA\n[/refrão]\n\nPAI OXALÁ\nÉ REI DO MUNDO INTEIRO\nJÁ DEU ORDENS PRA JUREMA\nCHAMAR SEUS CAPANGUEIROS [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY"
+  },
+  {
+    id: "pnt-caboclo-2",
+    title: "Ponto de Caboclo - Estrela lá no céu brilhou",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "ESTRELA LÁ NO CÉU BRILHOU\nE AS MATAS ESTREMECEU [2X]\n\nAONDE ANDA CAPAMGUEIRO DA JUREMA\nQUE ATÉ AGORA NÃO APARECEU [2x]",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-3",
+    title: "Ponto de caboclo - Eu andei, andei, andei",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "EU ANDEI\nANDEI\nANDEI, ANDEI, ANDEI\n\nPRA ENCONTRAR ______________\nNESSA ALDEIA REAL [4X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Congo de Ouro"
+  },
+  {
+    id: "pnt-caboclo-4",
+    title: "CABOCLA JUREMA - Ô JUREMÊ Ô JUREMA",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "Ô JUREMÊ Ô JUREMA\nSUA FOLHA CAIU SERENA Ô JUREMA\nDENTRO DESSE GONGÁ\n\nÔ JUREMÊ Ô JUREMÁ\nSUA FOLHA CAIU SERENA Ô JUREMA\nDENTRO DESSE GONGÁ\n\nSUA FOLHA CAIU SERENA Ô JUREMA\nDENTRO DESSE GONGÁ\nELA É CABOCLA JUREMA\nAQUI E EM QUALQUER LUGAR\n\nSUA FOLHA CAIU SERENA Ô JUREMA\nDENTRO DESSE GONGÁ\nELA É CABOCLA JUREMA\nAQUI E EM QUALQUER LUGAR",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-5",
+    title: "Ponto de Cabocla Jurema - Caiu uma folha na Jurema",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "CAIU UMA FOLHA NA JUREMA\nVEIO O SERENO E MOLHOU\nCAIU UMA FOLHA NA JUREMA\nVEIO O SERENO E MOLHOU\n\nE DEPOIS VEIO O SOL\nENXUGOU ENXUGOU\nE AS SUA MATA\nSE ABRIU TODA EM FLÔR\n\nE DEPOIS VEIO O SOL\nENXUGOU ENXUGOU\nE AS SUA MATA\nSE ABRIU TODA EM FLÔR",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-6",
+    title: "Ponto de Caboclo - Eu já mandei fazer 3 capacetes de pena",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "EU JÁ MANDEI FAZER\nTRÊS CAPACETES DE PENAS [2X]\n\nUM É DA IARA\nOUTRO É DA JANAÍNA\nE OUTRO É DA JUREMA [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Congo de Ouro"
+  },
+  {
+    id: "pnt-caboclo-7",
+    title: "Ponto de Caboclo - Entrei nas matas sem pedir licença",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "ENTREI NAS MATAS SEM PEDIR LICENÇA\nSÓ PRA VER A FORÇA QUE A JUREMA TEM [2X]\n\nJUREMA OH MINHA MÃE\nJUREMA OH MINHA MÃE\nJUREMA OH MINHA MÃE\nJUREMA...",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-8",
+    title: "Ponto de Caboclo - Cabocla Jurema da mata virgem",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "NO MEIO DA MATA VIRGEM\nUMA LINDA CABOCLA EU VI [2X]\n\n[refrão]\nCOM SEU SAIOTE\nCHEIO DE PENA\nELA É JUREMA\nFILHA DE TUPÍ\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Congo"
+  },
+  {
+    id: "pnt-caboclo-9",
+    title: "Ponto de Caboclo - Hoje tem alegria no terreiro do meu pai",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "HOJE TEM ALEGRIA\nNO TERREIRO DO MEU PAI\nSARAVÁ DONA JUREMA\nQUE ELA É CHEFE DE GONGÁ\n\n[refrão]\nEMBALA EU BABÁ\nEMBALA EU\nEMBALA EU BABÁ\nEMBALA EU\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-10",
+    title: "Ponto de Caboclo - Cabocla Iara",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "EU VI UMA MORENA SENTADA NA BEIRA DA PRAIA\nELA PETEAVA SEUS CABELOS AO LUAR [2X]\n\nMAS QUE CABOCLA É ESSA\nÉ A CABOCLA IARA\nELA DESCEU O RIO TODO\nATÉ CHEGAR AO MAR",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-11",
+    title: "Ponto de Cabocla Jupira - Estava na beira do rio",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "ESTAVA NA BEIRA DO RIO\nOUVI UM CABOCLO ASSOBIAR [2X]\n\nACORDA JUPIRA, ACORDA JUPIRA ACORDA\nVEM TRABALHAR [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-12",
+    title: "Ponto de Caboclo - Okê Caboclo, chama seu Cobra Coral",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "OKÊ CABOCLO\nCHAMA SEU COBRA CORAL\nOKÊ CABOCLO\nCHAMA SEU COBRA CORAL\n\nABRE OS TRABALHOS\nNA MATA VIRGEM\nCHAMA SEU COBRA CORAL\nABRE OS TRABALHOS\nNA MATA VIRGEM\nCHAMA SEU COBRA CORAL",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-13",
+    title: "Ponto de Caboclo - Caçador na beira do caminho",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "CAÇADOR NA BEIRA DO CAMINHO\nNÃO ME MATE ESSA CORAL NA ESTRADA\nELA ABANDONOU SUA CHOUPANA\nNO ROMPER DA MADRUGADA [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-14",
+    title: "Ponto de Caboclo - Cobra Coral é caboclo",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "COBRA CORAL É CABOCLO\nCOBRA CORAL É CABOCLO\n\nELE MORA LÁ NAS MATAS\nJUNTO COM ARRANCA-TOCO [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-15",
+    title: "Ponto de Caboclo - Louvação ao Caboclo Pena Branca",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "NÃO TEM DISTÂNCIA\nNÃO IMPORTA O CAMINHO\nNÃO HÁ FRONTEIRAS\nQUE POSSA ME IMPEDIR\n\nSEJA ONDE FOR\nEU VOU LOUVAR ESSE CABOCLO\nQUE ME CRIOU\nE ME ENSINOU A LHE SEGUIR\n\nLÁ NA ALDEIA ONDE OS TAMBORES TOCAM\nREÚNE MOÇO, VELINHO E CRIANÇA\nCLAREIA LUA CLAREIA, CLAREIA A ALDEIA DE SEU PENA BRANCA\nCLAREIA LUA CLAREIA\nQUEM CRÊ NESSE CABOCLO NÃO PERDE A CONFIANÇA\nOKÊ CABOCLO\n\n[refrão]\nOKÊ CABOCLO\nSEUS FILHOS QUEREM LHE AGRADECER\nOKÊ CABOCLO\nSENHOR DA MATA VIRGEM\nVENHA SEMPRE ME VALER\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Congo de Ouro"
+  },
+  {
+    id: "pnt-caboclo-16",
+    title: "Ponto de Caboclo - O seu saiote é branco (Pena Branca)",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "[refrão]\nO SEU SAIOTE É BRANCO\nÉ DA COR DO DIA [2X]\n\nSEU CAPACETE É FEITO [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-17",
+    title: "Ponto de Caboclo - 7 flechas no gongá",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "E RÊ RÊ\nCABOCLO 7 FLECHAS NO GONGÁ\nE RÊ RÊ\nCABOCLO 7 FLECHAS NO GONGÁ\n\nSARAVÁ SEU 7 FLECHAS\nQUE ELE É O REI DA MATA\nCOM A SUA BODOQUE ATIRA (Ô PARANGA)\nSUA FLECHA MATA [2X]\n\nE RÊ RÊ\nCABOCLO 7 FLECHAS NO GONGÁ\nE RÊ RÊ\nCABOCLO 7 FLECHAS NO GONGÁ",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-18",
+    title: "Ponto de Caboclo - Foi numa tarde serena",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "FOI NUMA TARDE SERENA\nLÁ NAS MATAS DA JUREMA\nEU VI UM CABOCLO BRADAR\nFOI NUMA TARDE SERENA\nLÁ NAS MATAS DA JUREMA\nEU VI UM CABOCLO BRADAR\n\n[refrão]\nKIOOOOO\nKIO KIO KIO KIERA\n\nTODA MATA ESTÁ EM FESTA\nSARAVÁ SEU SETE FLECHAS\nQUE ELE É REI DA FLORESTA\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-19",
+    title: "CABOCLO FLECHEIRO - VOCÊS ESTÃO VENDO AQUELE MEU CABOCLO",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "VOCÊS \"TÃO\" VENDO AQUELE MEU CABOCLO\nESTÁ EM CIMA DAQUELE LAJEDO\nOLHANDO O TEMPO PARA NÃO CHOVER\nPEDINDO A LUA PRA SAIR MAIS CEDO\n\nOQUÊ, CABOCLO\nOQUÊ, CABOCLO FLECHEIRO\n\nE TODA A TRIBO DESSE MEU CABOCLO\nADORA O CANTO DE UM ROUXINOL\nDE MANHÃ CEDO PEDE AO SEU FLECHEIRO\nCAÇAR A EMA AO ROMPER DO SOL",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Congo de Ouro"
+  },
+  {
+    id: "pnt-caboclo-20",
+    title: "Ponto de Caboclo - Como é tão lindo assistir festa na mata",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "COMO É TÃO LINDO\nASSISTIR FESTA NA MATA\nOUVIR O SOM DAS CASCATAS\nE O LINDO CANTO DO SABIÁ\n\nQUE NOITE LINDA\nLINDA NOITE DE LUAR\nFOI NO CLARÃO DA LUA\nQUE EU VI, SEU FLECHEIRO PASSAR\n\nA MATA ESTÁ EM FESTA\nTODA COBERTA DE FLORES\nATÉ OS PASSARINHOS CANTAVAM, MEUS CABOCLOS\nMAS ELES CANTAM EM SEU LOUVOR\n\nÔÔÔô OH QUE BELEZA\nôÔÔÔ QUANTO ESPLENDOR\nCOMO É BOM TER A CERTEZA\nQUE O SEU FLECHEIRO\nÉ MEU PROTETOR [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-21",
+    title: "CABOCLO DA MATA - ASSOVIA ASSOVIA, ELE ASSOVIOU",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "ASSOVIA ASSOVIA\nELE É ASSOVIOU\nASSOVIA ASSOVIA\nELE É ASSOVIOU\n\nCADÊ O CABOCLO DA MATA\nQUE AINDA NÃO CHEGOU\nCADÊ O CABOCLO DA MATA\nQUE AINDA NÃO CHEGOU",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-22",
+    title: "Ponto de Caboclo - Quando o meu tambor rufar (Caboclo Tupinambá)",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "QUANDO O MEU TAMBOR RUFAR\nEU SINTO A PRESENÇA DE TUPINAMBÁ\nQUANDO O MEU TAMBOR RUFAR\nEU SINTO A PRESENÇA DE TUPINAMBÁ\n\nDEIXA A NOITE CAIR\nVEJA UMA ESTRELA BRILHAR\nA MACÁIA ESTAVA EM FESTA\nPRA TUPINAMBÁ CHEGAR\n\nELE É CABOCLO\nELE VEM CAÇAR\nELE É GUERREIRO\nELE É TUPINAMBÁ",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-23",
+    title: "Ponto de Caboclo - Caboclo Arranca-toco , Jurema e Caçador",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "[refrão]\nÔoooo\nÓ que beleza o clarão da lua no Juremá\nCaboclo Arranca Toco, Jurema e Caçador\nSaindo para caçar\nÔooooo\n[/refrão]\n\nArranca Toco com sua lança dourada\nPede licença a Zambi quando sai para caçar\nDona Jurema com saiote de pena\nSeu arco e sua flecha\nReza prece a Oxalá\nSeu Caçador avistou a linda ema\nBelo pássaro de pena\nNo tronco do Juremá\nKio kio okê ô Juremá\nNão mate a ema, deixe a ema passar",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-24",
+    title: "CABOCLO - NA MATA VIRGEM UMA CORAL PIOU",
+    guideOrOrixa: "Caboclo",
+    type: "Sustentação",
+    lyrics: "NA MATA VIRGEM UMA CORAL PIOU\nELE ATIROU A SUA FLECHA CERTEIRA\nNA MATA VIRGEM UMA CORAL PIOU\nELE ATIROU A SUA FLECHA CERTEIRA\n\nELE ATIROU\nELE ATIROU\nELE ATIROU\nATIRA CABOCLO LÁ NAS MATAS DA JUREMA",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Congo"
+  },
+  {
+    id: "pnt-caboclo-25",
+    title: "Ponto de Caboclo - Sucurí jibóia como vêm beirando o mar",
+    guideOrOrixa: "Caboclo",
+    type: "Sustentação",
+    lyrics: "SUCURÍ JIBÓIA\nCOMO VÊM BEIRANDO O MAR\nSUCURÍ JIBÓIA\nCOMO VÊM BEIRANDO O MAR\n\nOLHA COMO BROGOIÔ\nA SUA COBRA-CORAL\nOLHA COMO BROGOIÔ\nA SUA COBRA-CORAL\n\nSEGURA ESSA COBRA\nNÃO DEIXA ELA FUGIR\nO NOME DESSA COBRA\nÉ COBRA SUCURÍ\n\nSEGURA ESSA COBRA\nNÃO DEIXA ELA FUGIR\nO NOME DESSA COBRA\nÉ COBRA SUCURÍ",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Congo"
+  },
+  {
+    id: "pnt-caboclo-26",
+    title: "Ponto de Caboclo - Vestimenta de Caboclo",
+    guideOrOrixa: "Caboclo",
+    type: "Sustentação",
+    lyrics: "VESTIMENTA DE CABOCLO\nÉ SAMAMBAIA, É SAMAMBAIA, É SAMAMBAIA [2X]\n\n[refrão]\nSAIA CABOCLO\nNÃO SE ATRAPALHA\nSAIA DO MEIO\nDA SAMAMBIA\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-27",
+    title: "Ponto de Caboclo - Lei Severa nas matas da Jurema",
+    guideOrOrixa: "Caboclo",
+    type: "Sustentação",
+    lyrics: "OH LÁ NAS MATAS\nLÁ DA JUREMA\nOH LÁ NAS MATAS\nLÁ DA JUREMA\n\nÉ UMA LEI SEVERA\nÉ UMA LEI SEM PENA\nÉ UMA LEI SEVERA\nÉ UMA LEI SEM PENA",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Congo de Ouro"
+  },
+  {
+    id: "pnt-caboclo-28",
+    title: "Ponto de Caboclo - Ele é caboclo da banda de lá",
+    guideOrOrixa: "Caboclo",
+    type: "Sustentação",
+    lyrics: "ELE É CABOCLO DA BANDA DE LÁ\nELE É CABOCLO DA BANDA DE LÁ\nQUANDO VÊ A COBRA CORRE PRA MATAR\nQUANDO VÊ A COBRA CORRE PRA MATAR\n\nELE ATIROU A SUA FLECHA MAS ERROU\nELE ATIROU A SUA FLECHA MAS ERROU\nSENTOU-SE NA AREIA E POISE A CHORAR\nSENTOU-SE NA AREIA E POISE A CHORAR\n\nQUANDO VÊ A COBRA CORRE PRA MATAR\nQUANDO VÊ A COBRA CORRE PRA MATAR",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY"
+  },
+  {
+    id: "pnt-caboclo-29",
+    title: "Ponto de Caboclo - Caboclo Roxo",
+    guideOrOrixa: "Caboclo",
+    type: "Chamada",
+    lyrics: "CABOCLO ROXO\nDA COR MORENA\nELE É OXOSSI\nCAÇADOR LÁ DA JUREMA [2X]\n\nELE JUROU\nE TORNOU A JURAR\nQUANDO OUVIR OS CONCELHOS\nQUE A JUREMA TEM PRA DAR [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-caboclo-30",
+    title: "Ponto de Caboclo (Subida) - Já vai já vai meu caboclo já vai",
+    guideOrOrixa: "Caboclo",
+    type: "Subida",
+    lyrics: "JÁ VAI JÁ VAI\nMEU CABOCLO JÁ VAI\nJÁ VAI JÁ VAI\nVAI NA HORA DE DEUS\n\nJÁ VAI JÁ VAI\nMEU CABOCLO JÁ VAI\nJÁ VAI JÁ VAI\nVAI NA HORA DE DEUS\n\nAUÊ AUÁ\nA JUREMA MANDOU LHE CHAMAR\nAUÊ AUÁ\nA JUREMA MANDOU LHE CHAMAR",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Barra-Vento"
+  },
+  {
+    id: "pnt-caboclo-31",
+    title: "Ponto de Caboclo - Zoa atabaque",
+    guideOrOrixa: "Caboclo",
+    type: "Subida",
+    lyrics: "ZOA ATABAQUE ZOA\nTODOS OS CABOCLOS VÃO EMBORA[2X]\n\nELE DISSE ADEUS, ATÉ LOGO E ATÉ JÁ\nSE PRECISAREM DELE É SÓ MANDAR CHAMAR [2x]",
+    youtubeUrl: "https://www.youtube.com/watch?v=nblyEL4CEzY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pretovelho-1",
+    title: "PRETO-VELHO - SE É DA BAHIA EU QUERO VER DESCER",
+    guideOrOrixa: "Preto Velho",
+    type: "Chamada",
+    lyrics: "SE É DA BAHIA\nEU QUERO VER DESCER\nSE É DA BAHIA\nEU QUERO VER DESCER\n\nCADÊ VOVÓ\nCADÊ VOCÊ\nCADÊ VOVÓ\nCADÊ VOCÊ",
+    youtubeUrl: "https://www.youtube.com/watch?v=DjjgGpFnqJg"
+  },
+  {
+    id: "pnt-pretovelho-2",
+    title: "Ponto de Preto-Velho - Lá vem vovó descendo a serra",
+    guideOrOrixa: "Preto Velho",
+    type: "Chamada",
+    lyrics: "LÁ VEM VOVÓ\nDESCENDO A SERRA COM A SUA SACOLA\nVEM COM SEU PATÚA\nVEM COM A SUA MANDINGA\nELA VEM DE ANGOLA [2X]\n\n[refrão]\nEU QUERO VER VOVÓ\nEU QUERO VER\nEU QUERO VER\nSE FILHO DE PEMBA TEM QUERER [2X]\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=DjjgGpFnqJg",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pretovelho-3",
+    title: "Ponto de Preto Velho - Eu vou fazer batuque pra chamar meu protetor",
+    guideOrOrixa: "Preto Velho",
+    type: "Chamada",
+    lyrics: "EH LUANDA\nEH LUANDA\nTERRA DA MACUMBA, DO BATUQUE DO CANJERÊ\n\nEU VOU CHAMAR VOVÔ\nEU VOU CHAMAR VOVÓ\nEU VOU CHAMAR VOVÔ\nEU VOU CHAMAR VOVÓ",
+    youtubeUrl: "https://www.youtube.com/watch?v=u1m8b4r0cM8",
+    rhythm: "Ijexá"
+  },
+  {
+    id: "pnt-pretovelho-4",
+    title: "PRETO VELHO - PAI MALAQUIAS - O NAVIO DE SÃO SALVADOR",
+    guideOrOrixa: "Preto Velho",
+    type: "Chamada",
+    lyrics: "O NAVIO DE SÃO SALVADOR\nCHEGOU DA BAHIA TÃO CARREGADO\n\nTROUXE CRAVO\nTROUXE ROSA\nPAI MALAQUIAS QUE VINHA DE LÁ\n\nTROUXE CRAVO\nTROUXE ROSA\nPAI MALAQUIAS QUE VINHA DE LÁ",
+    youtubeUrl: "https://www.youtube.com/watch?v=5c25v61xQ7s",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pretovelho-5",
+    title: "PRETO VELHO - PAI BENEDITO É PRETO",
+    guideOrOrixa: "Preto Velho",
+    type: "Chamada",
+    lyrics: "PAI BENEDITO É PRETO Ô SINHADONA\nELE MORA NO ROSEIRAL\nPAI BENEDITO É PRETO Ô SINHADONA\nELE MORA NO ROSEIRAL\n\nELE É PRETO E TEM COROAL, SINHADONA\nELE É CHEFE DE GONGÁ\nELE É PRETO E TEM COROAL, SINHADONA\nELE É CHEFE DE GONGÁ\n\nPAI BENEDITO É PRETO Ô SINHADONA\nELE MORA NO ROSEIRAL\nPAI BENEDITO É PRETO Ô SINHADONA\nELE MORA NO ROSEIRAL\n\nELE É PRETO E TEM COROAL, SINHADONA\nELE É CHEFE DE GONGÁ\nELE É PRETO E TEM COROAL, SINHADONA\nELE É CHEFE DE GONGÁ",
+    youtubeUrl: "https://www.youtube.com/watch?v=Qx-35y9w3mI",
+    rhythm: "Ijexá"
+  },
+  {
+    id: "pnt-pretovelho-6",
+    title: "Ponto de Preto-Velho - Vovó Cambina - Segredo da Lua",
+    guideOrOrixa: "Preto Velho",
+    type: "Chamada",
+    lyrics: "VOVÓ CAMBINA TEM\nTEM UM SEGREDO DA LUA\nVOVÓ CAMBINA TEM\nTEM UM SEGREDO DA LUA\n\nOLHA SEUS FILHOS VOVÓ\nESSES QUE MORAM NA RUA\nOLHA SEUS FILHOS VOVÓ\nESSES QUE MORAM NA RUA",
+    youtubeUrl: "https://www.youtube.com/watch?v=T1z-aHlS-4M",
+    rhythm: "Congo"
+  },
+  {
+    id: "pnt-pretovelho-7",
+    title: "Ponto de Preto-Velho - Estava dormindo, cambina me chamou",
+    guideOrOrixa: "Preto Velho",
+    type: "Chamada",
+    lyrics: "ESTAVA DORMINDO\nCAMBINA ME CHAMOU [2X]\n\nACORDA MEU NEGO\nO CATIVEIRO ACABOU [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=hO7W5N36_kY",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pretovelho-8",
+    title: "Ponto de Preto-Velho - Negra Cambinda",
+    guideOrOrixa: "Preto Velho",
+    type: "Chamada",
+    lyrics: "NEGRA CAMBINDA\nNEGRA DA COSTA DO MAR\nNEGRA DA COSTA LINDA\nFILHA DE YALORIXÁ\n\nNA MACUMBA EH\nNA MACUMBA AH\nNA MACUMBA EH\nNA MACUMBA AH\n\nNEGO FUMA\nNEGO DANÇA\nNA BATIDA DO TAMBOR\n\nNEGO BEBE\nSEU MARAFO\nSARAVÁ SEU PROTETOR",
+    youtubeUrl: "https://www.youtube.com/watch?v=R9Z8K-HjS50",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pretovelho-9",
+    title: "Ponto de Preto-Velho - Vovó Maria Redonda - Fio, se suncê precisar",
+    guideOrOrixa: "Preto Velho",
+    type: "Chamada",
+    lyrics: "MARIA CONGA SE EU PEDIR VOCÊ ME DÁ\nMARIA CONGA SE EU PEDIR VOCÊ ME DÁ\n\nUM PEDAÇO DO SEU LENÇO PRA FAZER MEU PATUÁ\nUM PEDAÇO DO SEU LENÇO PRA FAZER MEU PATUÁ\n\nRÊ RÊ RÊ RÊ\nRÊ RÊ RÊ RÊ RÊ RÁ\n\nUM PEDAÇO DO SEU LENÇO PRA FAZER MEU PATUÁ\nUM PEDAÇO DO SEU LENÇO PRA FAZER MEU PATUÁ",
+    youtubeUrl: "https://www.youtube.com/watch?v=dh0USenVYJI",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pretovelho-10",
+    title: "Ponto de Preto-Velho - Vovo Maria Redonda (Oh lá vem ela)",
+    guideOrOrixa: "Preto Velho",
+    type: "Chamada",
+    lyrics: "OH LA VEM ELA\nARRASTANDO SUA CHINELA\nAVENTAL TODO BRANCO\nE A COLHER DE PAU NA MAO\n\nELA É COZINHEIRA\nELA É MUCAMBA\nÉ MARIA REDONDA\nQUE SEGURA A NOSSA BANDA [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=dh0USenVYJI",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pretovelho-11",
+    title: "Ponto de Preto Velho - Maria Conga se eu pedir você me dá",
+    guideOrOrixa: "Preto Velho",
+    type: "Chamada",
+    lyrics: "MARIA CONGA SE EU PEDIR VOCÊ ME DÁ\nMARIA CONGA SE EU PEDIR VOCÊ ME DÁ\n\nUM PEDAÇO DO SEU LENÇO PRA FAZER MEU PATUÁ\nUM PEDAÇO DO SEU LENÇO PRA FAZER MEU PATUÁ\n\nRÊ RÊ RÊ RÊ\nRÊ RÊ RÊ RÊ RÊ RÁ\n\nUM PEDAÇO DO SEU LENÇO PRA FAZER MEU PATUÁ\nUM PEDAÇO DO SEU LENÇO PRA FAZER MEU PATUÁ",
+    youtubeUrl: "https://www.youtube.com/watch?v=dh0USenVYJI",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pretovelho-12",
+    title: "Ponto de Preto Velho - Meu senhor da Senzala - Pai Joaquim",
+    guideOrOrixa: "Preto Velho",
+    type: "Chamada",
+    lyrics: "MEU SENHOR DA SENZALA\nMEU SENHORZINHO\nELE VEM CANSADO\nMEU PAI JOAQUIM [2x]\n\nUM GRITO DE LIBERDADE\nNEGRO ECOOU\nQUANDO OXALÁ CHAMOU\nRECEBEU\nTODA PAZ PELA HUMILDADE\nHOJE ELE NOS TRAZ A CARIDADE\n\n[refrão]\nLUANDA\nOH LUANDA\nCOMO É TÃO LINDO\nPAI JOAQUIM EM NOSSA BANDA [2x]\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=J3gW-lO2Y2w",
+    rhythm: "Ijexá"
+  },
+  {
+    id: "pnt-pretovelho-13",
+    title: "Ponto de Preto-Velho - Vovó Catarina",
+    guideOrOrixa: "Preto Velho",
+    type: "Chamada",
+    lyrics: "ECOOU\nUM CANTO VINDO DE LONGE ECOOU [2X]\n\nEM UM LINDO DIA\nUMA LUZ NO CÉU BRILHOU\nCOM A ESTRELA GUIA\nILUMINADA CHEGOU\n\nA PRETA-VELHA DE ARUANDA LUZ DIVINA\nRECEBEU DE OXALÁ O NOME DE CATARINA [2X]\n\n[refrão]\nÉ LUA CHEIA\nÉ LUA NOVA\nLOUVADA SEJA\nVOVÓ CATARINA DE ANGOLA [2X]\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=5V2Vn2_d5oI",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pretovelho-14",
+    title: "Ponto de Preto-Velho - Vovó Benta",
+    guideOrOrixa: "Preto Velho",
+    type: "Chamada",
+    lyrics: "COM O SEU CACHIMBO\nE A PEMBA NA MÃO [2X]\n\nESSA PRETA-VELHA AFRICANA\nTEM BOM CORAÇÃO [2X]\n\nSENTADA NO SEU TOCO\nNINGUÉM SABE A FORÇA QUE ELA TEM\nMAS ELA É MARIA-BENTA\nQUE NA UMBANDA NUNCA FEZ MAL A NINGUÉM [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=1xN3x-8-1kI",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pretovelho-15",
+    title: "Ponto de Baiano - Na Bahia sim é que tem Orobi",
+    guideOrOrixa: "Preto Velho",
+    type: "Demanda",
+    lyrics: "NA BAHIA SIM\nÉ QUE TEM OROBÍ\nÉ QUE TEM OROBÚ [2X]\n\nÉ QUE TEM OROBÍ\nÉ QUE TEM OROBÚ\nPIMENTA DA COSTA\nMACUMBA IÔIÔ [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=f7Gg5Yg_W8s",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pretovelho-16",
+    title: "Ponto de Preto Velho - Bahia ou Áfria vem cá nos ajudar",
+    guideOrOrixa: "Preto Velho",
+    type: "Demanda",
+    lyrics: "BAHIA OH ÁFRICA\nVEM CÁ, VEM NOS AJUDAR [2X]\n\nFORÇA BAIANA\nFORÇA AFRICANA\nFORÇA DIVINA\nVEM CÁ, VEM CÁ [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=5c25v61xQ7s",
+    rhythm: "Congo"
+  },
+  {
+    id: "pnt-pretovelho-17",
+    title: "Ponto de Preto-Velho - Velha Mandingueira",
+    guideOrOrixa: "Preto Velho",
+    type: "Demanda",
+    lyrics: "AUÊ, AUÊ, AUÊ VOVÓ\nVÓ TONINHA VEM DE MINAS\nVEM PRA DESATOR O NÓ\nESSA VELHA MANDINGUEIRA CHEGA COM SEU PATUÁ\nNA SACOLA TRAZ A PEMBA PARA SEU PONTO RISCAR\nSUA BENGALA TEM MAGIA SUA REZA TEM PODER\nVOVÓ CORTA AS DEMANDAS, QUEM DUVÍDA VENHA VER\nREFRÃO\nFUMA CIGARRO DE PALHA COM GALHINHO DE ARRUDA NA MÃO\nMUITOS FILHOS LHE CONSULTÃO E RECEBEM SUA PROTEÇÃO\nATABAQUE FIRMA A GIRA, BATAM PALMAS E VAMOS CANTAR\nVÓ TONIHA SE LEVANTA, SORRIDENTE PRA DANÇAR",
+    youtubeUrl: "https://www.youtube.com/watch?v=7YpYd45xYvA",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pretovelho-18",
+    title: "Ponto de Preto-Velho - Minhas Almas",
+    guideOrOrixa: "Preto Velho",
+    type: "Demanda",
+    lyrics: "MINHAS ALMAS\nSANTAS ALMAS\nOLHA A MINHA ORAÇÃO [2X]\n\nOLHA MINHAS SANTAS ALMAS\nOLHA MINHA ORAÇÃO [2X]\n\n[refrão]\nEU LOUVEI LOUVEI\nEU LOUVEI AO SENHOR\nEU LOUVEI AS TERRAS\nDE SÃO SALVADOR\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=5c25v61xQ7s",
+    rhythm: "Congo"
+  },
+  {
+    id: "pnt-pretovelho-19",
+    title: "Ponto de Preto-Velho - Lamentos de Preto-Velho",
+    guideOrOrixa: "Preto Velho",
+    type: "Demanda",
+    lyrics: "[refrão]\nIÊ IÊ\nIÊ IÁ\nIÊ IÊ\nIÊ IÊ\nIÊ IÁ\n[refrão]\n\nA MUITO TEMPO SE OUVIA\nUM LAMENTAR DE DOR\nCHORAVA CATIVEIRO\nNÃO BATE MEU SENHOR\n\n[refrão]\nIÊ IÊ\nIÊ IÁ\nIÊ IÊ\nIÊ IÊ\nIÊ IÁ\n[refrão]\n\nHOJE TRÁS SUA MIRONGA\nÉ PRA PROTEGER\nÉ PRA NOS DEFENDER\nCHAMAMOS DE PRETOS-VELHOS\nTRÁS SEU ROSÁRIO PRA BENZER\n\n[refrão]\nIÊ IÊ\nIÊ IÁ\nIÊ IÊ\nIÊ IÊ\nIÊ IÁ\n[refrão]\n\nFOI ZAMBI QUEM MANDOU\nMANDOU EU TRABALHAR OH [2X]\nNÃO CHORA MAIS CATIVEIRO\nNEGRO NÃO VAI MAIS CHORAR\n\n[refrão]\nIÊ IÊ\nIÊ IÁ\nIÊ IÊ\nIÊ IÊ\nIÊ IÁ\n[refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=5c25v61xQ7s",
+    rhythm: "Ijexá"
+  },
+  {
+    id: "pnt-pretovelho-20",
+    title: "Ponto de Preto-Velho - Construi uma casa tão linda",
+    guideOrOrixa: "Preto Velho",
+    type: "Demanda",
+    lyrics: "EU CONSTRUÍ UMA CASA TÃO LINDA\nCOM TIJOLO , CIMENTO E VERGALHÃO [2X]\n\nMAS BATEU CHUVA , BATEU VENDO\nE JOGOU MINHA CASA NO CHÃO [2X]\n\nPRETO-VELHO ME ENSINA\nO QUE EU TENHO QUE FAZER\nPOIS O VENTO NÃO DERRUBA\nNOSSA CASA SAPÊ [2x]\n\n[refrão]\nOH TEM DENDÊ , TEM DENDÊ\nPRETO-VELHO TEM DENDÊ\nNA SUA CASA DE SAPÊ\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=5c25v61xQ7s",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pretovelho-21",
+    title: "Ponto de Preto-Velho - Numa noite linda, noite de luar",
+    guideOrOrixa: "Preto Velho",
+    type: "Sustentação",
+    lyrics: "NUMA NOITE LINDA\nNOITE DE LUAR\nPRETO-VELHO OROU A ZAMBI\nPRA CATIVEIRO ACABAR\n\nNUMA NOITE LINDA\nNOITE DE LUAR\nPRETO-VELHO OROU A ZAMBI\nPRA CATIVEIRO ACABAR\n\nTRABALHA ZÉ, TRABALHOU\nTRABALHA ZÉ, TRABALHOU\nTRABALHA ZÉ\nQUE O CATIVEIRO ACABOU\n\nTRABALHA ZÉ, TRABALHOU\nTRABALHA ZÉ, TRABALHOU\nTRABALHA ZÉ\nQUE O CATIVEIRO ACABOU",
+    youtubeUrl: "https://www.youtube.com/watch?v=5c25v61xQ7s",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pretovelho-22",
+    title: "Ponto de Preto-Velho - Atravessa o rio nas costas do jacaré",
+    guideOrOrixa: "Preto Velho",
+    type: "Sustentação",
+    lyrics: "PRETO VELHO QUANDO VEM\nELE NÃO VEM A PÉ\nATRAVESSA O RIO\nNAS COSTAS DO JACARÉ\n\nPRETO-VELHO QUANDO VAI\nELE NÃO VAI A PÉ\nATRAVESSA O RIO\nNAS COSTAS DO JACARÉ [2x]",
+    youtubeUrl: "https://www.youtube.com/watch?v=5c25v61xQ7s",
+    rhythm: "Congo"
+  },
+  {
+    id: "pnt-pretovelho-23",
+    title: "Ponto de Preto-Velho - Andou andou andou preto-velho trabalhador",
+    guideOrOrixa: "Preto Velho",
+    type: "Sustentação",
+    lyrics: "ANDOU ANDOU ANDOU\nPRETO-VELHO TRABALHADOR\nANDOU ANDOU ANDOU\nPRETO-VELHO TRABALHADOR\n\nPRETO-VELHO DESCEU A SERRA\nOXALÁ FOI QUEM MANDOU\nPRETO-VELHO DESCEU A SERRA\nOXALÁ FOI QUEM MANDOU",
+    youtubeUrl: "https://www.youtube.com/watch?v=5c25v61xQ7s",
+    rhythm: "Ijexá"
+  },
+  {
+    id: "pnt-pretovelho-24",
+    title: "Alguém me avisou - Dona Ivone Lara - Preto-Velho",
+    guideOrOrixa: "Preto Velho",
+    type: "Sustentação",
+    lyrics: "FORAM ME CHAMAR\nEU ESTOU AQUI\nO QUE QUE HÁ\nFORAM ME CHAMAR\nEU ESTOU AQUI\nO QUE QUE HÁ\n\nEU VIM DE LÁ\nEU VIM DE LÁ\nPEQUENININHO\nMAS EU VIM DE LÁ\nPEQUENININHO\n\nALGUÉM ME AVISOU\nPRA PISAR NESSE CHÃO\nDEVAGARINHO [2X]\n\n... letra incompleta",
+    youtubeUrl: "https://www.youtube.com/watch?v=5c25v61xQ7s",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pretovelho-25",
+    title: "Ponto de Preto Velho - Foi lá no cruzeiro das almas",
+    guideOrOrixa: "Preto Velho",
+    type: "Sustentação",
+    lyrics: "FOI LÁ\nNO CRUZEIRO DAS ALMAS\nONDE AS ALMAS FORAM REZAR [2X]\n\nAS ALMAS CHORAM DE ALEGRIA\nQUANDO OS FILHOS SE COMBINAM\nTAMBÉM CHORAM DE TRISTEZA\nQUANDO NÃO QUEREM COMBINAR [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=5c25v61xQ7s",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pretovelho-26",
+    title: "Ponto de Preto-Velho - Vovó não quer casca de coco no terreiro",
+    guideOrOrixa: "Preto Velho",
+    type: "Sustentação",
+    lyrics: "VOVÓ NÃO QUER\nCASCA DE COCO NO TERREIRO\nVOVÓ NÃO QUER\nCASCA DE COCO NO TERREIRO\n\nCASCA DE COCO FAZ LEMBRAR\nO TEMPO DO CATIVEIRO [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=5c25v61xQ7s",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pretovelho-27",
+    title: "Ponto de Preto-Velho - Preto-Velho não vai a cidade",
+    guideOrOrixa: "Preto Velho",
+    type: "Sustentação",
+    lyrics: "PRETO-VELHO NÃO VAI A CIDADE PORQUE\nANDA DEVAGAR [2X]\n\nANDA DEVAGAR\nÉ DEVAGARINHO\nANDA DEVAGAR\nPRETO-VELHO É DEVAGARINHO [2x]",
+    youtubeUrl: "https://www.youtube.com/watch?v=5c25v61xQ7s",
+    rhythm: "Ijexá"
+  },
+  {
+    id: "pnt-pretovelho-28",
+    title: "PRETO-VELHO (subida) - A SINETA DO CÉU BATEU",
+    guideOrOrixa: "Preto Velho",
+    type: "Subida",
+    lyrics: "A SINETA DO CÉU BATEU\nOXALÁ JÁ DIZ QUE É HORA\nA SINETA DO CÉU BATEU\nOXALÁ JÁ DIZ QUE É HORA\n\nEU VOU EU VOU EU VOU\nFICA COM DEUS E NOSSA SENHORA\nEU VOU EU VOU EU VOU\nFICA COM DEUS E NOSSA SENHORA",
+    youtubeUrl: "https://www.youtube.com/watch?v=5c25v61xQ7s",
+    rhythm: "Ijexá"
+  },
+  {
+    id: "pnt-pretovelho-29",
+    title: "Ponto de Preto-Velho - Tanto sofrimento",
+    guideOrOrixa: "Preto Velho",
+    type: "Subida",
+    lyrics: "CANSADO DE TANTO SOFRIMENTO\nDA MINHA CRUZ CARREGAR\nSUBI LÁ NO MORRO DO CRUZEIRO\n\nEU FUI PEDIR AO PAI PRA TROCAR\nA MINHA QUE ERA LEVE EU DEIXEI NA SUBIDA\nE CHEGANDO LÁ EM CIMA\nCOMECEI A PROCURAR\n\nMAS SÓ HAVIA\nMAIS PESADA E MAIS SOFRIDA\nCONFORMADO E ARREPENDIDO\nCOM A MAIOR EU VOU VOLTAR",
+    youtubeUrl: "https://www.youtube.com/watch?v=5c25v61xQ7s",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-ere-1",
+    title: "Ponto de Erê - Tem bala de coco e peteca",
+    guideOrOrixa: "Erê",
+    type: "Chamada",
+    lyrics: "TEM BALA DE COCO E PETECA\nDEIXA A IBEIJADA BRINCAR [2X]\n\nHOJE É DIA DE FESTA\nIBEIJADA VEM SARAVÁ [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=BXAGXBc-5zg",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-ere-2",
+    title: "Ponto de Erê - Na Bahia tem um coco",
+    guideOrOrixa: "Erê",
+    type: "Chamada",
+    lyrics: "NA BAHIA TEM UM COCO\nCOCO QUE FAZ A COCADA\nCOCO QUE FAZ O MANJAR\nPRA DAR PARA A IBEIJADA\n\nDOUM DOUM DOUM DOUM\nCOSME E DAMIÃO\nDOUM DOUM DOUM DOUM\nVEM BRINCAR NO CHÃO",
+    youtubeUrl: "https://www.youtube.com/watch?v=q0ARTqzfcA0",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-ere-3",
+    title: "Ponto de Erê - Cosme e Damião cadê Doum",
+    guideOrOrixa: "Erê",
+    type: "Chamada",
+    lyrics: "COSME E DAMIÃO\nCADÊ DOUM?\nDOUM FOI PASSEAR\nLÁ NO CAVALO DE OGUM\n\nDOIS DOIS SEREIA DO MAR\nDOIS DOIS MAMÃE IEMANJÁ\nDOIS DOIS SEREIA DO MAR\nDOIS DOIS MAMÃE IEMANJÁ",
+    youtubeUrl: "https://www.youtube.com/watch?v=BXAGXBc-5zg",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-ere-4",
+    title: "Ponto de Erê - Se não me der cocada, vou chorar",
+    guideOrOrixa: "Erê",
+    type: "Chamada",
+    lyrics: "SE NÃO ME DER COCADA\nVOU CHORAR VOU CHORAR VOU CHORAR\n\nEU VOU PEDIR PRA MINHA MÃE\nEU VOU PEDIR PRO MEU PAI\nPRA MANDAR COMPRAR COCADA\nPRA IBEIJADA",
+    youtubeUrl: "https://www.youtube.com/watch?v=BXAGXBc-5zg",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-ere-5",
+    title: "Ponto de Erê - Mariazinha não ganhou boneca",
+    guideOrOrixa: "Erê",
+    type: "Chamada",
+    lyrics: "MARIAZINHA\nNÃO GANHOU BONECA\nCHORA, CHORA, CHORA\nATÉ GANHAR PETECA",
+    youtubeUrl: "https://www.youtube.com/watch?v=BXAGXBc-5zg"
+  },
+  {
+    id: "pnt-ere-6",
+    title: "Ponto de Erê - Bota fogo Mariazinha",
+    guideOrOrixa: "Erê",
+    type: "Chamada",
+    lyrics: "BOTA FOGO MARIAZINHA\nBOTA FOGO NO CARVÃO\nMARIAZINHA QUANDO BRINCA\nBOTA FOGO NO CARVÃO",
+    youtubeUrl: "https://www.youtube.com/watch?v=BXAGXBc-5zg"
+  },
+  {
+    id: "pnt-ere-7",
+    title: "Ponto de Erê - Eu quero doce, eu quero bala",
+    guideOrOrixa: "Erê",
+    type: "Sustentação",
+    lyrics: "EU QUERO DOCE, EU QUERO BALA\nEU QUERO MEL PRA PASSAR NA MINHA CARA\n\nDOCE DOCE DOCE\nDA IBEIJADA\nBALA BALA BALA\nDA IBEIJADA",
+    youtubeUrl: "https://www.youtube.com/watch?v=BXAGXBc-5zg"
+  },
+  {
+    id: "pnt-ere-8",
+    title: "Ponto de Erê - Antes do sol nascer",
+    guideOrOrixa: "Erê",
+    type: "Sustentação",
+    lyrics: "ANTES DO SOL NASCER\nA IBEIJADA VEM SAUDAR\nOS FILHOS DE FÉ\nLÁ NO GONGÁ",
+    youtubeUrl: "https://www.youtube.com/watch?v=BXAGXBc-5zg"
+  },
+  {
+    id: "pnt-ere-9",
+    title: "Ponto de Erê - Ele é pequenininho",
+    guideOrOrixa: "Erê",
+    type: "Sustentação",
+    lyrics: "ELE É PEQUENININHO\nMORA NO FUNDO DO MAR\nSUA MADRINHA É A SEREIA\nSEU PADRINHO É BEIRA-MAR\n\nNO FUNDO DO MAR TEM AREIA\nNO FUNDO DO MAR TEM AREIA",
+    youtubeUrl: "https://www.youtube.com/watch?v=BXAGXBc-5zg"
+  },
+  {
+    id: "pnt-ere-10",
+    title: "Ponto de Erê - Caruru de mamãe",
+    guideOrOrixa: "Erê",
+    type: "Sustentação",
+    lyrics: "CARURÚ DE MAMÃE\nCARURÚ DE MAMÃE\nQUEM COMEU O CARURÚ DE MAMÃE?\n\nFOI SÃO COSME, SÃO DAMIÃO\nFOI SÃO COSME, SÃO DAMIÃO",
+    youtubeUrl: "https://www.youtube.com/watch?v=BXAGXBc-5zg"
+  },
+  {
+    id: "pnt-ere-11",
+    title: "Ponto de Erê - Cocadinha pra dois (Doum)",
+    guideOrOrixa: "Erê",
+    type: "Sustentação",
+    lyrics: "COCADINHA PRA DOIS\nCOCADA PRA TRÊS\nQUEM QUER COCADA\nCOCADA DE COSME E DAMIÃO",
+    youtubeUrl: "https://www.youtube.com/watch?v=BXAGXBc-5zg"
+  },
+  {
+    id: "pnt-ere-12",
+    title: "Ponto de Erê - Dia de festa",
+    guideOrOrixa: "Erê",
+    type: "Sustentação",
+    lyrics: "HOJE É DIA DE FESTA\nNO TERREIRO DO MEU PAI\nTEM BOLO, DOCE E GUARANÁ\nA IBEIJADA VEM BRINCAR",
+    youtubeUrl: "https://www.youtube.com/watch?v=BXAGXBc-5zg"
+  },
+  {
+    id: "pnt-ere-13",
+    title: "Ponto de Erê - Tem cocada (Erê)",
+    guideOrOrixa: "Erê",
+    type: "Sustentação",
+    lyrics: "TEM COCADA NO TERREIRO\nTEM COCADA NO GONGÁ\nDEIXA A IBEIJADA COMER\nDEIXA A IBEIJADA BRINCAR",
+    youtubeUrl: "https://www.youtube.com/watch?v=BXAGXBc-5zg"
+  },
+  {
+    id: "pnt-ere-14",
+    title: "Ponto de Erê - Ele foi doutor",
+    guideOrOrixa: "Erê",
+    type: "Sustentação",
+    lyrics: "ELE FOI DOUTOR\nELE FOI DOUTOR\nSÃO COSME E SÃO DAMIÃO\nCURA A DOR\nCURA A DOR",
+    youtubeUrl: "https://www.youtube.com/watch?v=BXAGXBc-5zg"
+  },
+  {
+    id: "pnt-ere-15",
+    title: "Ponto de Erê - Festa no abassá",
+    guideOrOrixa: "Erê",
+    type: "Sustentação",
+    lyrics: "TEM FESTA NO ABASSÁ\nTEM FESTA NO ABASSÁ\nA IBEIJADA DESCEU\nPRA PODER TRABALHAR",
+    youtubeUrl: "https://www.youtube.com/watch?v=BXAGXBc-5zg"
+  },
+  {
+    id: "pnt-ere-16",
+    title: "Ponto de Erê - 27 de setembro",
+    guideOrOrixa: "Erê",
+    type: "Sustentação",
+    lyrics: "VINTE E SETE DE SETEMBRO\nÉ DIA DE COSME E DAMIÃO\nVAMOS SARAVÁ A IBEIJADA\nCOM MUITA FÉ NO CORAÇÃO",
+    youtubeUrl: "https://www.youtube.com/watch?v=BXAGXBc-5zg"
+  },
+  {
+    id: "pnt-ere-17",
+    title: "Ponto de Erê - Crianças da sereia",
+    guideOrOrixa: "Erê",
+    type: "Sustentação",
+    lyrics: "AS CRIANÇAS DA SEREIA\nESTÃO BRINCANDO NA AREIA\nCOM AS CONCHINHAS DO MAR\nPRA MAMÃE IEMANJÁ",
+    youtubeUrl: "https://www.youtube.com/watch?v=BXAGXBc-5zg"
+  },
+  {
+    id: "pnt-ere-18",
+    title: "Ponto de Erê - Andorinha que voa, voa",
+    guideOrOrixa: "Erê",
+    type: "Subida",
+    lyrics: "ANDORINHA QUE VOA, VOA\nANDORINHA QUE VOA, VOA\nVAI LEVAR AS CRIANÇAS\nLÁ PRA ARUANDA, VOA",
+    youtubeUrl: "https://www.youtube.com/watch?v=BXAGXBc-5zg"
+  },
+  {
+    id: "pnt-ere-19",
+    title: "Ponto de Erê - A onda vai",
+    guideOrOrixa: "Erê",
+    type: "Subida",
+    lyrics: "A ONDA VAI\nA ONDA VEM\nAS CRIANÇAS VÃO EMBORA\nCOM A BENÇÃO DA MAMÃE",
+    youtubeUrl: "https://www.youtube.com/watch?v=BXAGXBc-5zg"
+  },
+  {
+    id: "pnt-pombagira-1",
+    title: "Ponto de Pombagira - Abre a roda (Deixa a cigana trabalhar)",
+    guideOrOrixa: "Pombagira",
+    type: "Chamada",
+    lyrics: "OH ABRE A RODA\nDEIXA A CIGANA TRABALHAR\nOH ABRE A RODA\nDEIXA A CIGANA TRABALHAR\nELA TEM PEITO DE AÇO\nELA TEM PEITO DE AÇO\nE UM CORAÇÃO\nDE UM SABIÁ [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=fZ7V-bjSS4Q"
+  },
+  {
+    id: "pnt-pombagira-2",
+    title: "Ponto de Pombagira - Arreda homem que aí vem mulher",
+    guideOrOrixa: "Pombagira",
+    type: "Chamada",
+    lyrics: "ARREDA HOMEM QUE AI VEM MULHER (2X)\nELA É A POMBA GIRA ESPOSA DE LUCIFER\nTRANCA RUAS VEM NA FRENTE PRA DIZER QUEM ELA É",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-3",
+    title: "Ponto de Pombagira - Maria Padilha das Almas (Choveu, choveu)",
+    guideOrOrixa: "Pombagira",
+    type: "Chamada",
+    lyrics: "CHOVEU CHOVEU\nSÓ NA CALUNGA QUE NÃO CHOVEU\nCHOVEU CHOVEU\nSÓ NA CALUNGA QUE NÃO CHOVEU\nÉ QUE A DONA PADILHA DAS ALMAS\nPRESTA CONTA COM DEUS\nÉ QUE A DONA PADILHA DAS ALMAS\nPRESTA CONTA COM DEUS",
+    youtubeUrl: "https://www.youtube.com/watch?v=pqiy3dnQog4"
+  },
+  {
+    id: "pnt-pombagira-4",
+    title: "Ponto de Pombagira - Pra ser rainha não é só sentar no trono",
+    guideOrOrixa: "Pombagira",
+    type: "Chamada",
+    lyrics: "PRA SER RAINHA NÃO É SÓ SENTAR NO TRONO\nPRA SER RAINHA TEM QUE SABER GOVERNAR\nPRA SER RAINHA NÃO É SÓ SENTAR NO TRONO\nPRA SER RAINHA TEM QUE SABER GOVERNAR\nSENTADA NO SEU TRONO\nMANDARAM LHE CHAMAR\nBOA NOITE GENTE\nMARIA PADILHA ESTAVA LÁ [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-5",
+    title: "Ponto de Pombagira - Salve Maria Padilha",
+    guideOrOrixa: "Pombagira",
+    type: "Chamada",
+    lyrics: "PERAMBULAVA PELAS RUAS\nJÁ SEM SABER O QUE FAZER\nPROCURAVA NA NOITE\nUMA SOLUÇÃO PRA TANTA DOR\nSOFRIMENTO E SOLIDÃO\nENTÃO EU CLAMEI AO POVO DA RUA\nQUE ME ENVIASSE NO MOMENTO ALGUMA AJUDA\nPOIS EU JÁ NÃO TINHA FORÇAS PRA CONTINUAR\nQUANDO ME VIREI, VI UMA MULHER\nNA BEIRA DA ESTRADA\nTRAZIA UMA ROSA EM SUA MÃO\nUM FEITIÇO NO OLHAR\nNAQUELA BELA NOITE DE LUAR\nVISLUMBREI SUA DANÇA COM SUA SAIA A RODAR\nEU ME APROXIMEI E LHE PERGUNTEI O QUE ELA FAZIA NA ESTRADA\nELA RESPONDEU: MOÇO, SOU RAINHA, VIM LHE AJUDAR, SOU MARIA PADILHA!\nSALVE MARIA PADILHA!\nQUANDO PRECISEI, OH POMBOGIRA, VOCÊ\nVEIO ME AJUDAR\nTU DESTE OUTRO RUMO A MINHA VIDA\nHOJE EU VENHO TE LOUVAR!",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-6",
+    title: "Ponto de Pombagira - Abre essa cova eu quero ver tremer (Maria Padilha das Almas)",
+    guideOrOrixa: "Pombagira",
+    type: "Chamada",
+    lyrics: "ABRE ESSA COVA QUE EU QUERO VER TREMER\nABRE ESSA COVA QUE EU QUERO VER BALANCEAR [2X]\nMARIA PADILHA DAS ALMAS\nO CEMITÉRIO É SEU LUGAR\nÉ NA CALUNGA QUE A PADILHA MORA\nÉ NA CALUNGA QUE A PADILHA VAI GIRAR [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=Czvv8Yo3n7M"
+  },
+  {
+    id: "pnt-pombagira-7",
+    title: "Ponto de Pombagira - A Padilha tem um gato",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "A PADILHA TEM UM GATO\nQUE NÃO É DE BRINCADEIRA [2X]\nMEIO-DIA ELE É GATO\nMEIA-NOITE É EXÚ CAVEIRA [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-8",
+    title: "Ponto de Pombagira - Maria Padilha feiticeira",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "MARIA PADILHA FEITICEIRA, FEITICEIRA\nMARIA PADILHA FEITICEIRA, FEITICEIRA\nMARIA PADILHA DA CALUNGA\nO SEU FEITIÇO NÃO É DE BRINCADEIRA [2X]\nÉ DE QUA QUA QUA\nÉ DE QUA QUA QUA\nÉ DE QUA QUA QUA\nMARIA PADILHA DA CALUNGA\nELA TRABALHA SEM PARAR [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-9",
+    title: "Ponto de Pombagira - Padilha, estou lhe chamando",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "PADILHA, PADILHA\nESTOU LHE CHAMANDO [2X]\nMARIA PADILHA TEM UM DEFEITO\nELA BATE O PÉ E SAI ANDANDO [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-10",
+    title: "Ponto de Pombagira - Pombo-Gira Padilha das Almas",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "ELA É POMBO-GIRA FORMOSA\nTRABALHA COM UMA ROSA\nE VEM DE LONGE PRA CÁ\nPARA ESSA UMBANDA TÃO LINDA\nCOM A MISSÃO TÃO BONITA\nDE PODER NOS AJUDAR\n[refrão]\nÉ POMBO-GIRA\nPADILHA DAS ALMAS\nPOMBO-GIRA ELA É\nLAROYÊ EXÚ\nA MOJUBÁ A MOJUBÁ\nPEÇA A POMBO-GIRA QUEM TEM FÉ\n[/refrão]\nCOM A SUA SAIA RODADA\nVAIDOSA ENCANTADA\nCONQUISTOU MEU CORAÇÃO\nME OLHE SEMPRE NAS MADRUGADAS\nNÃO DEIXE QUE O MAL ACONTEÇA\nVENHA DAR A PROTEÇÃO\n[refrão]\nÉ POMBO-GIRA\nPADILHA DAS ALMAS\nPOMBO-GIRA ELA É\nLAROYÊ EXÚ\nA MOJUBÁ A MOJUBÁ\nPEÇA A POMBO-GIRA QUEM TEM FÉ\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-11",
+    title: "Ponto de Pombagira - Maria Padilha, você é a flor perfeita",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "MARIA PADILHA VOCÊ É A FLÔR PERFEITA\nQUE VEM DENTRO DESTA SEITA PARA AQUELES QUE TEM FÉ\nTU ÉS A ROSA QUE PERFUMA A UMBANDA\nVENCEDORA DE DEMANDA COM AMOR E MUITO AXÉ\nMARIA PADILHA\nNÃO ME DEIXA ANDAR SOZINHO\nPONHA A ROSA SEM ESPINHOS\nNOS CAMINHOS ONDE EU PASSAR\nMARIA PADILHA\nNÃO ME DEIXA ANDAR SOZINHO\nPONHA A ROSA SEM ESPINHOS\nNOS CAMINHOS ONDE EU PASSAR\n[refrão]\nOH POMBO-GIRÊ\nOH POMBO-GIRA\nFORME UM TAPETE DE ROSAS\nPRA QUE EU POSSA CAMINHAR\nOH POMBO-GIRÊ\nOH POMBO-GIRA\nFORME UM TAPETE DE ROSAS\nPRA QUE EU POSSA CAMINHAR\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-12",
+    title: "Ponto de Pombagira - Tata Mulambo ela mereceu ganhar",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "TATA MULAMBO ELA MERECEU GANHAR\nGANHAR O QUE GANHOU [2X]\nFORAM SETE ROSAS NA CALUNGA\nSETE MARAFOS E UMA SAIA DE CETIM\nMAS COMO TUDO ISSO NÃO BASTASSE\nELA GANHOU UMA COROA DE ATOTÔ\nATOTÔ MEU PAI\nATOTÔ MEU SENHOR\nTATA MULAMBO MERECEU\nO QUE GANHOU [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-13",
+    title: "Ponto de Pombagira - A bruxa macumbeira chegou (Maria Mulambo)",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "A BRUXA MACUMBEIRA CHEGOU\nÉ A MARIA MULAMBO DAS ALMAS TRABALHOU [2X]\nQUANDO ELA VEM COM SUA VASSOURA DE TRAPO\nVEM GIRANDO E GARGALHANDO\nBEBENDO SANGUE DE RATO\nSE NÃO ACREDITA\nVEM ME CONHECER\nEU MORO NA LAMA\nSOU MARIA MULAMBÊ\nA BRUXA MACUMBEIRA CHEGOU\nÉ A MARIA MULAMBO DAS ALMAS TRABALHOU [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-14",
+    title: "Ponto de Pombagira - Lá vem ela (Maria Mulambo)",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "[refrão]\nLÁ VEM ELA OH, CAMINHANDO PELA RUA\nLÁ VEM A MARIA MULAMBO\nCOM TIRIRI\nMARABÔ E TRANCA-RUA [2X]\n[/refrão]\nOH QUE NOITE TÃO BONITA\nCOMO BRILHA O LUAR\nABRAM ALAS MINHA GENTE\nQUE A MULAMBO VAI CHEGAR\nCANTA UM PONTO BEM BONITO\nQUE A MULAMBO VAI DANÇAR\nO TRABALHO DESSA MOÇA\nFAZ A UMBANDA ADMIRAR\n+ refrão\nA LUA BRILHAVA\nTIRIRI BEBIA\nTRANCA-RUA CANTAVA\nMARABÔ SORRIA\nSÃO TODOS EXÚ DE FAMA\nSÃO TODOS EXÚ DE FÉ\nSARAVÁ MARIA MULAMBO\nE TODO EXÚ QUE AQUI VIER",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-15",
+    title: "Ponto de Pombagira - Mentira, mentira sim (Maria Padilha)",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "MENTIRA, MENTIRA SIM\nTU ENGANA AS MULHERES\nNÃO TENTE MENTIR PRA MIM\nTU ENGANA AS MULHERES\nNÃO TENTE MENTIR PRA MIM\nEU SOU MARIA PADILHA\nSENHORA DA NOITE\nRAINHA DA ENCRUZILHADA\nMENTIRA, MENTISTES SIM (ou me disse sim)\nEU SOU MARIA PADILHA\nSENHORA DA NOITE\nRAINHA DA ENCRUZILHADA\nMENTIRA, MENTISTES SIM (ou me disse sim)",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-16",
+    title: "Ponto de Pombagira - Olha a saia dela (Maria Mulambo)",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "OLHA A SAIA DELA\nÉ MULAMBO SÓ\nSUA SAIA TEM SETE METROS\nSETE METROS MULAMBO SÓ...",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-17",
+    title: "Ponto de Pombagira - Maria Mulambo (Mas oh que rua tão escura)",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "MAS OH QUE RUA TÃO ESCURA\nQUE VEM PASSANDO AQUELA MOÇA [2X]\nOH VESTIDINHO DE CHITA ESTALANDO OSSO\nOSSO POR OSSO [2X]\nMAS ELA É A POMBO-GIRA\nMAS ELA É TATA MULAMBO [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-18",
+    title: "Ponto de Pombagira - Maria Mulambo - Foi numa noite de luar",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "FOI NUMA NOITE DE LUAR.\nQUE EU ENCONTREI NA ENCRUZA, UMA MOÇA A TRABALHAR.\nFOI NUMA NOITE DE LUAR.\nQUE EU ENCONTREI NA ENCRUZA, UMA MOÇA A TRABALHAR.\nME DEU BOA NOITE, DISSE:\nMOÇO NÃO SE ENGANA.\nEU SOU POMBA GIRA, POUCOS CONHECEM MINHA FAMA.\nMUITOS JÁ TENTARAM JOGAR O MEU NOME NA LAMA.\nHOJE NA CALUNGA CONHECEM MULAMBO DE FAMA!\nFOI NUMA NOITE DE LUAR.\nQUE EU ENCONTREI NA ENCRUZA, UMA MOÇA A TRABALHAR.\nFOI NUMA NOITE DE LUAR.\nQUE EU ENCONTREI NA ENCRUZA, UMA MOÇA A TRABALHAR.\nME DEU BOA NOITE, DISSE:\nMOÇO NÃO SE ENGANA.\nEU SOU POMBA GIRA, POUCOS CONHECEM MINHA FAMA.\nVENHO DA CALUNGA.\nTRABALHAR NA ENCRUZILHADA.\nBEBER MEU MARAFO, FUMAR MEU CIGARRO,\nDAR MINHA GARGALHADA.\nBEBER MEU MARAFO, FUMAR MEU CIGARRO,\nDAR MINHA GARGALHADA.",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-19",
+    title: "Ponto de Pombagira - Na porta da calunga (Maria Quitéria)",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "[refrão]\nQUI QUI QUI QUI QUI\nQUI QUI QUI QUITÉRIA\nQUI QUI QUI QUI QUI\nQUI QUI QUI QUITÉRIA\n[/refrão]\nELA TRABALHA DE NOITE\nELA TRABALHA NO INFERNO\nNA PORTA DA CALUNGA\nNO MEIO DO CRUZEIRO",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-20",
+    title: "Ponto de Pombagira - Se a sua catacumba tem mistério (Rosa Caveira)",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "SE A SUA CATACUMBA TEM MISTÉRIO\nMAS ELA É A RAINHA DO CEMITÉRIO [2X]\n[refrão]\nMAS ELA É LOIRA\nDE UM OLHO AZUL\nROSA CAVEIRA\nÉ POMBO-GIRA DE OMULÚ\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-21",
+    title: "Ponto de Pombagira - Foi em uma estrada velha (Figueira)",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "FOI EM UMA ESTRADA VELHA\nNA SUBIDA DE UMA SERRA\nNUMA NOITE DE LUAR\nDE LUAR DE LUAR\nPOMBO-GIRA DA FIGUEIRA\nMOÇA BELA E FACEIRA\nDAVA O SEU GARGALHAR\n[refrão]\nELA É MOJUBÁ\nELA É MOJUBÁ\nELA É MOJUBÁ\nELA É MOJUBÁ\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-22",
+    title: "Ponto de Pombagira - Rosa Negra",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "É NEGRA , É SOBERANA E PODEROSA\nÉ A MAIS BELA DAS ROSAS QUE ENCANTAM O MEU JARDIM\nLÁ NA CALUNGA É LUZ QUE NOS DÁ CAMINHO\nNUNCA NOS DEIXA SOZINHA\nSEMPRE PRONTA PARA NOS AJUDAR\nÉ RICA DE MAGIA E DE BELEZA\nÉ FONTE DE ALEGRIA\nA ONDE HOUVER TRISTEZA\nSUA MISSÃO É PRATICAR A CARIDADE\nDEMONSTRANDO LEALDADE\nTRABALHANDO PARA O BEM\nAJUDANDO A QUEM PRECISA\nE A QUEM NÃO PRECISA TAMBÉM\nMAS SE VOCÊ NÃO ACREDITA\nUM DIA HÁ DE ACREDITAR\nQUANDO PASSAR PELA CALUNGA\nE A ROSA-NEGRA ESTIVER LÁ [2X]\n[refrão]\nRI QUA QUA QUA\nRI QUA QUA QUA\nÉ POMBO-GIRA ROSA-NEGRA\nNA CALUNGA A GARGALHAR [2X]\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-23",
+    title: "Ponto de Pombagira - Ciganinha da sandália de pau",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "CIGANINHA, CIGANINHA\nDA SANDÁLIA DE PAU\nCIGANINHA, CIGANINHA\nDA SANDÁLIA DE PAU\nQUANDO ELA BATE O PÉ\nELA TRAZ O BEM E LEVA O MAL\nQUANDO ELA BATE O PÉ\nELA TRAZ O BEM E LEVA O MAL",
+    youtubeUrl: "https://www.youtube.com/watch?v=AFvxRlyKvhM"
+  },
+  {
+    id: "pnt-pombagira-24",
+    title: "Ponto de Pombagira - Bem que eu lhe avisei pra você não jogar comigo (Cigana)",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "BEM QUE EU LHE AVISEI\nPRA VOCÊ NÃO JOGAR\nESSA CARTADA COMIGO [2X]\nVOCÊ PAROU NA DAMA\nE EU PAREI NO VALETE\nAMIGO, VOCÊ NÃO SE ENGANA\nPOMBO-GIRA CIGANA É POMBO-GIRA DE FAMA [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=AFvxRlyKvhM"
+  },
+  {
+    id: "pnt-pombagira-25",
+    title: "Ponto de Pombagira - Ganhei uma barraca nova (Cigana)",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "GANHEI UMA BARRACA NOVA\nFOI A CIGANA QUE ME DEU [2X]\nO QUE É MEU É DA CIGANA\nO QUE É DELA NÃO É MEU [2X]\n[refrão]\nCIGANINHA PUERÊ\nPUERÊ PUERÁ\nCIGANINHA PUERÊ\nPUERÊ PUERÁ\nCIGANINHA PUERÊ\nPUERÊ PUERÁ\nCIGANINHA PUERÊ\nPUERÊ PUERÁ\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=BypNnavT79w"
+  },
+  {
+    id: "pnt-pombagira-26",
+    title: "Ponto de Pombagira - Cigana da estrada (Vinha caminhando pela rua)",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "VINHA CAMINHANDO PELA RUA\nQUANDO UMA MOÇA BONITA EU VI\nVINHA CAMINHANDO PELA RUA\nQUANDO UMA MOÇA BONITA EU VI\nCOM A SUA SANDÁLIA DE PRATA\nSUA SAIA DOURADA\nELA SORRIU PARA MIM\nCOM A SUA SANDÁLIA DE PRATA\nSUA SAIA DOURADA\nELA SORRIU PARA MIM\nEU PERGUNTEI A ELA\nAONDE FICA A SUA MORADA\nELA RESPONDEU PRA MIM ASSIM\nMORO NUMA ESTRADA SEM FIM\n...\nMORO NUMA ESTRADA SEM FIM",
+    youtubeUrl: "https://www.youtube.com/watch?v=AFvxRlyKvhM"
+  },
+  {
+    id: "pnt-pombagira-27",
+    title: "Ponto de Pombagira - Cigana da estrada (Quem nesse mundo nunca ouviu dizer)",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "QUEM NESSE MUNDO NUNCA OUVIU DIZER\nQUEM NESSE MUNDO NUNCA OUVIU FALAR\nQUEM NESSE MUNDO NUNCA OUVIU DIZER\nQUEM NESSE MUNDO NUNCA OUVIU FALAR\nDE UMA CIGANA QUE MORA NAQUELA ESTRADA\nELA TEM SUA MORADA SOB O CLARÃO DO LUAR\nDE UMA CIGANA QUE MORA NAQUELA ESTRADA\nELA TEM SUA MORADA SOB O CLARÃO DO LUAR\nCIGANA DA ESTRADA, FORÇA PODEROSA\nME DÊ PROTEÇÃO E AXÉ CIGANINHA FORMOSA\nCIGANA DA ESTRADA, FORÇA PODEROSA\nME DÊ PROTEÇÃO E AXÉ CIGANINHA FORMOSA",
+    youtubeUrl: "https://www.youtube.com/watch?v=AFvxRlyKvhM"
+  },
+  {
+    id: "pnt-pombagira-28",
+    title: "Ponto de Pombagira - Cigana (Vinha caminhando a pé)",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "VINHA CAMINHANDO A PÉ\nPARA VER SE ENCONTRAVA\nUMA CIGANA DE FÉ\nVINHA CAMINHANDO A PÉ\nPARA VER SE ENCONTRAVA\nUMA CIGANA DE FÉ\nELA PAROU E LEU MINHA MÃO\nE DISSE TODA PURA VERDADE\nEU SÓ QUERIA SABER\nAONDE MORA A POMBO-GIRA CIGANA\nEU SÓ QUERIA SABER\nAONDE MORA A POMBO-GIRA CIGANA",
+    youtubeUrl: "https://www.youtube.com/watch?v=AFvxRlyKvhM"
+  },
+  {
+    id: "pnt-pombagira-29",
+    title: "Ponto de Pombagira - Não mexa com ela não",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "NÃO MEXA COM ELA NÃO\nELA É PONTA DE AGULHA\nQUEM MEXER COM A _______________\nVAI PARAR NA SEPULTURA [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-30",
+    title: "Ponto de Pombagira - Na minha casa não tem porta nem janela",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "NA MINHA CASA NÃO TEM PORTA NEM JANELA\nO QUE É DE BOM O VENTO TRÁS O QUE É DE RUIM O VENTO LEVA [2X]\nÔHHH ÔHH ÔHH\nA DONA DA CASA CHEGOU ÔHHH ÔHH ÔHH\nA DONA DA CASA CHEGOU",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-31",
+    title: "Ponto de Pombagira - Eu juro que vou matar essa andorinha",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "EU JURO QUE VOU MATAR\nESSA ANDORINHA\nEU JURO QUE VOU MATAR\nESSA MULHER [2X]\nESSA MULHER\nESTA FAZENDO ARRUAÇA\nNA MINHA CALUNGA\nEU VOU MATAR ESSA MULHER [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-32",
+    title: "Ponto de Pombagira - Dói dói dói",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "DÓI DÓI DÓI DÓI DÓI\nUM AMOR FAZ SOFRER\nDOIS AMORES\nFAZ CHORAR [2X]\n[refrão]\nQUEM É VOCÊ\nPRA DEITAR NA MINHA CAMA\nPAPAGAIO COME MILHO\nPERIQUITO LEVA FAMA\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-33",
+    title: "Ponto de Pombagira - Vai ter volta",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "E VAI TER VOLTA , E VAI TER VOLTA\nQUANDO EU ESTAVA NO CHÃO VOCÊ ME ABANDONOU, NÃO É PRAGA MAIS\nUM DIA AINDA VOU VÊ SUA DOR\nEU FALO PRA VOCÊ QUERIDO\nEU NUNCA ANDEI SOZINHA\nPOIS TENHO DONA MULAMBO\nQUE ANDA EM MEUS CAMINHOS\nQUANDO EU TAVA NA AMARGURA\nFOI ELA QUEM ME AJUDOU\nSALVE POMBA GIRA MENINA QUE TIROU A MINHA DOR\nVOU PROCURAR UM NOVO AMOR\nSOZINHA NÃO VOU FICAR\nSALVE POMBA GIRA CIGANA QUE REINA\nEM MEU CAMINHAR\nA TRAIÇÃO QUE TU ME DEU\nAGUENTEI COM MUITA DOR\nMAIS NÃO TEM PROBLEMAS\nO MUNDO SEMPRE DA VOLTAS MEU AMOR\nENTREGUEI PRA ROSA CAVEIRA COM ELA VOCÊ NÃO PODE , TU VAI CONHECER A CAPETA DONA DA MORTE",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-34",
+    title: "Ponto de Pombagira - Ela gosta do amarelo",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "ELA GOSTA DO AMARELO\nELA GOSTA DO AMARELO\nMAS É OURO QUE ELA QUER\nELA GOSTA DO AMARELO\nELA GOSTA DO AMARELO\nMAS É OURO QUE ELA QUER\nBRILHOU O SOL\nBRILHOU A LUA\nERA TANTO OURO\nESPALHADO PELA RUA\nBRILHOU O SOL\nBRILHOU A LUA\nERA TANTO OURO\nESPALHADO PELA RUA",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-35",
+    title: "Ponto de Pombagira - Foi condenada pela lei da Inquisição",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "FOI CONDENADA PELA LEI DA INQUISIÇÃO\nPARA SER QUEIMADA VIVA SEXTA-FEIRA DA PAIXÃO [2X]\nO PADRE REZAVA E O POVO ACOMPANHAVA\nQUANTO MAIS O FOGO ARDIA\nELA DAVA GARGALHADA [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-36",
+    title: "Ponto de Pombagira - Pombo-Gira é de Maceió",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "POMBO-GIRA AUÊ AUÊ\nPOMBO-GIRA É DE MACEIÓ [2X]\nONDE MORA A POMBO-GIRA\nELA MORA EM MACEIÓ [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-37",
+    title: "Ponto de Pombagira - Disseram que mataram a pombo-gira",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "DISSERAM QUE MATARAM A POMBO-GIRA\nMAS MENTIRA, ELA NÃO MORREU\nO VENTO SOPROU NA ENCRUZILHADA\nE COM UMA GARGALHADA, ELA APARECEU [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-38",
+    title: "Ponto de Pombagira - Eu matei, eu soltei pombo",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "EU MATEI, EU SOLTEI POMBO\nEU QUERO VER POMBO-GIRA [2X]\nRÉU RÉU RÉU\nRÉU RÉU OHH [2X]\nA CARRUAGEM QUEBROU NA ESTRADA\nA POMBO-GIRA É ABUSADA\nE ELA VAI A PÉ",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-39",
+    title: "Ponto de Pombagira - Quando eu era menina",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "QUANDO EU ERA MENINA\nEU FUI LARGADA\nNA PORTA DE UM CABARÉ\nMENINA VOLTA PRA CASA\nAQUI NÃO ENTRA CRIANÇA\nAQUI SÓ ENTRA MULHER\n[refrão]\nDIZ ALELUIA\nDIZ ALELUIA\nEU VOU MOSTRAR QUEM É CRIANÇA\nMAS TAMBÉM É MULHER DA RUA\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-40",
+    title: "Ponto de Pombagira - É uma casa de pombo-gira",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "É UMA CASA DE POMBO\nÉ DE POMBO-GIRA\nÉ UMA CASA DE POMBO\nÉ DE POMBO-GIRA\n[refrão]\nAUÊ AUÊ\nAUÊ AUÁ\nAUÊ AUÊ\nAUÊ AUÁ\nÉ POMBO-GIRA É MOJUBÁ\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-41",
+    title: "Ponto de Pombagira - Deu meia-noite a lua se escondeu",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "Deu meia-noite\nA lua se escondeu\nLá na encruzilhada dando a sua gargalhada\nPombo-gira apareceu\n[refrão]\nAlaruê , Alaruê , AlaruêêeÊê…\nEmojubá, emojubá, emojubááá…\nEle é odara , dando a sua gargalhada\nQuem tem fé nessa lebara\nÉ só pedir que ele dá\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-42",
+    title: "Ponto de Pombagira - Beba, beba, beba na porta de um botequim",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "BEBA BEBA BEBA BEBA\nBEBA BEBA BEBA BEBA\nNA PORTA DE UM BOTEQUIM\nBEBA BEBA BEBA BEBA\nBEBA BEBA BEBA BEBA\nNA PORTA DE UM BOTEQUIM\nELA BEBE SIM\nNINGUÉM TEM NADA COM ISSO\nELA BEBE O SEU MARAFO\nE AINDA FAZ O SEU FEITIÇO\nELA BEBE SIM\nNINGUÉM TEM NADA COM ISSO\nELA BEBE O SEU MARAFO\nE AINDA FAZ O SEU FEITIÇO",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-43",
+    title: "Ponto de Pombagira - A pombo-gira girou",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "A POMBO-GIRA GIROU\nGIROU E MANDOU AVISAR [2X]\nQUE HOJE TEM FESTA NA CALUNGA\nTEM CLARÃO DA LUA PRA QUEM CHEGAR\nQUE HOJE TEM FESTA NA ENCRUZA\nTEM CLARÃO DA LUA PRA QUEM CHEGAR",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-44",
+    title: "Ponto de Pombagira - Pombagira é mulher (Na boca de quem não presta)",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "POMBAGIRA É MULHER\nDE DOMINGO ATE SEGUNDA (BIS)\nNA BOCA DE QUEM NAO PRESTA\nPOMBAGIRA É VAGABUNDA\nOH GIRE, GIRE\nOH GIRE, GIRÁ\nELA TEM SETE MARIDOS\nMAS NAO PODE SE CASAR (BIS)",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-45",
+    title: "Ponto de Pombagira - De vermelho e negro",
+    guideOrOrixa: "Pombagira",
+    type: "Sustentação",
+    lyrics: "\" DE VERMELHO E NEGRO, VESTINDO A NOITE O MISTÉRIO TRAZ\nDE COLAR DE OURO, BRINCO DOURADO A PROMESSA FAZ\nSE É PRECISO IR, VOCE PODE IR FAÇA O QUE QUISER\nMAS CUIDADO AMIGO ELA É BONITA, ELA É MULHER (2X)\nE NO CANTO DA RUA, ZOMBANDO\nZOMBANDO, ZOMBANDO ESTÁ\nELA É MOÇA BONITA, OH GIRANDO\nOH GIRANDO,OH GIRANDO LÁ (2X)\nOH GIRANDO LÁ,OH LELE\nOH GIRANDOLA, OH LALA\nOH GIRANDO LÁ,OH LELE\nOH GIRANDOLA, OH LALA (2X)",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-pombagira-46",
+    title: "Ponto de Pombagira - Acabou, seu marafo acabou (Subida)",
+    guideOrOrixa: "Pombagira",
+    type: "Subida",
+    lyrics: "ACABOU\nSEU MARAFO ACABOU\nFECHOU\nO CABARÉ FECHOU [2X]\n[refrão]\nCAMINHA POMBO-GIRA CAMINHA\nESTÁ NA HORA DE CAMINHAR [2X]\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=O3ciguSZduE"
+  },
+  {
+    id: "pnt-exu-1",
+    title: "Ponto de Exú - Lá na porteira eu deixei meu sentinela",
+    guideOrOrixa: "Exú",
+    type: "Chamada",
+    lyrics: "LÁ NA PORTEIRA\nEU DEIXEI UM SENTINELA (2X)\nEU DEIXEI SEU (NOME DO EXU)\nTOMANDO CONTA DA CANCELA (2XX)\nLÁ NA PORTEIRA\nEU DEIXEI OS SENTINELAS (2X)\nEU DEIXEI EXUS E POMBA GIRAS\nTOMANDO CONTA DA CANCELA (2X)",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-2",
+    title: "Ponto de Exú - Olha quem vem lá no portão",
+    guideOrOrixa: "Exú",
+    type: "Chamada",
+    lyrics: "OLHA QUEM VEM LÁ NO PORTÃO\nDE CAPA E CARTOLA E PÉ NO CHÃO [2X]\nSERÁ SEU __________\nSERÁ , SERÁ\nSERÁ SEU __________\nSERÁ , SERÁ\nSERÁ SEU __________\nSERÁ , SERÁ",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-3",
+    title: "Ponto de Exú - Dá uma volta lá fora",
+    guideOrOrixa: "Exú",
+    type: "Chamada",
+    lyrics: "EXÚ _________\nDÁ UMA VOLTA LÁ FORA [2X]\nQUEM FOR BOM , BOTA PRA DENTRO\nE QUEM NÃO FOR DEIXA LÁ FORA [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-4",
+    title: "Ponto de Exú - Estava passando pela encruza",
+    guideOrOrixa: "Exú",
+    type: "Chamada",
+    lyrics: "ESTA PASSANDO PELA ENCRUZA\nEU AVISTEI UM VULTO\nE PERGUNTEI\nQUEM ERA\n[refrão]\nQUEM ERA\nQUEM ERA\nERA MARIA MULAMBO\nE TRANCA-RUA NA CANCELA [2x]\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-5",
+    title: "Ponto de Exú - Exú Tiriri (Essa é uma história que aconteceu comigo)",
+    guideOrOrixa: "Exú",
+    type: "Chamada",
+    lyrics: "ESSA É UMA HISTÓRIA, QUE ACONTECEU COMIGO\nANDAVA PELA RUA, E NO CAMINHO SÓ PERIGO\nEU NÃO TINHA PAZ, EU NÃO TINHA VERDADE\nNOS CAMINHOS DA AMARGURA, BUSCAVA FELICIDADE\nFOI ENTÃO QUE NO MEIO DA ENCRUZA\nAVISTEI UM HOMEM COM TRIDENTE NA MÃO.\nME DISSE MOÇO, NÃO TEMAS O PERIGO\nPOIS EXÚ É CAMINHO, ESTOU AQUI PRA LHE AJUDAR.\nQUANDO PRECISAR É SÓ CHAMAR POR MIM\nSOU SEU AMIGO, GUARDIÃO EU ME CHAMO TIRIRI\nQUANDO PRECISAR É SÓ CHAMAR POR MIM\nSOU SEU AMIGO, GUARDIÃO EU ME CHAMO TIRIRI\nÉ TIRIRI, REI DA ENCRUZA\nÉ TIRIRI, REI DA CALUNGA\nSEU TIRIRI, É REI EM QUALQUER LUGAR\nQUE NÃO HÁ PORTAS FECHADAS, QUANDO VEM PRA TRABALHAR.\nÉ TIRIRI, REI DA ENCRUZA.\nÉ TIRIRI, REI DA CALUNGA.\nSEU TIRIRI, É REI EM QUALQUER LUGAR.\nQUE NÃO HÁ PORTAS FECHADAS, QUANDO VEM PRA TRABALHAR.",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-6",
+    title: "Ponto de Exú - Na encruzilhada eu louvei Exú (Tiriri)",
+    guideOrOrixa: "Exú",
+    type: "Chamada",
+    lyrics: "NA ENCRUZILHADA EU LOUVEI EXÚ\nLEVEI MARAFO, UM CHARUTO E UMA VELA\nCANTEI UM PONTO PRO EXÚ TIRIRI\nE O QUE EU VI FOI A COISA MAIS BELA\nEU VI UMA LUZ\nOUVI UMA GARGALHADA\nE COM SUA CAPA\nTIRIRI É QUEM CHEGAVA\nELE É MEU AMIGO\nÉ MEU GUARDIÃO\nCONFIO EM TIRIRI\nBOTO MINHA VIDA EM SUAS MÃOS [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-7",
+    title: "Ponto de Exú - Festa do Exú Tiriri",
+    guideOrOrixa: "Exú",
+    type: "Chamada",
+    lyrics: "É MEIA NOITE EM PONTO E O GALO CANTOU\nÉ MEIA NOITE EM PONTO E O GALO CANTOU\nCANTOU PRA ANUNCIAR QUE TIRIRI CHEGOU\nCANTOU PRA ANUNCIAR QUE TIRIRI CHEGOU\nELE VEM DA CALUNGA\nDE CAPA E CARTOLA\nE TRIDENTE NA MÃO\nESSE EXÚ DE FÉ\nÉ QUEM NOS TRÁS O AXÉ\nE NOS DÁ PROTEÇÃO\nELE É EXÚ ODARA\nE VEM PRA TRABALHAR\nCOM SEU PUNHAL ELE CURA\nELE CORTA DEMANDA, ELE SALVA, ELE CURA, EXÚ É MOJUBÁ\nLAROYÊ EXÚ\nEXÚ A MOJUBA\nEU PERGUNTEI A ELE O QUE É EXÚ\nELE VEIO ME FALAR [2X]\nEXÚ É CAMINHO, É ENERGIA, É VIDA, É DETERMINAÇÃO\nÉ CUMPRIDOR DA LEI, EXÚ É ESPERTO, EXÚ É GUARDIÃO\nEXÚ TRABALHO, É ALEGRIA VELOZ, EXÚ É VIVER\nÉ A MAGIA, É O ENCANTO\nÉ O FOGO NO SANGUE, NA VEIA VIBRANDO, EXÚ É LAZER\nLAROYÊ EXÚ\nEXÚ A MOJUBA\nTRAZ SUA FALANGE\nEXÚ TIRIRI PARA TRABALHAR [2X]\nVEM SEU TRANCA-RUAS, MARIA PADILHA E EXÚ MARABÔ\nSETE ENCRUZILHADAS, SEU ZÉ PILINTRA AQUI CHEGOU\nMARIA MULAMBO, MARIA FARRAPO E DONA FIGUEIRA\nDONA SETE SAIAS, POMBO-GIRA MENINA E ROSA VERMELHA\nSETE CATACUMBAS, EXÚ CAVEIRA FIRMA O PONTO AQUI\nE O EXÚ CAPA PRETA ANUNCIOU A FESTA DO EXÚ TIRIRI",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-8",
+    title: "Ponto de Exú - Sete Encruzilhadas (Ogum mandou louvar Exú)",
+    guideOrOrixa: "Exú",
+    type: "Chamada",
+    lyrics: "OGUM MANDOU LOUVAR EXÚ\nLAROIÊ, LAROIÊ, LAROIÊ, LAROIÊ [2X]\nELE É TATA NA CALUNGA\nELE É BAMBA NA ENCRUZA\nLAROIÊ, LAROIÊ, LAROIÊ, LAROIÊ\nSUA CAPA É PRETA E ENCARNADA\nLAROIÊ, LAROIÊ, LAROIÊ, LAROIÊ\nELE É MEU AMIGO\nÉ SETE ENCRUZILHADAS\nLAROIÊ, LAROIÊ, LAROIÊ, LAROIÊ\nOGUM MANDOU LOUVAR EXÚ\nLAROIÊ, LAROIÊ, LAROIÊ, LAROIÊ [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-9",
+    title: "Ponto de Exú - O sino tocou (Sete Encruzilhadas)",
+    guideOrOrixa: "Exú",
+    type: "Chamada",
+    lyrics: "O SINO TOCOU, LÁ NA CALUNGA,\nA LUA CLAREOU.\nSAUDANDO ESSE EXÚ.\nGUARDIÃO DA ENCRUZILHADA E MEU PROTETOR.\nO SINO TOCOU, LÁ NA CALUNGA,\nA LUA CLAREOU.\nSAUDANDO ESSE EXÚ.\nGUARDIÃO DA ENCRUZILHADA E MEU PROTETOR.\nLÁ NA CALUNGA. ELE FAZ A SUA LEI.\nMAS É A MEIA-NOITE NA ENCRUZA.\nQUE ELE É O REI.\nSALVE A SUA CAPA ENCARNADA.\nMEU GUARDIÃO, SEU SETE ENCRUZILHADAS.\nSALVE ESSE EXÚ DE UMBANDA.\nQUE VEM NA NOSSA GIRA,\nCORTAR AS DEMANDAS.\nO SINO TOCOU, LÁ NA CALUNGA,\nA LUA CLAREOU.\nSAUDANDO ESSE EXÚ\nGUARDIÃO DA ENCRUZILHADA E MEU PROTETOR.\nCOM SUA CAPA ELE ME COBRE.\nCOM SEU TRIDENTE ME DEFENDE.\nCOM SEU PUNHAL, ELE FAZ A SUA CURA\nE QUEBRA AS CORRENTES.\nCOM SUA BENGALA E CARTOLA.\nEM MEUS CAMINHOS ME APÓIA.\nCOM ELE NÃO TEMO O PERIGO.\nCOM SEU SETE ENCRUZILHADAS,\nNÃO ESTOU SOZINHO.\nO SINO TOCOU, LÁ NA CALUNGA,\nA LUA CLAREOU.\nSAUDANDO ESSE EXÚ.\nGUARDIÃO DA ENCRUZILHADA E MEU PROTETOR.\nO SINO TOCOU, LÁ NA CALUNGA,\nA LUA CLAREOU.\nSAUDANDO ESSE EXÚ.\nGUARDIÃO DA ENCRUZILHADA E MEU PROTETOR.\nLÁ NA CALUNGA ELE FAZ A SUA LEI.\nMAS É A MEIA-NOITE NA ENCRUZA.\nQUE ELE É O REI.\nSALVE A SUA CAPA ENCARNADA.\nMEU GUARDIÃO, SEU SETE ENCRUZILHADAS.\nSALVE ESSE EXÚ DE UMBANDA.\nQUE VEM NA NOSSA GIRA.\nCORTAR AS DEMANDAS.\nO SINO TOCOU, LÁ NA CALUNGA,\nA LUA CLAREOU.\nSAUDANDO ESSE EXÚ\nGUARDIÃO DA ENCRUZILHADA E MEU PROTETOR.\nCOM SUA CAPA ELE ME COBRE.\nCOM SEU TRIDENTE ME DEFENDE.\nCOM SEU PUNHAL, ELE FAZ A SUA CURA\nE QUEBRA AS CORRENTES.\nCOM SUA BENGALA E CARTOLA.\nEM MEUS CAMINHOS ME APÓIA.\nCOM ELE NÃO TEMO O PERIGO.\nCOM SEU SETE ENCRUZILHADAS,\nNÃO ESTOU SOZINHO.",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-10",
+    title: "Ponto de Exú - Dizem que Exú só bebe e dá risada (Sete Encruzilhadas)",
+    guideOrOrixa: "Exú",
+    type: "Chamada",
+    lyrics: "DIZEM QUE EXU SÓ BEBE E DÁ RISADA\nMAS ELE É EXU\nÉ REI DAS SETE ENCRUZILHADAS\nA SUA GIRA É FORTE\nNÃO TEM CAÇOADA\nDEPOIS DA HORA GRANDE\nVAI GIRAR NA ENCRUZILHADA (BIS)",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-11",
+    title: "Ponto de Exú - Oi Sete, Sete Encruzilhada",
+    guideOrOrixa: "Exú",
+    type: "Chamada",
+    lyrics: "OI SETE, OI SETE, OI SETE ENCRUZILHADA\nTOMA CONTA E PRESTA CONTA\nNO ROMPER DA MADRUGADA (BIS)",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-12",
+    title: "Ponto de Exú - Odara (Morador da encruzilhada)",
+    guideOrOrixa: "Exú",
+    type: "Chamada",
+    lyrics: "ODARA\nMORADOR DA ENCRUZILHADA\nFIRMA SEU PONTO\nCOM SETE FACAS CRUZADAS\nFILHO DE UMBANDA PEDE COM FÉ\nA SEU SETE ENCRUZILHADAS\nELE DÁ O QUE VOCÊ QUER (BIS)",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-13",
+    title: "Ponto de Exú - Ô Luar, Ô Luar (Tranca-Ruas)",
+    guideOrOrixa: "Exú",
+    type: "Chamada",
+    lyrics: "Ô LUAR Ô LUAR\nÔ LUAR\nELE É DONO DA RUA\nÔ LUAR Ô LUAR\nÔ LUAR\nELE É DONO DA RUA\nQUEM COMETEU AS SUAS FALTAS\nPEÇA PERDÃO A TRANCA-RUAS\nQUEM COMETEU AS SUAS FALTAS\nPEÇA PERDÃO A TRANCA-RUAS\nTANTO SANGUE DERRAMADO (Ô LUAR)\nEM CIMA DO FRIO CHÃO\nONDE MORA TRANCA-RUAS\nMORA LÁ NO MEU PORTÃO",
+    youtubeUrl: "https://www.youtube.com/watch?v=yq3nEz77q1E"
+  },
+  {
+    id: "pnt-exu-14",
+    title: "Ponto de Exú - Melhor que Tranca-Rua das Almas não há",
+    guideOrOrixa: "Exú",
+    type: "Chamada",
+    lyrics: "[refrão]\nLAROIYÊ EXU AMOJUBÁ\nMELHOR QUE TRANCA-RUAS DAS ALMAS NÃO HÁ\nLAROIYÊ EXU AMOJUBÁ\nMELHOR QUE TRANCA-RUAS DAS ALMAS NÃO HÁ\n[/refrão]\nDE CAPA E CARTOLA CAMINHA NA MADRUGADA\nANDARILHO DA ESTRADA SEMPRE COMBATENDO O MAL\nSEU TRANCA RUA MEU AMIGO E CAMARADA,\nDANDO FORTE GARGALHADA, ME LIBRA DE TODO MAL\n[refrão]\nLAROIYÊ EXU AMOJUBÁ\nMELHOR QUE TRANCA-RUAS DAS ALMAS NÃO HÁ\nLAROIYÊ EXU AMOJUBÁ\nMELHOR QUE TRANCA-RUAS DAS ALMAS NÃO HÁ\n[/refrão]\nSETE MARAFOS COLOQUEI NA ENCRUZILHADA\nSETE VELAS E CHARUTO, TAMBÉM LEVEI UM PADÊ\nA MEIA NOITE EU CHAMEI POR SEU TRANCA RUA\nOUVI FORTE GARGALHADA E ELE VEIO ME VALER\n[refrão]\nLAROIYÊ EXU AMOJUBÁ\nMELHOR QUE TRANCA-RUAS DAS ALMAS NÃO HÁ\nLAROIYÊ EXU AMOJUBÁ\nMELHOR QUE TRANCA-RUAS DAS ALMAS NÃO HÁ\n[/refrão]\nFAÇO UM PEDIDO NO MEIO DA ENCRUZILHADA\nA TRANCA RUA DAS ALMAS, ANTES DO GALO CANTAR.\nSE O GALO CANTA, É SINAL QUE TA NA HORA,\nFIRMA GIRA MEU OGÃN QUE TRANCA-RUAS VAI EMBORA",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-15",
+    title: "Ponto de Exú - Tranca-Rua é ordenança de Ogum",
+    guideOrOrixa: "Exú",
+    type: "Chamada",
+    lyrics: "MEIA-NOITE TRANCA-RUA NA ENCRUZA\nPROTEGE QUEM TÁ NA RUA\nDAS MALADAS\nQUE VIER\nCORTA O PERIGO\nAJUDA E FAZ A CARIDADE\nQUEM INSISTE ELE ENCARA\nE AMANSA UM POR UM\n[refrão]\nTRANCA-RUA É ORDENANÇA DE OGUM\nTRANCA-RUA É ORDENANÇA DE OGUM\nTRANCA-RUA É ORDENANÇA DE OGUM\nTRANCA-RUA É ORDENANÇA DE OGUM\n[/refrão]\nÉ TRANCA-RUA\nÉ TRANCA-RUA\nÉ TRANCA-RUA O MEU PROTETOR\nÉ TRANCA-RUA\nÉ TRANCA-RUA\nÉ TRANCA-RUA O MEU PROTETOR\n[refrão]\nTRANCA-RUA É ORDENANÇA DE OGUM\nTRANCA-RUA É ORDENANÇA DE OGUM\nTRANCA-RUA É ORDENANÇA DE OGUM\nTRANCA-RUA É ORDENANÇA DE OGUM\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-16",
+    title: "Ponto de Exú - Ele é capitão da encruzilhada (Tranca-Ruas)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "ELE É CAPITÃO DA ENCRUZILHADA\nELE É, MAS ELE É\nORDENANÇA DE OGUM [2X]\nSUA DIVISA QUEM LHE DEU FOI OXALÁ\nSUA COROA QUEM LHE DEU FOI OMULÚ\nSALVE O SOL\nSALVE A ESTRELA\nSALVE A LUA\nSARAVÁ SEU TRANCA-RUA QUE É DONO A GIRA\nNO MEIO DA RUA [2X]\nENAÊ EMOJUBÁ\nENAÊ EMOJUBÁ\nSARAVÁ SEU TRANCA-RUA\nQUE É DONO DA GIRA NO MEIO DA RUA [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-17",
+    title: "Ponto de Exú - Ele nasceu em Mato Grosso (Tranca-Rua de Embaré)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "ELE NASCEU EM MATO-GROSSO\nELE NASCEU EM MATO-GROSSO\nE SE CRIOU EM NAZARÉ\nELE É FILHO DE UM XAVANTE\nÉ NETO DE UM NAVEGANTE\nÉ TRANCA-RUA DE EMBARÉ\nÉ OU NÃO É\nSEU TRANCA-RUA DE EMBARÉ [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-18",
+    title: "Ponto de Exú - Deu um clarão na encruzilhada (Tranca-Ruas)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "DEU UM CLARÃO NA ENCRUZILHADA\nE DO CLARÃO SURGIU UM GARGALHADA [2X]\nNÃO ERA O SOL\nNÃO ERA A LUA\nO QUE BRILHAVA\nERA O MESTRE TRANCA-RUAS [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-19",
+    title: "Ponto de Exú - Dono do meu caminho (Tranca-Ruas)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "QUANDO O SOL AQUI NÃO MAIS BRILHAR\nQUANDO A LUA SEU CLARÃO REFLETIR\nÉ SINAL QUE ESTÁ NA HORA\nÉ ELE QUE CHEGA AGORA JÁ DEU MEIA-NOITE\nTRANCA-RUA CHEGOU AQUI [2X]\nJUROU AMAR ALGUÉM NA ENCRUZILHADA\nJUROU FAZER O BEM DE MADRUGADA\nPEDE COM FÉ\nCOMPANHEIRO E AMIGO LEAL\nQUE QUEBRA FEITIÇO E TAMBÉM DESFAZ O MAL\nE TODA VEZ QUE NA RUA EU CAMINHAR\nE OUVIR AO LONGE SUA VOZ A ECOAR\nTENHO CERTEZA QUE AGORA NÃO ANDO SOZINHO\nSEU TRANCA-RUA É DONO DO MEU CAMINHO [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-20",
+    title: "Ponto de Exú - Se quiser me ver, suba no barranco Zé (Tranca-Rua de Embaré)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "SE QUISER ME VER\nSUBA NO BARRANCO ZÉ\nO HOMEM É\nTRANCA-RUA DE EMBARÉ [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-21",
+    title: "Ponto de Exú - Eu amei alguém (Tranca-Ruas)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "EU AMEI ALGUÉM\nE ESSE ALGUÉM NÃO AMOU NINGUÉM [2X]\n[refrão]\nEU AMEI O SOL\nEU AMEI A LUA\nMAS NA ENCRUZILHADA\nEU AMEI SEU TRANCA-RUA\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-22",
+    title: "Ponto de Exú - O sino da igrejinha (Tranca-Ruas)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "O SINO DA IGREJINHA\nFAZ BELÉM, BLÉM, BLOM [2X]\nDEU MEIA-NOITE O GALO JÁ CANTOU\nSEU TRANCA-RUAS QUE É DONO DA GIRA\nOH CORRE GIRA\nQUE OGUM MANDOU [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-23",
+    title: "Ponto de Exú - Quando passar na encruzilhada (Tranca-Ruas)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "QUANDO PASSAR NA ENCRUZILHADA\nN'AO SE ESQUEÇA DE OLHAR PRA TRÁS [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-24",
+    title: "Ponto de Exú - Ventou no canavial (Marabô)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "VENTOU NO CANAVIAL\nUM TROVÃO LÁ NO CÉU ECOOU\nVENTOU NO CANAVIAL\nUM TROVÃO LÁ NO CÉU ECOOU\nSALVE IANSÃ E XANGÔ\nSALVE A COROA DO EXÚ MARABÔ\nSALVE IANSÃ E XANGÔ\nSALVE A COROA DO EXÚ MARABÔ",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-25",
+    title: "Ponto de Exú - O Bruxo (Marabô)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "À meia noite,\nAo cair da madrugada,\nGalo canta, é a alvorada\nPia itatuité.\nNem sei de onde começou a caminhada:\nEncruza, calunga, estrada…?\nVenha de onde vier\nEle é o mago, o senhor das oferendas,\nO homem das velhas lendas\nQue fazem o sague gelar;\nEle é o bruxo que faz cura, faz feitiço,\nEm macumba de catiço.\nEna Ena Mojubá!\n[refrão]\nExu Marabô.\nExu Marabô ôh ôh\nExu Marabô\nExu Mrabô\nEle, Elebara.\nEle Alarô\nExu Marabô\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-26",
+    title: "Ponto de Exú - Foi nas almas que eu conheci Marabô",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "FOI NAS ALMAS\nNAS ALMAS QUE EU CONHECI MACUMBA [2X]\nFOI , OH FOI NAS ALMAS\nQUE EU CONHECI NAGÔ\nFOI, OH FOI NAS ALMAS\nQUE EU CONHECI MARABÔ",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-27",
+    title: "Ponto de Exú - Deu meia-noite na terra e no mar (Meia-Noite)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "DEU MEIA-NOITE NA TERRA E NO MAR\nDEU NO MATO\nNA CALUNGA\nEM TODO LUGAR\nDEU MEIA-NOITE NA TERRA E NO MAR\nDEU NO MATO\nNA CALUNGA\nEM TODO LUGAR\nSEU MEIA-NOITE NÃO TEM HORA PRA CHEGAR\nQUANDO CHEGA MEIA-NOITE\nCHEGA EM QUALQUER LUGAR\nSEU MEIA-NOITE NÃO TEM HORA PRA CHEGAR\nQUANDO CHEGA MEIA-NOITE\nCHEGA EM QUALQUER LUGAR",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-28",
+    title: "Ponto de Exú - É a hora, é chegada a hora (Caveira)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "É A HORA\nÉ CHEGADA A HORA\nDE FIRMAR NOSSA PORTEIRA\nCOM A FORÇA DA FALANGE DOS CAVEIRAS [2X]\nVAMOS TODOS BATER PALMAS\nPARA QUANDO EXÚ CHEGAR\nQUERO VER SUA GARGALHADA\nATÉ O DIA CLAREAR\nELE VEM DO CEMITÉRIO\nELE VEM LÁ DA CALUNGA\nSARAVÁ JOÃO CAVEIRA\nE SEU SETE CATACUMBAS\n[refrão]\nÉ A HORA\nÉ CHEGADA A HORA\nDE FIRMAR NOSSA PORTEIRA\nCOM A FORÇA DA FALANGE DOS CAVEIRAS [2X]\n[/refrão]\nO PRIMEIRO ENVIADO É O SEU TATA CAVEIRA\nVOU CHAMAR EXÚ VELUDO (qualquer exú)\nE TAMBÉM SETE PORTEIRAS\nTODOS ELES MENSAGEIROS\nDO NOSSO PAI OMULÚ\nPOR ISSO HOJE A NA GIRA\nVAMOS SARAVÁ EXÚ\n[refrão]\nÉ A HORA\nÉ CHEGADA A HORA\nDE FIRMAR NOSSA PORTEIRA\nCOM A FORÇA DA FALANGE DOS CAVEIRAS [2X]\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-29",
+    title: "Ponto de Exú - Portão de ferro, cadeado de madeira (Caveira)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "PORTÃO DE FERRO\nCADEADO DE MADEIRA\nPORTÃO DE FERRO\nCADEADO DE MADEIRA\nÉ NA PORTA DO CEMITÉRIO\nONDE MORA EXÚ CAVEIRA\nÉ NA PORTA DO CEMITÉRIO\nONDE MORA EXÚ CAVEIRA",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-30",
+    title: "Ponto de Exú - Folha da bananeira (Caveira)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "Ê, Caveira, firma seu ponto na folha da bananeira,\nExú Caveira! (x2)\nQuando o galo canta é madrugada,\nFoi Exú na encruzilhada, batizado com dendê.\nRezo uma oração de traz pra frente,\nEu queimo fogo e a chama ardente aquece Exú , Ô Laroiê.\nEu ouço a gargalhada do Diabo,\nÉ Caveira, o enviado do Príncipe Lúcifer.\nÉ ele quem comanda o cemitério,\nCatacumba tem mistério, seu feitiço tem axé. Ê Caveira!\nÊ, Caveira, afirma ponto na folha da bananeira, Exú Caveira! (x2)\nNa Calunga, quando ele aparece,\nCredo e cruz, eu rezo prece pra Exú, dono da rua.\nSinto a força deste momento,\nE firmo o meu pensamento nos quatros cantos da rua.\nE peço a ele que me proteja,\nOnde quer que eu esteja ao longo desta caminhada.\nConfio em sua ajuda verdadeira,\nEle é Exú Caveira, Senhor das Encruzilhadas. Ê Caveira !\nÊ, Caveira, afirma ponto na folha da bananeira, Exú Caveira! (x2)",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-31",
+    title: "Ponto de Exú - Morte na porteira (Caveira)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "[refrão]\nSE MATAR O BOI\nMATA NA PORTEIRA\nSE MATAR O BOI\nMATA NA PORTEIRA\nCOME A CARNE TODA\nE DEIXA O OSSO PRO CAVEIRA\nCOME A CARNE TODA\nE DEIXA O OXXO PRO CAVEIRA\n[/refrão]\nA PORTEIRA É LARGA\nDEIXA O BOI PASSAR\nSE ELE NÃO MORRER AQUI\nMORRE EM QUALQUER LUGAR",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-32",
+    title: "Ponto de Exú - Mosca varejeira (Caveira)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "EH PUERÊ\nEH PUERÁ [2X]\nOLHA MOSCA VAREJEIRA\nSALVE EXÚ CAVEIRA [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-33",
+    title: "Ponto de Exú - No corredor do cemitério (Sete Catacumbas)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "NO CORREDOR DO CEMITÉRIO\nEU AVISTEI SETE CATACUMBAS [2X]\nELE PULAVA NUM PÉ SÓ\nPULANDO DE TUMBA EM TUMBA [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-34",
+    title: "Ponto de Exú - Quem está dormindo acorda (Lúcifer)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "QUEM ESTÁ DORMINDO ACORDA\nQUEM ESTÁ SENTADO FICA EM PÉ [2X]\nÉ HORA\nÉ HORA\nÉ HORA\nDE SALVAR SEU LÚCIFER [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-35",
+    title: "Ponto de Exú - Pinga fogo lá no alto",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "PINGA FOFO LÁ NO ALTO\nPINGA FOGO LÁ NA SERRA [2X]\nABRE A PORTEIRA MINHA GENTE\nEXÚ PINGA FOGO ESTÁ NA TERRA [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-36",
+    title: "Ponto de Exú - Me cobre com a sua capa (Sete Capas)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "SEU SETE CAPAS\nME COBRE COM A SUA CAPA\nQUEM TEM SUA CAPA ESCAPA\nQUEM TEM SUA CAPA ESCAPA\nA SUA CAPA É UM MANTO DE CARIDADE\nSUA CAPA COBRE TUDO SÓ NÃO COBRE A FALSIDADE [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-37",
+    title: "Ponto de Exú - Na estrada tem um ganga (Sete Porteiras)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "NA ESTRADA TEM UM GANGA\nGANGA NÃO LEVA CARREIRA [2X]\nQUANDO A DEMANDA É GRANDE\nCHAMA POR SETE PORTEIRAS [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-38",
+    title: "Ponto de Exú - Debaixo daquela figueira",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "DEBAIXO DAQUELA FIGUEIRA\nFIZERAM UM FEITIÇO PRA ME DERRUBAR\nDEBAIXO DAQUELA FIGUEIRA\nFIZERAM UM FEITIÇO PRA ME DERRUBAR\nNO DIA DA FESTA EU VOU LÁ\nNO DIA DA FESTA EU VOU LÁ\nNO DIA DA FESTA EU VOU LÁ\nNO DIA DA FESTA EU VOU LÁ",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-39",
+    title: "Ponto de Exú - Plantei jiló, nasceu quiabo (Quimbanda)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "PLANTEI JILÓ\nNASCEU QUIABO\nPLANTEI JILÓ\nNASCEU QUIABO\nQUE FAMÍLIA É ESSA?\nÉ A FAMÍLIA DO DIABO\nQUE FAMÍLIA É ESSA?\nÉ A FAMÍLIA DO DIABO",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-40",
+    title: "Ponto de Exú - Bode preto bé bé (Quimbanda)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "MEU BODE PRETO BÉ BÉ\nAFIRMA PONTO QUEM TEM\nMEU BODE PRETO BÉ BÉ\nAFIRMA PONTO QUEM TEM\nMEU EXÚ TÁ VIRADO NA LINHA DO CÃO\nDERRUBA INIMIGO NO CHÃO\nMEU EXÚ TÁ VIRADO NA LINHA DO CÃO\nDERRUBA INIMIGO NO CHÃO",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-41",
+    title: "Ponto de Exú - Estava dormindo na porteira do gongá",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "ESTAVA DORMINDO NA PORTEIRA DO GONGÁ\nESTAVA DORMINDO NA PORTEIRA DO GONGÁ\nQUEM TEM INIMIGO NÃO DORME\nLEVANTA PRA TRABALHAR\nQUEM TEM INIMIGO NÃO DORME\nLEVANTA PRA TRABALHAR",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-42",
+    title: "Ponto de Exú - Não mexa com o povo da calunga",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "NÃO MEXA COM O POVO DA CALUNGA\nNÃO MEXA COM O POVO DA CALUNGA\nA COVA PODE SER RASA MAS A TERRA É PROFUNDA\nA COVA PODE SER RASA MAS A TERRA É PROFUNDA\nNÃO É BRINCADEIRA PENSE BEM ANTES DE ENTRAR\nTEM GUARDIÃO NA PORTEIRA\nSENTINELA A VIGIAR\nPRESTE ATENÇÃO NO CAMINHO QUE ESCOLHER\nPODE NÃO HAVER RETORNO\nQUANDO SE ARREPENDER\nNÃO MEXA COM O POVO DA CALUNGA\nNÃO MEXA COM O POVO DA CALUNGA\nA COVA PODE SER RASA MAS A TERRA É PROFUNDA\nA COVA PODE SER RASA MAS A TERRA É PROFUNDA\nTOME CUIDADO COM AQUILO QUE PEDIR\nPOIS PERDE A TRANQUILIDADE\nQUEM VIVE PRA DESTRUIR\nNÃO FAÇA AOS OUTROS\nO QUE NÃO QUER RECEBER\nPOIS O MAL SE TORNA O DOBRO\nQUANDO VOLTA PRA VOCÊ\nNÃO MEXA COM O POVO DA CALUNGA\nNÃO MEXA COM O POVO DA CALUNGA\nA COVA PODE SER RASA MAS A TERRA É PROFUNDA\nA COVA PODE SER RASA MAS A TERRA É PROFUNDA",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-43",
+    title: "Ponto de Exú - Me disseram que essa casa ia cair",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "ME DISSERAM QUE ESSA CASA IA CAIR\nME DISSERAM QUE ESSA CASA IA CAIR\nMAS ELA É MADEIRA\nQUE NÃO DÁ CUPIM [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-44",
+    title: "Ponto de Exú - Diabo velho eu vou cortar seu chifre",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "DIABO VELHO EU VOU CORTAR SEU CHIFRE\nVOU CORTAR SEU RABO E DAR PRA EXÚ COMER [2X]\nDA SUA LÍNGUA VOU FAZER CHICOTE\nPRA BATER NAS COSTAS DE QUEM FALA MAL DE MIM [2X]\n[refrão]\nFALA MAL DE MIM, SÓ NÃO FALA POR DE TRÁS\nFALA MAL DE MIM, SÓ NÃO FALA POR DE TRÁS\nPEGA ELA DIABO, PEGA ELA SATANÁS\nPEGA ELA DIABO, PEGA ELA SATANÁS\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-45",
+    title: "Ponto de Exú - Santo Antônio de batalha",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "SANTA ANTÔNIO DE BATALHA\nFAZ DE MIM BATALHADOR\nCORRE GIRA SANTO ANTÔNIO\nTRANCA-RUA E MARABÔ [2X]\nSANTA ANTÔNIO DE BATALHA\nFAZ DE MIM BATALHADOR\nCORRE GIRA SANTO ANTÔNIO\nTRANCA-RUA E MARABÔ [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-46",
+    title: "Ponto de Exú - Bate no couro Ogan pra Exú (Sustentação)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "BATE NO COURO OGAN PRA EXÚ\nDIZENDO LA LA Ê LA LA Ô\nBATE NO COURO OGAN PRA EXÚ\nDIZENDO LA LA Ê LA LA Ô\nÊ LA LA Ê LA LA Ô\nÊ LA LA Ê LA LA Ô\nÊ LA LA Ê LA LA Ô\nÊ LA LA Ê LA LA Ô\nCAVUCA MURUNDÚ QUE MURUNDÚ É FUNDO\nEU VOU BUSCAR ESSE DIABO LÁ NO FIM DO MUNDO\nCAVUCA MURUNDÚ QUE MURUNDÚ É FUNDO\nEU VOU BUSCAR ESSE DIABO LÁ NO FIM DO MUNDO",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-47",
+    title: "Ponto de Exú - Exú pede licença",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "OGUM EXÚ PEDE LICENÇA\nPARA O POVO ARRIAR\nOGUM EXÚ PEDE LICENÇA\nPARA O POVO ARRIAR\nMAS ELE É UM EXÚ GUERREIRO\nVEM TRAZENDO FORÇAS PARA ESSE TERREIRO\nMAS ELE É UM EXÚ GUERREIRO\nVEM TRAZENDO FORÇAS PARA ESSE TERREIRO",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-48",
+    title: "Ponto de Exú - Exú a lala ô, a mojúba",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "EXÚ A LALA Ô\nA LALA Ô A MOJUBÁ\nEXÚ A LALA Ô\nA LALA Ô A MOJUBÁ\nSEU TRANCA-RUA [EXÚ] É DA QUERÊ QUERÊ\nMARIA PADILHA [POMBO-GIRA] É DA QUERÊ QUERÁ\nEXÚ CAVEIRA É DA QUERÊ QUERÊ\nMARIA MULAMBO É DA QUERÊ QUERÁ\nEXÚ A LALA Ô\nA LALA Ô A MOJUBÁ\nEXÚ A LALA Ô\nA LALA Ô A MOJUBÁ\n[EXÚ] É DA QUERÊ QUERÊ\n[POMBO-GIRA] É DA QUERÊ QUERÁ",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-49",
+    title: "Ponto de Exú - Olho grande e braços fortes",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "OLHO GRANDE E BRAÇOS FORTES\nEXÚ VELUDO VEM TRAZENDO A SORTE\nOLHO GRANDE E BRAÇOS FORTES\nEXÚ CAVEIRA VEM TRAZENDO A SORTE",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-50",
+    title: "Ponto de Exú - É só pedir com fé",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "[refrão]\nÉ POIS É\nEXÚ DÁ CAMINHO\nÉ SÓ PEDIR COM FÉ\n[/refrão]\nA NOITE É LINDA NO CÉU BRILHA A LUA\nFAÇO UMA ORAÇÃO AO SEU TRANCA-RUAS\nHOMEM VALENTE, MEU PROTETOR\nREI DA ENCRUZILHADA É SEU MARABÔ\nO GALO CANTA DENTRO DA CALUNGA\nSAUDANDO A MAGIA DE SETE CATACUMBAS\nSUAS PALAVRAS SÃO VERDADEIRAS\nQUEM AVISA AMIGO É, DISSE SEU CAVEIRA\n[refrão]\nÉ POIS É\nEXÚ DÁ CAMINHO\nÉ SÓ PEDIR COM FÉ\n[/refrão]\nAO LADO DELE SEI QUE ESTOU SEGURO\nNÃO TENHO NADA A TEMER, ELE É EXÚ VELUDO\nSE ESTOU EM PERIGO, ELE VEM AGIR\nSALVE O EXÚ MENINO, SALVE SEU TIRIRI\nMEUS INIMIGOS NÃO TIRAM MEU SOSSEGO\nTENHO O OMBRO AMIGO DO EXÚ MORCEGO\nE AS MANDINGAS QUE JOGARAM EM MIM\nQUEM CORTOU BRINCANDO FOI EXÚ MIRÍM\nPODE ACREDITAR\nEXÚ VAI LHE AJUDAR\nÉ SÓ PEDIR COM FÉ\nQUE A SUA VIDA VAI MUDAR[2X]\n[refrão]\nÉ POIS É\nEXÚ DÁ CAMINHO\nÉ SÓ PEDIR COM FÉ\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-51",
+    title: "Ponto de Exú - Boa noite (Veludo)",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "QUANDO AMANHECE\nEXÚ VELUDO DÁ BOA NOITE\nQUANDO ANOITECE\nEXÚ VELUDO DÁ BOA NOITE\nBOA NOITE\nBOA NOITE\nBOA NOITE\nEXÚ VELUDO BOA NOITE [2x]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-52",
+    title: "Ponto de Exú - Laroyê Exú",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "LAROYÊ EXÚ\nAH LAROYÊ\nLAROYÊ EXÚ\nLAROYÊ [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-53",
+    title: "Ponto de Exú - Exú pisa no toco",
+    guideOrOrixa: "Exú",
+    type: "Sustentação",
+    lyrics: "EXÚ PISA NO TOCO\nEXÚ PISA NO GALHO\nO GALHO BALANÇA\nEXÚ NÃO CAI, OH GANGA\nEXÚ\nEXÚ PISA NO TOCO\nEM UM GALHO SÓ [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-54",
+    title: "Ponto de Exú - Ogum mandou tirar um ponto pra Exú ir embora (Subida)",
+    guideOrOrixa: "Exú",
+    type: "Subida",
+    lyrics: "OGUM MANDOU\nOGUM MANDOU\nTIRAR UM PONTO\nPRA EXÚ IR EMBORA [2X]\nAH É IR AGORA\nÉ IR AGORA\nAH TODOS OS EXÚS\nJÁ VÃO EMBORA [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-55",
+    title: "Ponto de Exú - Exú da porteira (Subida)",
+    guideOrOrixa: "Exú",
+    type: "Subida",
+    lyrics: "EXÚ PLANTOU BANANEIRA MEIA-NOITE\nPLANTOU UM GALHO NA BEIRA DO CAMINHO [2X]\nSAI DA FRENTE QUE ESSE CABRA É VALENTE\nDEPOIS DA MEIA-NOITE ELE VIRA FEITICEIRO\nELE VAI GIRAR\nELE VAI GIRAR\nLÁ NA PORTEIRA\nELE VAI GIRAR",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
+  },
+  {
+    id: "pnt-exu-56",
+    title: "Ponto de Exú - Calunga está lhe chamando (Subida)",
+    guideOrOrixa: "Exú",
+    type: "Subida",
+    lyrics: "[refrão]\nCALUNGA ESTÁ LHE CHAMANDO\nOH FIRMA EXÚ VAI GIRAR\nQUEM TIVER SUAS DEMANDAS\nPEDE COM FÉ QUE ELES VÃO LEVAR [2X]\n[/refrão]\nCAVEIRA TRABALHOU NA UMBANDA\nDONA FIGUEIRA FIRMOU MINHA GIRA\nCOM TRANCA-RUA E SEU TIRIRI\nEXÚ VELUDO E MARIA PADILHA\n+ [refrão]\nPADILHA VAI PARA ENCRUZILHADA\nEXÚ CAVEIRA PRO CEMITÉRIO\nTIRI, EXÚ VELUDO E MARABÔ\nVÃO AMARRANDO A COISA RUIM NO FERRO [2X]\n+ [refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=R1bkpasSl9M"
   }
 ];

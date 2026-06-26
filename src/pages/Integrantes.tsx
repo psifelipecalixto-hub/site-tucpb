@@ -175,21 +175,35 @@ export default function Integrantes() {
 
     if (storedPoints) {
       const parsed = JSON.parse(storedPoints);
-      const missingInitial = initialPoints.filter(ip => !parsed.find((sp: any) => sp.id === ip.id));
-      if (missingInitial.length > 0) {
-        const merged = [...parsed, ...missingInitial];
-        setCustomPoints(merged);
-        localStorage.setItem("tucpb_points", JSON.stringify(merged));
-      } else {
-        setCustomPoints(parsed);
-      }
+      
+      const updatedParsed = parsed.map((sp: any) => {
+        const initialMatch = initialPoints.find(ip => ip.id === sp.id);
+        if (initialMatch) {
+          return { ...sp, lyrics: initialMatch.lyrics || sp.lyrics, youtubeUrl: initialMatch.youtubeUrl || sp.youtubeUrl };
+        }
+        return sp;
+      });
+
+      const missingInitial = initialPoints.filter(ip => !updatedParsed.find((sp: any) => sp.id === ip.id));
+      const merged = [...updatedParsed, ...missingInitial];
+      
+      setCustomPoints(merged);
+      localStorage.setItem("tucpb_points", JSON.stringify(merged));
     } else {
       setCustomPoints(initialPoints);
       localStorage.setItem("tucpb_points", JSON.stringify(initialPoints));
     }
 
     if (storedArticles) {
-      setArticles(JSON.parse(storedArticles));
+      const parsedArticles = JSON.parse(storedArticles);
+      const updatedArticles = parsedArticles.map((a: any) => {
+        const initialMatch = initialArticles.find(ia => ia.id === a.id);
+        return initialMatch ? { ...a, ...initialMatch } : a;
+      });
+      const missingInitialArticles = initialArticles.filter(ia => !updatedArticles.find((a: any) => a.id === ia.id));
+      const mergedArticles = [...updatedArticles, ...missingInitialArticles];
+      setArticles(mergedArticles);
+      localStorage.setItem("tucpb_articles", JSON.stringify(mergedArticles));
     } else {
       setArticles(initialArticles);
       localStorage.setItem("tucpb_articles", JSON.stringify(initialArticles));
@@ -214,12 +228,14 @@ export default function Integrantes() {
 
     if (storedHerbs) {
       const parsedHerbs = JSON.parse(storedHerbs);
-      if (parsedHerbs.length < initialHerbs.length) {
-        setHerbs(initialHerbs);
-        localStorage.setItem("tucpb_herbs", JSON.stringify(initialHerbs));
-      } else {
-        setHerbs(parsedHerbs);
-      }
+      const updatedHerbs = parsedHerbs.map((h: any) => {
+        const initialMatch = initialHerbs.find(ih => ih.id === h.id);
+        return initialMatch ? { ...h, ...initialMatch } : h;
+      });
+      const missingInitialHerbs = initialHerbs.filter(ih => !updatedHerbs.find((h: any) => h.id === ih.id));
+      const mergedHerbs = [...updatedHerbs, ...missingInitialHerbs];
+      setHerbs(mergedHerbs);
+      localStorage.setItem("tucpb_herbs", JSON.stringify(mergedHerbs));
     } else {
       setHerbs(initialHerbs);
       localStorage.setItem("tucpb_herbs", JSON.stringify(initialHerbs));
@@ -876,6 +892,8 @@ export default function Integrantes() {
       
     return matchesSearch && matchesFilter && matchesGroup;
   });
+
+  const normalizeString = (str: string) => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "").toLowerCase();
 
   const filteredSongs = customPoints.filter(s => 
     s.title.toLowerCase().includes(searchSong.toLowerCase()) || 
@@ -2194,8 +2212,9 @@ export default function Integrantes() {
                </div>
 
                {(() => {
-                 const playlist = initialPlaylists.find(p => p.guideOrOrixa === curimbaLinha);
-                 const pontos = customPoints.filter(p => p.guideOrOrixa === curimbaLinha);
+                 const normalizedLinha = normalizeString(curimbaLinha);
+                 const playlist = initialPlaylists.find(p => normalizeString(p.guideOrOrixa) === normalizedLinha);
+                 const pontos = customPoints.filter(p => normalizeString(p.guideOrOrixa) === normalizedLinha);
                  
                  return (
                    <div className="space-y-6">
