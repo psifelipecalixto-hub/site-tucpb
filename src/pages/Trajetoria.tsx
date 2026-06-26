@@ -40,6 +40,21 @@ function GalleryYouTube({ videoId, title }: { videoId: string; title: string }) 
   );
 }
 
+function GalleryDriveVideo({ videoId, title }: { videoId: string; title: string }) {
+  return (
+    <div className="aspect-[9/16] rounded-3xl overflow-hidden shadow-sm relative group border border-areia-escura bg-black">
+      <iframe 
+        src={`https://drive.google.com/file/d/${videoId}/preview`}
+        allow="autoplay; fullscreen"
+        className="w-full h-full grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 border-none pointer-events-auto" 
+      />
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 translate-y-0 lg:translate-y-full lg:group-hover:translate-y-0 transition-transform duration-500 z-20 pointer-events-none">
+        <span className="text-pena-branca text-base font-serif font-medium tracking-wide">{title}</span>
+      </div>
+    </div>
+  );
+}
+
 export default function Trajetoria() {
   return (
     <div className="animate-fade-in space-y-20 pb-20" id="trajetoria-page">
@@ -235,8 +250,8 @@ export default function Trajetoria() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Gallery Item 1 */}
-          <GalleryYouTube 
-            videoId="sIJRw2AmSUY" 
+          <GalleryDriveVideo 
+            videoId="1lpaDYo9r4UINDKCbiX008E1xb4fUZ0em" 
             title="Gira de Esquerda" 
           />
           
