@@ -528,6 +528,217 @@ export const initialPlaylists: CurimbaPlaylist[] = [
 
 export const initialPoints: CurimbaPoint[] = [
   {
+    id: "pnt-ogum-1",
+    title: "Ponto de Ogum - Pisa na linha de umbanda",
+    guideOrOrixa: "Ogum",
+    type: "Chamada",
+    lyrics: "PISA NA LINHA DE UMBANDA QUE EU QUERO VER\nPISA NA LINHA DE UMBANDA QUE EU QUERO VER\nPISA NA LINHA DE UMBANDA QUE EU QUERO VER\nOGUM IARA\nOGUM MEGÊ [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=MohqdGt0ZYc",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-ogum-2",
+    title: "Ponto de Ogum - Ogum Iara e Ogum Megê",
+    guideOrOrixa: "Ogum",
+    type: "Chamada",
+    lyrics: "OGUM IARA\nOGUM MEGÊ [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=MohqdGt0ZYc",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-ogum-3",
+    title: "Ponto de Ogum - Valente guerreiro aqui chegou",
+    guideOrOrixa: "Ogum",
+    type: "Chamada",
+    lyrics: "VALENTE GUERREIRO\nAQUI CHEGOU\nVENCEDOR DE DEMANDAS\nMEU PROTETOR\n\nEM SUA TRAJETÓRIA\nMEU PAI LUTA CONTRA O MAL\nFOI NOS CAMPOS DE BATALHA\nQUE SE TORNOU GENERAL\n\nSALVE OGUM DE RONDA\nSALVE OGUM MEGÊ\nSALVE SEU BEIRA-MAR\nOGUM IARA E OGUM DILÊ\n\nSALVE TODAS FALANGES\nDESSE GLORIOSO GUERREIRO\nQUE VENCE TODAS DEMANDAS\nAQUI DENTRO DO TERREIRO",
+    youtubeUrl: "https://www.youtube.com/watch?v=x_9AMAQ9Y4k",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-ogum-4",
+    title: "Ponto de Ogum - Eu não seria nada se não fosse Ogum",
+    guideOrOrixa: "Ogum",
+    type: "Chamada",
+    lyrics: "[refrão]\nEU NÃO SERIA NADA\nSE NÃO FOSSE OGUM\nPARA ABRIR\nA MINHA ESTRADA [2X]\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=s5Uu09J75d8",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-ogum-5",
+    title: "Ponto de Ogum - Beira-Mar, auê Beira-Mar",
+    guideOrOrixa: "Ogum",
+    type: "Chamada",
+    lyrics: "BEIRA-MAR, AUÊ BEIRA-MAR\nBEIRA-MAR, AUÊ BEIRA-MAR\nBEIRA-MAR, AUÊ BEIRA-MAR\nBEIRA-MAR, AUÊ BEIRA-MAR",
+    youtubeUrl: "https://www.youtube.com/watch?v=S2n_6s7Wq5o",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-ogum-6",
+    title: "Ponto de Ogum - Ogum já jurou bandeira",
+    guideOrOrixa: "Ogum",
+    type: "Chamada",
+    lyrics: "OGUM JÁ JUROU BANDEIRA\nNOS CAMPOS DO HUMAITÁ\nOGUM JÁ VENCEU DEMANDA\nVAMOS TODOS SARAVÁ",
+    youtubeUrl: "https://www.youtube.com/watch?v=GieA4Wbfuk0",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-ogum-7",
+    title: "Ponto de Ogum - Ele venceu a guerra",
+    guideOrOrixa: "Ogum",
+    type: "Chamada",
+    lyrics: "ELE VENCEU A GUERRA\nELE TOCOU CLARIM [2X]\nELE JUROU JUSTIÇA\nELE LUTOU POR MIM\n\n[refrão]\nSÃO DOIS IRMÃOS\nNA MADRUGADA\nSEU OGUM BEIRAMAR E SEU OGUM MATINATA",
+    youtubeUrl: "https://www.youtube.com/watch?v=GieA4Wbfuk0",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-ogum-8",
+    title: "Ponto de Ogum - Beiramar, beirando a areia",
+    guideOrOrixa: "Ogum",
+    type: "Chamada",
+    lyrics: "BEIRAMAR, BEIRANDO A AREIA, SEU\nBEIRAMAR É FILHO DA MAMÃE SEREIA! (X2).\n\nA SUA ESPADA BRILHA NO RAIAR DO DIA,\nSEU BEIRAMAR É FILHO DA VIRGEM MARIA (X2).",
+    youtubeUrl: "https://www.youtube.com/watch?v=S2n_6s7Wq5o"
+  },
+  {
+    id: "pnt-ogum-9",
+    title: "Ponto de Ogum - Beira rio, Beira mar",
+    guideOrOrixa: "Ogum",
+    type: "Chamada",
+    lyrics: "Beira rio, Beira rio Beira mar o que se ganha\nde Ogum Só Ogum pode tirar (2x) Seu Ogum\nde ronda é quem vem girar Vem trazendo\nfolhas para descarregar (2x)",
+    youtubeUrl: "https://www.youtube.com/watch?v=S2n_6s7Wq5o"
+  },
+  {
+    id: "pnt-ogum-10",
+    title: "Ponto de Ogum - Estava na beira da praia",
+    guideOrOrixa: "Ogum",
+    type: "Chamada",
+    lyrics: "ESTAVA NA BEIRA DA PRAIA\nMAS QUANDO EU VI\nSETE ONDAS PASSAR [2X]\n\nABRE A PORTA OH GENTE\nQUE AÍ VEM OGUM",
+    youtubeUrl: "https://www.youtube.com/watch?v=MohqdGt0ZYc"
+  },
+  {
+    id: "pnt-ogum-11",
+    title: "Ponto de Ogum - Sua bandeira cobre os filhos de Jesus",
+    guideOrOrixa: "Ogum",
+    type: "Chamada",
+    lyrics: "OGUM EM SEU CAVALO CORRE\nE A SUA ESPADA RELUZ\n\n[refrão]\nOGUM, OGUM MEGÊ\nSUA BANDEIRA COBRE OS FILHOS DE JESUS ,\nOGUM IÊ\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=MohqdGt0ZYc",
+    rhythm: "Congo de Ouro"
+  },
+  {
+    id: "pnt-ogum-12",
+    title: "Ponto de Ogum - Ele vem remando",
+    guideOrOrixa: "Ogum",
+    type: "Chamada",
+    lyrics: "ELE VEM REMANDO\nELE VEM NAVEGANDO\nCOM A SUA CANOA\nQUANDO ELE CHEGA NA PRAIA\n\nA TERRA TODA CLAREIA\nELE É OGUM MATINATA\n\n[refrão]\nSEU MATINATA\nFIRMA SEU PONTO NA AREIA\nQUANDO ELE CHEGA NA PRAIA\nELE É OGUM DA SEREIA [2X]\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=MohqdGt0ZYc",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-ogum-13",
+    title: "Ponto de Ogum - Senhor das estradas",
+    guideOrOrixa: "Ogum",
+    type: "Chamada",
+    lyrics: "[refrão]\nOH OGUM\nOH OGUM IÊ\nOH OGUM\nOGUM XOROQUÊ\n\nMEU SENHOR DAS ESTRADAS\nOGUM IÊ\nABRA MEUS CAMINHOS\nOGUM IÊ\nMEU SENHOR DA PORTEIRA\nOGUM IÊ\nELE É MEU PAI OGUM XOROQUÊ",
+    youtubeUrl: "https://www.youtube.com/watch?v=MohqdGt0ZYc",
+    rhythm: "Congo de Ouro"
+  },
+  {
+    id: "pnt-ogum-14",
+    title: "Ponto de Ogum - Nos campos do Humaitá",
+    guideOrOrixa: "Ogum",
+    type: "Demanda",
+    lyrics: "NOS CAMPOS DO HUMAITÁ\nOGUM GUERREOU E VENCEU [2X]\n\nGANHOU DIVISA DE GENERAL\nFOI SÃO JOSÉ E MARIA QUEM DEU [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=ZJdFj0v_yD0",
+    rhythm: "Congo de Ouro"
+  },
+  {
+    id: "pnt-ogum-15",
+    title: "Ponto de Ogum - Se meu pai é Ogum, vencedor de demandas",
+    guideOrOrixa: "Ogum",
+    type: "Demanda",
+    lyrics: "E MEU PAI É OGUM\nVENCEDOR DE DEMANDAS\nELE VEM DE ARUANDA\nPRA SALVAR FILHOS DE UMBANDA\n\nOGUM, OGUM IARA\nOGUM, OGUM IARA\nSALVE OS CAMPOS DE BATALHA\nSALVE A SEREIA DO MAR\n\nOGUM, OGUM IARA\nSARAVÁ OGUM, OGUM IARA",
+    youtubeUrl: "https://www.youtube.com/watch?v=GieA4Wbfuk0",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-ogum-16",
+    title: "Ponto de Ogum - Saravá meu pai",
+    guideOrOrixa: "Ogum",
+    type: "Demanda",
+    lyrics: "OH OGUM IÊ\nSARAVÁ MEU PAI VEM ME VALER [2X]\n\nOH LIVRAI-ME DA DOR, DA PESTE E DA GUERRA\nPROTEÇÃO MEU PAI PRA NOSSA TERRA [2X]\n\nJESSI, JESSI, JESSI É DE PATAKORI OGUM\nJESSI, JESSI, JESSI OGUM MEU PAI\nJESSI, JESSI, JESSI É DE PATAKORI OGUM\nQUEM É FILHO DE OGUM NÃO CAI [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=MohqdGt0ZYc",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-ogum-17",
+    title: "Ponto de Ogum - Lanceiro de Oxalá",
+    guideOrOrixa: "Ogum",
+    type: "Sustentação",
+    lyrics: "LANCEIRO\nLANCEIRO\nLANCEIRO DE OXALÁ [2X]\n\nBENDITO LOUVADO SEJA\nORA MEU DEUS\nA HORA QUE OGUM NASCEU [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=MohqdGt0ZYc",
+    rhythm: "Congo de Ouro"
+  },
+  {
+    id: "pnt-ogum-18",
+    title: "Ponto de Ogum - Na lua nova na Umbanda ele é Ogum",
+    guideOrOrixa: "Ogum",
+    type: "Sustentação",
+    lyrics: "NA LUA NOVA NA UMBANDA ELE É OGUM\nNA LUA NOVA NA UMBANDA ELE É OGUM\n\nOGUM IÊ\nZAMBI ELE É OGUM\nOGUM IÊ\nZAMBI ELE É OGUM [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=MohqdGt0ZYc",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-ogum-19",
+    title: "Ponto de Ogum - Mandei fazer um capacete de penas",
+    guideOrOrixa: "Ogum",
+    type: "Sustentação",
+    lyrics: "MANDEI FAZER\nUM CAPACETE DE PENAS\nPARA USAR\nANTES DA ALVORADA\n\nVERMELHO E BRANCO\nVERDE E AZUL\nESSE CAPACETE\nTEM AS CORES DE OGUM [2X]\n\nDE OGUM MEGÊ\nDE OGUM MATINATA\nDE OGUM MEGÊ\nDE OGUM MATINATA\n\nQUANDO USO O CAPACETE\nOUÇO O TOQUE DA ALVORADA [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=MohqdGt0ZYc",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-ogum-20",
+    title: "Ponto de Ogum - Ele é cavaleiro santo",
+    guideOrOrixa: "Ogum",
+    type: "Sustentação",
+    lyrics: "ELE É CAVALEIRO SANTO\nSEU CAVALO É BRANCO\nELE É GENERAL\n\nÉ FORTE\nUSA ARMADURA\nELE É VALENTE\nLUTA CONTRA O MAL",
+    youtubeUrl: "https://www.youtube.com/watch?v=MohqdGt0ZYc"
+  },
+  {
+    id: "pnt-ogum-21",
+    title: "Ponto de Ogum - Ogum olha sua bandeira",
+    guideOrOrixa: "Ogum",
+    type: "Sustentação",
+    lyrics: "OGUM OLHA SUA BANDEIRA\nÉ BRANCA, É VERDE, É ENCARNADA [2X]\n\nOGUM NOS CAMPOS DE BATALHA\nELE VENCEU A GUERRA\nSEM PERDER SOLDADOS [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=MohqdGt0ZYc",
+    rhythm: "Congo de Ouro"
+  },
+  {
+    id: "pnt-ogum-22",
+    title: "Ponto de Ogum - Ogum me disse que dançar nagô é bom",
+    guideOrOrixa: "Ogum",
+    type: "Sustentação",
+    lyrics: "OGUM ME DISSE\nQUE DANÇAR NAGÔ É BOM [2X]\n\nQUE DANÇAR NAGÔ É BOM\nQUE DANÇAR NAGÔ É BOM\nQUE DANÇAR NAGÔ É BOM\nQUE DANÇAR NAGÔ É BOM",
+    youtubeUrl: "https://www.youtube.com/watch?v=MohqdGt0ZYc"
+  },
+  {
+    id: "pnt-ogum-23",
+    title: "Ponto de Ogum - Bandeira linda de Ogum",
+    guideOrOrixa: "Ogum",
+    type: "Sustentação",
+    lyrics: "BANDEIRA LINDA DE OGUM\nQUE ESTÁ IÇADA LÁ NO HUMAITÁ [2X]\n\nREPRESENTANDO GENERAL DE UMBANDA\nOGUM VENCEU DEMANDA LÁ NO HUMAITÁ [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=MohqdGt0ZYc",
+    rhythm: "Congo de Ouro"
+  },
+  {
+    id: "pnt-ogum-24",
+    title: "Ponto de Ogum - Selei, selei",
+    guideOrOrixa: "Ogum",
+    type: "Subida",
+    lyrics: "SELEI SELEI\nMEU PAI OGUM JA VAI EMBORA\nSEU CAVALO SELEI [2x]",
+    youtubeUrl: "https://www.youtube.com/watch?v=vVj4xPqYn9w",
+    rhythm: "Congo"
+  },
+  {
     id: "pnt-pdf-1",
     title: "EU DEFUMEI FOI COM AS ORDENS DE OXALÁ",
     guideOrOrixa: "Oxalá / Defumação",

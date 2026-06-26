@@ -174,7 +174,15 @@ export default function Integrantes() {
     }
 
     if (storedPoints) {
-      setCustomPoints(JSON.parse(storedPoints));
+      const parsed = JSON.parse(storedPoints);
+      const missingInitial = initialPoints.filter(ip => !parsed.find((sp: any) => sp.id === ip.id));
+      if (missingInitial.length > 0) {
+        const merged = [...parsed, ...missingInitial];
+        setCustomPoints(merged);
+        localStorage.setItem("tucpb_points", JSON.stringify(merged));
+      } else {
+        setCustomPoints(parsed);
+      }
     } else {
       setCustomPoints(initialPoints);
       localStorage.setItem("tucpb_points", JSON.stringify(initialPoints));
