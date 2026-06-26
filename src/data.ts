@@ -834,5 +834,217 @@ export const initialPoints: CurimbaPoint[] = [
     type: "Chamada",
     lyrics: "EXÚ _________\nDÁ UMA VOLTA LÁ FORA [2X]\n\nQUEM FOR BOM, BOTA PRA DENTRO\nE QUEM NÃO FOR DEIXA LÁ FORA [2X]",
     rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-boiadeiro-1",
+    title: "Ponto de Boiadeiro - Eu vou chamar o povo do sertão",
+    guideOrOrixa: "Boiadeiro",
+    type: "Chamada",
+    lyrics: "EU VOU CHAMAR,\nEU VOU CHAMAR,\nEU VOU CHAMAR,\nO POVO DO SERTÃO EU VOU CHAMAR. [4 VEZES]\n\nEU VOU CHAMAR,\nSEU ZÉ DO LAÇO.\nPARA NESSE TERREIRO TRABALHAR. [2 VEZES]\n\nEU VOU CHAMAR,\nEU VOU CHAMAR,\nEU VOU CHAMAR,\nO POVO DO SERTÃO EU VOU CHAMAR. [2 VEZES]\n\nEU VOU CHAMAR,\nJOÃO DA ALVORADA.\nPARA NESSE TERREIRO TRABALHAR. [2 VEZES]\n\nEU VOU CHAMAR,\nEU VOU CHAMAR,\nEU VOU CHAMAR,\nO POVO DO SERTÃO EU VOU CHAMAR. [2 VEZES]\n\nEU VOU CHAMAR,\nMAJOR DO DIA.\nPARA NESSE TERREIRO TRABALHAR. [2 VEZES]\n\nEU VOU CHAMAR,\nEU VOU CHAMAR,\nEU VOU CHAMAR,\nO POVO DO SERTÃO EU VOU CHAMAR. [2 VEZES]\n\nEU VOU CHAMAR,\nSEU ZÉ PILINTRA.\nPARA NESSE TERREIRO TRABALHAR. [2 VEZES]\n\nEU VOU CHAMAR,\nSEU ZÉ BAIANO.\nPARA NESSE TERREIRO TRABALHAR. [2 VEZES]\n\nEU VOU CHAMAR,\nTODOS OS MESTRES.\nPARA NESSE TERREIRO TRABALHAR. [2 VEZES]",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08"
+  },
+  {
+    id: "pnt-boiadeiro-2",
+    title: "Ponto de Boiadeiro - A minha boiada é de 31",
+    guideOrOrixa: "Boiadeiro",
+    type: "Chamada",
+    lyrics: "A MINHA BOIADA É DE 31\nA MINHA BOIADA É DE 31\n\nEU JÁ CONTEI\nSÓ TRINTA\nESTÁ FALTANDO UM [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=dURPjTbbPaM",
+    rhythm: "Congo"
+  },
+  {
+    id: "pnt-boiadeiro-3",
+    title: "Ponto de Boiadeiro - Morena cheguei",
+    guideOrOrixa: "Boiadeiro",
+    type: "Chamada",
+    lyrics: "CHEGUEI MORENA, CHEGUEI\nCHEGUEI VOU FIRMAR AGORA\nFOI NO RONCAR DO TAMBOR QUE EU VIM\nSOU BOIADEIRO, CABOCLO DE SAMBANGOLA\n\nNÃO TENHO PAI NEM MÃE,\nNINGUÉM PRA REZAR POR MIM\nA MINHA MÃE É NOSSA SENHORA\nE O MEU PAI SENHOR DO BONFIM",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08"
+  },
+  {
+    id: "pnt-boiadeiro-4",
+    title: "Ponto de Boiadeiro - Boiadeiro era menino",
+    guideOrOrixa: "Boiadeiro",
+    type: "Chamada",
+    lyrics: "BOIADEIRO ERA MENINO\nBOIADEIRO ERA MENINO\nÉ ELE\nQUE TA COM A PALAVRA\n\nE A PALAVRA DVINA\nÉ DE NOSSA SENHORA [2X]\n\n[refrão]\nJETRUÊ , JETRUÊ, JETRUÁ [2x]\nCADÊ A CORDA DE LAÇAR MEU BOI\nCADÊ A CORDA DE MEU BOI LAÇAR\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-boiadeiro-5",
+    title: "Ponto de Boiadeiro - Zé da Campina (Coração de Brasileiro)",
+    guideOrOrixa: "Boiadeiro",
+    type: "Chamada",
+    lyrics: "NO MEIO DA SERRA, EU VI SEU BOIADEIRO.\nHOMEM FORTE E VALENTE, CORAÇÃO DE BRASILEIRO.\nHOMEM FORTE E VALENTE, CORAÇÃO DE BRASILEIRO.\n\nMONTADO EM SEU CAVALO, COM SEU LAÇO NA MÃO.\nDE JALÉCO E CHAPÉU DE COURO, PELAS TERRAS DO SERTÃO.\nDE JALÉCO E CHAPÉU DE COURO, PELAS TERRAS DO SERTÃO.\n\nOLHA LÁ SEU BOIADEIRO, NA LUZ DO ROMPER DA AURORA.\nOLHA LÁ SEU BOIADEIRO, NA LUZ DO ROMPER DA AURORA.\nELE É ZÉ DA CAMPINA, VAQUEIRO DE NOSSA SENHORA.\nELE É ZÉ DA CAMPINA, VAQUEIRO DE NOSSA SENHORA.",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08"
+  },
+  {
+    id: "pnt-boiadeiro-6",
+    title: "Ponto de Boiadeiro - Boiadeiro laçador",
+    guideOrOrixa: "Boiadeiro",
+    type: "Demanda",
+    lyrics: "Lá no sertão, a boiada estourou.\nEu chamei seu Boiadeiro,\nBoiadeiro Laçador\n\nEm cima do seu cavalo\nCom o seu Laço na Mão\nBoiadeiro invocado\nJá correu todo o Sertão\n\nNão tem boi que ele não lace\nCavalo que ele não monte\nNão tem quem já não conheça\nO som do seu grande berrante.",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08"
+  },
+  {
+    id: "pnt-boiadeiro-7",
+    title: "Ponto de Boiadeiro - Meu Grande Mestre Zé Da Virada",
+    guideOrOrixa: "Boiadeiro",
+    type: "Demanda",
+    lyrics: "É CATIMBÓ É CAMARA\nMEU GRANDE MESTRE\nVAI DIZER TEU NOME\nTUA VALENTIA E TRIUNFARÁ\n\nE VEM DESCENDO POR CAMPINAS GRANDES\nE SOBE MORRO PRO GADO LAÇA\nOLHA O VENTO FAZ CURVA NA SERRA\nSEU ZÉ DA VIRADA SEU PONTO RISCA\n\nA TUA FOLHA É CIÊNCIA LINDA\nÉ ALQUIMIA LÁ DO JUREMÁ\nPEGO O CACHIMBO E ASSOPRE\nAO CONTRÁRIO JOGANDO FUMAÇA\nPARA O MAL LEVAR",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08"
+  },
+  {
+    id: "pnt-boiadeiro-8",
+    title: "Ponto de Boiadeiro - João Vaqueiro (Boiadeiro pode mais)",
+    guideOrOrixa: "Boiadeiro",
+    type: "Demanda",
+    lyrics: "EI MENINO, AVISA SEU PATRÃO.\nQUE A ONÇA PEGOU O BOI,\nNA DESCIDA DO GRUTÃO. (EI MENINO)\nEI MENINO, AVISA SEU PATRÃO.\nQUE A ONÇA PEGOU O BOI,\nNA DESCIDA DO GRUTÃO.\n\nMAS AVISA SEU PATRÃO, QUE O BOI ERA FORTE SIM.\nMAS A ONÇA FOI VALENTE, E ACABOU PEGANDO O BOI.\nOLHA A ONÇA PEGA O BOI, PEGA O BOI PEGA UMA BOIADA.\nSÓ NÃO PEGA BOIADEIRO, QUE TEM SUA FACA AFIADA.\nSÓ NÃO PEGA BOIADEIRO, QUE TEM SUA FACA AFIADA.\nOLHA A ONÇA É VALENTE, BOIADEIRO PODE MAIS.\nOLHA A ONÇA É VALENTE, BOIADEIRO PODE MAIS.",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08"
+  },
+  {
+    id: "pnt-boiadeiro-9",
+    title: "Ponto de Boiadeiro - Se tiver cantador",
+    guideOrOrixa: "Boiadeiro",
+    type: "Sustentação",
+    lyrics: "SE TIVER CANTADOR\nME AJUDE UM POUQUINHO\nSE TIVER CANTADOR\nME AJUDE UM POUQUINHO\n\nDOIS \"CANTADOR\" É BOM\nO RUIM É CANTAR SOZINHO\nDOIS \"CANTADOR\" É BOM\nO RUIM É CANTAR SOZINHO",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-boiadeiro-10",
+    title: "Ponto de Boiadeiro - Nas tranças dos seus cabelos",
+    guideOrOrixa: "Boiadeiro",
+    type: "Sustentação",
+    lyrics: "NAS TRANÇAS DOS SEUS CABELOS\nEU BEBI ÁGUA DE GRAVATÁ [2X]\n\nEU BEBI ÁGUA DE GRAVATÁ, SEU BOIADEIRO\nEU BEBI ÁGUA DE GRAVATÁ [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08",
+    rhythm: "Congo de Ouro"
+  },
+  {
+    id: "pnt-boiadeiro-11",
+    title: "Ponto de Boiadeiro - Lua do Gravatá",
+    guideOrOrixa: "Boiadeiro",
+    type: "Sustentação",
+    lyrics: "LUA, OH LUA\nOH LUA DO GRAVATÁ [2X]\n\nOLHA A MENINA NA JANELA\nSEU BOIADEIRO QUER FALAR COM ELA [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08",
+    rhythm: "Congo de Ouro"
+  },
+  {
+    id: "pnt-boiadeiro-12",
+    title: "Ponto de Boiadeiro - Não corte capim aí capineiro",
+    guideOrOrixa: "Boiadeiro",
+    type: "Sustentação",
+    lyrics: "NÃO CORTE AÍ CAPINEIRO\nSÓ CORTE QUANDO EU MANDAR [2X]\n\nE RÊ RÊ RÊ RÊ\nE RÊ RÊ RÊ RÁ [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-boiadeiro-13",
+    title: "Ponto de Boiadeiro - Chó passarinho, saia da beira da estrada",
+    guideOrOrixa: "Boiadeiro",
+    type: "Sustentação",
+    lyrics: "CHO CHO CHO PASSARINHO\nSAIA DA BEIRA DA ESTRADA [2X]\n\nAÍ VAI SEU BOIADEIRO\nTOCANDO A SUA BOIADA [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-boiadeiro-14",
+    title: "Ponto de Boiadeiro - Quando ele vem pelo rio de contas",
+    guideOrOrixa: "Boiadeiro",
+    type: "Sustentação",
+    lyrics: "QUANDO ELE VEM\nVEM PELO RIO DE CONTAS\nQUANDO ELE VAI\nVAI POR AQUELA RUA\n\nOLHA QUE BELEZA\nSEU BOIADEIRO NO CLARÃO DA LUA [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08"
+  },
+  {
+    id: "pnt-boiadeiro-15",
+    title: "Ponto de Boiadeiro - Seu boiadeiro por aqui choveu",
+    guideOrOrixa: "Boiadeiro",
+    type: "Sustentação",
+    lyrics: "SEU BOIADEIRO POR AQUI CHOVEU\nSEU BOIADEIRO POR AQUI CHOVEU [2X]\n\n[refrão]\nCHUVEU CHUVEU , RELAMPEJOU\nFOI TANTA ÁGUA QUE MEU BOI NADOU\n[/refrão]",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08",
+    rhythm: "Congo"
+  },
+  {
+    id: "pnt-boiadeiro-16",
+    title: "Ponto de Boiadeiro - Cadê minha corda de laçar meu boi",
+    guideOrOrixa: "Boiadeiro",
+    type: "Sustentação",
+    lyrics: "CADÊ MINHA CORDA\nDE LAÇAR MEU BOI\nO MEU BOI FUGIU\nE EU NÃO PRA ONDE FOI [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08",
+    rhythm: "Congo"
+  },
+  {
+    id: "pnt-boiadeiro-17",
+    title: "Ponto de Boiadeiro - Bandolê",
+    guideOrOrixa: "Boiadeiro",
+    type: "Sustentação",
+    lyrics: "[refrão]\nBANDOLÊ OLÊ OLÊ\nBANDOLÊ OLÊ OLÁ\nBANDOLÊ SEU BOIADEIRO\nBANDOLÊ OLÊ OLÁ\n\nDA LARANJA EU QUERO UM GOMO\nDO LIMÃO QUERO UM PEDAÇO\nDO CABOCLO BOIADEIRO\nQUERO APENAS UM ABRAÇO",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08",
+    rhythm: "Congo"
+  },
+  {
+    id: "pnt-boiadeiro-18",
+    title: "Ponto de Boiadeiro - Me chamaram de mineiro",
+    guideOrOrixa: "Boiadeiro",
+    type: "Sustentação",
+    lyrics: "ME CHAMARAMM DE MINEIRO\nEU NÃO SOU MINEIRO NÃO\n\nMANSADOR DE BURRO BRAVO\nMINEIRO É MEU PATRÃO\n\n[refrão]\nOH MINEIRO EH\nOH MINEIRO AH\nOH MINEIRO EH\nOH MINEIRO AH\n\nMACUMBA BOA COMO A DE MINAS NÃO HÁ\nMACUMBA BOA COM A DE MINAS NÃO HÁ",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08",
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-boiadeiro-19",
+    title: "Ponto de Boiadeiro - Brado alto",
+    guideOrOrixa: "Boiadeiro",
+    type: "Sustentação",
+    lyrics: "SEU BOIADEIRO DEU UM BRADO TÃO ALTO\nTÃO ALTO QUE SE OUVIU LÁ NO ALÉM[2x]\n\nATÉ O PADRE QUE REZAVA NA CAPELA\nSE AJOELHOU E REZOU AMÉM, AMÉM[2x]",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08"
+  },
+  {
+    id: "pnt-boiadeiro-20",
+    title: "Ponto de Boiadeiro - Olha meu camarada",
+    guideOrOrixa: "Boiadeiro",
+    type: "Sustentação",
+    lyrics: "OLHA MEU CAMARADA\nCAMARADA MEU (2X)\n\nA UMBANDA É UMA ESCOLA\nDE AMOR E CARIDADE\nAQUI DENTRO EU ENCONTREI\nMINHA FAMÍLIA DE VERDADE\n\nOLHA MEU CAMARADA\nCAMARADA MEU (2X)\n\nBOIADEIRO SAMBADOR\nSAMBA ATÉ DE MADRUGADA\nBOIADEIRO TA DANÇANDO\nA IAÔ JÁ TA CANSADA\n\nOLHA MEU CAMARADA\nCAMARADA MEU (2X)\n\nO BARULHO DO ATABAQUE\nESTREMECE TODO CHÃO\nO OGÃ PASSA PRO COURO\nA BATIDA DO CORAÇÃO\n\nOLHA MEU CAMARADA\nCAMARADA MEU (2X)",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08"
+  },
+  {
+    id: "pnt-boiadeiro-21",
+    title: "Ponto de Boiadeiro - Bóia boiadeiro",
+    guideOrOrixa: "Boiadeiro",
+    type: "Sustentação",
+    lyrics: "BÓIA BOIADEIRO\nBOIADEIRO BÓIA (2X)\n\nSE EU CONTAR A MINHA VIDA\nBOIADEIRO CHORA",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08"
+  },
+  {
+    id: "pnt-boiadeiro-22",
+    title: "Ponto de Boiadeiro - Eu tenho meu chapéu de couro",
+    guideOrOrixa: "Boiadeiro",
+    type: "Sustentação",
+    lyrics: "EU TENHO MEU CHAPÉU DE COURO\nEU TENHO A MINHA GUIADA\nEU TENHO MEU LENÇO VERMELHO\nPARA TOCAR MINHA VAQUEJADA.",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08"
+  },
+  {
+    id: "pnt-boiadeiro-23",
+    title: "Ponto de Boiadeiro - Boa noite meus senhores",
+    guideOrOrixa: "Boiadeiro",
+    type: "Sustentação",
+    lyrics: "BOA NOITE MEUS SENHORES\nBOA NOITE MEUS SENHORES\nDA LICENÇA PARA UM CAVALEIRO\nDAI-ME LICENÇA PARA UM CAVALEIRO\n\nPORQUE EU MOREI NA MATA SERRADA\nEU MOREI NA MATA SERRADA\nO MEU NOME É CABOCLO VAQUEIRO\nO MEU NOME É CABOCLO VAQUEIRO\n\nQUE DEUS SALVE A CASA SANTA\nQUE DEUS SALVE A CASA SANTA\nONDE DEUS FEZ A MORADA\nONDE DEUS FEZ A MORADA\n\nONDE MORA O CÁLICE BENTO\nONDE MORA O CÁLICE BENTO\nE A HÓSTIA CONSAGRADA\nE A HÓSTIA CONSAGRADA",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08"
+  },
+  {
+    id: "pnt-boiadeiro-24",
+    title: "Ponto de Boiadeiro - Adeus rolinha",
+    guideOrOrixa: "Boiadeiro",
+    type: "Subida",
+    lyrics: "ADEUS ROLINHA\nROLINHA MEU AMOR\nADEUS ROLINHA\nBATEU ASAS E VOOU\n\nELE VAI EMBORA\nVAI PRA SUA ALDEIA\nELE VAI EMBORA, CAMARADA\nVAI PRA SUA ALDEIA [2X]",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08",
+    rhythm: "Congo"
+  },
+  {
+    id: "pnt-boiadeiro-25",
+    title: "Ponto de Boiadeiro - É hora (Retirada de Boiadeiro)",
+    guideOrOrixa: "Boiadeiro",
+    type: "Subida",
+    lyrics: "É HORA, É HORA\nO GALO CANTA É HORA É HORA (BIS)\n\nSEU BOIADEIRO JÁ VAI EMBORA\nCOM DEUS E NOSSA SENHORA",
+    youtubeUrl: "https://www.youtube.com/watch?v=iCcs9shlx08"
   }
 ];
