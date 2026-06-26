@@ -120,7 +120,7 @@ export default function Integrantes() {
   const [herbGroupFilter, setHerbGroupFilter] = useState<string>("Todos os Grupos");
 
   // --- Curimba States ---
-  const [curimbaLinha, setCurimbaLinha] = useState<string>("Exu");
+  const [curimbaLinha, setCurimbaLinha] = useState<string>("Caboclo");
   const [searchSong, setSearchSong] = useState<string>("");
   const [selectedSong, setSelectedSong] = useState<CurimbaPoint | null>(null);
   const [selectedPlaylist, setSelectedPlaylist] = useState<CurimbaPlaylist | null>(initialPlaylists[0]);
@@ -179,7 +179,14 @@ export default function Integrantes() {
       const updatedParsed = parsed.map((sp: any) => {
         const initialMatch = initialPoints.find(ip => ip.id === sp.id);
         if (initialMatch) {
-          return { ...sp, lyrics: initialMatch.lyrics || sp.lyrics, youtubeUrl: initialMatch.youtubeUrl || sp.youtubeUrl };
+          return { 
+            ...sp, 
+            lyrics: initialMatch.lyrics || sp.lyrics, 
+            youtubeUrl: initialMatch.youtubeUrl || sp.youtubeUrl,
+            guideOrOrixa: initialMatch.guideOrOrixa || sp.guideOrOrixa,
+            title: initialMatch.title || sp.title,
+            type: initialMatch.type || sp.type
+          };
         }
         return sp;
       });
@@ -712,15 +719,16 @@ export default function Integrantes() {
   };
 
   // --- Admin Curimba Handlers ---
-  const handleAddPoint = (e: FormEvent) => {
+  const handleAddPoint = (e: FormEvent, overrideOrixa?: string) => {
     e.preventDefault();
-    if (!newPointTitle || !newPointOrixa || !newPointLyrics) return;
+    const orixaToUse = overrideOrixa || newPointOrixa;
+    if (!newPointTitle || !orixaToUse || !newPointLyrics) return;
 
     if (editPoint?.id) {
        setCustomPoints(customPoints.map(p => p.id === editPoint.id ? {
          ...p,
          title: newPointTitle,
-         guideOrOrixa: newPointOrixa,
+         guideOrOrixa: orixaToUse,
          type: newPointType,
          lyrics: newPointLyrics,
          youtubeUrl: newPointYoutube,
@@ -732,7 +740,7 @@ export default function Integrantes() {
       const newPoint: CurimbaPoint = {
         id: `pt-${Date.now()}`,
         title: newPointTitle,
-        guideOrOrixa: newPointOrixa,
+        guideOrOrixa: orixaToUse,
         type: newPointType,
         lyrics: newPointLyrics,
         youtubeUrl: newPointYoutube,
@@ -2284,7 +2292,7 @@ export default function Integrantes() {
                        <h3 className="font-serif text-xl font-bold text-gray-900 mb-4">{editPoint ? 'Editar Ponto' : `Cadastrar Novo Ponto de ${curimbaLinha}`}</h3>
                        <form onSubmit={(e) => { 
                          setNewPointOrixa(curimbaLinha); 
-                         handleAddPoint(e); 
+                         handleAddPoint(e, curimbaLinha); 
                        }} className="space-y-4">
                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                            <div>
