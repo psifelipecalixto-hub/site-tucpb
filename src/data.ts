@@ -237,6 +237,20 @@ export const initialLessons: Lesson[] = [
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     level: "Avançado",
     tags: ["Fundamento", "Defesa"]
+  },
+  
+  // OUTRAS AULAS E ESTUDOS
+  {
+    id: "les-outros-1",
+    title: "Módulo Complementar: Apostila de Cânticos",
+    category: "Outros",
+    description: "Material de apoio contendo letras, fundamentos e traduções dos principais pontos cantados no terreiro.",
+    duration: "Leitura",
+    instructor: "Babá Felipe",
+    date: "10 de Agosto de 2026",
+    videoUrl: "",
+    level: "Todos",
+    tags: ["Apostila", "Cânticos", "Material de Apoio"]
   }
 ];
 

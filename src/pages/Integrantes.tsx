@@ -2120,7 +2120,7 @@ export default function Integrantes() {
                    })}
 
                    {/* Outras Aulas */}
-                   {filteredLessons.filter(l => !["TRILHA I: A RAIZ", "TRILHA II: O TRONCO", "TRILHA III: A COPA"].includes(l.category)).length > 0 && (
+                   {(filteredLessons.filter(l => !["TRILHA I: A RAIZ", "TRILHA II: O TRONCO", "TRILHA III: A COPA"].includes(l.category)).length > 0 || lessonTrailFilter === "Outros") && (
                        <div className="bg-white rounded-2xl border border-areia-escura shadow-sm overflow-hidden animate-fade-in-quick mt-10">
                          <div className="bg-gray-800 p-5 sm:p-6 border-b-4 border-gray-600">
                            <h2 className="text-xl sm:text-2xl font-serif font-bold text-white tracking-wide">OUTRAS AULAS E ESTUDOS</h2>
@@ -2129,36 +2129,42 @@ export default function Integrantes() {
                            </p>
                          </div>
                          <div className="p-6 bg-areia-suave/30">
-                           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-                             {filteredLessons.filter(l => !["TRILHA I: A RAIZ", "TRILHA II: O TRONCO", "TRILHA III: A COPA"].includes(l.category)).map((lesson) => (
-                                <div key={lesson.id} className="bg-white rounded-xl border border-areia-escura overflow-hidden shadow-sm flex flex-col hover:-translate-y-1 transition-transform group">
-                                  <div className={`relative aspect-video flex items-center justify-center overflow-hidden cursor-pointer ${lesson.imageUrl ? 'bg-black' : 'bg-gradient-to-br from-gray-700 to-gray-900'}`} onClick={() => setSelectedLesson(lesson)}>
-                                    {lesson.imageUrl && <img src={lesson.imageUrl} alt={lesson.title} className="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105" />}
-                                    <PlayCircle className="h-14 w-14 text-white/50 group-hover:scale-110 group-hover:text-white transition-all z-10"/>
-                                    <div className="absolute bottom-3 left-3 bg-black/60 text-white text-[10px] px-2 py-1 rounded font-mono z-10">{lesson.duration}</div>
+                           {filteredLessons.filter(l => !["TRILHA I: A RAIZ", "TRILHA II: O TRONCO", "TRILHA III: A COPA"].includes(l.category)).length > 0 ? (
+                             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+                               {filteredLessons.filter(l => !["TRILHA I: A RAIZ", "TRILHA II: O TRONCO", "TRILHA III: A COPA"].includes(l.category)).map((lesson) => (
+                                  <div key={lesson.id} className="bg-white rounded-xl border border-areia-escura overflow-hidden shadow-sm flex flex-col hover:-translate-y-1 transition-transform group">
+                                    <div className={`relative aspect-video flex items-center justify-center overflow-hidden cursor-pointer ${lesson.imageUrl ? 'bg-black' : 'bg-gradient-to-br from-gray-700 to-gray-900'}`} onClick={() => setSelectedLesson(lesson)}>
+                                      {lesson.imageUrl && <img src={lesson.imageUrl} alt={lesson.title} className="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105" />}
+                                      <PlayCircle className="h-14 w-14 text-white/50 group-hover:scale-110 group-hover:text-white transition-all z-10"/>
+                                      <div className="absolute bottom-3 left-3 bg-black/60 text-white text-[10px] px-2 py-1 rounded font-mono z-10">{lesson.duration}</div>
+                                    </div>
+                                    <div className="p-5 flex-1 flex flex-col gap-3">
+                                      {lesson.tags && (
+                                        <div className="flex flex-wrap gap-2 mb-1">
+                                          {lesson.tags.map(tag => (
+                                            <span key={tag} className="text-[10px] px-2.5 py-1 bg-gray-100 text-gray-700 border border-gray-200 rounded-full font-bold uppercase tracking-wider">
+                                              {tag}
+                                            </span>
+                                          ))}
+                                        </div>
+                                      )}
+                                      <span className="text-[10px] px-2.5 py-1 bg-gray-100 text-gray-700 border border-gray-200 rounded-full font-bold uppercase tracking-wider self-start">
+                                        {lesson.category}
+                                      </span>
+                                      <h3 className="font-serif text-[17px] font-bold text-gray-900 leading-tight">{lesson.title}</h3>
+                                      <p className="text-sm text-gray-600 line-clamp-3 leading-relaxed flex-1">{lesson.description}</p>
+                                      <button onClick={() => setSelectedLesson(lesson)} className="mt-4 w-full py-2.5 bg-gray-800 hover:bg-gray-900 text-white text-xs font-bold rounded-lg transition-colors shadow-sm">
+                                        Acessar Módulo
+                                      </button>
+                                    </div>
                                   </div>
-                                  <div className="p-5 flex-1 flex flex-col gap-3">
-                                    {lesson.tags && (
-                                      <div className="flex flex-wrap gap-2 mb-1">
-                                        {lesson.tags.map(tag => (
-                                          <span key={tag} className="text-[10px] px-2.5 py-1 bg-gray-100 text-gray-700 border border-gray-200 rounded-full font-bold uppercase tracking-wider">
-                                            {tag}
-                                          </span>
-                                        ))}
-                                      </div>
-                                    )}
-                                    <span className="text-[10px] px-2.5 py-1 bg-gray-100 text-gray-700 border border-gray-200 rounded-full font-bold uppercase tracking-wider self-start">
-                                      {lesson.category}
-                                    </span>
-                                    <h3 className="font-serif text-[17px] font-bold text-gray-900 leading-tight">{lesson.title}</h3>
-                                    <p className="text-sm text-gray-600 line-clamp-3 leading-relaxed flex-1">{lesson.description}</p>
-                                    <button onClick={() => setSelectedLesson(lesson)} className="mt-4 w-full py-2.5 bg-gray-800 hover:bg-gray-900 text-white text-xs font-bold rounded-lg transition-colors shadow-sm">
-                                      Acessar Módulo
-                                    </button>
-                                  </div>
-                                </div>
-                             ))}
-                           </div>
+                               ))}
+                             </div>
+                           ) : (
+                             <div className="text-center py-8">
+                               <p className="text-sm text-gray-500 italic">Nenhum conteúdo adicional cadastrado nesta seção.</p>
+                             </div>
+                           )}
                          </div>
                        </div>
                    )}
