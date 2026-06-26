@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { BlogArticle, Lesson, Herb, GiraEvent, MemberTask, CurimbaPoint } from "./types";
+import { BlogArticle, Lesson, Herb, GiraEvent, MemberTask, CurimbaPoint, CurimbaPlaylist } from "./types";
 
 export const initialArticles: BlogArticle[] = [
   {
@@ -303,28 +303,28 @@ export const initialHerbs: Herb[] = [
   { id: "h51", name: "Urtiga", scientificName: "Urtica dioica", orixa: "Exu", grupo: "ÌṢẸ́GUN (Combate e Justiça)", verboAtuante: "DESTRUIR", ritualUse: "Erva de Exu, de natureza agressiva e excitatória. Usada para destruir negatividades densas e afastar energias contrárias.", ofo: "", tags: ["Quente", "Masculina"] }
 ];
 
-export const girasDeCura = [
-  { id: "cura-1", date: "Segunda (06/07)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio." },
-  { id: "cura-2", date: "Segunda (13/07)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio." },
-  { id: "cura-3", date: "Segunda (20/07)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio." },
-  { id: "cura-4", date: "Segunda (27/07)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio." },
-  { id: "cura-5", date: "Segunda (03/08)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio." },
-  { id: "cura-6", date: "Segunda (10/08)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio." },
-  { id: "cura-7", date: "Segunda (17/08)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio." },
-  { id: "cura-8", date: "Segunda (24/08)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio." },
-  { id: "cura-9", date: "Segunda (31/08)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio." },
-  { id: "cura-10", date: "Segunda (14/09)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento normal. (07/09 é Feriado Nacional - Independência, não haverá gira)." },
-  { id: "cura-11", date: "Segunda (21/09)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio." },
-  { id: "cura-12", date: "Segunda (28/09)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio." },
-  { id: "cura-13", date: "Segunda (05/10)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio." },
-  { id: "cura-14", date: "Segunda (19/10)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento normal. (12/10 é Feriado Nacional - N. Sra. Aparecida, não haverá gira)." },
-  { id: "cura-15", date: "Segunda (26/10)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio." },
-  { id: "cura-16", date: "Segunda (09/11)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento normal. (02/11 é Feriado Nacional - Finados, não haverá gira)." },
-  { id: "cura-17", date: "Segunda (16/11)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento normal. (15/11 é Feriado Nacional, gira mantida no dia 16)." },
-  { id: "cura-18", date: "Segunda (23/11)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio." },
-  { id: "cura-19", date: "Segunda (30/11)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio." },
-  { id: "cura-20", date: "Segunda (07/12)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio." },
-  { id: "cura-21", date: "Segunda (14/12)", title: "Encerramento das Giras de Cura", time: "19:00", description: "Última Gira de Cura do ano." }
+export const girasDeCura: GiraEvent[] = [
+  { id: "cura-1", date: "Segunda (06/07)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-2", date: "Segunda (13/07)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-3", date: "Segunda (20/07)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-4", date: "Segunda (27/07)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-5", date: "Segunda (03/08)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-6", date: "Segunda (10/08)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-7", date: "Segunda (17/08)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-8", date: "Segunda (24/08)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-9", date: "Segunda (31/08)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-10", date: "Segunda (14/09)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento normal. (07/09 é Feriado Nacional - Independência, não haverá gira).", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-11", date: "Segunda (21/09)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-12", date: "Segunda (28/09)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-13", date: "Segunda (05/10)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-14", date: "Segunda (19/10)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento normal. (12/10 é Feriado Nacional - N. Sra. Aparecida, não haverá gira).", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-15", date: "Segunda (26/10)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-16", date: "Segunda (09/11)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento normal. (02/11 é Feriado Nacional - Finados, não haverá gira).", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-17", date: "Segunda (16/11)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento normal. (15/11 é Feriado Nacional, gira mantida no dia 16).", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-18", date: "Segunda (23/11)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-19", date: "Segunda (30/11)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-20", date: "Segunda (07/12)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-21", date: "Segunda (14/12)", title: "Encerramento das Giras de Cura", time: "19:00", description: "Última Gira de Cura do ano.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "Confirmada" }
 ];
 
 export const initialGiras: GiraEvent[] = [
@@ -511,7 +511,54 @@ export const initialTasks: MemberTask[] = [
   }
 ];
 
+export const initialPlaylists: CurimbaPlaylist[] = [
+  { id: "pl-1", title: "Playlist de Caboclo", guideOrOrixa: "Caboclo", youtubeUrl: "https://www.youtube.com/watch?v=7D6ZM7hu2D8&list=PLlOqOVuQSG_aDjUJjsKXEa_00fmGKIAlZ&pp=gAQB" },
+  { id: "pl-2", title: "Playlist de Exu", guideOrOrixa: "Exu", youtubeUrl: "https://www.youtube.com/watch?v=rP4JZf4ZEx0&list=PLlOqOVuQSG_ZSxqokwts3l04GMaZKF-vi&pp=gAQB" },
+  { id: "pl-3", title: "Playlist de Pomba Gira", guideOrOrixa: "Pomba Gira", youtubeUrl: "https://www.youtube.com/watch?v=MI4FaYSeh1c&list=PLTMKTJl-SqinZMiZXfxuA4ZvKYHjzVXZg" },
+  { id: "pl-4", title: "Playlist de Preto Velho", guideOrOrixa: "Preto Velho", youtubeUrl: "https://www.youtube.com/watch?v=NAXWtSNEoek&list=PLlOqOVuQSG_bGJfiz05AjD_wVceKNWir0&pp=gAQB" },
+  { id: "pl-5", title: "Playlist de Ogum", guideOrOrixa: "Ogum", youtubeUrl: "https://www.youtube.com/watch?v=Cso8EuMb1Sc&list=PLTMKTJl-SqimobhNrpFX-sTfWLS3fnl8l&pp=0gcJCbAEOCosWNin" },
+  { id: "pl-6", title: "Playlist de Boiadeiro", guideOrOrixa: "Boiadeiro", youtubeUrl: "https://www.youtube.com/watch?v=QH25xWNcsO4&list=PLlOqOVuQSG_araJcq-7n6mNtAGkgvwDkS&pp=gAQB0gcJCbAEOCosWNin" },
+  { id: "pl-7", title: "Playlist de Baiano", guideOrOrixa: "Baiano", youtubeUrl: "https://www.youtube.com/watch?v=TsGKIYZl4ms&list=PLlOqOVuQSG_ZLy2ze07ORZYy0vbIOMmAo&pp=gAQB0gcJCbAEOCosWNin" },
+  { id: "pl-8", title: "Playlist de Cigano", guideOrOrixa: "Cigano", youtubeUrl: "https://www.youtube.com/watch?v=eKuFioj2xXg&list=PLjosQXRCphFvODse4oy56HDZ0u80TU0Aa" },
+  { id: "pl-9", title: "Playlist de Erê", guideOrOrixa: "Erê", youtubeUrl: "https://www.youtube.com/watch?v=H5gqKoVJ-nc&list=PLlOqOVuQSG_bcE-Ag7XfusIuQVRnFQTDj&pp=gAQB" },
+  { id: "pl-10", title: "Playlist de Marinheiro", guideOrOrixa: "Marinheiro", youtubeUrl: "https://www.youtube.com/watch?v=ufYxW_dtCMM&list=PLTMKTJl-Sqikzlb_Q-BStvkWvFQ4Yo7EP" },
+  { id: "pl-11", title: "Playlist de Exu Mirim", guideOrOrixa: "Exu Mirim", youtubeUrl: "https://www.youtube.com/watch?v=lRIQAXyVS_o&list=PLTMKTJl-Sqim1CHjPA3rHS9pBJEvITfJU" },
+  { id: "pl-12", title: "Playlist de Malandro", guideOrOrixa: "Malandro", youtubeUrl: "https://www.youtube.com/watch?v=L2d_1MN5DM0&list=PLlOqOVuQSG_YubKj_yOqiuBF-xAJPspi5&pp=gAQB" }
+];
+
 export const initialPoints: CurimbaPoint[] = [
+  {
+    id: "pnt-pdf-1",
+    title: "EU DEFUMEI FOI COM AS ORDENS DE OXALÁ",
+    guideOrOrixa: "Oxalá / Defumação",
+    type: "Defumação",
+    lyrics: `eu defumei, defumei\ncom as ordens de oxalá\neu defumei, defumei\ncom as ordens de oxalá\n\npra todo o mal\nque aqui se encontra\nohh leva para as ondas do mar [2x]`,
+    rhythm: "Samba Cabula",
+    youtubeUrl: "https://www.youtube.com/watch?v=7D6ZM7hu2D8" // Placeholder since it's from PDF without specific URL
+  },
+  {
+    id: "pnt-pdf-2",
+    title: "CABOCLO SAIU DA MACAIA",
+    guideOrOrixa: "Caboclo",
+    type: "Defumação",
+    lyrics: `CABOCLO SAIU DA MACAIA\nCOM AS ERVAS DA JUREMA NA MÃO\n\nCABOCLO DEFUMOU TERREIRO\nDEFUMOU SEUS FILHOS\nA BANDA DEFUMOU\n\n[refrão]\nDEFUMA, CABOCLO DEFUMA\nCOM AS ERVAS DA JUREMA QUE VOCÊ SEMEOU\n[/refrão] 2X`,
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pdf-3",
+    title: "SE O REI DA MATA É OXOSSI",
+    guideOrOrixa: "Ogum",
+    type: "Defumação",
+    lyrics: `SE O REI DA MATA É OXOSSI\nREI DA PEDREIRA É XANGÔ [2x]\n\n[refrão]\nFOI FOI OGUM QUEM MANDOU\nFOI FOI OGUM QUEM MANDOU\nCOM AS ERVAS DA JUREMA\nEU FAZER DEFUMADOR\n[/refrão]`,
+    rhythm: "Samba Cabula"
+  },
+  {
+    id: "pnt-pdf-4",
+    title: "CHEIROU, COMO CHEIRA UMBANDA",
+    guideOrOrixa: "Umbanda",
+    type: "Defumação",
+    lyrics: `CHEIROU, COMO CHEIRA UMBANDA...\nUMBANDA CHEIROU GUINÉ [2X]\n\nDEFUMA COM JESUS, MARIA E JOSÉ\nVAMOS DEFUMAR FILHOS DE FÉ. [2X]`
+  },
   {
     id: "pnt-1",
     title: "Hino da Umbanda",

@@ -100,11 +100,18 @@ export interface CurimbaPoint {
   id: string;
   title: string;
   guideOrOrixa: string;
-  type: "Abertura" | "Saudação" | "Defumação" | "Chamada" | "Subida";
+  type: "Abertura" | "Saudação" | "Defumação" | "Chamada" | "Subida" | "Playlist" | string;
   lyrics: string;
   author?: string;
   rhythm?: string;
   audioUrl?: string;
   videoUrl?: string;
   youtubeUrl?: string;
+}
+
+export interface CurimbaPlaylist {
+  id: string;
+  title: string;
+  guideOrOrixa: string;
+  youtubeUrl: string;
 }

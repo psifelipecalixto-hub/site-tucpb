@@ -1,7 +1,7 @@
 import { useState, FormEvent, useEffect, useRef, ChangeEvent } from "react";
 import { Lock, Unlock, Users, ClipboardList, BookOpen, Bell, CheckCircle, Search, PlayCircle, TreePine, X, GraduationCap, Upload, Shield, User as UserIcon, Calendar as CalendarIcon, LogOut, Plus, Check, Clock, Trash2, Edit2, Eye, EyeOff } from "lucide-react";
-import { initialPoints, initialLessons, initialHerbs, initialTasks, initialArticles } from "../data";
-import { MemberTask, CurimbaPoint, Lesson, Herb, UserProfile, BlogArticle } from "../types";
+import { initialPoints, initialLessons, initialHerbs, initialTasks, initialArticles, initialPlaylists } from "../data";
+import { MemberTask, CurimbaPoint, Lesson, Herb, UserProfile, BlogArticle, CurimbaPlaylist } from "../types";
 import { supabase } from "../lib/supabase";
 
 // (Empty for cleanup)
@@ -89,8 +89,10 @@ export default function Integrantes() {
   const [herbGroupFilter, setHerbGroupFilter] = useState<string>("Todos os Grupos");
 
   // --- Curimba States ---
+  const [curimbaLinha, setCurimbaLinha] = useState<string>("Exu");
   const [searchSong, setSearchSong] = useState<string>("");
-  const [selectedSong, setSelectedSong] = useState<CurimbaPoint | null>(initialPoints[0]);
+  const [selectedSong, setSelectedSong] = useState<CurimbaPoint | null>(null);
+  const [selectedPlaylist, setSelectedPlaylist] = useState<CurimbaPlaylist | null>(initialPlaylists[0]);
 
   // Load from LocalStorage and Supabase on mount
   useEffect(() => {
@@ -795,6 +797,26 @@ export default function Integrantes() {
     s.guideOrOrixa.toLowerCase().includes(searchSong.toLowerCase()) ||
     s.lyrics.toLowerCase().includes(searchSong.toLowerCase())
   );
+
+  const filteredPlaylists = initialPlaylists.filter(p => 
+    p.title.toLowerCase().includes(searchSong.toLowerCase()) || 
+    p.guideOrOrixa.toLowerCase().includes(searchSong.toLowerCase())
+  );
+
+  const linhasDeTrabalho = [
+    { name: "Caboclo", colorClass: "bg-green-700 text-white border-green-700 hover:bg-green-800" },
+    { name: "Exu", colorClass: "bg-red-800 text-white border-red-800 hover:bg-red-900" },
+    { name: "Pomba Gira", colorClass: "bg-red-600 text-white border-red-600 hover:bg-red-700" },
+    { name: "Preto Velho", colorClass: "bg-zinc-800 text-white border-zinc-800 hover:bg-zinc-900" },
+    { name: "Ogum", colorClass: "bg-blue-800 text-white border-blue-800 hover:bg-blue-900" },
+    { name: "Boiadeiro", colorClass: "bg-amber-800 text-white border-amber-800 hover:bg-amber-900" },
+    { name: "Baiano", colorClass: "bg-yellow-500 text-black border-yellow-500 hover:bg-yellow-600 hover:text-white" },
+    { name: "Cigano", colorClass: "bg-fuchsia-600 text-white border-fuchsia-600 hover:bg-fuchsia-700" },
+    { name: "Erê", colorClass: "bg-pink-400 text-white border-pink-400 hover:bg-pink-500" },
+    { name: "Marinheiro", colorClass: "bg-cyan-600 text-white border-cyan-600 hover:bg-cyan-700" },
+    { name: "Exu Mirim", colorClass: "bg-red-950 text-white border-red-950 hover:bg-black" },
+    { name: "Malandro", colorClass: "bg-red-700 text-white border-red-700 hover:bg-red-800" },
+  ];
 
   return (
     <div className="animate-fade-in pb-16 min-h-screen bg-gray-50" id="integrantes-page">
@@ -2039,65 +2061,122 @@ export default function Integrantes() {
 
           {/* TAB: Curimba */}
           {activeTab === "curimba" && (
-             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 animate-fade-in-quick">
-               <div className="lg:col-span-4 bg-white rounded-xl border border-areia-escura p-4 shadow-sm h-[600px] flex flex-col">
-                 <div className="relative mb-4">
-                   <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
-                   <input type="text" placeholder="Buscar orixá, guia..." value={searchSong} onChange={(e) => setSearchSong(e.target.value)} className="w-full pl-9 pr-4 py-2 bg-areia-suave border border-areia-escura text-xs rounded-lg outline-none focus:border-verde-folha" />
-                 </div>
-                 <div className="overflow-y-auto flex-1 space-y-2 pr-1">
-                   {filteredSongs.map((song) => (
-                     <button key={song.id} onClick={() => setSelectedSong(song)} className={`w-full text-left p-3 rounded-lg border flex flex-col gap-1 ${selectedSong?.id === song.id ? "bg-verde-folha/10 border-verde-folha text-verde-folha" : "bg-white border-areia-escura text-gray-700 hover:bg-gray-50"}`}>
-                       <span className="font-serif text-xs font-bold">{song.title}</span>
-                       <span className="text-[10px] text-gray-500 font-medium">Firmeza: {song.guideOrOrixa}</span>
-                     </button>
+             <div className="space-y-6 animate-fade-in-quick">
+               <div className="bg-white rounded-2xl border border-areia-escura p-4 shadow-sm flex flex-col items-center gap-4">
+                 <div className="flex flex-wrap justify-center gap-2 w-full">
+                   {linhasDeTrabalho.map(linha => (
+                      <button key={linha.name} onClick={() => setCurimbaLinha(linha.name)} className={`px-4 py-2 text-xs font-bold rounded-full border transition-colors shadow-sm ${curimbaLinha === linha.name ? linha.colorClass : "bg-white text-gray-700 border-areia-escura hover:bg-gray-50"}`}>
+                        {linha.name}
+                      </button>
                    ))}
                  </div>
                </div>
-               <div className="lg:col-span-8 bg-white rounded-xl border border-areia-escura p-8 shadow-sm">
-                 {selectedSong ? (
+
+               {(() => {
+                 const playlist = initialPlaylists.find(p => p.guideOrOrixa === curimbaLinha);
+                 const pontos = [...customPoints, ...initialPoints].filter(p => p.guideOrOrixa === curimbaLinha);
+                 
+                 return (
                    <div className="space-y-6">
-                     <div className="border-b border-areia-escura pb-4">
-                       <span className="text-xs font-mono font-bold uppercase tracking-wider text-verde-folha">Ponto de {selectedSong.guideOrOrixa}</span>
-                       <h3 className="font-serif text-2xl font-bold text-gray-900 mt-1">{selectedSong.title}</h3>
-                     </div>
-                     <pre className="font-serif text-sm sm:text-base text-gray-800 whitespace-pre-wrap leading-loose">{selectedSong.lyrics}</pre>
-
-                     {/* Media Rendering */}
-                     {(selectedSong.youtubeUrl || selectedSong.audioUrl || selectedSong.videoUrl) && (
-                       <div className="pt-6 border-t border-areia-escura space-y-4">
-                         <h4 className="font-bold text-sm text-gray-900 uppercase">Mídia de Estudo</h4>
-                         
-                         {selectedSong.youtubeUrl && (
-                           <div className="aspect-video w-full rounded-xl overflow-hidden bg-black">
-                             <iframe 
-                               src={selectedSong.youtubeUrl.replace("watch?v=", "embed/")} 
-                               title="YouTube video player" 
-                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                               allowFullScreen 
-                               className="w-full h-full border-0"
-                             ></iframe>
-                           </div>
-                         )}
-
-                         {selectedSong.videoUrl && !selectedSong.youtubeUrl && (
-                           <div className="aspect-video w-full rounded-xl overflow-hidden bg-black">
-                             <video src={selectedSong.videoUrl} controls className="w-full h-full object-contain" />
-                           </div>
-                         )}
-
-                         {selectedSong.audioUrl && (
-                           <div className="w-full bg-areia-suave p-4 rounded-xl border border-areia-escura">
-                             <audio src={selectedSong.audioUrl} controls className="w-full" />
-                           </div>
-                         )}
+                     {playlist && (
+                       <div className="bg-white rounded-2xl border border-areia-escura p-6 shadow-sm">
+                         <h3 className="font-serif text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                           <PlayCircle className="h-5 w-5 text-red-600"/>
+                           Playlist Base: {playlist.title}
+                         </h3>
+                         <div className="aspect-video w-full rounded-xl overflow-hidden bg-black mx-auto">
+                           <iframe 
+                             src={playlist.youtubeUrl.replace("watch?v=", "embed/").replace(/&list=/, "?list=")} 
+                             title="YouTube playlist player" 
+                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                             allowFullScreen 
+                             className="w-full h-full border-0"
+                           ></iframe>
+                         </div>
+                         <div className="mt-4 flex justify-center">
+                           <a href={playlist.youtubeUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-6 py-2.5 bg-red-600 text-white rounded-lg text-sm font-bold hover:bg-red-700 transition shadow-sm">
+                             <PlayCircle className="h-5 w-5"/> Abrir no YouTube
+                           </a>
+                         </div>
                        </div>
                      )}
+
+                     <div className="bg-white rounded-2xl border border-areia-escura p-6 shadow-sm">
+                       <h3 className="font-serif text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                         <BookOpen className="h-5 w-5 text-verde-folha"/>
+                         Pontos Cadastrados - {curimbaLinha}
+                       </h3>
+                       {pontos.length > 0 ? (
+                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                           {pontos.map(ponto => (
+                             <div key={ponto.id} className="border border-areia-escura rounded-xl p-4 bg-areia-suave">
+                               <h4 className="font-bold text-sm text-gray-900 mb-1">{ponto.title}</h4>
+                               <p className="text-xs text-gray-500 font-medium mb-3">Tipo: {ponto.type}</p>
+                               <pre className="font-serif text-sm text-gray-800 whitespace-pre-wrap leading-relaxed bg-white p-3 rounded border border-gray-100">{ponto.lyrics}</pre>
+                               {ponto.youtubeUrl && (
+                                 <a href={ponto.youtubeUrl} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1 text-xs font-bold text-red-600 hover:text-red-800">
+                                   <PlayCircle className="h-3 w-3"/> Ver no YouTube
+                                 </a>
+                               )}
+                             </div>
+                           ))}
+                         </div>
+                       ) : (
+                         <p className="text-sm text-gray-500 italic">Nenhum ponto cadastrado para esta linha ainda.</p>
+                       )}
+                     </div>
+
+                     <div className="bg-white rounded-2xl border border-areia-escura p-6 shadow-sm">
+                       <h3 className="font-serif text-xl font-bold text-gray-900 mb-4">Cadastrar Novo Ponto de {curimbaLinha}</h3>
+                       <form onSubmit={(e) => { 
+                         setNewPointOrixa(curimbaLinha); 
+                         handleAddPoint(e); 
+                       }} className="space-y-4">
+                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                           <div>
+                             <label className="text-[11px] font-bold text-gray-700 uppercase">Título do Ponto</label>
+                             <input type="text" required placeholder="Ex: Ponto de Subida" value={newPointTitle} onChange={(e) => setNewPointTitle(e.target.value)} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                           </div>
+                           <div>
+                             <label className="text-[11px] font-bold text-gray-700 uppercase">Tipo / Momento</label>
+                             <select value={newPointType} onChange={(e) => setNewPointType(e.target.value as CurimbaPoint["type"])} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha">
+                               <option value="Abertura">Abertura</option>
+                               <option value="Saudação">Saudação</option>
+                               <option value="Defumação">Defumação</option>
+                               <option value="Chamada">Chamada</option>
+                               <option value="Subida">Subida</option>
+                               <option value="Firmeza">Firmeza</option>
+                               <option value="Louvação">Louvação</option>
+                               <option value="Descarrego">Descarrego</option>
+                             </select>
+                           </div>
+                         </div>
+                         <div>
+                           <label className="text-[11px] font-bold text-gray-700 uppercase">Letra do Ponto</label>
+                           <textarea required rows={4} placeholder="Letra completa..." value={newPointLyrics} onChange={(e) => setNewPointLyrics(e.target.value)} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha font-serif" />
+                         </div>
+                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                           <div>
+                             <label className="text-[11px] font-bold text-gray-700 uppercase">URL YouTube</label>
+                             <input type="url" placeholder="https://youtube.com/watch?v=..." value={newPointYoutube} onChange={(e) => setNewPointYoutube(e.target.value)} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                           </div>
+                           <div>
+                             <label className="text-[11px] font-bold text-gray-700 uppercase">URL Áudio</label>
+                             <input type="url" placeholder="https://.../audio.mp3" value={newPointAudio} onChange={(e) => setNewPointAudio(e.target.value)} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                           </div>
+                           <div>
+                             <label className="text-[11px] font-bold text-gray-700 uppercase">URL Vídeo</label>
+                             <input type="url" placeholder="https://.../video.mp4" value={newPointVideo} onChange={(e) => setNewPointVideo(e.target.value)} className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm outline-none focus:border-verde-folha" />
+                           </div>
+                         </div>
+                         <button type="submit" className="w-full bg-verde-mata text-white py-2 rounded text-sm font-bold hover:bg-verde-folha transition flex justify-center items-center gap-2">
+                            Salvar Ponto Cantado <Plus className="h-4 w-4"/>
+                         </button>
+                       </form>
+                     </div>
                    </div>
-                 ) : (
-                   <div className="h-full flex items-center justify-center text-gray-400"><BookOpen className="h-12 w-12 opacity-20" /></div>
-                 )}
-               </div>
+                 );
+               })()}
              </div>
           )}
 
