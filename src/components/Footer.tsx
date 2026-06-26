@@ -31,7 +31,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <span className="text-xs text-marrom-claro italic font-semibold">— Caboclo das Sete Encruzilhadas (através de Zélio Fernandino de Moraes)</span>
             </p>
             <p className="text-xs text-areia-escura/80 leading-relaxed">
-              O Templo Umbandista Caboclo Pena Branca (TUCPB) baseia seus trabalhos no amor, na humildade, no respeito à natureza e na caridade espiritual totalmente gratuita.
+              No Templo Umbandista Caboclo Pena Branca (TUCPB), você encontra um verdadeiro refúgio de paz. Através do amor, da humildade e da caridade espiritual totalmente gratuita, nossa missão é acolher suas dores e iluminar seus caminhos.
             </p>
           </div>
 
