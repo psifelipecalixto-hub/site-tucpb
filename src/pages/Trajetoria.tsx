@@ -89,17 +89,21 @@ export default function Trajetoria() {
             
             <div className="lg:col-span-4 flex justify-center lg:justify-end">
               {/* Elegant bio avatar design, with a natural warm aura frame */}
-              <div className="relative w-72 h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-white flex flex-col items-center justify-end p-6 text-center transform hover:scale-105 transition-transform duration-500 group">
-                <div className="absolute inset-0 bg-marrom-terra/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-                <img src="/SaveClip.App_581942069_17904889521273292_5595332920639976122_n.jpg" alt="Pai Felipe" className="absolute inset-0 w-full h-full object-cover object-top" />
+              <div className="relative w-72 h-96 rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-[#d4af37]/20 flex flex-col items-center justify-end p-6 text-center transform hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(212,175,55,0.15)] transition-all duration-700 group">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-black/30 to-transparent z-10 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-[#d4af37]/10 mix-blend-color z-10 pointer-events-none"></div>
                 
-                {/* Glowing ring */}
-                <div className="absolute inset-4 rounded-2xl border border-white/20 z-20"></div>
+                <img src="/Gemini_Generated_Image_yte9zwyte9zwyte9.png" alt="Pai Felipe" className="absolute inset-0 w-full h-full object-cover grayscale-[20%] sepia-[10%] contrast-[1.05] brightness-[0.95] scale-[1.45] origin-[50%_40%] group-hover:grayscale-0 group-hover:sepia-0 group-hover:scale-[1.5] transition-all duration-1000" />
                 
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-6 pt-12 z-20">
+                {/* Elegant inner rings */}
+                <div className="absolute inset-3 rounded-3xl border border-[#d4af37]/30 z-20 pointer-events-none opacity-80"></div>
+                <div className="absolute inset-4 rounded-[1.25rem] border border-white/5 z-20 pointer-events-none"></div>
+                
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-20 pointer-events-none transform group-hover:-translate-y-1 transition-transform duration-700 flex flex-col items-center">
+                  <div className="h-[2px] w-8 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mb-3 opacity-80"></div>
                   <div className="relative z-30 space-y-1">
-                    <div className="text-white font-serif font-bold text-2xl">Pai Felipe</div>
-                    <div className="text-xs font-mono text-[#d4af37] uppercase tracking-widest mt-1">Dirigente Espiritual</div>
+                    <div className="text-white font-serif font-bold text-2xl tracking-wide drop-shadow-lg">Pai Felipe</div>
+                    <div className="text-[0.65rem] font-mono text-[#d4af37] uppercase tracking-[0.3em] font-medium">Dirigente Espiritual</div>
                   </div>
                 </div>
               </div>
@@ -249,28 +253,22 @@ export default function Trajetoria() {
           />
 
           {/* Gallery Item 4 */}
-          <div className="aspect-[9/16] rounded-3xl overflow-hidden shadow-sm relative group cursor-pointer border border-areia-escura">
-            <div className="absolute inset-0 bg-marrom-terra/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-            <img src="/Imagem do WhatsApp de 2024-05-12 à(s) 23.30.39_febd4a3f.jpg" alt="Firmeza no Gongá" className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20">
-              <span className="text-pena-branca text-base font-serif font-medium tracking-wide">Firmeza Sagrada</span>
-            </div>
-          </div>
+          <GalleryYouTube 
+            videoId="blvIb5ilgnY" 
+            title="Trabalho de Cura" 
+          />
 
           {/* Gallery Item 5 */}
           <GalleryYouTube 
-            videoId="rZpCNmcVdkY" 
-            title="Nossa Corrente" 
+            videoId="ycSW6-yAvP4" 
+            title="Feitura de Banho" 
           />
 
           {/* Gallery Item 6 */}
-          <div className="aspect-[9/16] rounded-3xl overflow-hidden shadow-sm relative group cursor-pointer border border-areia-escura">
-             <div className="absolute inset-0 bg-marrom-terra/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-            <img src="/SaveClip.App_519556405_672527209142230_3586110890263026244_n.jpg" alt="Detalhe do Terreiro" className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" />
-             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20">
-              <span className="text-pena-branca text-base font-serif font-medium tracking-wide">Memórias do Terreiro</span>
-            </div>
-          </div>
+          <GalleryYouTube 
+            videoId="torQZG710A0" 
+            title="Memórias do Terreiro" 
+          />
         </div>
       </section>
 
