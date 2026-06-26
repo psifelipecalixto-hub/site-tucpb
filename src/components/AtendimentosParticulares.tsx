@@ -12,10 +12,10 @@ export default function AtendimentosParticulares() {
           
           <div className="lg:col-span-5 space-y-6">
             <h2 className="font-serif text-3xl md:text-4xl font-bold tracking-tight text-marrom-terra leading-tight">
-              Atendimentos Particulares e Consultas de Orientação
+              Você Sente Que Precisa de Respostas? Descubra o Alívio e a Direção Através da Orientação Espiritual.
             </h2>
             <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-              Um espaço dedicado à escuta acolhedora, ao reequilíbrio espiritual e à busca pelo sentido da existência, unindo o rigor do cuidado terapêutico com a sabedoria ancestral.
+              Se você tem carregado um peso inexplicável, angústias ou dúvidas sobre os próximos passos, nós podemos ajudar. Através de um profundo acolhimento, unimos a sabedoria ancestral à escuta atenta para revelar o que está travando a sua vida. Imagine poder acordar amanhã com o coração leve, a mente clara e a certeza de que seus caminhos estão finalmente abertos.
             </p>
             
             <div className="flex flex-col gap-4 pt-4">
@@ -50,7 +50,7 @@ export default function AtendimentosParticulares() {
                 Jogo de Búzios <span className="text-sm font-normal text-marrom-terra block mt-1">(Consulta Sagrada)</span>
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Unindo a profunda sabedoria oracular de Ifá com a escuta fenomenológica. O jogo não é apenas adivinhação, mas uma ferramenta de mapeamento do destino, ajudando a revelar amarras invisíveis e trazendo clareza para a sua existência.
+                Mais do que simples adivinhação, o oráculo revela exatamente onde estão as amarras invisíveis que bloqueiam o seu sucesso e a sua paz. Através da sabedoria milenar, você receberá um mapeamento claro do seu destino e as respostas precisas para tomar as rédeas da sua jornada com total confiança.
               </p>
             </div>
 
@@ -63,7 +63,7 @@ export default function AtendimentosParticulares() {
                 Ebós e Limpezas <span className="text-sm font-normal text-verde-folha block mt-1">(Alinhamento de Axé)</span>
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Rituais sutis e respeitosos de desobsessão e descarrego. O foco é a abertura de caminhos e o reequilíbrio energético do seu campo magnético, trabalhando sempre em sintonia com as forças puras da natureza e dos guias espirituais.
+                Sabe aquela sensação constante de cansaço ou de que tudo dá errado? Nossos rituais de descarrego atuam diretamente na raiz espiritual desses problemas. Com a força pura da natureza, limpamos e blindamos o seu campo magnético para que você volte a prosperar de forma leve e equilibrada.
               </p>
             </div>
           </div>

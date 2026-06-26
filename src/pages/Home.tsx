@@ -5,7 +5,7 @@
 
 import { useState } from "react";
 import { Feather, Heart, TreePine, Sparkles, HelpCircle, ArrowRight, Sun, Flame, Droplets, Landmark, MapPin, Clock, ScrollText, Flower2, Compass } from "lucide-react";
-import { initialGiras } from "../data";
+import { initialGiras, girasDeCura } from "../data";
 import Logo from "../components/Logo";
 import AtendimentosParticulares from "../components/AtendimentosParticulares";
 import InstagramFeed from "../components/InstagramFeed";
@@ -17,8 +17,34 @@ interface HomeProps {
 export default function Home({ onNavigate }: HomeProps) {
   const [activeElement, setActiveElement] = useState<string | null>(null);
   
-  // Find the next upcoming gira
-  const nextGira = initialGiras[0];
+  // Encontrar a próxima gira dinamicamente
+  const getUpcomingGira = () => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const currentYear = today.getFullYear();
+    
+    const allGiras = [...initialGiras, ...girasDeCura].map(gira => {
+      const match = gira.date.match(/\((\d{2})\/(\d{2})\)/);
+      if (!match) return { ...gira, parsedDate: new Date(currentYear, 11, 31) };
+      const day = parseInt(match[1], 10);
+      const month = parseInt(match[2], 10) - 1;
+      let eventDate = new Date(currentYear, month, day);
+      
+      // Ajustar o ano caso o mês do evento já tenha passado (ex: virada de ano)
+      if (eventDate.getTime() < today.getTime() && month < today.getMonth() - 2) {
+          eventDate.setFullYear(currentYear + 1);
+      }
+      
+      return { ...gira, parsedDate: eventDate };
+    });
+
+    const upcoming = allGiras.filter(g => g.parsedDate >= today);
+    upcoming.sort((a, b) => a.parsedDate.getTime() - b.parsedDate.getTime());
+    
+    return upcoming.length > 0 ? upcoming[0] : initialGiras[0];
+  };
+
+  const nextGira = getUpcomingGira();
 
   const gongaElements = [
     {
