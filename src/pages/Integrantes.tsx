@@ -2228,7 +2228,16 @@ export default function Integrantes() {
                {(() => {
                  const normalizedLinha = normalizeString(curimbaLinha);
                  const playlist = initialPlaylists.find(p => normalizeString(p.guideOrOrixa) === normalizedLinha);
-                 const pontos = customPoints.filter(p => normalizeString(p.guideOrOrixa) === normalizedLinha);
+                 const pontos = customPoints.filter(p => {
+                   const nP = normalizeString(p.guideOrOrixa);
+                   const nL = normalizedLinha;
+                   
+                   // Tratamentos específicos
+                   if (nL === 'pretovelho' && nP === 'pretosvelhos') return true;
+                   if (nL === 'exu') return nP === 'exu'; // Para não incluir "exumirim"
+                   
+                   return nP.includes(nL) || nL.includes(nP);
+                 });
                  
                  return (
                    <div className="space-y-6">
@@ -2239,8 +2248,8 @@ export default function Integrantes() {
                            Playlist Base: {playlist.title}
                          </h3>
                          <div className="aspect-video w-full rounded-xl overflow-hidden bg-black mx-auto">
-                           <iframe 
-                             src={getYouTubeEmbedUrl(playlist.youtubeUrl)} 
+                           <iframe key={playlist.id}
+                              src={getYouTubeEmbedUrl(playlist.youtubeUrl)} 
                              title="YouTube playlist player" 
                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                              allowFullScreen 
