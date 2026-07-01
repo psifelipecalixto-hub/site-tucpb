@@ -318,7 +318,7 @@ export const initialHerbs: Herb[] = [
 ];
 
 export const girasDeCura: GiraEvent[] = [
-  { id: "cura-1", date: "Segunda (06/07)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
+  { id: "cura-1", date: "Segunda (06/07)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "Confirmada" },
   { id: "cura-2", date: "Segunda (13/07)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
   { id: "cura-3", date: "Segunda (20/07)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },
   { id: "cura-4", date: "Segunda (27/07)", title: "Gira de Cura e Desobsessão", time: "19:00", description: "Atendimento voltado para cura espiritual e equilíbrio.", orixaGuide: "Pretos Velhos e Caboclos", hasConsultation: true, status: "A Confirmar" },

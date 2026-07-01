@@ -158,20 +158,42 @@ export default function Integrantes() {
       }
     };
 
-    fetchUsers();
+    const fetchTasks = async () => {
+      try {
+        const { data, error } = await supabase.from('tarefas').select('*');
+        if (error) {
+          console.warn("Supabase (tarefas) table not found or error. Using LocalStorage fallback.");
+          loadTasksFromLocal();
+          return;
+        }
+        if (data && data.length > 0) {
+          setTasks(data as MemberTask[]);
+        } else {
+          setTasks(initialTasks);
+        }
+      } catch (err) {
+        console.error("Supabase tasks error:", err);
+        loadTasksFromLocal();
+      }
+    };
 
-    const storedTasks = localStorage.getItem("tucpb_tasks");
+    const loadTasksFromLocal = () => {
+      const storedTasks = localStorage.getItem("tucpb_tasks");
+      if (storedTasks) {
+        setTasks(JSON.parse(storedTasks));
+      } else {
+        setTasks(initialTasks);
+        localStorage.setItem("tucpb_tasks", JSON.stringify(initialTasks));
+      }
+    };
+
+    fetchUsers();
+    fetchTasks();
+
     const storedPoints = localStorage.getItem("tucpb_points");
     const storedArticles = localStorage.getItem("tucpb_articles");
     const storedLessons = localStorage.getItem("tucpb_lessons");
     const storedHerbs = localStorage.getItem("tucpb_herbs");
-
-    if (storedTasks) {
-      setTasks(JSON.parse(storedTasks));
-    } else {
-      setTasks(initialTasks);
-      localStorage.setItem("tucpb_tasks", JSON.stringify(initialTasks));
-    }
 
     if (storedPoints) {
       const parsed = JSON.parse(storedPoints);
@@ -594,19 +616,26 @@ export default function Integrantes() {
 
   // --- Task Handlers ---
   const handleToggleTask = (taskId: string) => {
-    setTasks(
-      tasks.map((t) => {
-        if (t.id === taskId) {
-          const nextStatusMap: Record<MemberTask["status"], MemberTask["status"]> = {
-            "Pendente": "Concluido",
-            "Em Andamento": "Concluido",
-            "Concluido": "Pendente",
-          };
-          return { ...t, status: nextStatusMap[t.status] };
-        }
-        return t;
-      })
-    );
+    let newStatus: MemberTask["status"] = "Pendente";
+    const newTasks = tasks.map((t) => {
+      if (t.id === taskId) {
+        const nextStatusMap: Record<MemberTask["status"], MemberTask["status"]> = {
+          "Pendente": "Concluido",
+          "Em Andamento": "Concluido",
+          "Concluido": "Pendente",
+        };
+        newStatus = nextStatusMap[t.status];
+        return { ...t, status: newStatus };
+      }
+      return t;
+    });
+    
+    setTasks(newTasks);
+    
+    // Background Supabase sync
+    supabase.from('tarefas').update({ status: newStatus }).eq('id', taskId).then(({ error }) => {
+      if (error) console.warn("Supabase (tarefas) might not exist:", error);
+    });
   };
 
   const handleAddTask = (e: FormEvent) => {
@@ -624,6 +653,11 @@ export default function Integrantes() {
 
     setTasks([newTaskItem, ...tasks]);
     setNewTaskText("");
+
+    // Background Supabase sync
+    supabase.from('tarefas').insert([newTaskItem]).then(({ error }) => {
+      if (error) console.warn("Supabase (tarefas) might not exist:", error);
+    });
   };
 
   // --- Profile Editing Handlers ---
@@ -873,7 +907,7 @@ export default function Integrantes() {
     setHerbs(herbs.filter(h => h.id !== id));
   };
 
-  const myTasks = tasks.filter(t => currentUser && t.assignedTo.toLowerCase() === currentUser.name.toLowerCase());
+  const myTasks = tasks.filter(t => currentUser && t.assignedTo.trim().toLowerCase() === currentUser.name.trim().toLowerCase());
 
   // --- Filters ---
   const filteredLessons = lessons.filter(les => {
