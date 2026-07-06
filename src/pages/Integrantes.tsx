@@ -1,5 +1,5 @@
 import { useState, FormEvent, useEffect, useRef, ChangeEvent } from "react";
-import { Lock, Unlock, Users, ClipboardList, BookOpen, Bell, CheckCircle, Search, PlayCircle, TreePine, X, GraduationCap, Upload, Shield, User as UserIcon, Calendar as CalendarIcon, LogOut, Plus, Check, Clock, Trash2, Edit2, Eye, EyeOff } from "lucide-react";
+import { Lock, Unlock, Users, ClipboardList, BookOpen, Bell, CheckCircle, Search, PlayCircle, TreePine, X, GraduationCap, Upload, Shield, User as UserIcon, Calendar as CalendarIcon, LogOut, Plus, Check, Clock, Trash2, Edit2, Eye, EyeOff, Headphones } from "lucide-react";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { initialPoints, initialLessons, initialHerbs, initialTasks, initialArticles, initialPlaylists } from "../data";
@@ -240,22 +240,9 @@ export default function Integrantes() {
       localStorage.setItem("tucpb_articles", JSON.stringify(initialArticles));
     }
 
-    if (storedLessons) {
-      try {
-        const parsedLessons = JSON.parse(storedLessons);
-        const initialIds = initialLessons.map(l => l.id);
-        const customLessons = parsedLessons.filter((l: any) => !initialIds.includes(l.id));
-        const mergedLessons = [...initialLessons, ...customLessons];
-        setLessons(mergedLessons);
-        localStorage.setItem("tucpb_lessons", JSON.stringify(mergedLessons));
-      } catch (e) {
-        setLessons(initialLessons);
-        localStorage.setItem("tucpb_lessons", JSON.stringify(initialLessons));
-      }
-    } else {
-      setLessons(initialLessons);
-      localStorage.setItem("tucpb_lessons", JSON.stringify(initialLessons));
-    }
+    // Lessons are hardcoded for now, clear localStorage and use initial
+    setLessons(initialLessons);
+    localStorage.setItem("tucpb_lessons", JSON.stringify(initialLessons));
 
     if (storedHerbs) {
       const parsedHerbs = JSON.parse(storedHerbs);
@@ -2128,7 +2115,13 @@ export default function Integrantes() {
                                <div key={lesson.id} className="bg-white rounded-xl border border-areia-escura overflow-hidden shadow-sm flex flex-col hover:-translate-y-1 transition-transform group">
                                  <div className={`relative aspect-video flex items-center justify-center overflow-hidden cursor-pointer ${lesson.imageUrl ? 'bg-black' : `bg-gradient-to-br ${theme.gradient}`}`} onClick={() => setSelectedLesson(lesson)}>
                                    {lesson.imageUrl && <img src={lesson.imageUrl} alt={lesson.title} className="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105" />}
-                                   <PlayCircle className={`h-14 w-14 ${theme.playIcon} group-hover:scale-110 transition-all z-10`}/>
+                                   {lesson.videoUrl ? (
+                                     <PlayCircle className={`h-14 w-14 ${theme.playIcon} group-hover:scale-110 transition-all z-10`}/>
+                                   ) : lesson.audioUrl ? (
+                                     <Headphones className={`h-14 w-14 ${theme.playIcon} group-hover:scale-110 transition-all z-10`}/>
+                                   ) : (
+                                     <BookOpen className={`h-14 w-14 ${theme.playIcon} group-hover:scale-110 transition-all z-10`}/>
+                                   )}
                                    <div className="absolute bottom-3 left-3 bg-black/60 text-white text-[10px] px-2 py-1 rounded font-mono z-10">{lesson.duration}</div>
                                  </div>
                                  <div className="p-5 flex-1 flex flex-col gap-3">
@@ -2415,22 +2408,34 @@ export default function Integrantes() {
             </div>
             
             <div className="overflow-y-auto flex-1 bg-white">
-              <div className="bg-black aspect-video w-full flex items-center justify-center overflow-hidden">
-                {selectedLesson.videoUrl ? (
-                  <iframe 
-                    src={selectedLesson.videoUrl} 
-                    title="Video Player" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowFullScreen 
-                    className="w-full h-full border-0"
-                  ></iframe>
-                ) : selectedLesson.imageUrl ? (
-                  <img src={selectedLesson.imageUrl} alt={selectedLesson.title} className="w-full h-full object-cover" />
-                ) : (
-                  <PlayCircle className="h-16 w-16 text-white/30" />
-                )}
-              </div>
+              {(selectedLesson.videoUrl || selectedLesson.imageUrl) && (
+                <div className="bg-black aspect-video w-full flex items-center justify-center overflow-hidden">
+                  {selectedLesson.videoUrl ? (
+                    <iframe 
+                      src={selectedLesson.videoUrl} 
+                      title="Video Player" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowFullScreen 
+                      className="w-full h-full border-0"
+                    ></iframe>
+                  ) : (
+                    <img src={selectedLesson.imageUrl} alt={selectedLesson.title} className="w-full h-full object-cover" />
+                  )}
+                </div>
+              )}
               <div className="p-6">
+                {selectedLesson.audioUrl && (
+                  <div className="mb-6 bg-areia-suave/50 rounded-xl p-4 border border-areia-escura">
+                    <h4 className="text-sm font-bold text-marrom-terra mb-3 flex items-center gap-2">
+                      <Headphones className="h-4 w-4" /> 
+                      Áudio da Aula
+                    </h4>
+                    <audio controls className="w-full h-10 outline-none">
+                      <source src={selectedLesson.audioUrl} type="audio/mpeg" />
+                      Seu navegador não suporta o elemento de áudio.
+                    </audio>
+                  </div>
+                )}
                 <div className="flex flex-wrap gap-3 mb-4">
                   <span className="bg-verde-folha/10 text-verde-folha px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-verde-folha/20">{selectedLesson.category}</span>
                   <span className="bg-marrom-terra/10 text-marrom-terra px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-marrom-terra/20">{selectedLesson.level}</span>

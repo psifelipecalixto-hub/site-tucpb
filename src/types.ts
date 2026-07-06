@@ -28,6 +28,7 @@ export interface Lesson {
   date: string;
   videoUrl: string;
   imageUrl?: string;
+  audioUrl?: string;
   level: string;
   tags?: string[];
 }
