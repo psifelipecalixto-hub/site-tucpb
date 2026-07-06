@@ -44,7 +44,7 @@ export default function Home({ onNavigate }: HomeProps) {
     return upcoming.length > 0 ? upcoming[0] : initialGiras[0];
   };
 
-  const nextGira = getUpcomingGira();
+  const nextGira = { ...getUpcomingGira(), status: "Confirmada" };
 
   const gongaElements = [
     {

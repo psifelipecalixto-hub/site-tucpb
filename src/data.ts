@@ -359,10 +359,10 @@ export const initialGiras: GiraEvent[] = [
     date: "Sábado (11/07)",
     time: "19:00",
     orixaGuide: "Caboclo / Baiano",
-    description: "Atenção: A gira poderá ser cancelada caso o Brasil passe para as quartas de final da Copa. Aguardando confirmação.",
+    description: "Gira de atendimento e desenvolvimento com as linhas de Caboclos e Baianos.",
     hasConsultation: true,
     maxConsultations: 60,
-    status: "A Confirmar"
+    status: "Confirmada"
   },
   {
     id: "gir-3",
