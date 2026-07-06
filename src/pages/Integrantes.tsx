@@ -2431,7 +2431,7 @@ export default function Integrantes() {
                       Áudio da Aula
                     </h4>
                     <audio key={selectedLesson.id} controls className="w-full h-10 outline-none">
-                      <source src={selectedLesson.audioUrl} />
+                      <source src={selectedLesson.audioUrl} type="audio/mp4" />
                       Seu navegador não suporta o elemento de áudio.
                     </audio>
                   </div>
