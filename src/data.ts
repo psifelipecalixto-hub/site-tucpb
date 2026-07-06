@@ -66,68 +66,6 @@ export const initialLessons: Lesson[] = [
     level: "Todos",
     tags: ["Fundamento", "Árvore da Vida"]
   },
-  // TRILHA I: A RAIZ
-  {
-    id: "les-t1-1",
-    title: "Sub-Aula 1: O Mistério do Axé e as Três Cores Primordiais",
-    category: "TRILHA I: A RAIZ",
-    description: "O fluxo da força vital nas polaridades Funfun (Branco/Ancestral), Preto (Matéria) e Vermelho (Movimento/Fogo) nos reinos mineral, vegetal e animal.",
-    duration: "45 min",
-    instructor: "Babá Felipe",
-    date: "12 de Junho de 2026",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    level: "Iniciante",
-    tags: ["Fundamento", "Energia"]
-  },
-  {
-    id: "les-t1-2",
-    title: "Sub-Aula 2: As Leis Universais da Magia Simpática",
-    category: "TRILHA I: A RAIZ",
-    description: "Domínio prático do Princípio de Correspondência (semelhante produz semelhante) e da Lei do Contágio (vínculos energéticos por objetos e fotos).",
-    duration: "40 min",
-    instructor: "Babá Felipe",
-    date: "15 de Junho de 2026",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    level: "Iniciante",
-    tags: ["Fundamento", "Magia"]
-  },
-  {
-    id: "les-t1-3",
-    title: "Sub-Aula 3: Anatomia Espiritual Iorubá",
-    category: "TRILHA I: A RAIZ",
-    description: "O entrelaçamento sagrado entre o Ara (corpo), Ojiji (sombra), Okan (coração), Emi (sopro) e Esè (pernas), e a regência dos Orixás nos órgãos.",
-    duration: "55 min",
-    instructor: "Babá Felipe",
-    date: "18 de Junho de 2026",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    level: "Intermediário",
-    tags: ["Fundamento", "Anatomia"]
-  },
-  {
-    id: "les-t1-4",
-    title: "Sub-Aula 4: A Ciência do Ori e os Quatro Cantos",
-    category: "TRILHA I: A RAIZ",
-    description: "Alinhamento elemental da cabeça física e espiritual (Ori Odé e Ori Inu) através dos quadrantes da testa, nuca e laterais, e o autoconhecimento pelo Espelho de Oxum.",
-    duration: "50 min",
-    instructor: "Babá Felipe",
-    date: "22 de Junho de 2026",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    level: "Avançado",
-    tags: ["Fundamento", "Ori"]
-  },
-  {
-    id: "les-t1-5",
-    title: "Sub-Aula 5: As 256 Encruzilhadas do Destino",
-    category: "TRILHA I: A RAIZ",
-    description: "O mapeamento das 16x16 ramificações elementais de Ori e o comportamento da alma pelas vias do Ar, Água, Terra e Fogo.",
-    duration: "60 min",
-    instructor: "Babá Felipe",
-    date: "25 de Junho de 2026",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    level: "Avançado",
-    tags: ["Fundamento", "Destino"]
-  },
-
   // TRILHA II: O TRONCO
   {
     id: "les-t2-1",
