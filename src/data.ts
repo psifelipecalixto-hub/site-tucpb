@@ -63,7 +63,7 @@ export const initialLessons: Lesson[] = [
     date: "06 de Julho de 2026",
     videoUrl: "",
     imageUrl: "/capa-arvore.png",
-    audioUrl: "/A_Arvore_como_Mapa_da_Mediunidade.m4a",
+    audioUrl: "/A_Arvore_como_Mapa_da_Mediunidade.mp3",
     level: "Todos",
     tags: ["Fundamento", "Árvore da Vida"]
   },
