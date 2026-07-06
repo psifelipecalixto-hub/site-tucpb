@@ -1,5 +1,7 @@
 import { useState, FormEvent, useEffect, useRef, ChangeEvent } from "react";
 import { Lock, Unlock, Users, ClipboardList, BookOpen, Bell, CheckCircle, Search, PlayCircle, TreePine, X, GraduationCap, Upload, Shield, User as UserIcon, Calendar as CalendarIcon, LogOut, Plus, Check, Clock, Trash2, Edit2, Eye, EyeOff } from "lucide-react";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { initialPoints, initialLessons, initialHerbs, initialTasks, initialArticles, initialPlaylists } from "../data";
 import { MemberTask, CurimbaPoint, Lesson, Herb, UserProfile, BlogArticle, CurimbaPlaylist } from "../types";
 import { supabase } from "../lib/supabase";
@@ -2438,7 +2440,9 @@ export default function Integrantes() {
                     </span>
                   ))}
                 </div>
-                <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{selectedLesson.description}</p>
+                <div className="text-sm sm:text-base text-gray-700 leading-relaxed font-serif markdown-body prose prose-sm sm:prose-base max-w-none prose-table:w-full prose-td:border prose-th:border prose-td:p-2 prose-th:p-2 prose-th:bg-areia-suave">
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>{selectedLesson.description}</ReactMarkdown>
+                </div>
                 <div className="mt-6 pt-4 border-t border-areia-escura flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-500 font-medium">
                   <span className="flex items-center gap-1"><UserIcon className="h-4 w-4" /> Instrutor: {selectedLesson.instructor}</span>
                   <span className="flex items-center gap-1"><Clock className="h-4 w-4" /> Duração: {selectedLesson.duration}</span>
