@@ -2430,9 +2430,13 @@ export default function Integrantes() {
                       <Headphones className="h-4 w-4" /> 
                       Áudio da Aula
                     </h4>
-                    <audio key={selectedLesson.id} controls className="w-full h-10 outline-none" src={selectedLesson.audioUrl}>
-                      Seu navegador não suporta o elemento de áudio.
-                    </audio>
+                    {selectedLesson.audioUrl.includes('drive.google.com') ? (
+                      <iframe src={selectedLesson.audioUrl} className="w-full h-[120px] rounded border-none outline-none" allow="autoplay" />
+                    ) : (
+                      <audio key={selectedLesson.id} controls className="w-full h-10 outline-none" src={selectedLesson.audioUrl}>
+                        Seu navegador não suporta o elemento de áudio.
+                      </audio>
+                    )}
                   </div>
                 )}
                 <div className="flex flex-wrap gap-3 mb-4">
