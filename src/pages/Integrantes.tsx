@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm';
 import { initialPoints, initialLessons, initialHerbs, initialTasks, initialArticles, initialPlaylists } from "../data";
 import { MemberTask, CurimbaPoint, Lesson, Herb, UserProfile, BlogArticle, CurimbaPlaylist } from "../types";
 import { supabase } from "../lib/supabase";
+import { AudioPlayer } from "../components/AudioPlayer";
 
 // (Empty for cleanup)
 
@@ -2424,19 +2425,7 @@ export default function Integrantes() {
               )}
               <div className="p-6">
                 {selectedLesson.audioUrl && (
-                  <div className="mb-6 bg-areia-suave/50 rounded-xl p-4 border border-areia-escura">
-                    <h4 className="text-sm font-bold text-marrom-terra mb-3 flex items-center gap-2">
-                      <Headphones className="h-4 w-4" /> 
-                      Áudio da Aula
-                    </h4>
-                    {selectedLesson.audioUrl.includes('drive.google.com') ? (
-                      <iframe src={selectedLesson.audioUrl} className="w-full h-[120px] rounded border-none outline-none" allow="autoplay" />
-                    ) : (
-                      <audio key={selectedLesson.id} controls className="w-full h-10 outline-none" src={selectedLesson.audioUrl}>
-                        Seu navegador não suporta o elemento de áudio.
-                      </audio>
-                    )}
-                  </div>
+                  <AudioPlayer src={selectedLesson.audioUrl} />
                 )}
                 {selectedLesson.pdfUrl && (
                   <div className="mb-6">
