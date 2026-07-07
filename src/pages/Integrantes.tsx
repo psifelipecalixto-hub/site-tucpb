@@ -2451,8 +2451,8 @@ export default function Integrantes() {
                   <ReactMarkdown 
                     remarkPlugins={[remarkGfm]}
                     components={{
-                      img: ({node, ...props}) => (
-                        <img {...props} className="w-full max-w-2xl mx-auto rounded-lg shadow-md my-8" />
+                      img: ({node, src, alt, title, ...props}) => (
+                        <img src={src} alt={alt} title={title} {...props} className="w-full max-w-2xl mx-auto rounded-lg shadow-md my-8" />
                       )
                     }}
                   >
