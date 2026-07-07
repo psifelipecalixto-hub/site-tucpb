@@ -62,7 +62,7 @@ export const initialLessons: Lesson[] = [
     instructor: "Babá Felipe",
     date: "06 de Julho de 2026",
     videoUrl: "",
-    imageUrl: "/img-arvore-tucpb.jpg",
+    imageUrl: "/capa-arvore.png",
     audioUrl: "https://drive.google.com/file/d/1Z6cs2LLF6IKzd_z-QorJ3r6mjaXOvsEq/preview",
     level: "Todos",
     tags: ["Fundamento", "Árvore da Vida"]
