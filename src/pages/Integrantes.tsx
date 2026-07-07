@@ -2449,7 +2449,16 @@ export default function Integrantes() {
                   ))}
                 </div>
                 <div className="text-sm sm:text-base text-gray-700 leading-relaxed font-serif markdown-body prose prose-sm sm:prose-base max-w-none prose-table:w-full prose-td:border prose-th:border prose-td:p-2 prose-th:p-2 prose-th:bg-areia-suave">
-                  <ReactMarkdown remarkPlugins={[remarkGfm]}>{selectedLesson.description}</ReactMarkdown>
+                  <ReactMarkdown 
+                    remarkPlugins={[remarkGfm]}
+                    components={{
+                      img: ({node, ...props}) => (
+                        <img {...props} className="w-full max-w-2xl mx-auto rounded-lg shadow-md my-8" />
+                      )
+                    }}
+                  >
+                    {selectedLesson.description}
+                  </ReactMarkdown>
                 </div>
                 <div className="mt-6 pt-4 border-t border-areia-escura flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-500 font-medium">
                   <span className="flex items-center gap-1"><UserIcon className="h-4 w-4" /> Instrutor: {selectedLesson.instructor}</span>
