@@ -1,5 +1,5 @@
 import { useState, FormEvent, useEffect, useRef, ChangeEvent } from "react";
-import { Lock, Unlock, Users, ClipboardList, BookOpen, Bell, CheckCircle, Search, PlayCircle, TreePine, X, GraduationCap, Upload, Shield, User as UserIcon, Calendar as CalendarIcon, LogOut, Plus, Check, Clock, Trash2, Edit2, Eye, EyeOff, Headphones } from "lucide-react";
+import { Lock, Unlock, Users, ClipboardList, BookOpen, Bell, CheckCircle, Search, PlayCircle, TreePine, X, GraduationCap, Upload, Shield, User as UserIcon, Calendar as CalendarIcon, LogOut, Plus, Check, Clock, Trash2, Edit2, Eye, EyeOff, Headphones, Download, FileText } from "lucide-react";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { initialPoints, initialLessons, initialHerbs, initialTasks, initialArticles, initialPlaylists } from "../data";
@@ -2436,6 +2436,20 @@ export default function Integrantes() {
                         Seu navegador não suporta o elemento de áudio.
                       </audio>
                     )}
+                  </div>
+                )}
+                {selectedLesson.pdfUrl && (
+                  <div className="mb-6">
+                    <a 
+                      href={selectedLesson.pdfUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-3 bg-white border-2 border-marrom-terra text-marrom-terra font-bold rounded-xl hover:bg-marrom-terra hover:text-white transition-colors group w-full sm:w-auto"
+                    >
+                      <FileText className="h-5 w-5" />
+                      <span>Baixar Material de Apoio (PDF)</span>
+                      <Download className="h-4 w-4 ml-auto sm:ml-2 opacity-70 group-hover:opacity-100 transition-opacity" />
+                    </a>
                   </div>
                 )}
                 <div className="flex flex-wrap gap-3 mb-4">

@@ -29,6 +29,7 @@ export interface Lesson {
   videoUrl: string;
   imageUrl?: string;
   audioUrl?: string;
+  pdfUrl?: string;
   level: string;
   tags?: string[];
 }
