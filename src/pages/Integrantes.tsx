@@ -2114,7 +2114,7 @@ export default function Integrantes() {
                              {trailLessons.map((lesson) => (
                                <div key={lesson.id} className="bg-white rounded-xl border border-areia-escura overflow-hidden shadow-sm flex flex-col hover:-translate-y-1 transition-transform group">
                                  <div className={`relative aspect-video flex items-center justify-center overflow-hidden cursor-pointer ${lesson.imageUrl ? 'bg-black' : `bg-gradient-to-br ${theme.gradient}`}`} onClick={() => setSelectedLesson(lesson)}>
-                                   {lesson.imageUrl && <img src={lesson.imageUrl} alt={lesson.title} className="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105" />}
+                                   {lesson.imageUrl && <img src={lesson.imageUrl} alt={lesson.title} className="absolute inset-0 w-full h-full object-contain opacity-60 transition-transform duration-500 group-hover:scale-105" />}
                                    {lesson.videoUrl ? (
                                      <PlayCircle className={`h-14 w-14 ${theme.playIcon} group-hover:scale-110 transition-all z-10`}/>
                                    ) : lesson.audioUrl ? (
@@ -2163,7 +2163,7 @@ export default function Integrantes() {
                                {filteredLessons.filter(l => !["TRILHA I: A RAIZ", "TRILHA II: O TRONCO", "TRILHA III: A COPA"].includes(l.category)).map((lesson) => (
                                   <div key={lesson.id} className="bg-white rounded-xl border border-areia-escura overflow-hidden shadow-sm flex flex-col hover:-translate-y-1 transition-transform group">
                                     <div className={`relative aspect-video flex items-center justify-center overflow-hidden cursor-pointer ${lesson.imageUrl ? 'bg-black' : 'bg-gradient-to-br from-gray-700 to-gray-900'}`} onClick={() => setSelectedLesson(lesson)}>
-                                      {lesson.imageUrl && <img src={lesson.imageUrl} alt={lesson.title} className="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105" />}
+                                      {lesson.imageUrl && <img src={lesson.imageUrl} alt={lesson.title} className="absolute inset-0 w-full h-full object-contain opacity-60 transition-transform duration-500 group-hover:scale-105" />}
                                       <PlayCircle className="h-14 w-14 text-white/50 group-hover:scale-110 group-hover:text-white transition-all z-10"/>
                                       <div className="absolute bottom-3 left-3 bg-black/60 text-white text-[10px] px-2 py-1 rounded font-mono z-10">{lesson.duration}</div>
                                     </div>
@@ -2419,7 +2419,7 @@ export default function Integrantes() {
                       className="w-full h-full border-0"
                     ></iframe>
                   ) : (
-                    <img src={selectedLesson.imageUrl} alt={selectedLesson.title} className="w-full h-full object-cover" />
+                    <img src={selectedLesson.imageUrl} alt={selectedLesson.title} className="w-full h-full object-contain" />
                   )}
                 </div>
               )}
