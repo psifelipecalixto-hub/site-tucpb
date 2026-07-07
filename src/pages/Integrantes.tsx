@@ -2456,7 +2456,7 @@ export default function Integrantes() {
                       )
                     }}
                   >
-                    {selectedLesson.description}
+                    {selectedLesson.description.replace(/\\n/g, '\n')}
                   </ReactMarkdown>
                 </div>
                 <div className="mt-6 pt-4 border-t border-areia-escura flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-500 font-medium">
