@@ -62,7 +62,7 @@ export const initialLessons: Lesson[] = [
     instructor: "Babá Felipe",
     date: "08 de Julho de 2026",
     videoUrl: "https://www.youtube.com/embed/Q2O-4HL31Gw",
-    imageUrl: "/O_Cambono_no_TUCPB.png",
+    imageUrl: "https://img.youtube.com/vi/Q2O-4HL31Gw/hqdefault.jpg",
     pdfUrl: "https://drive.google.com/file/d/1UjjoYlEP40VrvXP2DUhgWvbHoMWBWAAm/view?usp=sharing",
     level: "Todos",
     tags: ["Cambono", "Mediunidade", "Módulo 1"]
@@ -77,7 +77,7 @@ export const initialLessons: Lesson[] = [
     instructor: "Babá Felipe",
     date: "24 de Julho de 2026",
     videoUrl: "https://www.youtube.com/embed/pMF9wTf7jnw",
-    imageUrl: "/O_Cambono_no_TUCPB.png",
+    imageUrl: "https://img.youtube.com/vi/pMF9wTf7jnw/hqdefault.jpg",
     pdfUrl: "https://drive.google.com/file/d/1PDHZz3OCVE1fyB7rhLW9DMrT4YR7bGS4/view?usp=drive_link",
     level: "Todos",
     tags: ["Cambono", "Mediunidade", "Módulo 2"]
@@ -92,7 +92,7 @@ export const initialLessons: Lesson[] = [
     instructor: "Babá Felipe",
     date: "24 de Julho de 2026",
     videoUrl: "https://www.youtube.com/embed/XlwP6X25QfA",
-    imageUrl: "/O_Cambono_no_TUCPB.png",
+    imageUrl: "https://img.youtube.com/vi/XlwP6X25QfA/hqdefault.jpg",
     pdfUrl: "https://drive.google.com/file/d/13PJ0rzeY6_OiEQWlUq6PbGSuP0IPPiVs/view?usp=drive_link",
     level: "Todos",
     tags: ["Cambono", "Mediunidade", "Módulo 3"]
@@ -107,7 +107,7 @@ export const initialLessons: Lesson[] = [
     instructor: "Babá Felipe",
     date: "24 de Julho de 2026",
     videoUrl: "https://www.youtube.com/embed/Skcguvdl15c",
-    imageUrl: "/O_Cambono_no_TUCPB.png",
+    imageUrl: "https://img.youtube.com/vi/Skcguvdl15c/hqdefault.jpg",
     pdfUrl: "https://drive.google.com/file/d/1WJD6zXz5LBUskVLSEUHHcD-GHdoYeTpO/view?usp=drive_link",
     level: "Todos",
     tags: ["Cambono", "Mediunidade", "Módulo 4"]
@@ -122,10 +122,313 @@ export const initialLessons: Lesson[] = [
     instructor: "Babá Felipe",
     date: "24 de Julho de 2026",
     videoUrl: "https://www.youtube.com/embed/cdhTUGJU3i0",
-    imageUrl: "/O_Cambono_no_TUCPB.png",
+    imageUrl: "https://img.youtube.com/vi/cdhTUGJU3i0/hqdefault.jpg",
     pdfUrl: "https://drive.google.com/file/d/1i77d4g2l5Smeto207go054HqcB1b_XAN/view?usp=drive_link",
     level: "Todos",
     tags: ["Cambono", "Mediunidade", "Módulo 5"]
+  },
+
+  {
+    id: "les-t2-1",
+    title: "Módulo 1: Fundamentos e Linguagem",
+    category: "TRILHA II: O TRONCO",
+    description: `## Módulo 1 — Fundamentos e Linguagem
+### Compreendendo a mediunidade entre fé, experiência, ciência e tradição
+
+A mediunidade é uma experiência humana antiga, presente em diferentes povos, culturas e tradições religiosas. Entretanto, antes de estudar incorporação, transe, vidência, psicofonia ou qualquer outra manifestação, é necessário compreender o que estamos chamando de mediunidade e quais linguagens podem ser utilizadas para falar sobre ela.
+
+O primeiro módulo do estudo “Mediunidade — fundamentos, experiência e desenvolvimento na Umbanda” estabelece as bases que acompanharão toda a formação. Seu propósito é oferecer ao estudante uma compreensão ampla, responsável e respeitosa do fenômeno mediúnico, reconhecendo a importância da fé sem transformar a ciência em inimiga da religião e sem utilizar a religião para negar questões relacionadas à saúde mental.
+
+Ao longo deste módulo, estudaremos a mediunidade como experiência espiritual, fenômeno humano, campo de investigação e prática formada dentro de uma comunidade religiosa. Também conheceremos aspectos importantes da história da Umbanda, suas diferentes matrizes e o papel do terreiro na construção da disciplina, do pertencimento e da responsabilidade mediúnica.
+
+### O que você estudará neste módulo
+
+O Módulo 1 acompanha os quatro capítulos da primeira parte do livro:
+- O que chamamos de mediunidade
+- Três lentes: fé, experiência e ciência
+- Umbanda: história, matrizes e diversidade
+- O terreiro como comunidade de formação
+
+Esses capítulos formam a base conceitual necessária para compreender os fenômenos, os cuidados e os ensinamentos que serão aprofundados nos módulos seguintes.
+
+### Capítulo 1 — O que chamamos de mediunidade
+
+Antes de classificar uma experiência como incorporação, intuição, vidência ou comunicação espiritual, precisamos fazer uma pergunta fundamental:
+
+**O que exatamente estamos chamando de mediunidade?**
+
+Nas tradições espiritualistas, a mediunidade costuma ser compreendida como a capacidade de perceber, receber ou expressar influências atribuídas a espíritos, guias, ancestrais ou consciências espirituais.
+
+Essa capacidade pode manifestar-se por meio de pensamentos, sensações, movimentos, imagens, palavras, sonhos, alterações de percepção ou estados de transe. Porém, a maneira como cada manifestação é compreendida depende da tradição religiosa, da cultura, da comunidade e da trajetória de quem vive a experiência.
+
+Na psicologia e na antropologia, o interesse pode estar na forma como a experiência é sentida, no contexto em que ela ocorre, nas alterações de consciência, na produção de significado e na relação entre o indivíduo e sua comunidade.
+
+Isso significa que diferentes áreas podem estudar a mesma experiência fazendo perguntas distintas.
+
+A religião pode perguntar:
+*Qual entidade está se manifestando e qual é o sentido espiritual dessa comunicação?*
+
+A psicologia pode perguntar:
+*Como a pessoa vivencia essa mudança de consciência e quais efeitos ela produz em sua vida?*
+
+A antropologia pode perguntar:
+*Como a comunidade reconhece, organiza e interpreta essa experiência?*
+
+A ciência pode observar comportamentos, relatos e atividades cerebrais, mas não consegue determinar, apenas por esses registros, a origem espiritual de uma manifestação. A interpretação espiritual pertence ao campo da fé, da tradição e da experiência religiosa.
+
+#### Uma experiência presente em diferentes culturas
+
+Experiências de mediação com o mundo espiritual aparecem em muitas sociedades ao longo da história. Elas podem ser encontradas:
+- no xamanismo;
+- nos oráculos da Antiguidade;
+- nas tradições proféticas;
+- nas religiões africanas;
+- nas espiritualidades indígenas;
+- nas filosofias orientais;
+- no Espiritismo;
+- na Umbanda;
+- em diversas tradições populares.
+
+Entretanto, a presença de experiências semelhantes não significa que todas sejam iguais.
+
+Um pajé, um oráculo da Antiguidade, um médium de psicografia e um filho de santo em transe pertencem a sistemas culturais e religiosos diferentes. Cada tradição possui sua própria linguagem, seus símbolos, seus métodos de preparação e suas formas de interpretar a experiência.
+
+O ponto de aproximação está na ideia de mediação: uma pessoa estabelece contato, comunicação ou relação com forças, seres, memórias ou dimensões consideradas invisíveis.
+
+### Capítulo 2 — Três lentes: fé, experiência e ciência
+
+Uma lente permite enxergar determinados aspectos de uma realidade, mas não mostra tudo ao mesmo tempo. Para estudar a mediunidade de maneira responsável, precisamos aprender a olhar por diferentes lentes.
+
+Neste módulo, trabalharemos com três:
+
+#### A lente da fé
+
+A lente religiosa interpreta a mediunidade por meio de conceitos como:
+- espíritos;
+- guias;
+- Orixás;
+- ancestrais;
+- missão;
+- caridade;
+- desenvolvimento;
+- compromisso espiritual.
+
+Para a Umbanda, a mediunidade não é apenas um fenômeno individual. Ela está inserida em uma relação com o sagrado, com as entidades, com a comunidade e com o trabalho de cuidado realizado no terreiro.
+
+A fé procura compreender o sentido espiritual da experiência.
+
+#### A lente da experiência
+
+A segunda lente é a fenomenológica.
+
+Apesar de parecer uma palavra difícil, fenomenologia significa observar e descrever como uma experiência é vivida por quem passa por ela.
+
+Essa lente procura compreender:
+- o que o médium sente;
+- quais pensamentos aparecem;
+- como o corpo reage;
+- se há mudanças na percepção;
+- o que permanece na memória;
+- como a identidade é vivenciada durante o transe;
+- quais significados a experiência produz.
+
+Nesse campo, o objetivo inicial não é provar ou negar a presença de um espírito. O primeiro passo é compreender como a experiência acontece para a pessoa.
+
+#### A lente da ciência
+
+A terceira lente investiga aspectos observáveis e comparáveis, como:
+- atividade cerebral;
+- comportamento;
+- saúde mental;
+- funcionamento social;
+- memória;
+- atenção;
+- qualidade de vida;
+- efeitos psicológicos;
+- contexto cultural.
+
+A ciência pode observar o que acontece no cérebro e no comportamento durante determinadas práticas. Contudo, uma imagem cerebral não mostra se uma entidade espiritual está ou não presente. Ela mostra quais regiões do cérebro estão mais ou menos ativas naquele momento.
+
+Por isso, ciência e religião não precisam disputar o mesmo território. Cada uma trabalha com perguntas, métodos e limites diferentes.
+
+#### Mediunidade e saúde mental
+
+Durante muito tempo, experiências religiosas incomuns foram classificadas automaticamente como sinais de doença. Atualmente, a avaliação clínica procura observar critérios mais cuidadosos.
+
+Entre eles estão:
+- sofrimento intenso;
+- risco para a própria pessoa ou para terceiros;
+- perda importante de funcionamento;
+- desorganização persistente;
+- ausência de controle;
+- prejuízo no trabalho, nos estudos ou nas relações;
+- dificuldade de integrar a experiência à vida cotidiana.
+
+Uma experiência religiosa reconhecida pela comunidade, vivida de forma voluntária, organizada e acompanhada pode coexistir com boa saúde mental.
+
+Por outro lado, quando há sofrimento, risco ou desorganização persistente, o acompanhamento religioso não deve impedir a procura por profissionais da saúde.
+
+O estudo responsável evita dois extremos:
+- A ciência não deve ser usada para humilhar a fé.
+- A fé não deve ser usada para esconder ou negar o sofrimento psicológico.
+
+### Capítulo 3 — Umbanda: história, matrizes e diversidade
+
+A Umbanda não surgiu de uma única fonte. Ela se formou no Brasil por meio de encontros, conflitos, adaptações, resistências e criações religiosas.
+
+A narrativa fundacional mais conhecida apresenta o dia 15 de novembro de 1908 como um momento importante para sua organização institucional. Nessa narrativa, Zélio Fernandino de Moraes manifesta o Caboclo das Sete Encruzilhadas, que questiona o preconceito contra entidades apresentadas como indígenas e negros escravizados.
+
+Essa memória possui grande importância religiosa. Entretanto, a história da Umbanda não pode ser reduzida a um único acontecimento.
+
+Antes e depois desse marco, diferentes comunidades, famílias, sacerdotes, terreiros e tradições populares participaram da formação da religião. A Umbanda foi construída coletivamente, em diferentes regiões do Brasil, assumindo múltiplas formas.
+
+#### As matrizes da Umbanda
+
+O livro apresenta cinco grandes matrizes que contribuíram para a formação das diferentes Umbandas:
+
+**Matriz africana e afro-brasileira**
+Está presente no culto aos Orixás, na força vital do axé, nos ritmos, nos cantos, nos saberes ancestrais e na presença de entidades como Pretos e Pretas-Velhas.
+
+**Matriz indígena**
+Manifesta-se na presença dos Caboclos, na relação com a mata, com as ervas, com os territórios, com os encantados e com diferentes saberes atribuídos aos povos originários.
+
+**Matriz cristã**
+Pode ser percebida na presença de Jesus, dos santos, das orações, da caridade e de diferentes formas de sincretismo religioso.
+
+**Matriz espírita ou kardecista**
+Contribuiu para a organização de conceitos relacionados à mediunidade, à reencarnação, à evolução espiritual, ao estudo sistematizado e à responsabilidade moral.
+
+**Matriz orientalista e esotérica**
+Está presente em algumas vertentes por meio de conceitos como chacras, corpos sutis, energia, magnetismo e práticas de equilíbrio espiritual.
+
+Essas matrizes não aparecem da mesma maneira em todos os terreiros. Algumas casas possuem maior influência africana; outras são mais próximas do Espiritismo; outras fortalecem os elementos indígenas, populares, cristãos ou esotéricos.
+
+Reconhecer essa diversidade não significa afirmar que todas as casas são iguais. Significa compreender que a Umbanda possui diferentes formas de organização e expressão.
+
+Também é necessário estudar o sincretismo com responsabilidade, evitando que as contribuições africanas, afro-brasileiras e indígenas sejam apagadas.
+
+### Capítulo 4 — O terreiro como comunidade de formação
+
+O terreiro não é apenas o lugar onde a manifestação mediúnica acontece. É o espaço onde essa experiência recebe:
+- linguagem;
+- orientação;
+- disciplina;
+- limites;
+- acompanhamento;
+- responsabilidade;
+- sentido comunitário.
+
+Uma percepção isolada pode gerar dúvida, ansiedade ou interpretações precipitadas. Dentro de uma comunidade preparada, o médium aprende a observar, estudar, esperar, pedir ajuda e compreender que nem toda impressão interna representa uma orientação espiritual.
+
+#### A gramática ritual de cada casa
+
+Cada terreiro possui uma espécie de gramática ritual: um conjunto de símbolos, regras, funções, hierarquias, fundamentos e formas de cuidado.
+
+Essa gramática ensina ao médium:
+- quando falar e quando silenciar;
+- como entrar e permanecer na corrente;
+- como respeitar as entidades e os dirigentes;
+- como cuidar do espaço sagrado;
+- como tratar os consulentes;
+- como reconhecer seus limites;
+- como lidar com dúvidas;
+- como receber orientações;
+- como exercer a caridade com responsabilidade.
+
+Os terreiros podem diferir quanto ao uso de atabaques, imagens, bebidas, fumo, roupas, assentamentos, elementos naturais e formas de culto. Essa diversidade não significa ausência de organização.
+
+Cada casa constrói seus fundamentos de acordo com sua tradição, sua história e sua comunidade.
+
+#### Pertencimento e disciplina
+
+O desenvolvimento mediúnico não acontece apenas por meio da manifestação de entidades. Ele também ocorre através da convivência.
+
+O médium aprende observando os mais experientes, participando dos trabalhos, cumprindo responsabilidades e reconhecendo que faz parte de algo maior do que sua experiência individual.
+
+A disciplina não deve ser confundida com autoritarismo. Em uma comunidade saudável, ela funciona como proteção.
+
+Ela protege:
+- o médium contra a vaidade;
+- o consulente contra abusos;
+- a entidade contra interpretações irresponsáveis;
+- o terreiro contra desorganização;
+- a comunidade contra disputas e personalismos.
+
+Desenvolver a mediunidade é também aprender a pertencer, cooperar, ouvir, servir e assumir responsabilidade pelas consequências das próprias palavras e atitudes.
+
+### Objetivos de aprendizagem
+
+Ao concluir este módulo, o estudante deverá ser capaz de:
+- compreender diferentes definições de mediunidade;
+- reconhecer a mediunidade como experiência presente em diversas culturas;
+- diferenciar experiência, descrição e interpretação;
+- compreender as lentes religiosa, fenomenológica e científica;
+- reconhecer os limites da investigação científica sobre experiências espirituais;
+- evitar a patologização automática das práticas religiosas;
+- reconhecer situações que exigem acompanhamento profissional;
+- compreender a formação plural da Umbanda;
+- identificar suas principais matrizes religiosas e culturais;
+- reconhecer a diversidade existente entre os terreiros;
+- compreender o terreiro como comunidade de formação;
+- perceber a importância do pertencimento, da disciplina e da responsabilidade.
+
+### Conceitos centrais do módulo
+
+**Mediunidade**
+Capacidade de perceber, receber ou expressar influências atribuídas a espíritos, guias, ancestrais ou consciências espirituais.
+
+**Transe**
+Estado de consciência no qual podem ocorrer alterações de percepção, comportamento, movimento, identidade ou expressão.
+
+**Fenomenologia**
+Estudo da experiência conforme ela é vivida e descrita pela pessoa.
+
+**Diagnóstico diferencial**
+Processo utilizado para distinguir experiências religiosas culturalmente reconhecidas de situações que podem necessitar de acompanhamento clínico.
+
+**Matrizes da Umbanda**
+Conjuntos de tradições e saberes africanos, indígenas, cristãos, espíritas, populares e esotéricos que participaram de sua formação.
+
+**Gramática ritual**
+Conjunto de regras, símbolos, fundamentos, comportamentos e formas de organização ensinados por uma comunidade religiosa.
+
+**Terreiro Escola**
+Espaço de formação espiritual, ética e comunitária no qual o médium aprende por meio do estudo, da convivência, da disciplina e do serviço.
+
+### Questões para reflexão
+1. Como a tradição do TUCPB compreende a mediunidade?
+2. Por que experiências espirituais semelhantes não devem ser tratadas como se fossem todas iguais?
+3. Qual é a diferença entre descrever uma experiência e determinar sua origem?
+4. Como fé, experiência e ciência podem dialogar sem que uma tente eliminar a outra?
+5. Quais sinais ajudam a diferenciar uma experiência religiosa integrada de uma situação de sofrimento psíquico?
+6. Por que a história da Umbanda não pode ser explicada por um único acontecimento?
+7. Quais matrizes estão mais presentes na tradição do Templo Umbandista Caboclo Pena Branca?
+8. Como reconhecer o sincretismo sem apagar os saberes africanos e indígenas?
+9. Quais regras do terreiro protegem o médium, o consulente e a comunidade?
+10. Por que pertencimento, disciplina e responsabilidade também fazem parte do desenvolvimento mediúnico?
+
+### Síntese do Módulo 1
+
+A mediunidade não deve ser compreendida apenas como um fenômeno extraordinário. Ela é uma experiência que recebe significado dentro de uma cultura, de uma tradição e de uma comunidade.
+
+A fé oferece sentido espiritual. A experiência revela como o fenômeno é vivido. A ciência investiga seus aspectos observáveis. O terreiro reúne essas dimensões em um caminho de formação, cuidado e responsabilidade.
+
+Antes de aprender a manifestar, o médium precisa aprender a compreender. Antes de falar em nome do sagrado, precisa aprender a ouvir. Antes de buscar fenômenos, precisa desenvolver raízes.
+
+É a partir desses fundamentos que iniciaremos, nos próximos módulos, o estudo da incorporação, do transe, da consciência, do corpo e das diferentes formas de mediunidade.
+
+---
+*Obra de referência: Mediunidade — fundamentos, experiência e desenvolvimento na Umbanda*
+*Autor: Bàbá Aláàrìnrin Àjò / Pai Felipe de Oxaguian*
+*Instituição: Templo Umbandista Caboclo Pena Branca — TUCPB*`,
+    duration: "Módulo 1",
+    instructor: "Babá Felipe",
+    date: "24 de Julho de 2026",
+    videoUrl: "https://www.youtube.com/embed/9m9bjwLI90I",
+    imageUrl: "https://img.youtube.com/vi/9m9bjwLI90I/hqdefault.jpg",
+    pdfUrl: "https://drive.google.com/file/d/1UJTPo2Wwcm3d280MCkHD8zAkSozG-3Yk/view?usp=drive_link",
+    level: "Todos",
+    tags: ["Mediunidade", "Módulo 1"]
   },
 
   {
