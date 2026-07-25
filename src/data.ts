@@ -2008,6 +2008,966 @@ No próximo módulo, aprofundaremos as filosofias africanas e afro-diaspóricas,
   },
 
   {
+    id: "les-t2-4",
+    title: "Módulo 4: Ancestralidade Africana e Afro-Diaspórica",
+    category: "TRILHA II: O TRONCO",
+    description: `## Módulo 4 — Ancestralidade Africana e Afro-Diaspórica
+### Comunidade, memória, corpo, tempo e força vital na compreensão da mediunidade
+
+Nos módulos anteriores, estudamos os fundamentos da mediunidade, os fenômenos relacionados ao transe e à incorporação e os princípios de ética, cuidado e saúde mental que devem acompanhar o desenvolvimento mediúnico.
+
+Agora, avançamos para uma mudança importante de perspectiva.
+
+Grande parte das explicações ocidentais sobre a mediunidade começa pelo indivíduo. Pergunta-se o que acontece na mente do médium, como seu cérebro funciona, quais alterações aparecem em seu comportamento e quais experiências ele relata.
+
+As filosofias africanas e afro-diaspóricas nos convidam a ampliar essa visão.
+
+Nessa perspectiva, a pessoa não existe de forma isolada. Ela é constituída por suas relações com a comunidade, com os mais velhos, com os ancestrais, com o território, com a espiritualidade e com aqueles que ainda virão.
+
+O corpo não é apenas um instrumento biológico. Ele também é memória, história, linguagem e presença ancestral.
+
+O tempo não é apenas uma linha que começa no passado, atravessa o presente e segue em direção ao futuro. Ele pode ser compreendido como movimento espiralar, no qual aquilo que veio antes continua participando daquilo que somos agora.
+
+A ancestralidade, por sua vez, não é apenas lembrança de pessoas que morreram. Ela representa continuidade, pertencimento, responsabilidade e transmissão de conhecimentos.
+
+Neste módulo, a mediunidade será estudada a partir de conceitos como:
+- Ubuntu;
+- comunidade ampliada;
+- ancestralidade;
+- Kalunga;
+- tempo espiralar;
+- corpo-arquivo;
+- oralidade;
+- Orí;
+- axé;
+- Exu;
+- encruzilhada.
+
+Esses conceitos não pertencem a uma única cultura africana e não devem ser tratados como se todo o continente africano possuísse uma religião ou uma filosofia uniforme.
+
+A África reúne muitos povos, línguas, territórios, histórias e sistemas de conhecimento. Por isso, este estudo não procura criar uma suposta “filosofia africana única”. Seu objetivo é apresentar algumas perspectivas africanas e afro-diaspóricas que ajudam a compreender a mediunidade para além do individualismo e das explicações exclusivamente ocidentais.
+
+### O que você estudará neste módulo
+
+O Módulo 4 acompanha os três capítulos da quarta parte do livro:
+- Ubuntu e comunidade ampliada
+- Kalunga, tempo espiralar e corpo-arquivo
+- Orí, axé, Exu e encruzilhada
+
+Esses capítulos mostram que a mediunidade não acontece apenas dentro do indivíduo. Ela nasce e recebe sentido em uma rede formada por comunidade, corpo, ancestralidade, memória, território e forças espirituais.
+
+### Capítulo 13 — Ubuntu e comunidade ampliada
+
+A palavra Ubuntu tornou-se conhecida por expressões como:
+*“Eu sou porque nós somos.”*
+
+Essa tradução ajuda a iniciar a compreensão do conceito, mas não esgota sua profundidade.
+
+Ubuntu está ligado a uma visão de humanidade construída por meio das relações. Nessa perspectiva, ninguém se torna plenamente pessoa sozinho.
+
+Nossa identidade é formada pela convivência, pelo cuidado, pela responsabilidade e pela participação em uma comunidade.
+
+Isso significa que a existência individual não é negada, mas compreendida como parte de uma rede maior.
+
+#### A pessoa como relação
+
+Em uma visão individualista, a pessoa costuma ser apresentada como uma unidade independente.
+
+Primeiro existiria o indivíduo. Depois, ele estabeleceria relações com outras pessoas.
+
+A perspectiva comunitária modifica essa ordem.
+
+Ela nos convida a perceber que já nascemos dentro de relações:
+- recebemos um nome;
+- aprendemos uma língua;
+- somos cuidados por outras pessoas;
+- herdamos histórias;
+- recebemos valores;
+- ocupamos um território;
+- aprendemos gestos, crenças e comportamentos;
+- somos reconhecidos por uma comunidade.
+
+Portanto, não existimos primeiro para depois nos relacionarmos.
+
+Existimos porque fomos recebidos, cuidados, nomeados e reconhecidos em uma rede de relações.
+
+A frase “eu sou porque nós somos” não significa que a pessoa deva perder sua individualidade. Significa que sua individualidade é construída em comunidade.
+
+#### Comunidade ampliada
+
+Nas perspectivas ancestrais e religiosas africanas, a comunidade pode ser mais ampla do que o conjunto das pessoas vivas.
+
+Ela pode incluir:
+- os ancestrais;
+- os que vieram antes;
+- os mais velhos;
+- as crianças;
+- os que ainda nascerão;
+- as divindades;
+- as forças da natureza;
+- os seres espirituais;
+- o território;
+- a memória coletiva.
+
+Essa compreensão transforma a relação entre vivos e mortos.
+
+A morte não rompe completamente o vínculo com a comunidade. A pessoa que parte pode continuar presente na memória, nos ensinamentos, nos nomes, nos costumes, nos gestos e nas práticas transmitidas.
+
+Em determinadas tradições, alguns mortos passam a ocupar uma posição ancestral. Isso não significa que toda pessoa falecida seja automaticamente cultuada como ancestral.
+
+A ancestralidade envolve reconhecimento, vínculo, continuidade e responsabilidade.
+
+#### Ancestralidade não é apenas passado
+
+É comum imaginar os ancestrais como figuras pertencentes exclusivamente ao passado.
+
+Entretanto, a ancestralidade também atua no presente.
+
+Ela aparece:
+- nos nomes que carregamos;
+- nas histórias de família;
+- nos hábitos;
+- nos modos de falar;
+- nas músicas;
+- nos alimentos;
+- nas práticas religiosas;
+- nas formas de resistência;
+- nos conhecimentos transmitidos;
+- nas maneiras de cuidar;
+- nas marcas inscritas no corpo e na memória.
+
+Os ancestrais não são importantes apenas porque viveram antes. Eles são importantes porque aquilo que construíram continua participando da comunidade.
+
+A ancestralidade também se relaciona ao futuro.
+
+Aquilo que fazemos hoje será recebido por aqueles que virão depois de nós.
+
+Por isso, a relação ancestral produz responsabilidade.
+
+A pergunta deixa de ser apenas:
+*“O que eu desejo para minha vida?”*
+
+E passa a incluir:
+*“O que minhas escolhas entregam à comunidade e às próximas gerações?”*
+
+#### Ubuntu e mediunidade
+
+Quando a mediunidade é observada por uma perspectiva comunitária, ela deixa de ser compreendida apenas como uma capacidade individual.
+
+O médium não é proprietário de um poder.
+
+Sua sensibilidade é formada e orientada dentro de uma comunidade.
+
+Ele aprende:
+- com os mais velhos;
+- com as entidades;
+- com a corrente mediúnica;
+- com os fundamentos da casa;
+- com os consulentes;
+- com seus erros;
+- com a memória do terreiro;
+- com as responsabilidades do serviço.
+
+A manifestação não pertence somente ao médium.
+
+Ela acontece em uma rede.
+
+O ponto cantado sustenta. O atabaque organiza. O cambono acompanha. A liderança orienta. A corrente oferece firmeza. O consulente participa do encontro. A entidade se manifesta por meio de uma linguagem construída comunitariamente.
+
+Por isso, a mediunidade não deve ser tratada como espetáculo pessoal.
+
+Quanto mais o médium se percebe como centro absoluto do trabalho, maior é o risco de afastar-se da perspectiva comunitária.
+
+#### A comunidade como proteção
+
+A comunidade não existe apenas para confirmar experiências.
+
+Ela também precisa:
+- orientar;
+- questionar;
+- estabelecer limites;
+- observar os frutos;
+- corrigir excessos;
+- acolher dificuldades;
+- proteger pessoas vulneráveis;
+- preservar os fundamentos;
+- impedir abusos.
+
+O médium isolado pode interpretar todas as suas sensações sem contraponto.
+
+Dentro de uma comunidade responsável, suas experiências podem ser observadas e acompanhadas ao longo do tempo.
+
+A correção comunitária não deve destruir a autonomia da pessoa, mas ajudá-la a amadurecer.
+
+#### O perigo do individualismo espiritual
+
+O individualismo espiritual aparece quando alguém acredita que:
+- não precisa de orientação;
+- sua entidade está acima das regras;
+- suas percepções não podem ser questionadas;
+- sua mediunidade é superior;
+- a comunidade existe para servi-lo;
+- o trabalho depende exclusivamente de sua presença;
+- qualquer correção representa perseguição;
+- seus desejos pessoais são ordens espirituais.
+
+Esse comportamento transforma a mediunidade em instrumento de vaidade.
+
+Na perspectiva de Ubuntu, o valor da pessoa não desaparece, mas é colocado em relação com o bem coletivo.
+
+O médium amadurece quando compreende que sua capacidade só encontra sentido pleno quando contribui para o equilíbrio da comunidade.
+
+### Capítulo 14 — Kalunga, tempo espiralar e corpo-arquivo
+
+O modo como compreendemos o tempo influencia a maneira como interpretamos a vida, a morte, a memória e a ancestralidade.
+
+Na visão ocidental moderna, o tempo costuma ser representado como uma linha:
+passado → presente → futuro
+
+Nessa imagem, o passado ficou para trás, o presente acontece agora e o futuro ainda não existe.
+
+As perspectivas africanas e afro-diaspóricas podem apresentar outras formas de compreender essa relação.
+
+Uma delas é a imagem do tempo espiralar.
+
+#### O tempo espiralar
+
+Uma espiral passa novamente por direções semelhantes, mas nunca retorna exatamente ao mesmo ponto.
+
+Essa imagem ajuda a compreender como acontecimentos, histórias e memórias podem reaparecer em novos contextos.
+
+O passado não está morto.
+
+Ele continua atuando:
+- nas estruturas sociais;
+- nos costumes;
+- nas desigualdades;
+- nas religiões;
+- nas formas de resistência;
+- na memória coletiva;
+- nos gestos transmitidos;
+- nos traumas;
+- nas conquistas;
+- nas celebrações;
+- nos conhecimentos preservados.
+
+O tempo espiralar não significa repetição automática.
+
+Significa continuidade com transformação.
+
+Uma tradição pode ser transmitida e, ao mesmo tempo, adaptar-se a novas realidades.
+
+Uma música pode preservar ritmos antigos e receber novos instrumentos.
+
+Um ensinamento pode atravessar gerações e ganhar outras formas de expressão.
+
+A memória volta, mas volta transformada.
+
+#### Mediunidade e tempo espiralar
+
+A experiência mediúnica aproxima tempos diferentes.
+
+Quando uma entidade se apresenta com a linguagem de um Preto-Velho, de uma Preta-Velha, de um Caboclo ou de outra linha de trabalho, a manifestação não deve ser entendida como simples reprodução histórica.
+
+Há uma atualização simbólica e espiritual.
+
+O passado é trazido ao presente para produzir orientação, cura, memória, crítica e ensinamento.
+
+A experiência mediúnica pode tornar visíveis memórias que a sociedade tentou apagar.
+
+Na presença dos Pretos e Pretas-Velhas, por exemplo, aparecem histórias de sofrimento, resistência, sabedoria, cuidado, sobrevivência e reconstrução.
+
+Essas entidades não devem ser reduzidas a caricaturas da escravidão.
+
+Sua presença pode transformar marcas de violência em linguagem de dignidade, memória e cuidado.
+
+O tempo espiralar permite compreender que a ancestralidade não está parada em um passado distante. Ela participa do presente e ajuda a construir outros futuros.
+
+#### Kalunga: travessia, limite e continuidade
+
+Kalunga é um conceito presente em diferentes tradições de matriz banto e pode assumir significados diversos conforme o povo, a língua e o contexto.
+
+Por isso, não deve ser reduzido a uma tradução única.
+
+Kalunga pode estar relacionado a ideias como:
+- mar;
+- grande água;
+- imensidão;
+- fronteira;
+- travessia;
+- passagem;
+- mundo dos ancestrais;
+- relação entre vida e morte;
+- transformação.
+
+Na história da diáspora africana, o mar possui um significado profundamente ambivalente.
+
+Ele foi caminho de violência, separação e morte durante o tráfico transatlântico de pessoas escravizadas.
+
+Ao mesmo tempo, tornou-se espaço de memória, travessia, comunicação e reconstrução religiosa.
+
+A grande água separa, mas também liga territórios.
+
+Ela representa distância, perda, passagem e continuidade.
+
+#### A linha entre os mundos
+
+Kalunga pode ser imaginada como uma fronteira entre dimensões.
+
+Entretanto, uma fronteira não é necessariamente uma parede absoluta.
+
+Ela pode ser um lugar de contato.
+
+O nascimento e a morte são passagens. O sonho pode ser compreendido como travessia. O transe pode ser vivido como aproximação entre dimensões. A água pode marcar limpeza, transformação, nascimento e retorno.
+
+Essa imagem ajuda a compreender a mediunidade como relação entre mundos que não estão totalmente separados.
+
+O médium atua simbolicamente em uma zona de passagem.
+
+Ele não abandona completamente o mundo cotidiano, mas também não permanece limitado a ele.
+
+Por isso, o trabalho exige preparação e retorno.
+
+Toda travessia precisa de orientação.
+
+#### O corpo-arquivo
+
+Um arquivo guarda documentos, registros e memórias.
+
+Quando falamos em corpo-arquivo, não estamos afirmando que o corpo funcione como uma biblioteca imóvel.
+
+O corpo registra experiências de maneira viva.
+
+Ele guarda:
+- gestos;
+- posturas;
+- ritmos;
+- dores;
+- habilidades;
+- medos;
+- formas de proteção;
+- modos de dançar;
+- modos de rezar;
+- maneiras de cuidar;
+- marcas de violência;
+- memórias familiares;
+- aprendizados comunitários.
+
+Nem tudo o que o corpo sabe pode ser explicado por palavras.
+
+Uma pessoa pode aprender um ritmo antes de conhecer sua história. Pode reproduzir um gesto que observou durante anos. Pode sentir segurança ao ouvir determinado canto. Pode reagir corporalmente a uma lembrança mesmo sem conseguir narrá-la completamente.
+
+O corpo não é apenas objeto da memória. Ele é um modo de lembrar.
+
+#### O corpo na tradição oral
+
+Em culturas marcadas pela oralidade, o conhecimento não depende exclusivamente de livros.
+
+Ele é transmitido por meio de:
+- histórias;
+- cantos;
+- provérbios;
+- danças;
+- rituais;
+- gestos;
+- silêncio;
+- convivência;
+- repetição;
+- observação;
+- participação.
+
+A oralidade não significa ausência de conhecimento organizado.
+
+Ela representa outra forma de guardar e transmitir saberes.
+
+Quando um ponto cantado é repetido em diferentes gerações, ele carrega memória.
+
+Quando um gesto ritual é ensinado pela observação, o corpo participa da transmissão.
+
+Quando um mais velho conta uma história, ele não transmite apenas informações. Ele oferece experiência, ritmo, interpretação e presença.
+
+#### Oralitura
+
+O conceito de oralitura ajuda a pensar a inscrição de conhecimentos no corpo, na voz e na performance.
+
+A memória não é transmitida apenas pela palavra escrita. Ela se manifesta na forma de cantar, dançar, narrar, caminhar e realizar o ritual.
+
+A oralitura é uma escrita que acontece na presença.
+
+Ela utiliza:
+- a voz como registro;
+- o corpo como suporte;
+- o ritmo como organização;
+- a repetição como preservação;
+- a performance como transmissão;
+- a comunidade como guardiã.
+
+Na Umbanda, muitos conhecimentos são aprendidos dessa maneira.
+
+O médium observa como os mais velhos se comportam, como cuidam dos elementos, como recebem uma entidade, como encerram um trabalho e como se relacionam com a comunidade.
+
+O ensinamento é vivido antes de ser completamente explicado.
+
+#### O transe como memória corporal
+
+Durante o transe, o corpo pode expressar movimentos, posturas e ritmos associados a uma linha espiritual.
+
+Parte dessa expressão pode ser compreendida religiosamente como influência da entidade.
+
+Ao mesmo tempo, ela acontece em um corpo que aprendeu a linguagem do terreiro.
+
+Essas duas dimensões não precisam ser tratadas como inimigas.
+
+A participação da memória corporal não anula o sentido espiritual da experiência.
+
+Toda manifestação ocorre por meio de uma linguagem possível para o médium e reconhecível pela comunidade.
+
+O corpo não é obstáculo à espiritualidade.
+
+Ele é o lugar onde a experiência se torna presença.
+
+### Capítulo 15 — Orí, axé, Exu e encruzilhada
+
+Os conceitos de Orí, axé e Exu estão ligados principalmente a tradições iorubás e afro-diaspóricas.
+
+Eles não devem ser retirados de seus contextos apenas para se tornarem metáforas genéricas.
+
+Neste módulo, serão apresentados como caminhos de compreensão, respeitando sua profundidade religiosa e filosófica.
+
+#### Orí: cabeça, direção e singularidade
+
+A palavra Orí pode ser traduzida inicialmente como “cabeça”, mas seu significado ultrapassa a cabeça física.
+
+Orí pode estar relacionado à dimensão pessoal da existência, à direção, ao destino, à consciência e à singularidade de cada ser.
+
+É por meio de Orí que a pessoa realiza sua caminhada.
+
+Essa compreensão mostra que a espiritualidade não apaga a individualidade.
+
+Mesmo pertencendo à comunidade, cada pessoa possui:
+- uma história;
+- uma direção;
+- capacidades;
+- desafios;
+- escolhas;
+- responsabilidades;
+- um modo particular de realizar sua existência.
+
+O médium não deve copiar o caminho de outro médium.
+
+Sua formação precisa respeitar seu Orí, sua trajetória e sua responsabilidade pessoal.
+
+#### Orí e discernimento
+
+Quando alguém atribui todas as decisões às entidades, corre o risco de abandonar a própria responsabilidade.
+
+O conceito de Orí recorda que a pessoa também precisa pensar, escolher, avaliar e responder por suas ações.
+
+A entidade pode orientar, mas não deve substituir completamente a consciência.
+
+A liderança pode aconselhar, mas não deve possuir a vida do integrante.
+
+A comunidade pode oferecer fundamentos, mas a pessoa continua responsável por sua caminhada.
+
+Cuidar de Orí também significa cuidar:
+- da mente;
+- do equilíbrio;
+- das escolhas;
+- da direção;
+- da saúde;
+- da dignidade;
+- da capacidade de decidir;
+- da relação consigo mesma.
+
+A espiritualidade não deve destruir a autonomia.
+
+Ela deve contribuir para uma vida mais consciente.
+
+#### Axé: força de realização
+
+Axé é frequentemente traduzido como energia, mas essa palavra pode ser insuficiente.
+
+Axé pode ser compreendido como força vital, potência, capacidade de realização e princípio que permite que algo aconteça.
+
+O axé circula.
+
+Ele pode ser transmitido, fortalecido, cuidado e compartilhado por meio de:
+- palavras;
+- gestos;
+- alimentos;
+- folhas;
+- águas;
+- cantos;
+- objetos consagrados;
+- relações;
+- rituais;
+- bênçãos;
+- presença comunitária.
+
+Essa circulação não deve ser reduzida a uma eletricidade invisível.
+
+O axé envolve relação, fundamento e finalidade.
+
+Uma palavra possui força porque é pronunciada por alguém, em determinado contexto, com intenção e responsabilidade.
+
+Um elemento ritual possui valor porque está inserido em uma tradição e em uma rede de significados.
+
+#### Axé e responsabilidade
+
+Toda força precisa de direção.
+
+A mediunidade pode ser compreendida como uma forma de potência, mas a potência, sozinha, não garante o bem.
+
+Uma pessoa pode possuir grande sensibilidade e utilizá-la de maneira irresponsável.
+
+Pode ter facilidade de manifestação e alimentar vaidade.
+
+Pode reconhecer elementos da vida do consulente e usar essa percepção para criar dependência.
+
+Por isso, o axé precisa ser acompanhado de ética.
+
+Não basta perguntar:
+*“Quanta força existe nessa manifestação?”*
+
+Também é necessário perguntar:
+*“Para onde essa força está sendo conduzida?”*
+*“Quais frutos ela produz?”*
+*“Ela fortalece ou enfraquece a comunidade?”*
+*“Ela promove autonomia ou dependência?”*
+
+O axé amadurecido transforma potência em cuidado.
+
+#### Exu: movimento, comunicação e relação
+
+Exu é uma divindade fundamental em tradições iorubás e afro-diaspóricas.
+
+Sua imagem foi profundamente distorcida pelo colonialismo e por interpretações cristãs racistas, que o associaram indevidamente ao diabo.
+
+Essa equivalência é incorreta.
+
+Exu não corresponde ao diabo cristão.
+
+Ele está relacionado a dimensões como:
+- movimento;
+- comunicação;
+- linguagem;
+- troca;
+- circulação;
+- caminho;
+- transformação;
+- abertura;
+- relação;
+- imprevisibilidade;
+- encruzilhada.
+
+Exu coloca as coisas em movimento.
+
+Sem movimento, não há encontro. Sem comunicação, não há comunidade. Sem troca, não há circulação de axé.
+
+#### Exu e linguagem
+
+Toda comunicação envolve interpretação.
+
+Uma palavra pode aproximar ou afastar. Pode cuidar ou ferir. Pode abrir caminhos ou criar conflitos.
+
+Exu recorda que nenhuma mensagem chega sem passar por mediações.
+
+Na prática mediúnica, isso é muito importante.
+
+Uma percepção espiritual precisa ser transformada em linguagem.
+
+Nesse processo, podem surgir:
+- escolhas de palavras;
+- diferenças culturais;
+- limites do vocabulário;
+- emoções;
+- expectativas;
+- ambiguidades;
+- interpretações pessoais.
+
+A comunicação mediúnica não é um transporte neutro de informação.
+
+Ela acontece em uma encruzilhada entre entidade, médium, consulente, comunidade e contexto.
+
+Por isso, o cuidado com a palavra também é cuidado com Exu enquanto princípio de comunicação e movimento.
+
+#### A encruzilhada
+
+A encruzilhada é o lugar onde os caminhos se encontram.
+
+Ela representa:
+- escolha;
+- possibilidade;
+- encontro;
+- conflito;
+- dúvida;
+- mudança;
+- negociação;
+- abertura;
+- responsabilidade.
+
+Na encruzilhada, não existe apenas um caminho visível.
+
+A pessoa precisa observar, interpretar e escolher.
+
+Por isso, a encruzilhada é uma imagem importante para o conhecimento.
+
+Aprender não significa apenas receber respostas.
+
+Também significa permanecer diante de possibilidades, reconhecer limites e decidir com responsabilidade.
+
+#### Mediunidade como encruzilhada
+
+A mediunidade pode ser compreendida como uma encruzilhada entre diferentes dimensões:
+- corpo e espírito;
+- indivíduo e comunidade;
+- memória e presente;
+- visível e invisível;
+- experiência e interpretação;
+- liberdade e responsabilidade;
+- tradição e transformação;
+- fé e investigação.
+
+O médium encontra diferentes caminhos de interpretação.
+
+Uma sensação pode possuir elementos espirituais, emocionais, corporais e culturais ao mesmo tempo.
+
+O discernimento não consiste em eliminar rapidamente todas as possibilidades até restar uma resposta única.
+
+Consiste em permanecer na encruzilhada tempo suficiente para compreender o que está acontecendo.
+
+#### Exu e o perigo das respostas fáceis
+
+O pensamento colonial frequentemente procura classificações fixas:
+- verdadeiro ou falso;
+- sagrado ou profano;
+- espiritual ou psicológico;
+- consciente ou inconsciente;
+- tradição ou mudança.
+
+A encruzilhada mostra que a realidade pode ser mais complexa.
+
+Uma experiência pode ser espiritual e corporal.
+Uma tradição pode preservar fundamentos e adaptar formas.
+Um médium pode estar consciente e, ainda assim, viver uma experiência profunda.
+Uma orientação pode conter uma percepção válida e precisar de cuidado na maneira de ser comunicada.
+
+Exu desorganiza certezas excessivamente rígidas e obriga o pensamento a movimentar-se.
+
+#### Exu não é desordem sem responsabilidade
+
+Reconhecer Exu como movimento e abertura não significa defender ausência de limites.
+
+Toda encruzilhada exige escolhas.
+Toda comunicação possui consequências.
+Todo movimento produz transformações.
+
+Por isso, Exu também nos ensina responsabilidade.
+
+O médium precisa responder pelo caminho que escolhe ao transformar uma percepção em palavra ou atitude.
+
+#### Descolonizar a compreensão da mediunidade
+
+Descolonizar não significa rejeitar todo conhecimento produzido no Ocidente.
+
+Significa questionar a ideia de que apenas uma forma de conhecimento possui valor.
+
+Durante muito tempo, práticas africanas e afro-diaspóricas foram classificadas como:
+- superstição;
+- atraso;
+- feitiçaria;
+- ignorância;
+- desordem;
+- doença;
+- primitivismo.
+
+Essas classificações não foram neutras.
+
+Elas serviram para justificar perseguições, proibições e violências contra povos africanos e comunidades de terreiro.
+
+Descolonizar o estudo da mediunidade exige reconhecer que essas tradições produziram conhecimentos complexos sobre:
+- corpo;
+- comunidade;
+- saúde;
+- natureza;
+- ancestralidade;
+- memória;
+- ética;
+- linguagem;
+- espiritualidade;
+- cuidado.
+
+Isso não significa que toda prática esteja acima de críticas.
+
+Toda comunidade humana pode produzir erros, conflitos e abusos.
+
+A diferença é que a crítica não deve partir do preconceito nem da ideia de que essas tradições são inferiores.
+
+#### Ancestralidade e Umbanda
+
+A Umbanda foi construída em um país marcado pela diáspora africana, pela escravização, pelo racismo e pela resistência de comunidades negras.
+
+Por isso, não é possível compreender plenamente a religião apagando suas matrizes africanas e afro-brasileiras.
+
+A presença de Pretos e Pretas-Velhas, Orixás, ritmos, pontos, ervas, defumações e diferentes formas de culto carrega memórias de sobrevivência e reconstrução.
+
+Esses elementos não devem ser tratados apenas como decoração espiritual.
+
+Eles estão ligados a histórias de pessoas que preservaram saberes mesmo diante de perseguições.
+
+Reconhecer essa história significa respeitar:
+- os mais velhos;
+- as comunidades tradicionais;
+- os terreiros;
+- as línguas de origem;
+- os contextos culturais;
+- os conhecimentos transmitidos;
+- as lutas contra o racismo religioso.
+
+A valorização da ancestralidade não deve transformar a África em uma imagem exótica ou idealizada.
+
+Ela deve promover estudo, respeito, reconhecimento e responsabilidade.
+
+#### A afroperspectiva na formação mediúnica
+
+A afroperspectiva modifica algumas perguntas tradicionais sobre a mediunidade.
+
+Em vez de perguntar apenas:
+*“O que está acontecendo dentro do médium?”*
+
+Também podemos perguntar:
+*“Quais relações tornam essa manifestação possível?”*
+*“Qual memória essa entidade atualiza?”*
+*“Como o corpo aprendeu essa linguagem?”*
+*“Que responsabilidade essa experiência produz para a comunidade?”*
+*“Quais ancestrais e tradições estão sendo reconhecidos?”*
+*“Que futuro está sendo construído por meio desse trabalho?”*
+
+Essa mudança impede que a mediunidade seja reduzida a um fenômeno isolado.
+
+Ela passa a ser compreendida como relação entre tempos, corpos, memórias e comunidades.
+
+### Objetivos de aprendizagem
+
+Ao concluir este módulo, o estudante deverá ser capaz de:
+- compreender a pessoa como ser constituído em relação;
+- reconhecer o sentido comunitário do conceito de Ubuntu;
+- compreender a comunidade como rede que inclui vivos, ancestrais e futuras gerações;
+- reconhecer que a mediunidade não é propriedade individual;
+- compreender a ancestralidade como presença e responsabilidade;
+- explicar o conceito de tempo espiralar;
+- reconhecer a memória como processo vivo e transformador;
+- compreender diferentes sentidos relacionados a Kalunga;
+- perceber o corpo como arquivo de experiências e conhecimentos;
+- reconhecer a oralidade e a performance como formas de transmissão;
+- compreender o conceito de oralitura;
+- reconhecer a participação da memória corporal no transe;
+- compreender Orí como dimensão de singularidade, direção e responsabilidade;
+- compreender axé como força vital e capacidade de realização;
+- reconhecer a necessidade de orientar eticamente a potência mediúnica;
+- compreender Exu como movimento, comunicação e relação;
+- desfazer a associação colonial entre Exu e o diabo cristão;
+- compreender a encruzilhada como espaço de escolha e conhecimento;
+- valorizar as matrizes africanas e afro-diaspóricas da Umbanda;
+- reconhecer a importância de combater o racismo religioso.
+
+### Conceitos centrais do módulo
+
+**Ubuntu**
+Perspectiva ética e filosófica na qual a humanidade da pessoa é construída por meio das relações com a comunidade.
+
+**Comunidade ampliada**
+Rede de pertencimento que pode incluir pessoas vivas, ancestrais, futuras gerações, divindades, forças espirituais e território.
+
+**Ancestralidade**
+Relação de continuidade, memória, pertencimento e responsabilidade com aqueles que vieram antes.
+
+**Tempo espiralar**
+Compreensão do tempo em que o passado continua atuando no presente e retorna de maneira transformada na construção do futuro.
+
+**Kalunga**
+Conceito de matriz banto relacionado, conforme o contexto, a grande água, travessia, passagem, limite, ancestralidade e relação entre vida e morte.
+
+**Corpo-arquivo**
+Compreensão do corpo como lugar vivo de memória, experiência, gesto, ritmo, trauma, conhecimento e transmissão.
+
+**Oralidade**
+Forma de produção e transmissão de conhecimentos por meio da palavra falada, da convivência, da memória e da presença.
+
+**Oralitura**
+Inscrição e transmissão de saberes por meio da voz, do corpo, do gesto, da performance e do ritual.
+
+**Orí**
+Conceito ligado à cabeça física e espiritual, à singularidade, à consciência, à direção e à responsabilidade pessoal.
+
+**Axé**
+Força vital, potência de realização e capacidade de produzir movimento, transformação e existência.
+
+**Exu**
+Divindade relacionada ao movimento, à comunicação, à circulação, à linguagem, às trocas, aos caminhos e às encruzilhadas.
+
+**Encruzilhada**
+Espaço simbólico de encontro, escolha, possibilidade, transformação, negociação e responsabilidade.
+
+**Afroperspectiva**
+Modo de produzir conhecimento a partir de referências africanas e afro-diaspóricas, valorizando comunidade, corpo, ancestralidade, oralidade e território.
+
+**Racismo religioso**
+Perseguição, discriminação ou violência dirigida especialmente às religiões de matrizes africanas e aos praticantes.
+
+### Questões para reflexão
+1. O que significa afirmar que uma pessoa existe por meio das relações?
+2. Como Ubuntu modifica uma visão individualista da mediunidade?
+3. Quem participa da comunidade ampliada de um terreiro?
+4. Por que a mediunidade não deve ser tratada como propriedade pessoal?
+5. Qual é a diferença entre ancestralidade e simples lembrança do passado?
+6. Como nossas escolhas presentes afetam aqueles que virão depois de nós?
+7. O que a imagem do tempo espiralar nos ajuda a compreender?
+8. Como o passado continua presente nas práticas religiosas atuais?
+9. Quais sentidos podem estar relacionados a Kalunga?
+10. Como o corpo guarda conhecimentos que nem sempre conseguimos explicar em palavras?
+11. De que maneira o canto, o gesto e o ritual transmitem memória?
+12. Por que a participação da memória corporal não invalida uma experiência espiritual?
+13. Como Orí se relaciona à autonomia e à responsabilidade?
+14. Por que o médium não deve entregar todas as decisões às entidades?
+15. O que diferencia axé de uma ideia genérica de energia?
+16. Por que toda força mediúnica precisa de orientação ética?
+17. Quais distorções coloniais foram criadas sobre Exu?
+18. Como a encruzilhada representa conhecimento e escolha?
+19. Em quais encruzilhadas o médium se encontra durante seu desenvolvimento?
+20. Como valorizar as matrizes africanas sem transformar a África em uma imagem única ou exótica?
+21. De que maneira o racismo religioso ainda afeta os terreiros?
+22. Quais práticas do TUCPB expressam comunidade, memória e ancestralidade?
+
+### Atividade de memória e ancestralidade
+
+Escolha uma prática do terreiro, como:
+- um ponto cantado;
+- uma oração;
+- um gesto;
+- uma forma de preparar o espaço;
+- uma orientação dos mais velhos;
+- um elemento ritual;
+- uma maneira de receber uma entidade;
+- uma história contada na comunidade.
+
+Depois, reflita:
+- Quem lhe ensinou essa prática?
+- Essa pessoa aprendeu com quem?
+- O conhecimento foi transmitido por escrito, pela fala ou pela observação?
+- Que valores estão presentes nessa prática?
+- O que ela preserva?
+- Como ela foi transformada ao longo do tempo?
+- O que precisa ser transmitido às próximas gerações?
+
+Essa atividade ajuda a perceber que nenhum conhecimento começa completamente em nós.
+Somos parte de uma corrente de transmissão.
+
+### Atividade sobre o corpo-arquivo
+
+Durante uma atividade ritual, observe:
+- como seu corpo reage aos pontos cantados;
+- quais movimentos surgem com mais naturalidade;
+- como sua respiração se modifica;
+- quais posturas produzem firmeza;
+- quais sons despertam memórias;
+- quais gestos você aprendeu observando;
+- quais conhecimentos seu corpo realiza sem explicação verbal.
+
+Depois, escreva um relato sem tentar definir imediatamente se cada sensação é espiritual, emocional ou corporal.
+O objetivo é reconhecer que essas dimensões podem estar relacionadas.
+
+### Estudo de situações
+
+**Situação 1 — O médium indispensável**
+Um médium afirma que a gira não funciona sem sua presença porque suas entidades são as mais fortes da casa.
+*Reflexão*: Essa postura centraliza o trabalho no indivíduo e enfraquece a dimensão comunitária. Na perspectiva de Ubuntu, o terreiro é sustentado por uma rede de relações, funções e responsabilidades.
+
+**Situação 2 — A tradição sem origem**
+Uma prática africana é utilizada no terreiro, mas apresentada como uma técnica espiritual universal, sem reconhecimento de sua origem.
+*Reflexão*: Apagar a origem pode reproduzir invisibilização. Valorizar um conhecimento também significa reconhecer os povos, as comunidades e as histórias que o preservaram.
+
+**Situação 3 — Exu como ameaça**
+Uma pessoa utiliza a imagem de Exu para ameaçar um integrante, dizendo que consequências espirituais acontecerão caso ele não obedeça.
+*Reflexão*: Essa conduta reproduz distorções e utiliza o medo como forma de controle. Exu não deve ser transformado em instrumento de intimidação ou associado ao mal cristão.
+
+**Situação 4 — A mensagem sem mediação**
+Um médium acredita que toda palavra dita durante o transe vem diretamente da entidade, sem qualquer participação humana.
+*Reflexão*: Toda comunicação passa pelo corpo, pela linguagem e pela história do médium. Reconhecer essa mediação aumenta a responsabilidade e o cuidado com a palavra.
+
+**Situação 5 — A tradição imutável**
+Uma pessoa afirma que qualquer mudança na forma ritual representa abandono completo da ancestralidade.
+*Reflexão*: O tempo espiralar mostra que a tradição pode manter fundamentos e assumir novas formas. Preservar não significa congelar. A mudança, porém, deve ocorrer com estudo, respeito e responsabilidade.
+
+### Ubuntu e a vida cotidiana
+
+Ubuntu não deve permanecer apenas como um conceito bonito.
+
+Ele precisa aparecer nas relações.
+
+Uma comunidade inspirada por essa perspectiva procura:
+- acolher sem humilhar;
+- corrigir sem destruir;
+- ensinar sem controlar;
+- ouvir os mais velhos;
+- proteger os mais novos;
+- dividir responsabilidades;
+- reconhecer diferentes capacidades;
+- cuidar de quem está fragilizado;
+- impedir abusos;
+- celebrar conquistas coletivas;
+- preservar a memória;
+- preparar o caminho para quem virá.
+
+A comunidade não é saudável apenas porque utiliza a palavra família.
+
+Ela é saudável quando suas práticas produzem dignidade, pertencimento e responsabilidade compartilhada.
+
+### Síntese do Módulo 4
+
+A mediunidade não nasce nem se desenvolve no isolamento.
+
+Ela acontece em uma rede de relações que envolve o médium, a entidade, o terreiro, os mais velhos, os consulentes, os ancestrais e a comunidade.
+
+Ubuntu nos ensina que a pessoa se constrói na relação. Isso significa que a sensibilidade mediúnica não deve ser utilizada como propriedade ou instrumento de superioridade.
+
+A ancestralidade amplia nossa percepção do tempo. Aqueles que vieram antes continuam presentes nas palavras, nos ritmos, nos gestos, nas práticas e nos conhecimentos transmitidos.
+
+O tempo espiralar mostra que o passado não desaparece. Ele retorna transformado e participa da construção do futuro.
+
+Kalunga nos coloca diante das travessias entre vida e morte, memória e esquecimento, separação e continuidade.
+
+O corpo-arquivo recorda que o conhecimento não está apenas nos livros. Ele também vive na postura, na dança, no canto, na respiração, no gesto e no ritual.
+
+Orí reafirma a singularidade e a responsabilidade pessoal. O médium pertence à comunidade, mas não abandona sua consciência e sua capacidade de escolher.
+
+Axé é potência de realização. Entretanto, toda potência precisa de direção ética.
+
+Exu ensina movimento, comunicação, troca e transformação. A encruzilhada mostra que o conhecimento nasce também diante das dúvidas, dos encontros e das escolhas.
+
+Na perspectiva africana e afro-diaspórica, amadurecer mediunicamente não significa afastar-se do mundo para alcançar uma espiritualidade individual.
+
+Significa aprofundar relações.
+
+Significa reconhecer de onde viemos, cuidar de quem caminha conosco e preparar caminhos para aqueles que ainda virão.
+
+No próximo módulo, estudaremos as epistemologias dos povos originários, aprofundando a relação entre mediunidade, território, sonho, palavra, floresta, encantamento e comunicação ancestral.
+
+---
+*Obra de referência: Mediunidade — fundamentos, experiência e desenvolvimento na Umbanda*
+*Autor: Bàbá Aláàrìnrin Àjò / Pai Felipe de Oxaguian*
+*Instituição: Templo Umbandista Caboclo Pena Branca — TUCPB*`,
+    duration: "Módulo 4",
+    instructor: "Babá Felipe",
+    date: "24 de Julho de 2026",
+    videoUrl: "https://www.youtube.com/embed/2p71_pHZ-WA",
+    imageUrl: "https://img.youtube.com/vi/2p71_pHZ-WA/hqdefault.jpg",
+    pdfUrl: "https://drive.google.com/file/d/1UJTPo2Wwcm3d280MCkHD8zAkSozG-3Yk/view?usp=drive_link",
+    level: "Todos",
+    tags: ["Mediunidade", "Módulo 4"]
+  },
+
+  {
     id: "les-t1-0",
     title: "O Simbolismo da Árvore e Sua Aplicação no Desenvolvimento Mediúnico na Umbanda De Caboclo",
     category: "TRILHA I: A RAIZ",
