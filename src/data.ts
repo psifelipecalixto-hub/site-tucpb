@@ -1173,6 +1173,841 @@ No próximo módulo, estudaremos o desenvolvimento mediúnico como processo cont
   },
 
   {
+    id: "les-t2-3",
+    title: "Módulo 3: Desenvolvimento, Ética e Cuidado",
+    category: "TRILHA II: O TRONCO",
+    description: `## Módulo 3 — Desenvolvimento, Ética e Cuidado
+### O amadurecimento mediúnico como caminho de responsabilidade, equilíbrio e serviço
+
+Depois de compreender os fundamentos da mediunidade e estudar os fenômenos relacionados à incorporação, ao transe, ao corpo e à consciência, chegamos a uma etapa essencial da formação: o desenvolvimento mediúnico.
+
+Desenvolver a mediunidade não significa apenas aprender a incorporar, perceber entidades ou manifestar diferentes formas de sensibilidade espiritual. O verdadeiro desenvolvimento envolve a formação integral do médium.
+
+Ele alcança:
+- o comportamento;
+- a disciplina;
+- o equilíbrio emocional;
+- a capacidade de escutar;
+- o cuidado com a palavra;
+- a relação com a comunidade;
+- o respeito ao consulente;
+- o discernimento entre experiência espiritual e sofrimento psicológico;
+- a responsabilidade pelas consequências do trabalho realizado.
+
+Uma manifestação intensa não é necessariamente uma manifestação madura. Um médium pode apresentar movimentos fortes, mudanças marcantes na voz ou grande facilidade de incorporação e ainda precisar desenvolver humildade, equilíbrio, responsabilidade e capacidade de convivência.
+
+Por outro lado, uma pessoa cuja mediunidade se expressa de maneira discreta pode realizar um trabalho profundo, seguro e transformador.
+
+O amadurecimento não é medido pelo espetáculo. Ele é reconhecido pela estabilidade, pela coerência e pelos frutos produzidos.
+
+Neste módulo, estudaremos o desenvolvimento mediúnico como processo contínuo. Também refletiremos sobre ética, caridade, responsabilidade e saúde mental, compreendendo que o cuidado espiritual não deve excluir o cuidado psicológico, médico ou social quando esses acompanhamentos forem necessários.
+
+### O que você estudará neste módulo
+
+O Módulo 3 acompanha os três capítulos da terceira parte do livro:
+- Desenvolvimento mediúnico
+- Ética, caridade e responsabilidade
+- Saúde mental e discernimento
+
+Esses capítulos mostram que a formação do médium não termina quando uma entidade se manifesta. Na verdade, a manifestação é apenas uma parte de um caminho mais amplo de estudo, cuidado, autoconhecimento e serviço.
+
+### Capítulo 10 — Desenvolvimento mediúnico
+
+O desenvolvimento mediúnico é um processo de aprendizagem.
+
+Ele não deve ser compreendido como uma busca apressada por fenômenos, nem como uma competição para descobrir quem incorpora primeiro, quem sente mais ou quem apresenta manifestações mais visíveis.
+
+Cada médium possui uma história, um corpo, uma sensibilidade, uma formação e um tempo próprios.
+
+Por isso, não existe um único modelo de desenvolvimento que funcione da mesma maneira para todas as pessoas.
+
+#### Desenvolvimento não é fabricação de fenômenos
+
+Uma das maiores confusões no início da caminhada é acreditar que o médium precisa produzir alguma manifestação para demonstrar que possui mediunidade.
+
+Essa expectativa pode fazer com que a pessoa:
+- force movimentos;
+- imite manifestações observadas em outros médiuns;
+- interprete qualquer sensação como presença espiritual;
+- tenha medo de permanecer consciente;
+- sinta vergonha por não incorporar rapidamente;
+- confunda ansiedade com aproximação de entidade;
+- crie gestos para corresponder às expectativas do grupo.
+
+O desenvolvimento responsável não exige que o médium prove nada.
+
+Ele ensina a observar.
+
+Antes de classificar uma sensação, é necessário percebê-la com calma. Antes de atribuir uma fala a uma entidade, é necessário aprender a diferenciar intuição, emoção, memória e influência do ambiente.
+
+O médium não deve buscar fenômenos. Deve preparar-se para servir quando e como sua mediunidade puder contribuir.
+
+#### O tempo de cada pessoa
+
+Alguns médiuns percebem sua sensibilidade desde a infância. Outros começam a reconhecer determinadas experiências na vida adulta.
+
+Algumas pessoas apresentam facilidade para a incorporação. Outras desenvolvem primeiro a intuição, a percepção energética, os sonhos ou a capacidade de sustentação da corrente.
+
+Há também médiuns cuja principal contribuição não será uma manifestação visível.
+
+Eles podem atuar por meio de:
+- oração;
+- sustentação;
+- canto;
+- toque;
+- organização;
+- acolhimento;
+- cambonagem;
+- estudo;
+- cuidado com o espaço;
+- assistência à comunidade.
+
+A mediunidade não deve ser reduzida à incorporação.
+
+Do mesmo modo, o valor de uma pessoa dentro do terreiro não pode ser definido pela forma como sua sensibilidade se manifesta.
+
+#### Desenvolvimento como educação da sensibilidade
+
+Uma sensibilidade sem orientação pode gerar confusão. O médium pode captar emoções do ambiente, perceber alterações corporais ou ter experiências interiores sem saber como interpretá-las.
+
+O desenvolvimento ajuda a transformar sensação em percepção organizada.
+
+Esse processo envolve aprender a perguntar:
+- O que eu senti?
+- Quando começou?
+- Qual era meu estado emocional?
+- Isso acontece apenas no terreiro?
+- Houve mudança depois do ponto cantado?
+- A sensação permaneceu após o encerramento?
+- Já vivi algo semelhante antes?
+- Minha interpretação foi confirmada?
+- Estou atribuindo sentido espiritual cedo demais?
+- Preciso conversar com a liderança?
+
+Com o tempo, a observação diminui a ansiedade e fortalece o discernimento.
+
+#### Estudo, prática e convivência
+
+O desenvolvimento mediúnico não acontece apenas durante a gira.
+
+Ele é formado por três dimensões inseparáveis:
+
+**Estudo**
+O estudo oferece linguagem, referências e critérios para compreender as experiências.
+Ele ajuda o médium a não depender exclusivamente de sensações ou opiniões pessoais.
+
+**Prática**
+A prática permite observar como os ensinamentos funcionam no corpo, no ritual e na convivência.
+É na experiência que o médium aprende a reconhecer aproximações, limites, dificuldades e responsabilidades.
+
+**Convivência**
+A convivência mostra que a mediunidade não é uma experiência isolada.
+O médium aprende observando, escutando, ajudando, recebendo correções e assumindo tarefas dentro da comunidade.
+
+Sem convivência, a experiência pode tornar-se excessivamente individual e sujeita a interpretações sem confirmação.
+
+#### Autoconhecimento
+
+Desenvolver a mediunidade também significa conhecer a própria humanidade.
+
+O médium precisa reconhecer:
+- suas inseguranças;
+- seus desejos;
+- suas expectativas;
+- sua necessidade de aprovação;
+- seus medos;
+- seus conflitos;
+- suas opiniões;
+- seus limites;
+- suas tendências emocionais;
+- suas dificuldades de relacionamento.
+
+Quanto menos a pessoa conhece a si mesma, maior é o risco de confundir conteúdos pessoais com orientações espirituais.
+
+O autoconhecimento não elimina a participação humana. Ele torna essa participação mais consciente e responsável.
+
+#### Disciplina sem autoritarismo
+
+A disciplina é necessária porque a prática mediúnica envolve outras pessoas.
+
+Uma palavra dita durante um atendimento pode influenciar decisões familiares, afetivas, profissionais, religiosas e de saúde.
+
+Por isso, o médium precisa aprender a respeitar:
+- horários;
+- funções;
+- orientações;
+- fundamentos;
+- limites da casa;
+- organização da corrente;
+- momentos de silêncio;
+- responsabilidades assumidas.
+
+Disciplina não deve significar humilhação, medo ou submissão cega.
+
+Uma liderança saudável orienta, explica, corrige e protege. Ela não usa a autoridade espiritual para controlar a vida pessoal dos integrantes.
+
+Da mesma forma, o médium deve aprender a receber correções sem transformar toda orientação em ofensa.
+
+#### Desenvolvimento é continuidade
+
+Não existe um ponto em que o médium possa afirmar que terminou completamente seu desenvolvimento.
+
+A experiência muda com:
+- o tempo;
+- a idade;
+- o amadurecimento emocional;
+- as responsabilidades assumidas;
+- as entidades com as quais trabalha;
+- as mudanças na comunidade;
+- os desafios da vida.
+
+Desenvolver-se é continuar aprendendo.
+
+Quanto maior a responsabilidade espiritual, maior deve ser a disposição para estudar, revisar atitudes e reconhecer limites.
+
+### Capítulo 11 — Ética, caridade e responsabilidade
+
+A mediunidade coloca o médium em uma posição de confiança.
+
+Durante um atendimento, o consulente pode revelar dores, medos, conflitos, perdas e situações íntimas. Muitas vezes, ele procura o terreiro em um momento de fragilidade.
+
+Isso exige cuidado.
+
+A ética não é um detalhe do trabalho mediúnico. Ela é parte do fundamento.
+
+Sem ética, a sensibilidade pode transformar-se em instrumento de vaidade, manipulação ou abuso.
+
+#### O que é ética mediúnica?
+
+Ética mediúnica é o conjunto de princípios que orienta a maneira como o médium utiliza sua sensibilidade e participa dos trabalhos espirituais.
+
+Ela envolve:
+- respeito;
+- responsabilidade;
+- sigilo;
+- humildade;
+- prudência;
+- honestidade;
+- cuidado com a palavra;
+- respeito à liberdade do consulente;
+- reconhecimento dos próprios limites;
+- compromisso com o bem-estar da comunidade.
+
+A ética não depende apenas da intenção.
+
+Uma pessoa pode acreditar que está ajudando e, ainda assim, produzir medo, dependência ou sofrimento.
+
+Por isso, não basta querer fazer o bem. É necessário aprender a cuidar.
+
+#### Caridade não é poder
+
+Na Umbanda, a caridade ocupa lugar central. Contudo, ela não deve ser confundida com posição de superioridade.
+
+O médium não está acima do consulente.
+
+Ele não é proprietário da verdade, da entidade ou do destino de quem procura atendimento.
+
+A caridade verdadeira não humilha, não controla e não transforma a fragilidade do outro em fonte de prestígio.
+
+Ela procura:
+- acolher;
+- escutar;
+- orientar com cuidado;
+- fortalecer a autonomia;
+- respeitar a dignidade;
+- aliviar o sofrimento quando possível;
+- encaminhar para outros cuidados quando necessário.
+
+#### O cuidado com a palavra
+
+Uma frase dita em nome de uma entidade pode ter grande peso para quem a recebe.
+
+Por isso, o médium deve evitar declarações que:
+- anunciem tragédias;
+- estabeleçam datas para acontecimentos;
+- imponham decisões;
+- estimulem rompimentos precipitados;
+- criem medo de espíritos ou demandas;
+- prometam cura garantida;
+- determinem abandono de tratamento;
+- afirmem diagnósticos;
+- culpem a pessoa por seu sofrimento;
+- gerem dependência do médium ou do terreiro.
+
+Mesmo quando uma percepção parece clara, sua comunicação precisa ser cuidadosa.
+
+É diferente dizer:
+*“Você precisa abandonar imediatamente essa relação porque algo ruim acontecerá.”*
+
+E dizer:
+*“Talvez seja importante observar como essa relação tem afetado sua segurança, sua dignidade e seu equilíbrio. Procure apoio e reflita com cuidado antes de tomar uma decisão.”*
+
+A segunda forma preserva a autonomia e evita transformar uma percepção em sentença.
+
+#### Sigilo e privacidade
+
+O que é revelado durante um atendimento não deve tornar-se assunto de conversa.
+
+O médium não deve compartilhar detalhes sobre o consulente para:
+- demonstrar sua mediunidade;
+- divertir outras pessoas;
+- buscar reconhecimento;
+- contar histórias;
+- justificar comentários;
+- criar curiosidade dentro da comunidade.
+
+O sigilo protege a dignidade da pessoa atendida e a confiança no trabalho espiritual.
+
+Existem situações de risco em que a liderança ou profissionais responsáveis precisam ser procurados. Fora dessas situações, a intimidade deve ser preservada.
+
+#### Limites da orientação espiritual
+
+O atendimento religioso pode oferecer acolhimento, reflexão e direção espiritual. No entanto, ele não substitui todas as outras formas de cuidado.
+
+O médium não deve atuar como:
+- médico sem formação;
+- psicólogo sem formação;
+- advogado sem formação;
+- assistente social sem formação;
+- investigador;
+- autoridade sobre decisões pessoais;
+- controlador da vida do consulente.
+
+Uma entidade pode orientar uma pessoa a cuidar de sua saúde. Isso é diferente de prescrever medicamentos ou determinar a interrupção de um tratamento.
+
+Pode incentivar diálogo e reflexão. Isso é diferente de ordenar decisões familiares.
+
+Pode sugerir proteção e prudência. Isso é diferente de criar medo permanente.
+
+#### Abuso espiritual
+
+O abuso espiritual acontece quando símbolos, crenças, entidades ou posições religiosas são usados para controlar, intimidar ou explorar alguém.
+
+Alguns sinais de abuso incluem:
+- exigir obediência absoluta;
+- ameaçar consequências espirituais;
+- proibir questionamentos;
+- controlar relacionamentos;
+- exigir dinheiro ou favores em troca de proteção;
+- usar informações íntimas contra a pessoa;
+- justificar humilhações como ensinamento;
+- afirmar que somente uma liderança possui acesso à verdade;
+- impedir acompanhamento médico ou psicológico;
+- criar dependência emocional e espiritual.
+
+Nenhuma posição dentro do terreiro coloca alguém acima da responsabilidade ética.
+
+A autoridade religiosa deve existir para servir, orientar e proteger.
+
+#### Relações afetivas e poder
+
+É necessário cuidado especial quando existe diferença de autoridade entre dirigente, médium, cambono, estudante ou consulente.
+
+A posição espiritual não deve ser usada para obter:
+- envolvimento afetivo;
+- acesso sexual;
+- vantagens financeiras;
+- trabalho gratuito forçado;
+- favores pessoais;
+- submissão emocional.
+
+Consentimento pode ser prejudicado quando existe medo de punição espiritual ou dependência religiosa.
+
+Por isso, relações de poder precisam ser reconhecidas e tratadas com transparência e responsabilidade.
+
+#### Dinheiro e trabalho espiritual
+
+Cada comunidade organiza suas necessidades materiais de maneira diferente.
+
+O terreiro possui despesas, responsabilidades e formas de manutenção. O problema não está necessariamente na existência de contribuições, mas na exploração da vulnerabilidade.
+
+A pessoa não deve ser levada a acreditar que:
+- somente receberá ajuda se pagar;
+- sua proteção depende de um valor;
+- uma entidade exige pagamento pessoal;
+- o aumento da contribuição garantirá resultado espiritual;
+- a falta de dinheiro provocará punição.
+
+Transparência é fundamental.
+
+Quando houver contribuições, elas precisam ser explicadas com clareza e separadas de ameaças ou promessas.
+
+#### Responsabilidade coletiva
+
+A ética não é responsabilidade apenas do dirigente.
+
+Toda a comunidade precisa participar da construção de um ambiente seguro.
+
+Isso inclui:
+- observar práticas inadequadas;
+- acolher quem relata sofrimento;
+- não proteger abusos por amizade;
+- respeitar procedimentos;
+- encaminhar situações para a liderança;
+- reconhecer quando a própria liderança precisa ser questionada;
+- evitar fofocas;
+- proteger crianças, adolescentes e pessoas vulneráveis.
+
+Uma comunidade saudável não confunde silêncio com lealdade.
+
+### Capítulo 12 — Saúde mental e discernimento
+
+Experiências espirituais e questões de saúde mental podem apresentar elementos semelhantes.
+
+Uma pessoa pode:
+- ouvir vozes;
+- sentir presenças;
+- ter sonhos intensos;
+- perceber mudanças na identidade;
+- experimentar alterações de consciência;
+- apresentar movimentos involuntários;
+- sentir medo ou perseguição;
+- interpretar acontecimentos como mensagens.
+
+Essas experiências podem receber sentidos diferentes conforme o contexto, a cultura, a história da pessoa e os efeitos produzidos em sua vida.
+
+Por isso, não é responsável afirmar que toda experiência incomum é doença.
+
+Também não é responsável afirmar que todo sofrimento psicológico é mediunidade.
+
+O discernimento exige atenção ao contexto e às consequências.
+
+#### Experiência religiosa não é doença automática
+
+Uma experiência mediúnica vivida dentro de uma tradição pode coexistir com equilíbrio e qualidade de vida.
+
+Alguns elementos que sugerem maior integração são:
+- a experiência possui sentido dentro da cultura da pessoa;
+- ocorre em contexto ritual organizado;
+- existe algum grau de controle;
+- a pessoa consegue iniciar e encerrar a prática;
+- não há prejuízo significativo na vida cotidiana;
+- a experiência produz pertencimento e crescimento;
+- o médium aceita orientação;
+- existe acompanhamento comunitário;
+- não há risco para si ou para terceiros;
+- a pessoa mantém vínculos, responsabilidades e autocuidado.
+
+Esses elementos não servem como diagnóstico, mas ajudam a observar a maneira como a experiência está integrada à vida.
+
+#### Sinais de sofrimento que exigem atenção
+
+Algumas situações indicam necessidade de cuidado profissional, especialmente quando há:
+- sofrimento intenso;
+- medo permanente;
+- perda de sono por vários dias;
+- incapacidade de trabalhar ou estudar;
+- abandono do autocuidado;
+- desorganização da fala;
+- confusão persistente;
+- comportamentos de risco;
+- agressividade;
+- ideias de perseguição;
+- isolamento extremo;
+- uso prejudicial de álcool ou outras substâncias;
+- pensamentos de morte;
+- vontade de ferir a si ou outra pessoa;
+- perda importante de contato com a realidade;
+- vozes que ordenam comportamentos perigosos;
+- piora rápida e intensa do estado emocional.
+
+Nessas situações, a pessoa precisa ser acolhida e encaminhada para avaliação profissional.
+
+O encaminhamento não significa negar a dimensão espiritual de sua experiência.
+
+Significa reconhecer que o cuidado humano pode exigir diferentes formas de apoio.
+
+#### Religião e tratamento profissional
+
+Tratamento psicológico ou psiquiátrico não é sinal de fraqueza espiritual.
+
+Da mesma forma, utilizar medicamentos prescritos não significa impedir o desenvolvimento mediúnico.
+
+A interrupção de medicamentos deve ser decidida exclusivamente com o profissional responsável.
+
+O terreiro pode oferecer:
+- acolhimento;
+- oração;
+- escuta;
+- pertencimento;
+- orientação espiritual;
+- apoio comunitário.
+
+Profissionais da saúde podem oferecer:
+- avaliação;
+- diagnóstico;
+- acompanhamento clínico;
+- psicoterapia;
+- medicação quando necessária;
+- manejo de crises;
+- prevenção de riscos.
+
+Essas formas de cuidado podem coexistir.
+
+#### Discernimento e humildade
+
+Discernimento não é capacidade de ter certeza sobre tudo.
+
+É a capacidade de observar, comparar, esperar, investigar e reconhecer quando não sabemos.
+
+O médium maduro não precisa explicar imediatamente toda experiência.
+
+Ele pode dizer:
+*“Ainda não compreendi.”*
+*“Preciso observar novamente.”*
+*“Vou conversar com a liderança.”*
+*“Talvez exista também uma questão emocional.”*
+*“Essa situação precisa de acompanhamento profissional.”*
+*“Não tenho segurança para orientar.”*
+*“Minha percepção pode estar influenciada pelo meu estado pessoal.”*
+
+Essa postura não enfraquece a mediunidade. Ela demonstra responsabilidade.
+
+#### Fatores que influenciam a experiência
+
+O estado do médium pode ser afetado por:
+- falta de sono;
+- fome;
+- desidratação;
+- estresse;
+- luto;
+- conflitos;
+- ansiedade;
+- depressão;
+- uso de substâncias;
+- medicamentos;
+- doenças físicas;
+- alterações hormonais;
+- sobrecarga de trabalho;
+- expectativas religiosas;
+- pressão do grupo.
+
+Esses fatores precisam ser considerados antes que tudo seja atribuído ao plano espiritual.
+
+Uma experiência pode possuir significado religioso e, ao mesmo tempo, ser influenciada pelas condições do corpo e da mente.
+
+#### Crise espiritual e crise psicológica
+
+Algumas pessoas passam por períodos de intensa transformação religiosa. Podem questionar antigas crenças, sentir mudanças na percepção e procurar novo sentido para a vida.
+
+Esses períodos podem ser vividos como crises espirituais.
+
+No entanto, quando a crise provoca risco, desorganização profunda ou perda importante de funcionamento, ela também precisa ser avaliada clinicamente.
+
+O objetivo não é escolher entre “espiritual” ou “psicológico” de forma apressada.
+
+O objetivo é cuidar da pessoa inteira.
+
+#### O médium não é terapeuta
+
+Durante o atendimento, o médium pode acolher relatos de:
+- depressão;
+- ansiedade;
+- violência;
+- abuso;
+- luto;
+- dependência;
+- conflitos familiares;
+- pensamentos de morte;
+- traumas.
+
+Ele deve escutar com respeito, mas não assumir uma função para a qual não possui formação.
+
+O médium não deve:
+- diagnosticar;
+- prescrever;
+- prometer cura;
+- investigar traumas de maneira invasiva;
+- obrigar a pessoa a revelar detalhes;
+- responsabilizar espiritualmente a vítima;
+- sugerir abandono de tratamento;
+- conduzir sozinho situações de risco.
+
+Quando necessário, deve procurar a liderança e orientar a busca por atendimento especializado.
+
+#### Saúde mental do próprio médium
+
+O cuidado não se dirige apenas ao consulente.
+
+O médium também precisa observar sua própria saúde mental.
+
+A dedicação ao terreiro não elimina a necessidade de descanso, lazer, relações saudáveis e acompanhamento profissional.
+
+Alguns sinais de sobrecarga são:
+- irritabilidade;
+- exaustão;
+- dificuldade para dormir;
+- medo constante;
+- sensação de obrigação permanente;
+- incapacidade de afastar-se do trabalho;
+- culpa por descansar;
+- vontade de salvar todas as pessoas;
+- dificuldade de separar a vida pessoal do terreiro;
+- perda de prazer em outras atividades.
+
+Servir não significa destruir-se.
+
+O cuidado com o próprio corpo e com a própria mente faz parte da responsabilidade espiritual.
+
+### Desenvolvimento mediúnico na visão do TUCPB
+
+Na visão do Templo Umbandista Caboclo Pena Branca, o desenvolvimento mediúnico deve formar pessoas responsáveis, e não apenas manifestações impressionantes.
+
+O trabalho do terreiro procura fortalecer:
+- disciplina;
+- estudo;
+- convivência;
+- humildade;
+- responsabilidade;
+- autoconhecimento;
+- respeito;
+- equilíbrio;
+- serviço;
+- compromisso com a caridade.
+
+A mediunidade não deve afastar a pessoa da realidade.
+
+Ela deve ajudá-la a viver com maior consciência de suas relações, escolhas e responsabilidades.
+
+Um médium em amadurecimento aprende que:
+- nem toda sensação é comunicação;
+- nem toda intuição é orientação;
+- nem toda manifestação é madura;
+- nem toda dificuldade é demanda;
+- nem todo sofrimento é mediunidade;
+- nem toda correção é perseguição;
+- nem toda autoridade está acima de questionamentos;
+- nem toda palavra precisa ser dita;
+- nem toda percepção precisa ser comunicada.
+
+A sabedoria mediúnica também se expressa naquilo que o médium escolhe não fazer.
+
+#### O desenvolvimento como cultivo
+
+Podemos comparar o desenvolvimento mediúnico ao cultivo de uma árvore.
+
+Não é possível puxar uma planta para fazê-la crescer mais rápido.
+
+O crescimento depende de:
+- terra adequada;
+- raízes firmes;
+- água;
+- luz;
+- tempo;
+- cuidado;
+- proteção;
+- poda;
+- equilíbrio.
+
+Da mesma forma, o médium precisa de fundamentos, convivência, experiência e tempo.
+
+Uma árvore que cresce sem raízes pode cair diante do primeiro vento forte.
+
+Uma mediunidade desenvolvida apenas para produzir fenômenos pode não suportar conflitos, responsabilidades e frustrações.
+
+O desenvolvimento verdadeiro fortalece as raízes antes de exibir a copa.
+
+### Princípios para um desenvolvimento seguro
+
+**Não tenha pressa**
+A pressa aumenta a ansiedade e dificulta o discernimento.
+
+**Não se compare**
+Cada médium possui uma forma e um tempo de aprendizagem.
+
+**Não busque espetáculo**
+A intensidade da manifestação não determina sua qualidade.
+
+**Aceite orientação**
+O desenvolvimento exige escuta e disposição para corrigir atitudes.
+
+**Preserve sua autonomia**
+Nenhuma liderança deve controlar completamente sua vida pessoal.
+
+**Cuide do corpo**
+Sono, alimentação, hidratação e acompanhamento médico influenciam o equilíbrio.
+
+**Cuide da mente**
+Buscar apoio psicológico não diminui a fé.
+
+**Respeite o consulente**
+Quem procura ajuda não deve ser transformado em objeto de poder.
+
+**Reconheça seus limites**
+Dizer “não sei” pode ser uma atitude profundamente ética.
+
+**Observe os frutos**
+A prática deve produzir responsabilidade, caridade, equilíbrio e amadurecimento.
+
+### Objetivos de aprendizagem
+
+Ao concluir este módulo, o estudante deverá ser capaz de:
+- compreender o desenvolvimento mediúnico como processo contínuo;
+- reconhecer que desenvolvimento não significa fabricação de fenômenos;
+- respeitar o tempo e a forma de manifestação de cada pessoa;
+- compreender a importância do estudo, da prática e da convivência;
+- reconhecer o autoconhecimento como parte do discernimento;
+- diferenciar disciplina de autoritarismo;
+- compreender os princípios da ética mediúnica;
+- cuidar da palavra durante o atendimento;
+- preservar sigilo, privacidade e dignidade;
+- reconhecer limites da orientação espiritual;
+- identificar sinais de abuso espiritual;
+- compreender a importância da autonomia do consulente;
+- diferenciar experiência religiosa integrada de sofrimento desorganizador;
+- reconhecer sinais que exigem avaliação profissional;
+- compreender que religião e tratamento podem coexistir;
+- cuidar da saúde mental do próprio médium;
+- avaliar o desenvolvimento pelos frutos, e não pelo espetáculo.
+
+### Conceitos centrais do módulo
+
+**Desenvolvimento mediúnico**
+Processo de formação espiritual, ética, emocional, corporal e comunitária por meio do qual o médium aprende a compreender, organizar e utilizar sua sensibilidade com responsabilidade.
+
+**Discernimento**
+Capacidade de observar uma experiência, considerar diferentes possibilidades e evitar conclusões precipitadas.
+
+**Ética mediúnica**
+Conjunto de princípios que orienta o uso responsável da mediunidade e o cuidado com o consulente, a comunidade e o próprio médium.
+
+**Caridade**
+Ação de cuidado voltada ao bem do outro, realizada sem humilhação, controle, exploração ou busca de superioridade.
+
+**Sigilo**
+Compromisso de preservar informações pessoais e íntimas compartilhadas durante atendimentos ou atividades religiosas.
+
+**Autonomia**
+Direito da pessoa de tomar decisões sobre sua própria vida sem coerção, manipulação ou ameaça espiritual.
+
+**Abuso espiritual**
+Uso de crenças, entidades, símbolos ou posições religiosas para controlar, intimidar, explorar ou violentar alguém.
+
+**Diagnóstico diferencial**
+Processo clínico utilizado para avaliar diferentes causas possíveis de uma experiência ou conjunto de sintomas.
+
+**Saúde mental**
+Condição relacionada ao equilíbrio emocional, à capacidade de lidar com desafios, manter relações, realizar atividades e cuidar de si.
+
+**Encaminhamento**
+Orientação para que a pessoa procure atendimento profissional ou institucional adequado quando a situação ultrapassa os limites do cuidado religioso.
+
+**Sobrecarga**
+Estado de desgaste físico ou emocional provocado por excesso de responsabilidades, falta de descanso e dificuldade de estabelecer limites.
+
+### Questões para reflexão
+1. O que diferencia desenvolvimento mediúnico de busca por fenômenos?
+2. Por que cada médium deve respeitar o próprio tempo?
+3. Como estudo, prática e convivência se complementam?
+4. De que forma o autoconhecimento reduz interferências prejudiciais?
+5. Qual é a diferença entre disciplina e autoritarismo?
+6. Por que a intenção de ajudar não é suficiente para garantir uma conduta ética?
+7. Como uma palavra dita durante o atendimento pode afetar o consulente?
+8. Quais orientações ultrapassam os limites do trabalho mediúnico?
+9. Por que o sigilo é importante?
+10. Como reconhecer sinais de abuso espiritual?
+11. Qual é a diferença entre caridade e controle?
+12. Quando uma experiência religiosa pode coexistir com boa saúde mental?
+13. Quais sinais indicam que uma pessoa precisa de avaliação profissional?
+14. Por que o tratamento psicológico ou psiquiátrico não deve ser visto como falta de fé?
+15. Como o médium pode cuidar da própria saúde mental?
+16. Por que dizer “não sei” pode ser uma atitude ética?
+17. Quais frutos indicam amadurecimento mediúnico?
+18. Que atitudes precisam ser fortalecidas no desenvolvimento realizado pelo TUCPB?
+
+### Atividade de autoavaliação
+
+Leia cada afirmação e reflita com honestidade sobre sua caminhada.
+- Consigo receber uma correção sem interpretá-la imediatamente como perseguição?
+- Sinto necessidade de demonstrar minha mediunidade?
+- Comparo minhas manifestações com as de outras pessoas?
+- Atribuo todas as minhas emoções ao plano espiritual?
+- Consigo reconhecer quando estou cansado ou sobrecarregado?
+- Respeito a privacidade de quem procura atendimento?
+- Consigo dizer que não sei?
+- Tenho dificuldade para separar minhas opiniões pessoais das orientações espirituais?
+- Aceito a possibilidade de procurar ajuda profissional?
+- Minha participação no terreiro melhorou minhas relações fora dele?
+- Tenho desenvolvido mais paciência, responsabilidade e humildade?
+- Estou servindo ou buscando reconhecimento?
+
+Essa atividade não deve ser utilizada para produzir culpa.
+
+Seu objetivo é favorecer o autoconhecimento e identificar pontos que precisam de cuidado.
+
+### Estudo de situações
+
+**Situação 1 — A promessa**
+Durante um atendimento, um médium afirma que o consulente receberá uma grande quantia de dinheiro em determinada data.
+*Reflexão*: A promessa cria expectativa e pode influenciar decisões. O médium não possui controle sobre o futuro e não deve transformar percepção em garantia. Uma orientação responsável deve fortalecer prudência e autonomia.
+
+**Situação 2 — Interrupção de tratamento**
+Uma pessoa relata que utiliza medicação psiquiátrica. O médium afirma que o medicamento bloqueia sua mediunidade e recomenda que ela pare de tomá-lo.
+*Reflexão*: Essa conduta é perigosa e ultrapassa os limites do atendimento religioso. Nenhum medicamento deve ser interrompido sem orientação do profissional responsável.
+
+**Situação 3 — A correção**
+Um médium é orientado pela liderança a reduzir determinados movimentos durante a manifestação. Ele conclui que a casa está impedindo o trabalho de sua entidade.
+*Reflexão*: A orientação pode estar relacionada à segurança, à organização ou ao amadurecimento. O médium deve escutar, dialogar e avaliar antes de interpretar a correção como perseguição.
+
+**Situação 4 — O segredo**
+Depois de um atendimento, o médium conta a outros integrantes detalhes íntimos do consulente para demonstrar que a entidade revelou informações verdadeiras.
+*Reflexão*: Mesmo que a informação tenha surgido durante a manifestação, a exposição viola o sigilo e transforma a dor da pessoa em instrumento de reconhecimento.
+
+**Situação 5 — O sofrimento**
+Uma pessoa relata ouvir vozes ameaçadoras durante todo o dia, não consegue dormir, abandonou o trabalho e acredita que precisa obedecer a todas as ordens recebidas.
+*Reflexão*: A situação apresenta sinais de sofrimento e risco. A pessoa precisa de acolhimento, apoio da família quando possível e avaliação profissional. O terreiro não deve tratar o caso apenas como desenvolvimento mediúnico.
+
+### Síntese do Módulo 3
+
+Desenvolver a mediunidade é desenvolver a pessoa.
+
+A manifestação espiritual não pode ser separada da ética, do equilíbrio e da responsabilidade.
+
+O médium amadurece quando aprende a observar antes de afirmar, escutar antes de orientar e reconhecer limites antes de assumir uma função que não lhe pertence.
+
+A caridade não transforma o médium em dono da vida do consulente. Ela exige respeito à autonomia, cuidado com a palavra e proteção da dignidade.
+
+A ética impede que a mediunidade seja utilizada para criar medo, dependência, controle ou exploração.
+
+A saúde mental também faz parte do cuidado espiritual.
+
+Uma experiência religiosa integrada pode contribuir para pertencimento, sentido e qualidade de vida. Entretanto, quando há sofrimento intenso, risco ou desorganização, é necessário buscar acompanhamento profissional.
+
+A fé não precisa competir com a psicologia ou com a medicina. O cuidado pode ser compartilhado.
+
+Na visão do TUCPB, a maturidade mediúnica não é medida pela intensidade da incorporação, pela quantidade de entidades ou pelo impacto provocado no público.
+
+Ela é reconhecida na qualidade dos frutos:
+- mais humildade;
+- mais equilíbrio;
+- mais responsabilidade;
+- mais respeito;
+- mais discernimento;
+- mais capacidade de servir;
+- menos vaidade;
+- menos necessidade de provar;
+- menos medo;
+- menos dependência.
+
+O desenvolvimento verdadeiro fortalece as raízes antes de apresentar a copa.
+
+No próximo módulo, aprofundaremos as filosofias africanas e afro-diaspóricas, estudando conceitos como Ubuntu, ancestralidade, Kalunga, tempo espiralar, corpo-arquivo, Orí, axé, Exu e encruzilhada.
+
+---
+*Obra de referência: Mediunidade — fundamentos, experiência e desenvolvimento na Umbanda*
+*Autor: Bàbá Aláàrìnrin Àjò / Pai Felipe de Oxaguian*
+*Instituição: Templo Umbandista Caboclo Pena Branca — TUCPB*`,
+    duration: "Módulo 3",
+    instructor: "Babá Felipe",
+    date: "24 de Julho de 2026",
+    videoUrl: "https://www.youtube.com/embed/Zqt5LtCmK5I",
+    imageUrl: "https://img.youtube.com/vi/Zqt5LtCmK5I/hqdefault.jpg",
+    pdfUrl: "https://drive.google.com/file/d/1UJTPo2Wwcm3d280MCkHD8zAkSozG-3Yk/view?usp=drive_link",
+    level: "Todos",
+    tags: ["Mediunidade", "Módulo 3"]
+  },
+
+  {
     id: "les-t1-0",
     title: "O Simbolismo da Árvore e Sua Aplicação no Desenvolvimento Mediúnico na Umbanda De Caboclo",
     category: "TRILHA I: A RAIZ",
