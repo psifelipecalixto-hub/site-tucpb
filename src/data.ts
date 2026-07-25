@@ -432,6 +432,747 @@ Antes de aprender a manifestar, o médium precisa aprender a compreender. Antes 
   },
 
   {
+    id: "les-t2-2",
+    title: "Módulo 2: Fenômenos, Corpo e Consciência",
+    category: "TRILHA II: O TRONCO",
+    description: `## Módulo 2 — Fenômenos, Corpo e Consciência
+### Compreendendo a incorporação, o transe, a sintonia e as diferentes formas de mediunidade
+
+Depois de estabelecer os fundamentos da mediunidade, conhecer as três lentes de estudo e compreender o papel formador do terreiro, chegamos ao segundo módulo da nossa jornada.
+
+Agora, o estudo se aproxima dos fenômenos mediúnicos propriamente ditos.
+
+O que acontece durante uma incorporação? O médium permanece consciente? Qual é a participação do corpo? Como diferenciar intuição, psicofonia, vidência e outras formas de percepção? O que a ciência consegue observar durante o transe? Uma imagem cerebral pode provar ou negar a presença de uma entidade?
+
+Essas perguntas exigem cuidado porque a experiência mediúnica não pode ser reduzida a uma única explicação.
+
+Na Umbanda, a incorporação é compreendida como uma relação de sintonia entre médium e entidade. Não se trata de imaginar o corpo como um recipiente vazio, invadido por uma força externa. O médium permanece participante da experiência, oferecendo seu corpo, sua memória, sua linguagem, sua sensibilidade e sua história para que o trabalho espiritual possa se expressar.
+
+Por isso, a manifestação mediúnica é também um aprendizado de consciência, responsabilidade e cooperação.
+
+Neste módulo, estudaremos o transe como experiência espiritual, corporal, psicológica e comunitária. Veremos como o canto, o ritmo, a respiração, os pontos, os gestos e a organização ritual ajudam o médium a entrar, permanecer e sair do estado de trabalho.
+
+Também conheceremos o que pesquisas científicas, incluindo estudos de neuroimagem, conseguem observar sobre esses estados — e, principalmente, quais são os limites dessas observações.
+
+### O que você estudará neste módulo
+
+O Módulo 2 acompanha os cinco capítulos da segunda parte do livro:
+- Incorporação, transe e sintonia
+- Consciência e coautoria
+- Tipos de mediunidade
+- Corpo, ritmo, canto e ritual
+- O que a ciência consegue observar
+
+Esses capítulos ajudam o estudante a compreender que a mediunidade não acontece somente na mente. Ela envolve corpo, consciência, emoção, memória, linguagem, comunidade, disciplina e contexto ritual.
+
+### Capítulo 5 — Incorporação, transe e sintonia
+
+A incorporação é uma das manifestações mais conhecidas da Umbanda. Ao mesmo tempo, é uma das experiências mais mal compreendidas por quem observa o fenômeno de fora e também por muitos médiuns em início de desenvolvimento.
+
+É comum encontrar a ideia de que incorporar significa perder completamente o controle do corpo ou permitir que uma entidade tome o lugar do médium.
+
+Essa interpretação pode gerar medo, ansiedade e expectativas equivocadas.
+
+Uma maneira mais responsável de compreender a incorporação é por meio do conceito de sintonia.
+
+#### Incorporação como relação
+
+Podemos pensar a incorporação como uma relação entre duas presenças que aprendem a trabalhar em conjunto.
+
+O médium não desaparece. Ele continua oferecendo:
+- o corpo;
+- o sistema nervoso;
+- a voz;
+- o vocabulário;
+- as lembranças;
+- os gestos;
+- a sensibilidade;
+- a história de vida;
+- a formação religiosa;
+- as condições emocionais daquele momento.
+
+A entidade, dentro da compreensão espiritual da Umbanda, oferece uma direção, uma identidade de trabalho, uma forma de presença e uma orientação voltada para a caridade.
+
+A manifestação surge dessa relação.
+
+Isso significa que a entidade não se expressa de maneira completamente independente dos recursos do médium. Mesmo quando a experiência é profunda, ela passa pelo corpo, pela mente e pela linguagem de quem incorpora.
+
+Por esse motivo, dois médiuns que trabalham com entidades da mesma linha podem apresentar gestos, tons de voz e formas de aconselhamento diferentes.
+
+Não significa necessariamente que uma entidade seja verdadeira e a outra falsa. Significa que toda comunicação mediúnica passa por instrumentos humanos diferentes.
+
+#### A comparação com a sintonia
+
+Uma comparação frequentemente utilizada é a de um aparelho de rádio.
+
+A emissora transmite um sinal, mas o aparelho precisa estar ajustado para recebê-lo. Se a sintonia estiver instável, haverá ruídos, interrupções ou mistura de frequências.
+
+Entretanto, essa comparação possui limites.
+
+O médium não é um aparelho passivo. Ele sente, interpreta, reage, aprende e participa. Por isso, talvez seja mais adequado imaginar dois músicos aprendendo a tocar juntos.
+
+No início, pode haver desencontro. Com estudo, disciplina e experiência, o trabalho se torna mais harmônico.
+
+A sintonia mediúnica envolve:
+- disponibilidade;
+- concentração;
+- confiança;
+- preparação;
+- segurança;
+- entrega responsável;
+- conhecimento dos fundamentos;
+- vínculo com a comunidade;
+- amadurecimento emocional;
+- respeito ao tempo do desenvolvimento.
+
+#### Transe não significa inconsciência obrigatória
+
+O transe é um estado no qual podem ocorrer mudanças na percepção, nos movimentos, na atenção, na identidade e na forma de expressão.
+
+Essas mudanças possuem diferentes intensidades.
+
+Alguns médiuns percebem quase tudo o que acontece. Outros relatam lembranças parciais. Há também pessoas que apresentam pouca recordação de determinados momentos.
+
+Portanto, não existe um único modelo de transe.
+
+A profundidade da experiência pode variar conforme:
+- o médium;
+- a entidade;
+- a linha de trabalho;
+- o momento da gira;
+- o grau de desenvolvimento;
+- o estado físico e emocional;
+- a segurança oferecida pelo terreiro;
+- as características da própria comunidade.
+
+Ser consciente durante a incorporação não significa estar fingindo.
+
+Da mesma forma, relatar pouca lembrança não comprova automaticamente uma manifestação espiritual.
+
+A qualidade da mediunidade não deve ser medida apenas pelo grau de consciência, mas pela coerência, pela responsabilidade, pelo equilíbrio e pelos frutos produzidos pelo trabalho.
+
+### Capítulo 6 — Consciência e coautoria
+
+Um dos maiores desafios do desenvolvimento mediúnico é compreender a participação do próprio médium na manifestação.
+
+Muitos iniciantes acreditam que qualquer pensamento pessoal invalida a experiência. Outros atribuem às entidades tudo o que falam, sentem ou fazem durante o transe.
+
+Esses dois extremos podem causar dificuldades.
+
+O primeiro gera insegurança permanente:
+*“Se eu pensei, então não era a entidade.”*
+
+O segundo pode retirar do médium a responsabilidade:
+*“Não fui eu; foi a entidade que falou.”*
+
+O conceito de coautoria ajuda a construir uma compreensão mais madura.
+
+#### O que significa coautoria?
+
+Coautoria significa reconhecer que a manifestação mediúnica ocorre por meio de uma cooperação.
+
+Na interpretação religiosa, há uma influência espiritual. Entretanto, essa influência é expressa através de um ser humano concreto, que possui personalidade, memória, emoções, valores, conhecimento e limites.
+
+A entidade pode inspirar uma orientação, mas as palavras utilizadas pertencem ao repertório do médium.
+A entidade pode conduzir determinado gesto, mas o movimento acontece no corpo do médium.
+A entidade pode oferecer uma percepção, mas ela será reconhecida e interpretada pela consciência humana.
+
+Isso não reduz o valor espiritual da experiência. Ao contrário, aumenta a responsabilidade de quem serve como instrumento.
+
+#### Consciência não é interferência automática
+
+Durante a incorporação, o médium pode perceber:
+- a aproximação da entidade;
+- mudanças na respiração;
+- alterações no equilíbrio;
+- vontade de realizar certos movimentos;
+- emoções que parecem diferentes das habituais;
+- imagens interiores;
+- palavras surgindo antes de serem pronunciadas;
+- lembranças do atendimento;
+- sensações corporais específicas;
+- mudanças na percepção do ambiente.
+
+Nada disso torna a experiência menos legítima.
+
+O médium não precisa apagar a própria consciência para permitir o trabalho espiritual.
+
+O desenvolvimento responsável procura construir uma consciência capaz de acompanhar a experiência sem controlá-la excessivamente e sem abandonar o discernimento.
+
+#### A responsabilidade permanece
+
+Mesmo durante o transe, o médium continua responsável pelo que acontece através de seu corpo e de sua voz.
+
+Essa responsabilidade não significa que ele controla conscientemente cada palavra. Significa que precisa:
+- desenvolver equilíbrio;
+- respeitar os fundamentos da casa;
+- aceitar orientações;
+- não usar a entidade para impor opiniões pessoais;
+- não justificar agressões ou humilhações;
+- não fazer promessas irresponsáveis;
+- não apresentar diagnósticos médicos;
+- não interferir de maneira abusiva na vida do consulente;
+- reconhecer quando está confuso ou emocionalmente fragilizado.
+
+A frase “foi a entidade” não deve servir como proteção contra qualquer questionamento.
+
+Uma comunidade madura avalia os frutos da manifestação.
+
+A presença espiritual deve contribuir para a caridade, para o equilíbrio e para o amadurecimento, e não para alimentar vaidade, medo ou dependência.
+
+#### Animismo e participação humana
+
+Em muitos estudos espiritualistas, o termo animismo é utilizado para descrever conteúdos que surgem da própria alma, da memória, do inconsciente ou da personalidade do médium.
+
+Durante muito tempo, animismo e mediunidade foram apresentados como fenômenos completamente opostos: ou a mensagem viria do espírito, ou viria do médium.
+
+Na prática, essa separação pode ser mais complexa.
+
+Toda manifestação passa pela estrutura humana do médium. Portanto, elementos pessoais podem aparecer na linguagem, nos gestos e na interpretação da experiência.
+
+Isso não significa necessariamente fraude.
+
+A questão mais importante é desenvolver discernimento para reconhecer:
+- tendências pessoais;
+- expectativas;
+- desejos;
+- medos;
+- opiniões;
+- emoções;
+- conteúdos espirituais percebidos;
+- influências do ambiente;
+- ensinamentos recebidos na comunidade.
+
+O objetivo não é alcançar uma pureza impossível, mas aprender a reduzir interferências prejudiciais e ampliar a clareza do trabalho.
+
+### Capítulo 7 — Tipos de mediunidade
+
+A mediunidade pode se manifestar de diferentes maneiras.
+
+Essas classificações ajudam o estudo, mas não devem se transformar em rótulos rígidos. Uma mesma pessoa pode apresentar mais de uma forma de percepção, e suas características podem mudar ao longo do desenvolvimento.
+
+Também é importante compreender que nem toda sensação representa obrigatoriamente uma manifestação espiritual.
+
+O reconhecimento deve ocorrer com tempo, observação, orientação e participação comunitária.
+
+#### Mediunidade de incorporação ou psicofonia
+
+Na incorporação, a influência espiritual se expressa por meio do corpo, dos movimentos, da postura, da voz e do comportamento do médium.
+
+A psicofonia refere-se especialmente à comunicação pela fala.
+
+Durante a manifestação, podem ocorrer alterações em:
+- ritmo da fala;
+- vocabulário;
+- postura;
+- expressão facial;
+- gestos;
+- respiração;
+- intensidade emocional;
+- modo de aconselhar;
+- percepção do ambiente.
+
+Nem toda mudança precisa ser teatral ou intensa.
+
+Uma entidade não é mais elevada porque sua manifestação é mais visível. A qualidade do trabalho não depende de movimentos exagerados, gritos ou demonstrações espetaculares.
+
+#### Mediunidade intuitiva
+
+A intuição pode surgir como uma compreensão rápida, uma ideia, uma frase, uma percepção ou uma orientação interior.
+
+O desafio está em diferenciar intuição mediúnica de pensamentos pessoais.
+
+Essa diferença nem sempre é imediata.
+
+Com o tempo, o médium pode aprender a reconhecer características como:
+- modo diferente de organização do pensamento;
+- sensação de clareza inesperada;
+- conteúdo que não estava sendo elaborado conscientemente;
+- percepção acompanhada de determinada presença;
+- coerência com os fundamentos da casa;
+- confirmação por outros elementos da experiência.
+
+Ainda assim, a intuição deve passar pelo discernimento. Uma ideia não deve ser tratada como ordem espiritual apenas porque surgiu de maneira repentina.
+
+#### Vidência
+
+Vidência é a percepção de imagens, cenas, símbolos, formas, cores ou presenças que não são observadas pelos olhos físicos da maneira habitual.
+
+Ela pode ocorrer:
+- com os olhos abertos;
+- com os olhos fechados;
+- como uma imagem interior;
+- durante sonhos;
+- durante o transe;
+- em momentos de oração ou concentração.
+
+A visão pode ser simbólica, e não literal.
+
+Ver água, por exemplo, não significa necessariamente que exista água física no ambiente. Pode representar limpeza, emoção, movimento, ancestralidade ou outro significado relacionado ao contexto.
+
+Por isso, o médium não deve interpretar toda imagem imediatamente.
+
+Primeiro, deve observar. Depois, buscar compreender.
+
+#### Audiência mediúnica
+
+A audiência é a percepção de palavras, sons, cantos ou mensagens atribuídas ao plano espiritual.
+
+Ela pode ser vivida como:
+- som semelhante a uma voz externa;
+- frase percebida interiormente;
+- palavra que surge com clareza;
+- canto ou ponto que aparece espontaneamente;
+- orientação breve;
+- sensação sonora sem origem física identificada.
+
+Experiências auditivas também podem ocorrer em condições psicológicas e neurológicas. Quando são persistentes, ameaçadoras, desorganizadoras ou provocam sofrimento, é importante buscar avaliação profissional.
+
+O cuidado clínico não precisa negar a espiritualidade.
+
+#### Psicografia
+
+Psicografia é a expressão mediúnica por meio da escrita.
+
+Ela pode ocorrer com diferentes graus de participação consciente. O médium pode perceber as ideias antes de escrevê-las, acompanhar parcialmente a mensagem ou relatar uma escrita mais automática.
+
+Em todos os casos, o texto passa pelas capacidades motoras, linguísticas e culturais de quem escreve.
+
+Uma mensagem escrita não deve ser considerada verdadeira apenas por ter sido produzida em contexto mediúnico. Seu conteúdo precisa ser avaliado com responsabilidade, coerência e ética.
+
+#### Sensitividade ou percepção energética
+
+Algumas pessoas relatam perceber mudanças nos ambientes e nas pessoas por meio de sensações corporais ou emocionais.
+
+Entre os relatos mais comuns estão:
+- arrepios;
+- calor;
+- frio;
+- pressão;
+- alterações na respiração;
+- peso corporal;
+- sensação de presença;
+- mudança súbita de humor;
+- desconforto em determinados espaços;
+- sensação de expansão ou tranquilidade.
+
+Essas experiências podem receber interpretação espiritual dentro do terreiro. Contudo, também podem estar relacionadas a ansiedade, cansaço, expectativa, condições ambientais e outros fatores.
+
+O desenvolvimento procura transformar sensibilidade em percepção organizada, evitando conclusões precipitadas.
+
+#### Sonhos e experiências durante o sono
+
+Os sonhos podem ser compreendidos de várias maneiras.
+
+Eles podem expressar:
+- memórias;
+- emoções;
+- conflitos;
+- desejos;
+- preocupações;
+- símbolos culturais;
+- processos psicológicos;
+- experiências interpretadas religiosamente como encontros ou orientações espirituais.
+
+Nem todo sonho é uma mensagem.
+
+No terreiro, o médium aprende a observar a repetição, a coerência, os efeitos e o contexto antes de atribuir origem espiritual a uma experiência ocorrida durante o sono.
+
+### Capítulo 8 — Corpo, ritmo, canto e ritual
+
+A mediunidade não acontece apenas no pensamento.
+
+O corpo participa de todo o processo.
+
+Respiração, postura, equilíbrio, atenção, movimento, som, ritmo e emoção ajudam a construir o estado ritual no qual a experiência mediúnica acontece.
+
+Por isso, não devemos tratar o corpo como um objeto passivo ou como simples suporte da entidade.
+
+O corpo é memória, linguagem e presença.
+
+#### O corpo aprende
+
+Ao participar repetidamente das giras, o médium aprende corporalmente:
+- onde permanecer;
+- como respirar;
+- como acompanhar os pontos;
+- quando se movimentar;
+- como reconhecer mudanças internas;
+- como sustentar a postura;
+- como entrar e sair do estado de trabalho;
+- como responder às orientações;
+- como respeitar o espaço coletivo.
+
+Parte desse aprendizado não acontece apenas por explicações verbais. Ele é adquirido pela convivência, pela repetição e pela experiência.
+
+O corpo guarda o ritmo da casa.
+
+Com o tempo, determinados sons, cheiros, gestos e cantos podem preparar a atenção para o trabalho espiritual.
+
+#### O papel dos pontos cantados
+
+Os pontos cantados cumprem diferentes funções dentro da Umbanda.
+
+Eles podem:
+- organizar a corrente;
+- marcar o início e o encerramento de trabalhos;
+- identificar linhas e entidades;
+- fortalecer o sentimento de pertencimento;
+- conduzir a respiração;
+- reunir a atenção coletiva;
+- favorecer mudanças no estado de consciência;
+- transmitir ensinamentos;
+- preservar memórias religiosas;
+- produzir unidade entre os participantes.
+
+O canto não funciona apenas como música de fundo.
+
+Ele cria um ambiente compartilhado de concentração e significado.
+
+Quando muitas pessoas cantam juntas, seus ritmos respiratórios, movimentos e atenções podem se aproximar. Isso fortalece a experiência comunitária e ajuda a sustentar o trabalho.
+
+#### Atabaques e ritmo
+
+Nas casas que utilizam atabaques, o ritmo possui função ritual, espiritual e corporal.
+
+A repetição rítmica pode favorecer:
+- concentração;
+- redução da dispersão;
+- sincronização dos movimentos;
+- mudança da percepção temporal;
+- organização da respiração;
+- ativação emocional;
+- sensação de pertencimento;
+- sustentação da corrente mediúnica.
+
+Isso não significa que o ritmo, sozinho, produza a mediunidade.
+
+Ele participa de um conjunto formado por crença, preparação, ambiente, expectativa, memória, corporeidade e fundamento religioso.
+
+#### Gestos e movimentos
+
+As manifestações podem apresentar gestos característicos de determinadas linhas de trabalho.
+
+Caboclos, Pretos-Velhos, Crianças, Exus e outras entidades podem expressar diferentes posturas, movimentos e maneiras de ocupar o espaço.
+
+Esses gestos possuem dimensão simbólica e religiosa. Também são aprendidos e reconhecidos dentro da cultura do terreiro.
+
+Isso não significa que sejam apenas imitação.
+
+A experiência mediúnica acontece dentro de uma linguagem coletiva. O médium aprende essa linguagem ao conviver com a comunidade, assim como uma pessoa aprende gestos, palavras e comportamentos em qualquer tradição cultural.
+
+A manifestação não precisa ser completamente desconhecida para ser significativa.
+
+#### Entrada e saída do transe
+
+O cuidado não deve existir apenas no momento da incorporação.
+
+Também é necessário preparar a entrada e a saída do estado de trabalho.
+
+Antes da gira, o médium pode precisar de:
+- repouso;
+- alimentação adequada;
+- concentração;
+- oração;
+- organização emocional;
+- silêncio;
+- preparação ritual;
+- orientação da liderança.
+
+Depois do trabalho, pode precisar de:
+- desaceleração;
+- hidratação;
+- descanso;
+- conversa;
+- reorganização corporal;
+- acolhimento;
+- avaliação do que foi vivido.
+
+Uma saída desorganizada pode gerar cansaço, confusão ou mal-estar.
+
+Por isso, desenvolvimento mediúnico também significa aprender a retornar plenamente ao estado cotidiano.
+
+### Capítulo 9 — O que a ciência consegue observar
+
+A ciência investiga aspectos observáveis da experiência mediúnica.
+
+Ela pode estudar:
+- atividade cerebral;
+- atenção;
+- memória;
+- linguagem;
+- movimentos;
+- frequência cardíaca;
+- respiração;
+- respostas emocionais;
+- comportamento;
+- saúde mental;
+- qualidade de vida;
+- relações sociais;
+- efeitos da prática religiosa.
+
+Esses estudos ajudam a compreender o fenômeno humano, mas não resolvem sozinhos todas as perguntas religiosas.
+
+#### O cérebro durante o transe
+
+Técnicas de neuroimagem procuram identificar mudanças na atividade cerebral durante determinadas tarefas ou estados de consciência.
+
+Entre essas técnicas está o SPECT, sigla em inglês para tomografia computadorizada por emissão de fóton único.
+
+De forma simplificada, o exame acompanha padrões relacionados à circulação sanguínea em diferentes regiões do cérebro. Como áreas mais ativas geralmente necessitam de maior fluxo, os pesquisadores podem comparar mudanças ocorridas durante uma atividade.
+
+É importante compreender que o SPECT não fotografa pensamentos, espíritos ou a consciência.
+
+Ele produz dados sobre padrões fisiológicos associados ao funcionamento cerebral.
+
+#### Estudos com psicografia
+
+Um estudo conhecido utilizou SPECT para observar médiuns durante a produção de textos psicografados.
+
+Os pesquisadores compararam a atividade cerebral durante a psicografia com uma situação de escrita comum.
+
+Entre os resultados relatados, médiuns mais experientes apresentaram redução relativa de atividade em determinadas áreas associadas ao planejamento, ao controle e à produção deliberada da linguagem, mesmo produzindo textos avaliados como mais complexos.
+
+Esse resultado chamou a atenção porque, em uma tarefa comum, seria esperado que uma produção textual complexa exigisse maior participação dessas áreas.
+
+Entretanto, o estudo não demonstrou que espíritos escreveram os textos.
+
+Ele mostrou um padrão cerebral interessante durante a experiência de psicografia e levantou perguntas sobre automatismo, treinamento, controle consciente e estados diferenciados de produção.
+
+#### O que esses exames não conseguem provar
+
+Uma imagem cerebral não consegue determinar sozinha:
+- se uma entidade estava presente;
+- qual seria a identidade da entidade;
+- se a mensagem veio de um espírito;
+- se a experiência possui origem exclusivamente psicológica;
+- se determinada interpretação religiosa é verdadeira ou falsa.
+
+O cérebro participa de todas as experiências humanas.
+
+Orar, recordar, amar, cantar, sonhar e sentir uma presença espiritual também possuem correspondentes cerebrais.
+
+Encontrar atividade cerebral durante uma experiência não significa que essa experiência seja falsa. Da mesma forma, encontrar um padrão incomum não comprova uma explicação espiritual.
+
+A neurociência descreve aspectos do funcionamento do cérebro. A interpretação do significado da experiência exige diálogo com outras áreas.
+
+#### Transe, treinamento e automatismo
+
+Pessoas treinadas podem realizar tarefas complexas com menor esforço consciente do que iniciantes.
+
+Um músico experiente não precisa pensar em cada movimento dos dedos. Um motorista experiente não planeja conscientemente cada pequena ação. Um dançarino treinado executa sequências complexas com fluidez.
+
+Algo semelhante pode ocorrer em práticas mediúnicas desenvolvidas ao longo de muitos anos.
+
+Isso não resolve a questão da origem espiritual, mas ajuda a compreender como treinamento, repetição, confiança e experiência podem alterar a participação consciente em uma atividade.
+
+#### Ciência e humildade
+
+O estudo científico da mediunidade exige humildade em duas direções.
+
+A ciência precisa reconhecer que nem toda experiência religiosa deve ser automaticamente reduzida a doença, fraude ou imaginação.
+
+A religião precisa reconhecer que uma pesquisa interessante não representa prova definitiva de suas crenças.
+
+Quando ambas respeitam seus limites, o diálogo se torna mais produtivo.
+
+A pergunta científica pode ser:
+*O que acontece no cérebro e no comportamento durante o transe?*
+
+A pergunta religiosa pode ser:
+*Qual é o significado espiritual dessa experiência dentro da tradição?*
+
+As duas perguntas podem coexistir sem que uma elimine a outra.
+
+### A incorporação na visão do TUCPB
+
+Na visão do Templo Umbandista Caboclo Pena Branca, a incorporação deve ser compreendida como uma relação construída com tempo, disciplina e responsabilidade.
+
+O objetivo do desenvolvimento não é produzir manifestações espetaculares.
+
+É formar médiuns capazes de:
+- sustentar o trabalho;
+- reconhecer seus limites;
+- servir com humildade;
+- respeitar a orientação da casa;
+- proteger o consulente;
+- manter equilíbrio emocional;
+- compreender a participação da própria consciência;
+- aprender com as entidades;
+- transformar a experiência em caridade.
+
+A firmeza de uma manifestação não é medida pelo volume da voz, pela força dos movimentos ou pelo impacto causado em quem observa.
+
+Ela é percebida na coerência, na serenidade, no respeito e nos frutos.
+
+Uma manifestação simples pode ser profundamente significativa. Uma manifestação teatral pode não produzir nenhum crescimento verdadeiro.
+
+O desenvolvimento deve conduzir o médium para além da necessidade de provar sua mediunidade.
+
+#### Cuidados durante o desenvolvimento
+
+O estudante deve evitar algumas atitudes comuns:
+
+**Forçar manifestações**
+Tentar produzir movimentos, falas ou sensações para acompanhar outros médiuns pode gerar confusão e ansiedade.
+Cada pessoa possui seu próprio tempo.
+
+**Comparar experiências**
+Um médium pode sentir calor; outro, frio. Um pode apresentar movimentos intensos; outro, mudanças discretas.
+A diferença não indica superioridade.
+
+**Buscar inconsciência**
+A perda de memória não deve ser tratada como prova de mediunidade mais elevada.
+Consciência pode ser uma forma de proteção e aprendizado.
+
+**Atribuir tudo ao plano espiritual**
+Cansaço, medo, expectativa, dor, ansiedade e emoções pessoais também afetam o corpo.
+O discernimento cresce quando o médium aprende a considerar diferentes possibilidades.
+
+**Transformar percepção em certeza**
+Sentir uma presença não significa conhecer imediatamente sua identidade, sua intenção ou sua mensagem.
+Primeiro vem a observação. Depois, o estudo e a confirmação.
+
+**Abandonar a responsabilidade**
+O médium não deve usar a entidade para justificar agressividade, invasão, humilhação ou orientação irresponsável.
+
+### Objetivos de aprendizagem
+
+Ao concluir este módulo, o estudante deverá ser capaz de:
+- compreender a incorporação como relação de sintonia;
+- reconhecer que o médium permanece participante da experiência;
+- entender que transe não significa inconsciência obrigatória;
+- diferenciar consciência, controle e coautoria;
+- compreender a participação humana na manifestação;
+- reconhecer diferentes tipos de mediunidade;
+- evitar classificações rígidas e conclusões precipitadas;
+- compreender o papel do corpo no desenvolvimento;
+- reconhecer a importância do canto, do ritmo e do ritual;
+- entender que a linguagem mediúnica é aprendida na comunidade;
+- compreender o que técnicas de neuroimagem conseguem observar;
+- reconhecer os limites científicos dos estudos sobre transe;
+- dialogar com a ciência sem reduzir a experiência religiosa;
+- avaliar a manifestação por seus frutos éticos e espirituais.
+
+### Conceitos centrais do módulo
+
+**Incorporação**
+Manifestação em que a influência espiritual se expressa por meio do corpo, dos movimentos, da voz e da consciência do médium.
+
+**Transe**
+Estado de consciência caracterizado por alterações na atenção, na percepção, nos movimentos, na identidade ou na forma de expressão.
+
+**Sintonia**
+Processo de aproximação e ajuste entre médium e entidade, construído por meio de preparação, confiança, disciplina e experiência.
+
+**Coautoria**
+Participação conjunta da influência espiritual e dos recursos humanos do médium na produção da manifestação.
+
+**Animismo**
+Expressão de conteúdos provenientes da memória, da personalidade, das emoções ou da vida interior do próprio médium.
+
+**Psicofonia**
+Comunicação mediúnica realizada por meio da fala.
+
+**Psicografia**
+Comunicação ou produção mediúnica realizada por meio da escrita.
+
+**Vidência**
+Percepção de imagens, formas, símbolos ou presenças não observadas pelos olhos físicos de maneira habitual.
+
+**Audiência mediúnica**
+Percepção de sons, palavras ou mensagens atribuídas ao plano espiritual.
+
+**Sensitividade**
+Percepção corporal, emocional ou intuitiva de ambientes, pessoas ou presenças.
+
+**SPECT**
+Técnica de neuroimagem que fornece informações indiretas sobre padrões de circulação sanguínea e atividade cerebral.
+
+**Automatismo**
+Realização de uma ação com menor participação do planejamento consciente, frequentemente relacionada a treinamento, repetição ou estados diferenciados de consciência.
+
+### Questões para reflexão
+1. Por que a incorporação não deve ser compreendida como simples possessão do corpo?
+2. O que significa afirmar que médium e entidade trabalham em sintonia?
+3. Por que a consciência não invalida uma manifestação mediúnica?
+4. De que maneira a memória, a linguagem e a história do médium participam da comunicação?
+5. O que o conceito de coautoria ensina sobre responsabilidade?
+6. Como diferenciar participação humana de fraude?
+7. Quais formas de mediunidade você já observou ou estudou?
+8. Por que as classificações mediúnicas não devem se tornar rótulos rígidos?
+9. Como o canto e o ritmo ajudam a organizar a experiência ritual?
+10. De que maneira o corpo aprende a linguagem do terreiro?
+11. O que um exame de neuroimagem pode mostrar durante o transe?
+12. Por que uma imagem cerebral não prova nem nega a presença de uma entidade?
+13. Quais riscos existem quando o médium atribui todas as suas emoções ao plano espiritual?
+14. Por que a intensidade dos movimentos não determina a qualidade de uma incorporação?
+15. Quais frutos devem ser observados para avaliar o amadurecimento mediúnico?
+
+### Atividade de observação
+
+Durante uma gira ou atividade de desenvolvimento, observe silenciosamente:
+- sua respiração;
+- mudanças na postura;
+- alterações na atenção;
+- emoções presentes antes do trabalho;
+- sensações corporais;
+- influência do canto;
+- efeito do ritmo;
+- pensamentos que aparecem;
+- momentos de ansiedade;
+- momentos de serenidade;
+- facilidade ou dificuldade para retornar ao estado cotidiano.
+
+Depois da atividade, registre suas percepções sem classificá-las imediatamente.
+
+Em vez de escrever:
+*“Era determinada entidade.”*
+
+Prefira inicialmente:
+*“Percebi alteração na respiração, vontade de curvar o corpo, sensação de serenidade e uma imagem interior relacionada a determinada linha.”*
+
+Essa forma de registro ajuda a separar experiência e interpretação.
+
+Com o tempo, a orientação da casa, a repetição e a coerência poderão ajudar na compreensão.
+
+### Síntese do Módulo 2
+
+A mediunidade é vivida por meio do corpo e da consciência.
+
+Na incorporação, o médium não desaparece. Ele participa da manifestação, oferecendo os recursos humanos através dos quais o trabalho espiritual se expressa.
+
+Por isso, a consciência não deve ser vista como inimiga da mediunidade.
+
+Ela pode funcionar como espaço de aprendizado, discernimento e responsabilidade.
+
+O corpo aprende a linguagem do terreiro. O canto reúne a comunidade. O ritmo organiza a atenção. O ritual estabelece limites e cria condições para que a experiência aconteça com segurança.
+
+As diferentes formas de mediunidade ajudam a compreender a diversidade das manifestações, mas não devem servir para alimentar disputas ou hierarquias.
+
+A ciência pode observar mudanças no cérebro, no comportamento e na experiência. Porém, seus instrumentos não determinam sozinhos o significado espiritual do fenômeno.
+
+O estudo maduro reconhece os limites de cada linguagem.
+
+A mediunidade não se fortalece pelo espetáculo, mas pela sintonia. Não se torna confiável pela perda de consciência, mas pela qualidade dos frutos. Não amadurece somente quando a entidade se manifesta, mas quando o médium aprende a observar, servir, discernir e assumir responsabilidade.
+
+No próximo módulo, estudaremos o desenvolvimento mediúnico como processo contínuo, aprofundando os temas da ética, da caridade, da saúde mental e do cuidado com o consulente.
+
+---
+*Obra de referência: Mediunidade — fundamentos, experiência e desenvolvimento na Umbanda*
+*Autor: Bàbá Aláàrìnrin Àjò / Pai Felipe de Oxaguian*
+*Instituição: Templo Umbandista Caboclo Pena Branca — TUCPB*`,
+    duration: "Módulo 2",
+    instructor: "Babá Felipe",
+    date: "24 de Julho de 2026",
+    videoUrl: "https://www.youtube.com/embed/EiLrLvBesEk",
+    imageUrl: "https://img.youtube.com/vi/EiLrLvBesEk/hqdefault.jpg",
+    pdfUrl: "https://drive.google.com/file/d/1UJTPo2Wwcm3d280MCkHD8zAkSozG-3Yk/view?usp=drive_link",
+    level: "Todos",
+    tags: ["Mediunidade", "Módulo 2"]
+  },
+
+  {
     id: "les-t1-0",
     title: "O Simbolismo da Árvore e Sua Aplicação no Desenvolvimento Mediúnico na Umbanda De Caboclo",
     category: "TRILHA I: A RAIZ",
