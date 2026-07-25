@@ -4364,6 +4364,1850 @@ No próximo módulo, estudaremos a visão do TUCPB sobre a mediunidade como Árv
   },
 
   {
+    id: "les-t2-6",
+    title: "Módulo 6: A Visão do TUCPB e a Árvore do Conhecimento",
+    category: "TRILHA II: O TRONCO",
+    description: `## Módulo 6 — A Visão do TUCPB e a Árvore do Conhecimento
+
+### Terra, raízes, tronco, seiva, poda, copa, flores e frutos no amadurecimento mediúnico
+
+Ao longo dos cinco primeiros módulos, estudamos a mediunidade por diferentes caminhos.
+
+Começamos pelos fundamentos e pelas linguagens utilizadas para compreender a experiência mediúnica. Em seguida, observamos a incorporação, o transe, o corpo e a consciência. Depois, aprofundamos o desenvolvimento, a ética, o cuidado e a saúde mental.
+
+Também nos aproximamos das filosofias africanas e afro-diaspóricas, reconhecendo a importância da comunidade, da ancestralidade, do corpo, da oralidade, de Orí, do axé, de Exu e da encruzilhada.
+
+Por fim, estudamos conhecimentos de povos originários relacionados ao território, à palavra viva, aos sonhos, à floresta, ao encantamento, à retomada e à responsabilidade com a vida.
+
+Agora chegamos ao sexto módulo, no qual esses diferentes conhecimentos são reunidos pela visão desenvolvida no **Templo Umbandista Caboclo Pena Branca — TUCPB**.
+
+Essa síntese é representada pela **Árvore do Conhecimento**.
+
+A árvore não é utilizada apenas como uma imagem bonita. Cada uma de suas partes ajuda a compreender uma dimensão da formação mediúnica:
+- a terra representa o território e a comunidade que acolhem;
+- as raízes representam fundamentos, ancestralidade e autoconhecimento;
+- o tronco representa disciplina, corpo e responsabilidade;
+- a seiva representa a circulação do axé e do aprendizado;
+- o tempo representa a maturação;
+- a poda representa correção, renúncia e transformação;
+- a copa representa a expressão da mediunidade;
+- as flores representam capacidades que começam a amadurecer;
+- os frutos representam a caridade e os resultados do desenvolvimento;
+- as sementes representam a transmissão responsável do conhecimento;
+- a floresta representa a comunidade formada por diferentes trajetórias.
+
+A árvore também ensina que crescimento não significa apenas aumentar de tamanho.
+
+Uma árvore pode crescer rapidamente e permanecer frágil. Pode apresentar muitos galhos e possuir raízes superficiais. Pode produzir flores vistosas e não gerar frutos.
+
+Da mesma forma, um médium pode apresentar manifestações intensas sem ter desenvolvido equilíbrio, ética, disciplina ou responsabilidade.
+
+Na visão do TUCPB, o amadurecimento mediúnico não é medido pela aparência do fenômeno, mas pela qualidade de sua estrutura e pelos frutos que produz.
+
+---
+
+### O que você estudará neste módulo
+
+O Módulo 6 acompanha os oito capítulos da sexta parte do livro:
+
+1. **A mediunidade como árvore**
+2. **A terra e as raízes: onde o médium aprende a permanecer**
+3. **O tronco: disciplina, corpo e responsabilidade**
+4. **A seiva, o tempo e a poda**
+5. **A copa, as flores e frutos**
+6. **O Terreiro Escola como floresta de almas**
+7. **Comparativo: a árvore e os estudos deste livro**
+8. **A Árvore do Conhecimento como caminho de acompanhamento**
+
+Esses capítulos formam a síntese do caminho apresentado ao longo de toda a obra.
+
+---
+
+### Capítulo 20 — A mediunidade como árvore
+
+Uma árvore não começa pela copa.
+
+Antes de aparecer acima da terra, ela precisa desenvolver-se em uma dimensão que ninguém vê.
+
+A semente rompe-se. A raiz surge. O solo é atravessado. A planta busca água, nutrientes e estabilidade. Somente depois começa a crescer em direção à luz.
+
+Essa imagem ajuda a compreender o desenvolvimento mediúnico.
+
+Muitas pessoas chegam ao terreiro interessadas na parte mais visível da experiência:
+- incorporação;
+- vidência;
+- psicofonia;
+- sonhos;
+- mensagens;
+- manifestações;
+- nomes de entidades;
+- movimentos;
+- fenômenos considerados extraordinários.
+
+Esses elementos correspondem, simbolicamente, àquilo que aparece na copa.
+
+Entretanto, a copa só permanece de pé porque existe uma estrutura menos visível sustentando-a.
+
+O médium precisa desenvolver:
+- fundamentos;
+- pertencimento;
+- disciplina;
+- equilíbrio;
+- ética;
+- autoconhecimento;
+- responsabilidade;
+- capacidade de convivência;
+- cuidado com a palavra;
+- compromisso com a caridade.
+
+Sem essa estrutura, a manifestação pode tornar-se instável.
+
+#### A árvore como ser relacional
+
+Uma árvore não existe isoladamente.
+
+Ela depende:
+- do solo;
+- da água;
+- da luz;
+- do ar;
+- dos fungos;
+- dos insetos;
+- dos animais;
+- das outras plantas;
+- das estações;
+- do território.
+
+Da mesma forma, o médium não se desenvolve sozinho.
+
+Sua formação depende de relações com:
+- a comunidade;
+- os mais velhos;
+- as entidades;
+- a liderança;
+- os cambonos;
+- os demais médiuns;
+- os consulentes;
+- os ensinamentos;
+- o território;
+- os Orixás;
+- sua própria história.
+
+A metáfora da árvore impede que a mediunidade seja tratada como propriedade individual.
+
+Assim como uma árvore pertence a um ambiente, a mediunidade recebe sentido dentro de uma comunidade.
+
+#### Crescimento visível e crescimento invisível
+
+Nem todo crescimento pode ser visto imediatamente.
+
+Um médium pode atravessar um período em que nenhuma grande manifestação acontece, mas ainda assim estar amadurecendo.
+
+Ele pode estar desenvolvendo:
+- paciência;
+- escuta;
+- capacidade de receber correções;
+- consciência corporal;
+- disciplina;
+- equilíbrio emocional;
+- respeito às funções;
+- discernimento;
+- humildade;
+- presença.
+
+Esses aprendizados podem parecer menos impressionantes do que uma incorporação, mas são fundamentais.
+
+O desenvolvimento invisível prepara o médium para sustentar aquilo que se tornará visível.
+
+#### A árvore não disputa com a floresta
+
+Uma árvore saudável não precisa provar que é superior às outras.
+
+Ela ocupa seu lugar, recebe o que necessita e contribui para o ambiente.
+
+No terreiro, cada pessoa possui:
+- um tempo;
+- uma história;
+- uma sensibilidade;
+- uma função;
+- uma forma de aprender;
+- uma maneira de servir.
+
+Comparar manifestações pode produzir ansiedade, vaidade e competição.
+
+A árvore ensina que diferenças não significam desigualdade de valor.
+
+Uma árvore pequena pode oferecer sombra. Uma árvore antiga pode guardar memória. Uma planta rasteira pode proteger o solo. Uma flor pode alimentar insetos. Uma semente pode carregar o futuro.
+
+A comunidade precisa de diferentes capacidades.
+
+#### A mediunidade como processo vivo
+
+A árvore muda durante toda a vida.
+
+Ela atravessa períodos de:
+- crescimento;
+- repouso;
+- florescimento;
+- perda de folhas;
+- poda;
+- renovação;
+- produção de frutos;
+- recuperação após tempestades.
+
+A mediunidade também passa por ciclos.
+
+Existem momentos de maior sensibilidade e momentos de recolhimento. Há períodos de avanço e fases em que o médium precisa reorganizar sua vida.
+
+Por isso, desenvolvimento não é uma linha reta.
+
+É um processo vivo.
+
+---
+
+### Capítulo 21 — A terra e as raízes: onde o médium aprende a permanecer
+
+Antes de pensar na manifestação, precisamos perguntar:
+
+> **Em qual terra essa mediunidade está sendo cultivada?**
+
+A terra representa o ambiente que recebe, alimenta e oferece condições para o crescimento.
+
+No desenvolvimento mediúnico, a terra pode representar:
+- o terreiro;
+- a comunidade;
+- o território;
+- os fundamentos;
+- a ancestralidade;
+- as relações;
+- o ambiente familiar;
+- a realidade social;
+- a história da pessoa.
+
+Nenhuma mediunidade se desenvolve fora de um contexto.
+
+O médium leva para o terreiro tudo aquilo que faz parte de sua vida:
+- experiências;
+- valores;
+- medos;
+- expectativas;
+- conhecimentos;
+- traumas;
+- afetos;
+- conflitos;
+- condições físicas e emocionais.
+
+A formação precisa considerar essa realidade.
+
+#### A terra como comunidade
+
+O terreiro funciona como terra quando oferece:
+- acolhimento;
+- orientação;
+- segurança;
+- regras claras;
+- convivência;
+- estudo;
+- correção;
+- proteção;
+- espaço de participação;
+- sentido de pertencimento.
+
+Uma terra saudável não força todas as plantas a crescerem da mesma maneira.
+
+Da mesma forma, uma comunidade saudável não exige que todos os médiuns manifestem as mesmas características.
+
+Ela reconhece a diversidade e, ao mesmo tempo, preserva fundamentos coletivos.
+
+#### Quando a terra adoece
+
+Nem todo ambiente religioso é automaticamente saudável.
+
+Uma comunidade pode tornar-se uma terra empobrecida quando apresenta:
+- autoritarismo;
+- humilhação;
+- competição;
+- falta de transparência;
+- abuso espiritual;
+- exploração financeira;
+- ausência de cuidado;
+- desorganização;
+- favoritismo;
+- silêncio diante da violência.
+
+Uma planta cultivada em solo adoecido pode apresentar dificuldades que não são culpa de sua semente.
+
+Da mesma forma, um médium pode sofrer em ambientes que não oferecem segurança ou acompanhamento adequado.
+
+Por isso, também é necessário avaliar a qualidade da comunidade.
+
+#### As raízes
+
+As raízes cumprem diferentes funções.
+
+Elas:
+- fixam a árvore;
+- retiram nutrientes do solo;
+- buscam água;
+- armazenam reservas;
+- relacionam-se com outros seres;
+- sustentam o crescimento;
+- ajudam a árvore a resistir aos ventos.
+
+Na formação mediúnica, as raízes representam aquilo que sustenta o médium quando surgem dificuldades.
+
+Entre essas raízes estão:
+- os fundamentos da Umbanda;
+- o conhecimento da tradição da casa;
+- a ancestralidade;
+- o autoconhecimento;
+- a ética;
+- a disciplina;
+- o vínculo comunitário;
+- o cuidado com a saúde;
+- a compreensão da própria história;
+- a relação com os Orixás e entidades.
+
+#### Raiz não é aparência
+
+A raiz não busca ser vista.
+
+Ela trabalha no silêncio.
+
+Essa imagem é importante porque parte do amadurecimento acontece sem reconhecimento público.
+
+O médium cria raízes quando:
+- cumpre tarefas simples;
+- ajuda na organização;
+- escuta os mais velhos;
+- chega no horário;
+- estuda;
+- cuida do espaço;
+- aprende a permanecer em silêncio;
+- aceita não ser o centro;
+- participa mesmo quando não incorpora;
+- reconhece seus erros.
+
+Essas atitudes podem parecer pequenas, mas sustentam todo o trabalho.
+
+#### Autoconhecimento como raiz
+
+Conhecer a si mesmo ajuda o médium a diferenciar:
+- vontade pessoal;
+- expectativa;
+- medo;
+- ansiedade;
+- memória;
+- opinião;
+- influência do ambiente;
+- percepção espiritual.
+
+Autoconhecimento não significa controlar completamente a experiência.
+
+Significa conhecer as características do próprio instrumento.
+
+Um músico precisa conhecer seu instrumento. O médium também precisa conhecer seu corpo, sua mente e suas emoções.
+
+#### Ancestralidade como raiz
+
+Nenhuma árvore começa consigo mesma.
+
+Ela vem de uma semente produzida por outra árvore.
+
+A formação mediúnica também possui continuidade.
+
+O médium recebe conhecimentos de:
+- seus familiares;
+- seus mais velhos;
+- seus dirigentes;
+- sua comunidade;
+- suas entidades;
+- tradições anteriores;
+- gerações de praticantes.
+
+Reconhecer as raízes significa abandonar a ideia de que todo conhecimento começou em nós.
+
+Também significa assumir responsabilidade sobre aquilo que será transmitido.
+
+#### Permanecer sem ficar imóvel
+
+Criar raízes não significa recusar mudanças.
+
+As raízes crescem, desviam de obstáculos e procuram novas fontes de água.
+
+Permanecer não é congelar-se.
+
+É possuir um ponto de sustentação que permita atravessar transformações sem perder completamente a direção.
+
+Um médium enraizado pode estudar novas perspectivas sem abandonar seus fundamentos. Pode receber correções sem perder a dignidade. Pode atravessar dúvidas sem abandonar imediatamente a caminhada.
+
+---
+
+### Capítulo 22 — O tronco: disciplina, corpo e responsabilidade
+
+O tronco liga as raízes à copa.
+
+Ele sustenta o peso dos galhos, transporta substâncias e permite que a árvore cresça verticalmente.
+
+Na metáfora do desenvolvimento mediúnico, o tronco representa a estrutura que transforma fundamentos em prática.
+
+Essa estrutura é formada por:
+- disciplina;
+- corpo;
+- responsabilidade;
+- constância;
+- limites;
+- organização;
+- postura;
+- compromisso.
+
+Sem tronco, as raízes não conseguem sustentar a copa.
+
+Sem disciplina e responsabilidade, o conhecimento não se transforma em serviço seguro.
+
+#### Disciplina como estrutura
+
+Disciplina não significa rigidez vazia.
+
+Ela é a capacidade de manter compromissos mesmo quando a empolgação inicial desaparece.
+
+No terreiro, a disciplina pode aparecer em atitudes como:
+- respeitar horários;
+- preparar-se para os trabalhos;
+- cuidar do corpo;
+- manter frequência;
+- estudar;
+- assumir funções;
+- cumprir orientações;
+- informar ausências;
+- cuidar dos materiais;
+- respeitar o espaço;
+- preservar o sigilo;
+- organizar-se após a gira.
+
+A disciplina oferece continuidade.
+
+Sem ela, o desenvolvimento pode depender apenas de emoções momentâneas.
+
+#### O corpo como tronco
+
+O corpo é o lugar onde a mediunidade acontece.
+
+É por meio dele que o médium:
+- respira;
+- movimenta-se;
+- fala;
+- percebe;
+- incorpora;
+- canta;
+- trabalha;
+- descansa;
+- adoece;
+- recupera-se.
+
+Por isso, o corpo não pode ser tratado como objeto descartável.
+
+Cuidar da mediunidade também significa cuidar:
+- do sono;
+- da alimentação;
+- da hidratação;
+- da saúde;
+- da postura;
+- da respiração;
+- dos limites físicos;
+- do descanso;
+- do acompanhamento médico quando necessário.
+
+Um médium exausto pode ter mais dificuldade para discernir suas sensações.
+
+Uma pessoa em sofrimento físico ou emocional pode interpretar experiências de maneira diferente.
+
+O cuidado com o corpo faz parte do cuidado espiritual.
+
+#### O tronco recebe marcas
+
+O tronco de uma árvore guarda sinais do tempo.
+
+Ele apresenta:
+- cicatrizes;
+- alterações;
+- marcas de podas;
+- regiões mais espessas;
+- sinais de crescimento.
+
+O corpo humano também guarda experiências.
+
+Traumas, alegrias, trabalhos, doenças, afetos e memórias participam da forma como a pessoa vive a mediunidade.
+
+A formação não deve tratar o médium como se fosse uma superfície vazia.
+
+Cada pessoa possui uma história corporal.
+
+Essa história precisa ser respeitada.
+
+#### Responsabilidade como sustentação
+
+Quanto maior a copa, maior precisa ser a capacidade do tronco de sustentá-la.
+
+Quanto maior a visibilidade ou a autoridade de um médium, maior deve ser sua responsabilidade.
+
+A responsabilidade envolve reconhecer que:
+- palavras possuem consequências;
+- consulentes podem estar vulneráveis;
+- a autoridade religiosa pode influenciar decisões;
+- informações íntimas precisam ser protegidas;
+- uma entidade não deve ser usada para justificar abusos;
+- o médium precisa aceitar avaliação;
+- nenhuma função coloca alguém acima da ética.
+
+O tronco representa a firmeza necessária para não ceder diante da vaidade, do medo ou da pressão.
+
+#### Flexibilidade e firmeza
+
+Uma árvore completamente rígida pode quebrar durante uma tempestade.
+
+O tronco precisa de firmeza, mas também de flexibilidade.
+
+Da mesma forma, o médium precisa preservar fundamentos sem tornar-se incapaz de aprender.
+
+A flexibilidade permite:
+- revisar interpretações;
+- aceitar novas informações;
+- reconhecer erros;
+- adaptar-se a mudanças;
+- dialogar;
+- compreender diferenças;
+- amadurecer.
+
+A firmeza protege valores.
+
+A flexibilidade permite crescimento.
+
+#### Autoridade sem autoritarismo
+
+O tronco sustenta, mas não oprime a árvore.
+
+A autoridade religiosa deve funcionar da mesma maneira.
+
+Uma liderança responsável:
+- orienta;
+- protege;
+- organiza;
+- escuta;
+- estabelece limites;
+- explica decisões;
+- recebe questionamentos;
+- reconhece erros;
+- encaminha situações;
+- preserva a comunidade.
+
+Autoridade não significa controle absoluto.
+
+A estrutura existe para sustentar a vida, e não para impedir seu crescimento.
+
+---
+
+### Capítulo 23 — A seiva, o tempo e a poda
+
+A seiva circula pela árvore.
+
+Ela transporta água, nutrientes e substâncias necessárias ao crescimento.
+
+Na formação mediúnica, a seiva representa aquilo que circula entre as diferentes partes da vida religiosa:
+- axé;
+- conhecimento;
+- orientação;
+- experiência;
+- afeto;
+- memória;
+- responsabilidade;
+- comunicação;
+- cuidado;
+- aprendizado.
+
+Uma comunidade não se mantém apenas por regras escritas.
+
+Ela permanece viva porque algo circula entre seus integrantes.
+
+#### A circulação do axé
+
+O axé não deve ser compreendido apenas como uma energia abstrata.
+
+Ele circula através de relações e práticas.
+
+Pode ser fortalecido por:
+- cantos;
+- orações;
+- folhas;
+- águas;
+- alimentos;
+- gestos;
+- palavras;
+- cuidados;
+- presença;
+- trabalho;
+- confiança;
+- responsabilidade.
+
+Também pode ser enfraquecido por:
+- conflitos constantes;
+- humilhações;
+- fofocas;
+- competição;
+- desorganização;
+- falta de cuidado;
+- abuso;
+- exploração;
+- quebra de confiança.
+
+A qualidade da circulação depende da qualidade das relações.
+
+#### Conhecimento que não circula
+
+Uma árvore não sobreviveria se a seiva ficasse presa em apenas uma parte.
+
+Da mesma forma, uma comunidade enfraquece quando o conhecimento é utilizado como instrumento de controle.
+
+Guardar fundamentos pode ser necessário quando existem conteúdos que exigem preparação e responsabilidade.
+
+Entretanto, transformar todo conhecimento em segredo para aumentar o poder de uma pessoa produz dependência.
+
+O ensino precisa respeitar o tempo do estudante, mas também precisa oferecer caminhos reais de aprendizagem.
+
+#### O tempo de amadurecimento
+
+Nenhuma árvore produz frutos logo após a germinação.
+
+O crescimento exige tempo.
+
+Essa lição é essencial para o desenvolvimento mediúnico.
+
+A ansiedade pode fazer o estudante perguntar:
+- Quando vou incorporar?
+- Qual é minha entidade?
+- Quando poderei atender?
+- Por que outra pessoa avançou antes?
+- Quando receberei uma função?
+- Quando serei reconhecido?
+
+Essas perguntas são compreensíveis, mas não podem comandar o processo.
+
+O tempo mediúnico não deve ser medido apenas pelo calendário.
+
+Uma pessoa pode frequentar o terreiro por muitos anos e resistir ao aprendizado. Outra pode demonstrar maturidade em menos tempo, embora ainda precise continuar estudando.
+
+O amadurecimento depende de como a experiência é vivida.
+
+#### Esperar também é trabalhar
+
+A espera não significa ausência de desenvolvimento.
+
+Durante a espera, o médium pode:
+- observar;
+- estudar;
+- cuidar;
+- apoiar;
+- organizar;
+- ouvir;
+- aprender;
+- fortalecer vínculos;
+- reconhecer emoções;
+- desenvolver disciplina;
+- preparar o corpo.
+
+A semente não está inativa apenas porque ainda não apareceu acima do solo.
+
+#### A poda
+
+Podar significa retirar determinadas partes para proteger, reorganizar ou favorecer o crescimento.
+
+Na vida mediúnica, a poda pode representar:
+- correção;
+- limite;
+- renúncia;
+- revisão de comportamento;
+- abandono de hábitos prejudiciais;
+- reorganização de expectativas;
+- transformação;
+- encerramento de ciclos.
+
+A poda não deve ser utilizada como justificativa para violência ou humilhação.
+
+Corrigir alguém não significa feri-lo.
+
+Uma poda bem realizada possui finalidade de cuidado.
+
+#### O que precisa ser podado?
+
+Ao longo do desenvolvimento, o médium pode precisar trabalhar:
+- vaidade;
+- necessidade de reconhecimento;
+- pressa;
+- competição;
+- autoritarismo;
+- medo;
+- dependência;
+- impulsividade;
+- desejo de controlar;
+- dificuldade de ouvir;
+- uso irresponsável da palavra;
+- tendência a atribuir tudo ao espiritual;
+- resistência ao cuidado profissional.
+
+A poda não destrói a identidade.
+
+Ela remove aquilo que impede um crescimento mais saudável.
+
+#### Poda e luto
+
+Toda poda produz uma perda.
+
+Mesmo quando uma mudança é necessária, ela pode gerar desconforto.
+
+O médium pode precisar abandonar uma imagem idealizada de si mesmo. Pode descobrir que sua função não será aquela que imaginava. Pode precisar deixar uma prática, um comportamento ou uma expectativa.
+
+Esse processo pode ser vivido como luto.
+
+A comunidade precisa acompanhar as mudanças com respeito.
+
+#### Quando não podar
+
+Nem toda diferença precisa ser eliminada.
+
+Uma liderança não deve utilizar a ideia de poda para apagar:
+- personalidade;
+- criatividade;
+- autonomia;
+- identidade;
+- questionamentos legítimos;
+- limites pessoais;
+- diversidade.
+
+A poda serve à saúde da árvore.
+
+Se ela retira aquilo que é necessário à vida, transforma-se em mutilação.
+
+---
+
+### Capítulo 24 — A copa, as flores e os frutos
+
+A copa é a parte mais visível da árvore.
+
+Ela se abre para a luz, ocupa espaço e participa de relações com outros seres.
+
+Na formação mediúnica, a copa representa as formas pelas quais a sensibilidade começa a expressar-se de maneira mais reconhecível.
+
+Ela pode incluir:
+- incorporação;
+- psicofonia;
+- intuição;
+- vidência;
+- percepção energética;
+- psicografia;
+- sonhos;
+- aconselhamento;
+- sustentação;
+- canto;
+- cura;
+- acolhimento.
+
+A copa é importante, mas não existe sozinha.
+
+Toda expressão depende da terra, das raízes, do tronco, da seiva e do tempo.
+
+#### Manifestação não é conclusão
+
+Quando a mediunidade começa a manifestar-se de maneira mais clara, o desenvolvimento não terminou.
+
+Na verdade, inicia-se uma nova fase de responsabilidade.
+
+O médium precisa aprender:
+- a reconhecer limites;
+- a trabalhar em grupo;
+- a aceitar orientações;
+- a avaliar mensagens;
+- a cuidar da palavra;
+- a preservar o consulente;
+- a encerrar o transe;
+- a organizar-se após o atendimento;
+- a lidar com elogios;
+- a lidar com críticas;
+- a não transformar a entidade em identidade pessoal.
+
+A presença da copa não torna as raízes desnecessárias.
+
+Quanto maior a expressão, maior deve ser o aprofundamento dos fundamentos.
+
+#### As flores
+
+As flores podem representar capacidades que começam a aparecer.
+
+Elas anunciam possibilidades, mas ainda não são frutos.
+
+Uma percepção mediúnica inicial pode ser comparada a uma flor.
+
+Ela possui valor, mas precisa de tempo, cuidado e observação antes de ser utilizada como orientação segura.
+
+Entre as flores do desenvolvimento podem estar:
+- aumento da sensibilidade;
+- primeiras incorporações;
+- sonhos recorrentes;
+- percepção de linhas;
+- intuições;
+- mudanças corporais;
+- maior conexão com o ritual;
+- facilidade de concentração.
+
+Essas experiências não devem ser desprezadas nem supervalorizadas.
+
+Elas precisam ser acompanhadas.
+
+#### Nem toda flor produz fruto
+
+Uma árvore pode florescer muito e produzir poucos frutos.
+
+Da mesma forma, um médium pode apresentar muitas manifestações sem transformar sua experiência em caridade, equilíbrio ou amadurecimento.
+
+A qualidade do desenvolvimento não é medida apenas pela quantidade de fenômenos.
+
+É necessário perguntar:
+- Essa mediunidade ajuda alguém?
+- Produz autonomia ou dependência?
+- Fortalece a comunidade?
+- Desenvolve responsabilidade?
+- Melhora a convivência?
+- Amplia o respeito?
+- Contribui para o equilíbrio do próprio médium?
+- Produz cuidado?
+
+#### Os frutos
+
+Os frutos representam aquilo que a árvore oferece.
+
+Na formação mediúnica, os frutos podem ser:
+- caridade;
+- acolhimento;
+- orientação responsável;
+- equilíbrio;
+- transformação;
+- conhecimento;
+- serviço;
+- fortalecimento comunitário;
+- respeito;
+- proteção;
+- esperança;
+- autonomia.
+
+O fruto não existe para alimentar a própria árvore.
+
+Ele é oferecido.
+
+Essa imagem ensina que a mediunidade não deve ser desenvolvida apenas para satisfazer a curiosidade do médium.
+
+Seu sentido se realiza no serviço.
+
+#### Fruto não é espetáculo
+
+Um fruto não precisa chamar atenção para cumprir sua função.
+
+Da mesma forma, uma orientação simples pode produzir mais transformação do que uma manifestação teatral.
+
+Um gesto de acolhimento pode ser um fruto.
+
+Uma palavra prudente pode ser um fruto.
+
+O silêncio diante de uma percepção insegura também pode ser um fruto.
+
+Encaminhar alguém para atendimento profissional pode ser um fruto de responsabilidade.
+
+#### Frutos saudáveis e frutos adoecidos
+
+Nem tudo o que nasce de uma prática religiosa é automaticamente bom.
+
+É necessário observar os resultados.
+
+Frutos saudáveis produzem:
+- dignidade;
+- autonomia;
+- confiança;
+- equilíbrio;
+- pertencimento;
+- responsabilidade;
+- esperança realista;
+- cuidado.
+
+Frutos adoecidos produzem:
+- medo;
+- dependência;
+- controle;
+- humilhação;
+- isolamento;
+- exploração;
+- fanatismo;
+- abandono de cuidados necessários;
+- superioridade;
+- violência.
+
+A avaliação pelos frutos é uma ferramenta de discernimento.
+
+#### As sementes
+
+Dentro dos frutos existem sementes.
+
+Elas representam a continuidade do conhecimento.
+
+O médium que amadurece começa a influenciar outras pessoas.
+
+Seus comportamentos, palavras e escolhas tornam-se referências.
+
+Por isso, transmitir não significa apenas ensinar conteúdos.
+
+A pessoa transmite também por sua maneira de:
+- tratar os outros;
+- receber críticas;
+- exercer autoridade;
+- lidar com erros;
+- cumprir responsabilidades;
+- cuidar da comunidade;
+- reconhecer limites.
+
+As sementes carregam o futuro.
+
+Transmitir conhecimento exige responsabilidade sobre aquilo que será cultivado nas próximas gerações.
+
+---
+
+### Capítulo 25 — O Terreiro Escola como floresta de almas
+
+Uma floresta não é formada por uma única árvore.
+
+Ela reúne diferentes espécies, tamanhos, idades e funções.
+
+Existem árvores antigas, brotos, sementes, cipós, arbustos, plantas medicinais, folhas caídas, fungos e animais.
+
+A vida acontece por meio das relações entre todos esses elementos.
+
+O **Terreiro Escola** pode ser compreendido como uma floresta de almas.
+
+Essa imagem mostra que a comunidade não é formada por pessoas iguais.
+
+Cada integrante possui:
+- uma história;
+- uma função;
+- um tempo;
+- uma sensibilidade;
+- um conhecimento;
+- uma dificuldade;
+- uma forma de contribuir.
+
+#### Terreiro Escola
+
+Chamar o terreiro de escola não significa transformá-lo em uma instituição acadêmica comum.
+
+Significa reconhecer que nele existem processos de formação.
+
+Aprende-se por meio de:
+- estudo;
+- prática;
+- convivência;
+- observação;
+- oralidade;
+- ritual;
+- trabalho;
+- correção;
+- experiência;
+- serviço.
+
+O ensino não acontece somente durante aulas.
+
+A forma como o espaço é organizado também ensina. O modo como os mais velhos tratam os iniciantes ensina. A maneira como os conflitos são resolvidos ensina. A postura durante um atendimento ensina.
+
+Toda a comunidade participa da formação.
+
+#### Floresta não é plantação uniforme
+
+Uma plantação costuma reunir indivíduos da mesma espécie, organizados para uma finalidade específica.
+
+A floresta é diversa.
+
+O Terreiro Escola não deve formar médiuns idênticos.
+
+Ele deve preservar fundamentos e permitir que cada pessoa desenvolva suas capacidades com responsabilidade.
+
+Uniformidade não é o mesmo que unidade.
+
+Uma comunidade pode possuir unidade de propósito sem apagar diferenças.
+
+#### Os mais velhos como árvores de memória
+
+Árvores antigas carregam marcas do tempo.
+
+Elas oferecem:
+- sombra;
+- sementes;
+- abrigo;
+- memória;
+- referência;
+- estabilidade.
+
+Os mais velhos da comunidade podem ocupar papel semelhante.
+
+Entretanto, envelhecer não torna alguém automaticamente sábio ou eticamente correto.
+
+A experiência precisa estar acompanhada de responsabilidade.
+
+Os mais velhos devem ser respeitados, mas também permanecem sujeitos à ética, ao diálogo e à avaliação comunitária.
+
+#### Os mais novos como brotos
+
+Brotos precisam de cuidado.
+
+Não devem ser pisados, mas também não podem ser expostos prematuramente a condições que ainda não conseguem sustentar.
+
+Os estudantes precisam de:
+- orientação;
+- espaço para perguntar;
+- limites claros;
+- proteção;
+- acompanhamento;
+- tarefas adequadas;
+- tempo;
+- reconhecimento de seu crescimento.
+
+Pressionar uma pessoa para manifestar ou assumir funções antes de estar preparada pode causar danos.
+
+#### Funções diferentes
+
+Nem toda árvore produz o mesmo fruto.
+
+Da mesma forma, nem todos os integrantes do terreiro terão as mesmas funções.
+
+Algumas pessoas atuarão principalmente na incorporação. Outras poderão contribuir com:
+- canto;
+- toque;
+- cambonagem;
+- organização;
+- acolhimento;
+- cozinha;
+- limpeza;
+- estudo;
+- administração;
+- comunicação;
+- cuidado com os elementos;
+- recepção;
+- ensino.
+
+Nenhuma função deve ser considerada inferior quando serve ao equilíbrio da comunidade.
+
+#### Redes subterrâneas
+
+Em uma floresta, as raízes e fungos formam redes que permitem trocas.
+
+Muitas dessas relações não são visíveis.
+
+No terreiro, também existem trabalhos que raramente recebem destaque:
+- preparar o espaço;
+- limpar;
+- organizar materiais;
+- acolher quem chega;
+- cuidar da água;
+- acompanhar um médium;
+- manter registros;
+- resolver problemas;
+- oferecer apoio após uma crise.
+
+Essas atividades funcionam como redes subterrâneas.
+
+Sem elas, a parte visível não se sustenta.
+
+#### Quando uma árvore adoece
+
+Se uma árvore adoece, a floresta precisa responder.
+
+Na comunidade, uma pessoa pode atravessar:
+- crise emocional;
+- luto;
+- doença;
+- conflito;
+- esgotamento;
+- dificuldade financeira;
+- dúvida espiritual;
+- afastamento.
+
+O cuidado comunitário não significa invadir ou controlar.
+
+Significa oferecer apoio, encaminhamento e respeito.
+
+Também é necessário reconhecer quando o comportamento de alguém ameaça outras pessoas.
+
+Cuidar da árvore individual não pode signific abandonar a segurança da floresta.
+
+#### Conflitos na floresta
+
+Uma comunidade viva terá conflitos.
+
+O objetivo não é eliminar toda diferença, mas aprender a lidar com ela.
+
+Conflitos precisam ser tratados com:
+- escuta;
+- transparência;
+- responsabilidade;
+- limites;
+- mediação;
+- respeito;
+- proteção contra retaliações;
+- foco na reparação.
+
+Fingir que não existe conflito não produz harmonia.
+
+Produz acúmulo.
+
+#### A floresta e o território
+
+A floresta não existe sem território.
+
+Da mesma forma, o terreiro precisa reconhecer sua relação com o lugar que ocupa.
+
+O Terreiro Escola ensina cuidado com:
+- água;
+- plantas;
+- resíduos;
+- vizinhança;
+- recursos;
+- história do espaço;
+- impactos ambientais;
+- relações sociais.
+
+A espiritualidade precisa produzir uma forma responsável de habitar.
+
+---
+
+### Capítulo 26 — Comparativo: a árvore e os estudos deste livro
+
+A Árvore do Conhecimento não substitui os conhecimentos estudados nos módulos anteriores.
+
+Ela funciona como uma forma de organizá-los e relacioná-los.
+
+Cada parte da árvore dialoga com diferentes temas da obra.
+
+#### A terra e a antropologia
+
+A antropologia mostra que as experiências mediúnicas recebem sentido dentro de culturas e comunidades.
+
+A terra representa esse contexto.
+
+Nenhuma manifestação acontece fora de uma linguagem, de um território e de uma tradição.
+
+#### As raízes e a ancestralidade
+
+As filosofias africanas e afro-diaspóricas ajudam a compreender a ancestralidade como presença, continuidade e responsabilidade.
+
+As raízes simbolizam os conhecimentos recebidos e as relações que sustentam a pessoa.
+
+#### O tronco e a psicologia
+
+A psicologia contribui para o estudo da consciência, da identidade, das emoções, da memória e do comportamento.
+
+O tronco representa a estrutura humana pela qual a mediunidade se expressa.
+
+#### A seiva e o axé
+
+O conceito de axé amplia a compreensão da força vital e da capacidade de realização.
+
+A seiva representa a circulação dessa força por meio das relações, dos rituais, das palavras e dos cuidados.
+
+#### O tempo e a maturação
+
+O tempo espiralar mostra que passado, presente e futuro se relacionam.
+
+Na árvore, o tempo não é apenas espera. É o processo pelo qual experiências são integradas e transformadas.
+
+#### A poda e o discernimento
+
+A ética, o autoconhecimento e a saúde mental ajudam a reconhecer o que precisa ser revisto.
+
+A poda representa a capacidade de corrigir excessos sem destruir a pessoa.
+
+#### A copa e os fenômenos mediúnicos
+
+Incorporação, psicofonia, vidência, intuição e outras manifestações aparecem na copa.
+
+São expressões visíveis de processos mais profundos.
+
+#### As flores e as experiências iniciais
+
+As flores representam capacidades em formação.
+
+Elas precisam ser acompanhadas antes de serem tratadas como frutos maduros.
+
+#### Os frutos e a ética
+
+A ética ensina que uma prática deve ser avaliada por suas consequências.
+
+Os frutos representam aquilo que a mediunidade oferece à comunidade.
+
+#### As sementes e a educação
+
+A transmissão do conhecimento produz continuidade.
+
+As sementes representam aquilo que será entregue às próximas gerações.
+
+#### A floresta e Ubuntu
+
+Ubuntu mostra que a pessoa se constrói nas relações.
+
+A floresta representa a comunidade ampliada, formada por diferentes vidas que se sustentam mutuamente.
+
+#### O território e os conhecimentos indígenas
+
+As epistemologias originárias mostram que o território não é simples cenário.
+
+A floresta e a terra recordam que espiritualidade, comunidade e ambiente estão relacionados.
+
+#### A árvore e a neurociência
+
+A neurociência pode observar o cérebro e o corpo durante determinadas experiências.
+
+Na metáfora da árvore, ela estuda aspectos da estrutura e do funcionamento.
+
+Entretanto, não determina sozinha o significado espiritual de toda a árvore.
+
+#### A árvore e as três lentes
+
+A lente religiosa pergunta pelo sentido espiritual da árvore.
+
+A lente fenomenológica observa como a experiência é vivida.
+
+A lente científica investiga aspectos observáveis de seu funcionamento.
+
+As três lentes podem olhar para a mesma realidade sem fazer exatamente as mesmas perguntas.
+
+---
+
+### Capítulo 27 — A Árvore do Conhecimento como caminho de acompanhamento
+
+A Árvore do Conhecimento não deve ser utilizada para classificar pessoas de maneira rígida.
+
+Ela não é uma tabela destinada a declarar quem é superior, inferior, pronto ou incapaz.
+
+Seu objetivo é favorecer o acompanhamento.
+
+A árvore ajuda a formular perguntas.
+
+#### Perguntas sobre a terra
+
+- A pessoa sente-se acolhida pela comunidade?
+- Compreende a tradição da casa?
+- Existe segurança no ambiente?
+- Consegue participar sem sentir-se constantemente ameaçada?
+- Possui condições para desenvolver-se neste momento?
+
+#### Perguntas sobre as raízes
+
+- Conhece os fundamentos básicos?
+- Reconhece sua história?
+- Desenvolve autoconhecimento?
+- Aceita orientação?
+- Possui vínculos comunitários?
+- Compreende a importância da ancestralidade?
+
+#### Perguntas sobre o tronco
+
+- Mantém disciplina?
+- Cuida do corpo?
+- Cumpre responsabilidades?
+- Respeita horários e funções?
+- Demonstra estabilidade?
+- Consegue receber correções?
+- Mantém postura ética?
+
+#### Perguntas sobre a seiva
+
+- O conhecimento circula?
+- A pessoa participa das trocas?
+- Consegue aprender e compartilhar?
+- Suas relações fortalecem ou enfraquecem a comunidade?
+- Há comunicação clara?
+- Existe confiança?
+
+#### Perguntas sobre o tempo
+
+- O estudante respeita seu próprio ritmo?
+- Demonstra pressa?
+- Compara-se constantemente?
+- Consegue atravessar períodos sem manifestação?
+- Integra as experiências vividas?
+
+#### Perguntas sobre a poda
+
+- Reconhece comportamentos que precisam ser modificados?
+- Aceita rever atitudes?
+- Consegue abandonar práticas prejudiciais?
+- A correção é realizada com respeito?
+- A comunidade diferencia poda de violência?
+
+#### Perguntas sobre a copa
+
+- Quais formas de mediunidade aparecem?
+- Como essas manifestações são acompanhadas?
+- Existe coerência?
+- Há equilíbrio na entrada e na saída do transe?
+- A pessoa reconhece sua participação consciente?
+
+#### Perguntas sobre as flores
+
+- Quais capacidades estão surgindo?
+- Elas estão sendo observadas com calma?
+- Existe expectativa exagerada?
+- A pessoa transforma toda percepção em certeza?
+
+#### Perguntas sobre os frutos
+
+- O trabalho produz caridade?
+- Fortalece autonomia?
+- Gera equilíbrio?
+- Respeita o consulente?
+- Produz crescimento comunitário?
+- Os resultados correspondem aos princípios ensinados?
+
+#### Perguntas sobre as sementes
+
+- O que essa pessoa transmite aos mais novos?
+- Sua postura serve de referência saudável?
+- Compartilha conhecimento com responsabilidade?
+- Reproduz medo, vaidade e autoritarismo ou cuidado, humildade e ética?
+
+#### Acompanhamento não é julgamento
+
+Avaliar não significa condenar.
+
+O acompanhamento procura identificar:
+- potencialidades;
+- necessidades;
+- riscos;
+- dificuldades;
+- avanços;
+- pontos que exigem cuidado;
+- formas adequadas de participação.
+
+Uma pessoa pode apresentar copa desenvolvida e raízes fragilizadas.
+
+Outra pode possuir raízes profundas e ainda não demonstrar fenômenos visíveis.
+
+A árvore ajuda a perceber essas diferenças.
+
+#### Não existe uma árvore perfeita
+
+Todo médium possui aspectos em desenvolvimento.
+
+Uma pessoa pode ser disciplinada e precisar trabalhar a flexibilidade. Pode ser sensível e precisar fortalecer o discernimento. Pode possuir conhecimento e precisar aprender a comunicar com mais cuidado.
+
+A formação não busca perfeição imediata.
+
+Busca crescimento responsável.
+
+#### Acompanhamento individual e comunitário
+
+O desenvolvimento precisa considerar a pessoa, mas também a comunidade.
+
+Não basta perguntar como o médium está.
+
+Também é necessário observar:
+- como ele afeta o grupo;
+- como reage aos limites;
+- como utiliza sua influência;
+- como trata pessoas vulneráveis;
+- como participa das tarefas;
+- como lida com responsabilidades.
+
+O amadurecimento é pessoal e comunitário.
+
+#### Registros de desenvolvimento
+
+O acompanhamento pode utilizar registros simples, preservando o sigilo.
+
+Podem ser observados:
+- frequência;
+- participação;
+- dificuldades relatadas;
+- experiências recorrentes;
+- orientações recebidas;
+- mudanças percebidas;
+- necessidades de encaminhamento;
+- responsabilidades assumidas;
+- momentos de pausa;
+- avaliações periódicas.
+
+O registro não deve transformar o médium em objeto de vigilância.
+
+Seu propósito é organizar o cuidado e evitar que o desenvolvimento dependa apenas de impressões momentâneas.
+
+#### Pausas também fazem parte
+
+Em alguns momentos, a pessoa pode precisar reduzir ou interromper temporariamente determinadas atividades.
+
+Isso pode ocorrer por:
+- saúde;
+- luto;
+- exaustão;
+- conflitos;
+- mudanças familiares;
+- necessidade de tratamento;
+- reorganização emocional;
+- dificuldade de integração.
+
+A pausa não deve ser automaticamente interpretada como fracasso ou afastamento espiritual.
+
+Às vezes, o cuidado exige repouso.
+
+#### Mudança de função
+
+Uma árvore muda ao longo do tempo.
+
+O médium também pode mudar de função.
+
+Alguém que incorporava com frequência pode passar a dedicar-se mais ao ensino. Uma pessoa que inicialmente cuidava da organização pode desenvolver outra forma de participação.
+
+Função não é identidade eterna.
+
+A comunidade precisa reconhecer ciclos.
+
+#### Quando o encaminhamento é necessário
+
+A árvore também ajuda a reconhecer limites do terreiro.
+
+Quando há sofrimento psicológico, físico, social ou jurídico, pode ser necessário procurar:
+- psicólogo;
+- psiquiatra;
+- médico;
+- assistente social;
+- advogado;
+- serviço de proteção;
+- rede de apoio.
+
+Encaminhar não significa abandonar.
+
+Significa ampliar o cuidado.
+
+---
+
+### A Árvore do Conhecimento na visão do TUCPB
+
+Na visão do Templo Umbandista Caboclo Pena Branca, a Árvore do Conhecimento representa um caminho de formação integral.
+
+Ela recorda que:
+- fenômeno sem fundamento é instável;
+- sensibilidade sem ética pode ferir;
+- conhecimento sem circulação pode tornar-se poder;
+- disciplina sem cuidado pode transformar-se em autoritarismo;
+- liberdade sem responsabilidade pode produzir desorganização;
+- tradição sem reflexão pode congelar;
+- mudança sem raiz pode perder direção;
+- espiritualidade sem comunidade pode alimentar individualismo;
+- fé sem discernimento pode gerar dependência;
+- ciência sem respeito cultural pode produzir redução;
+- serviço sem autocuidado pode levar ao esgotamento.
+
+A árvore reúne essas tensões sem oferecer respostas simplistas.
+
+Ela ensina equilíbrio.
+
+---
+
+### Princípios da Árvore do Conhecimento
+
+**Primeiro enraizar, depois manifestar**
+A manifestação precisa ser sustentada por fundamentos, ética e pertencimento.
+
+**Crescer não é competir**
+Cada médium possui um ritmo e uma forma de desenvolvimento.
+
+**Toda força precisa de direção**
+Sensibilidade e axé devem ser orientados para o cuidado.
+
+**O tempo também ensina**
+Nem todo aprendizado pode ser acelerado.
+
+**A poda precisa proteger a vida**
+Correção não deve ser humilhação nem violência.
+
+**A copa depende do tronco**
+Fenômenos visíveis exigem disciplina e responsabilidade.
+
+**Flores não são frutos**
+Experiências iniciais precisam de acompanhamento antes de se tornarem orientação.
+
+**Os frutos pertencem à comunidade**
+A mediunidade encontra sentido na caridade e no serviço.
+
+**Toda semente carrega responsabilidade**
+Aquilo que transmitimos formará as próximas gerações.
+
+**Nenhuma árvore é a floresta inteira**
+Nenhuma pessoa possui todo o conhecimento ou sustenta sozinha o terreiro.
+
+---
+
+### Objetivos de aprendizagem
+
+Ao concluir este módulo, o estudante deverá ser capaz de:
+- compreender a Árvore do Conhecimento como metáfora formativa;
+- reconhecer a mediunidade como processo vivo e relacional;
+- compreender a terra como território e comunidade;
+- reconhecer as raízes como fundamentos, ancestralidade e autoconhecimento;
+- compreender o tronco como disciplina, corpo e responsabilidade;
+- reconhecer a seiva como circulação do axé e do conhecimento;
+- respeitar o tempo de amadurecimento;
+- compreender a poda como correção e transformação;
+- diferenciar correção de violência ou humilhação;
+- reconhecer a copa como expressão mediúnica;
+- compreender as flores como capacidades em formação;
+- avaliar a mediunidade pelos frutos;
+- compreender as sementes como transmissão de conhecimento;
+- reconhecer o Terreiro Escola como floresta de almas;
+- valorizar diferentes funções na comunidade;
+- relacionar a árvore aos estudos científicos, filosóficos e religiosos do livro;
+- utilizar a Árvore do Conhecimento como instrumento de acompanhamento;
+- reconhecer a necessidade de pausas e mudanças de função;
+- compreender quando encaminhamentos profissionais são necessários;
+- avaliar o amadurecimento pela ética, pela responsabilidade e pela caridade.
+
+---
+
+### Conceitos centrais do módulo
+
+**Árvore do Conhecimento**
+Imagem utilizada pelo TUCPB para organizar as diferentes dimensões do desenvolvimento mediúnico.
+
+**Terra**
+Comunidade, território e conjunto de condições que acolhem e alimentam o desenvolvimento.
+
+**Raízes**
+Fundamentos, ancestralidade, vínculos, autoconhecimento e valores que oferecem sustentação.
+
+**Tronco**
+Estrutura formada por disciplina, corpo, constância, responsabilidade e limites.
+
+**Seiva**
+Circulação do axé, do conhecimento, do cuidado e das experiências entre as partes da comunidade.
+
+**Tempo**
+Processo necessário para maturação, integração e transformação das experiências.
+
+**Poda**
+Correção, limite, renúncia e revisão de comportamentos que prejudicam o crescimento.
+
+**Copa**
+Expressão visível da mediunidade e das capacidades desenvolvidas.
+
+**Flores**
+Potencialidades e experiências iniciais que ainda precisam de acompanhamento.
+
+**Frutos**
+Resultados éticos, espirituais e comunitários produzidos pela mediunidade.
+
+**Sementes**
+Conhecimentos, exemplos e valores transmitidos às próximas gerações.
+
+**Terreiro Escola**
+Comunidade de formação na qual o aprendizado acontece por estudo, ritual, convivência, oralidade e serviço.
+
+**Floresta de almas**
+Imagem da comunidade como rede diversa de pessoas, entidades, funções, histórias e conhecimentos.
+
+**Acompanhamento mediúnico**
+Processo de observação, orientação e cuidado com o desenvolvimento individual e comunitário.
+
+**Maturidade mediúnica**
+Capacidade de utilizar a sensibilidade com equilíbrio, ética, discernimento, responsabilidade e compromisso com a caridade.
+
+---
+
+### Questões para reflexão
+
+1. Por que a mediunidade pode ser comparada a uma árvore?
+2. O que acontece quando alguém procura desenvolver apenas a copa?
+3. Qual é a terra em que sua mediunidade está sendo cultivada?
+4. Quais raízes sustentam sua caminhada?
+5. Como o autoconhecimento fortalece o discernimento?
+6. O que representa o tronco no desenvolvimento mediúnico?
+7. Como você cuida do corpo utilizado no trabalho espiritual?
+8. Qual é a diferença entre disciplina e rigidez?
+9. O que circula como seiva dentro do terreiro?
+10. O conhecimento é compartilhado ou utilizado para produzir dependência?
+11. Como você reage ao tempo de espera?
+12. Quais comportamentos precisam ser podados em sua caminhada?
+13. Como diferenciar uma poda cuidadosa de uma violência?
+14. Quais flores já apareceram em seu desenvolvimento?
+15. Você tem tratado experiências iniciais como frutos maduros?
+16. Quais frutos sua participação produz?
+17. Sua mediunidade fortalece a autonomia ou cria dependência?
+18. Que sementes você transmite por meio de seu comportamento?
+19. Quais funções pouco visíveis sustentam o terreiro?
+20. Como os mais velhos e os mais novos são tratados na comunidade?
+21. O terreiro funciona como floresta diversa ou como plantação uniforme?
+22. Como a Árvore do Conhecimento dialoga com a ciência?
+23. Como ela dialoga com Ubuntu e a ancestralidade?
+24. Como se relaciona ao território e aos conhecimentos indígenas?
+25. Quais sinais demonstram maturidade mediúnica?
+26. Em quais situações uma pausa pode ser necessária?
+27. Como acompanhar sem julgar ou controlar?
+
+---
+
+### Atividade — Desenhando sua Árvore do Conhecimento
+
+Desenhe uma árvore ou utilize uma imagem como base.
+Divida-a nas seguintes partes:
+- terra;
+- raízes;
+- tronco;
+- seiva;
+- poda;
+- copa;
+- flores;
+- frutos;
+- sementes.
+
+Em cada parte, escreva elementos da sua caminhada.
+
+**Na terra**
+Registre os ambientes, pessoas e tradições que acolhem seu desenvolvimento.
+
+**Nas raízes**
+Registre seus fundamentos, valores, ancestralidade e aprendizados.
+
+**No tronco**
+Registre suas disciplinas, responsabilidades e cuidados com o corpo.
+
+**Na seiva**
+Registre o que circula em suas relações: conhecimentos, afetos, orientações e práticas.
+
+**Na poda**
+Registre comportamentos, medos ou expectativas que precisam ser transformados.
+
+**Na copa**
+Registre as formas pelas quais sua sensibilidade se expressa.
+
+**Nas flores**
+Registre capacidades que estão começando a desenvolver-se.
+
+**Nos frutos**
+Registre aquilo que sua participação oferece à comunidade.
+
+**Nas sementes**
+Registre os ensinamentos e exemplos que deseja transmitir.
+
+Ao final, observe:
+> Minha copa está proporcional às minhas raízes?
+> Quais partes precisam de mais cuidado?
+> Estou produzindo frutos ou apenas buscando flores?
+
+---
+
+### Atividade de acompanhamento pessoal
+
+Avalie cada afirmação com uma das opções:
+- preciso desenvolver;
+- estou aprendendo;
+- consigo realizar com constância.
+
+**Terra e pertencimento**
+- Conheço a tradição da casa.
+- Sinto-me parte da comunidade.
+- Respeito o território e o espaço do terreiro.
+- Consigo pedir ajuda.
+
+**Raízes**
+- Estudo os fundamentos.
+- Reconheço minha história e meus limites.
+- Procuro desenvolver autoconhecimento.
+- Valorizo os ensinamentos dos mais velhos.
+
+**Tronco**
+- Cumpro compromissos.
+- Cuido do meu corpo.
+- Respeito horários e funções.
+- Aceito orientações.
+
+**Seiva**
+- Compartilho conhecimentos com responsabilidade.
+- Evito fofocas e conflitos desnecessários.
+- Minha presença fortalece as relações.
+- Consigo dialogar.
+
+**Tempo**
+- Respeito meu ritmo.
+- Evito comparações.
+- Consigo permanecer mesmo sem manifestações.
+- Não busco resultados imediatos.
+
+**Poda**
+- Reconheço meus erros.
+- Consigo pedir desculpas.
+- Aceito rever comportamentos.
+- Diferencio correção de humilhação.
+
+**Copa e flores**
+- Observo minhas experiências com calma.
+- Não transformo toda sensação em certeza.
+- Reconheço minha participação na manifestação.
+- Aceito acompanhamento.
+
+**Frutos e sementes**
+- Minha participação produz cuidado.
+- Respeito a autonomia dos consulentes.
+- Preservo o sigilo.
+- Transmito mais responsabilidade do que vaidade.
+
+---
+
+### Estudo de situações
+
+**Situação 1 — A copa sem raízes**
+Um médium manifesta-se com intensidade, mas não aceita orientações, falta aos estudos e desrespeita os demais integrantes.
+*Reflexão*: A copa pode estar visível, mas a estrutura encontra-se fragilizada. A manifestação não substitui fundamentos, disciplina e responsabilidade.
+
+**Situação 2 — A raiz sem espaço para crescer**
+Uma pessoa estuda, participa e cumpre suas funções, mas a liderança nunca permite que ela avance, apenas para manter controle.
+*Reflexão*: A terra também precisa ser avaliada. O acompanhamento não deve impedir crescimento por medo, favoritismo ou autoritarismo.
+
+**Situação 3 — A poda agressiva**
+Um estudante é humilhado publicamente e a situação é justificada como quebra de ego.
+*Reflexão*: Humilhação não é poda espiritual. A correção deve preservar dignidade e possuir finalidade de cuidado.
+
+**Situação 4 — Muitas flores**
+Uma pessoa começa a ter sonhos e percepções e passa imediatamente a orientar outras pessoas.
+*Reflexão*: As flores indicam possibilidades, mas ainda precisam de tempo e acompanhamento. Experiências iniciais não devem ser tratadas como autoridade madura.
+
+**Situação 5 — O fruto da dependência**
+Um médium oferece orientações que fazem o consulente acreditar que não pode tomar nenhuma decisão sem consultá-lo.
+*Reflexão*: Esse fruto não é saudável. O trabalho espiritual deve fortalecer autonomia, e não criar controle.
+
+**Situação 6 — A árvore indispensável**
+Uma liderança afirma que o terreiro deixará de existir sem sua presença.
+*Reflexão*: Nenhuma árvore é a floresta inteira. A comunidade precisa formar continuidade, compartilhar responsabilidades e preparar novas gerações.
+
+**Situação 7 — A pausa**
+Uma médium enfrenta esgotamento emocional e acredita que se afastar temporariamente será uma traição às entidades.
+*Reflexão*: O repouso pode fazer parte do cuidado. Uma árvore também atravessa períodos de recolhimento e renovação.
+
+**Situação 8 — A semente do autoritarismo**
+Um médium mais antigo trata os iniciantes com dureza porque afirma ter aprendido dessa forma.
+*Reflexão*: Transmitir uma tradição não significa repetir suas violências. As sementes precisam carregar fundamentos e cuidado, não apenas hábitos antigos.
+
+---
+
+### Sinais de maturidade mediúnica
+
+A maturidade pode ser percebida quando o médium:
+- não precisa provar constantemente sua sensibilidade;
+- aceita ser orientado;
+- reconhece seus limites;
+- cuida da própria saúde;
+- respeita o consulente;
+- preserva o sigilo;
+- não utiliza a entidade para impor opiniões;
+- consegue dizer “não sei”;
+- não abandona a realidade cotidiana;
+- valoriza diferentes funções;
+- serve sem exigir destaque;
+- aceita períodos de espera;
+- reconhece a importância da comunidade;
+- procura reparar seus erros;
+- transmite conhecimento com responsabilidade;
+- produz autonomia, cuidado e equilíbrio.
+
+Maturidade não significa ausência de falhas.
+Significa capacidade de reconhecer, aprender e transformar.
+
+---
+
+### O fruto final: servir sem desaparecer
+
+O desenvolvimento mediúnico convida a pessoa ao serviço.
+
+Entretanto, servir não significa desaparecer como indivíduo, abandonar limites ou aceitar abusos.
+
+Uma árvore oferece frutos sem deixar de cuidar de sua própria sobrevivência.
+
+Da mesma forma, o médium precisa equilibrar:
+- entrega e autonomia;
+- serviço e descanso;
+- comunidade e individualidade;
+- disciplina e flexibilidade;
+- tradição e reflexão;
+- sensibilidade e discernimento;
+- fé e cuidado profissional;
+- autoridade e responsabilidade.
+
+O serviço saudável não destrói o servidor.
+Ele o transforma e também fortalece a comunidade.
+
+---
+
+### Síntese do Módulo 6
+
+A Árvore do Conhecimento reúne os principais ensinamentos desta formação.
+
+A terra mostra que ninguém se desenvolve fora de um território e de uma comunidade.
+
+As raízes representam fundamentos, ancestralidade, autoconhecimento e pertencimento.
+
+O tronco ensina que a mediunidade precisa de corpo, disciplina, estrutura e responsabilidade.
+
+A seiva mostra que axé, conhecimento e cuidado precisam circular.
+
+O tempo recorda que amadurecimento não pode ser fabricado pela pressa.
+
+A poda ensina que crescer também exige corrigir comportamentos, rever expectativas e abandonar aquilo que prejudica a vida.
+
+A copa representa os fenômenos visíveis, mas recorda que nenhuma manifestação se sustenta sem uma estrutura profunda.
+
+As flores representam potencialidades. Elas devem ser acolhidas sem serem confundidas com frutos maduros.
+
+Os frutos mostram o verdadeiro sentido da mediunidade: caridade, cuidado, autonomia, equilíbrio e transformação.
+
+As sementes representam aquilo que transmitiremos às próximas gerações.
+
+A floresta recorda que nenhuma pessoa sustenta o terreiro sozinha.
+
+Na visão do TUCPB, a maturidade mediúnica não é medida pela quantidade de manifestações, pelo tempo de incorporação ou pela admiração que o médium desperta.
+
+Ela é reconhecida quando a pessoa desenvolve:
+- raízes mais profundas;
+- estrutura mais firme;
+- circulação mais saudável;
+- maior capacidade de aceitar podas;
+- uma copa equilibrada;
+- frutos que alimentam a comunidade;
+- sementes que preservam conhecimento e responsabilidade.
+
+A Árvore do Conhecimento não é uma fórmula encerrada.
+
+Ela é um caminho de observação e acompanhamento.
+
+Cada pessoa pode reconhecer em qual parte precisa trabalhar, sem transformar o desenvolvimento em competição.
+
+O objetivo não é formar médiuns espetaculares.
+
+É formar pessoas capazes de servir com consciência, humildade, ética e responsabilidade.
+
+A árvore madura não precisa anunciar sua força.
+
+Sua presença, sua sombra, seus frutos e suas sementes revelam aquilo que ela se tornou.
+`,
+    duration: "Módulo 6",
+    instructor: "Babá Felipe",
+    date: "24 de Julho de 2026",
+    videoUrl: "https://www.youtube.com/embed/bAV9VKS9nBU",
+    imageUrl: "https://img.youtube.com/vi/bAV9VKS9nBU/hqdefault.jpg",
+    pdfUrl: "https://drive.google.com/file/d/1UJTPo2Wwcm3d280MCkHD8zAkSozG-3Yk/view?usp=drive_link",
+    level: "Todos",
+    tags: ["Mediunidade", "Módulo 6"]
+  },
+
+  {
     id: "les-t1-0",
     title: "O Simbolismo da Árvore e Sua Aplicação no Desenvolvimento Mediúnico na Umbanda De Caboclo",
     category: "TRILHA I: A RAIZ",
