@@ -2968,6 +2968,1402 @@ No próximo módulo, estudaremos as epistemologias dos povos originários, aprof
   },
 
   {
+    id: "les-t2-5",
+    title: "Módulo 5: Povos Originários e Território",
+    category: "TRILHA II: O TRONCO",
+    description: `## Módulo 5 — Povos Originários e Território
+
+### Palavra viva, sonhos, encantamento e comunicação ancestral
+
+Nos módulos anteriores, compreendemos a mediunidade como uma experiência que envolve corpo, consciência, comunidade, ética, ancestralidade e responsabilidade. Também estudamos como as filosofias africanas e afro-diaspóricas ampliam o entendimento da pessoa, mostrando que ninguém existe isoladamente e que o passado continua vivo no presente.
+
+Neste módulo, aproximamo-nos dos conhecimentos produzidos por diferentes povos originários.
+
+Essa aproximação exige respeito e cuidado.
+
+Os povos indígenas não formam uma única cultura, religião ou filosofia. Cada povo possui sua própria língua, história, território, espiritualidade, organização social e maneira de compreender a existência.
+
+Por isso, não devemos falar em “espiritualidade indígena” como se ela fosse uma tradição única.
+
+Existem muitos povos, entre eles:
+- Yanomami;
+- Guarani;
+- Tukano;
+- Desana;
+- Baniwa;
+- Pataxó;
+- Xakriabá;
+- Potiguara;
+- Fulni-ô;
+- Xukuru;
+- Tremembé;
+- Kariri-Xocó;
+- Tupinambá;
+- Munduruku;
+- Krenak;
+- e muitos outros.
+
+Cada povo possui conceitos e práticas que precisam ser compreendidos dentro de seus próprios contextos.
+
+O objetivo deste módulo não é retirar elementos dessas tradições para adaptá-los livremente à Umbanda. O propósito é reconhecer que os povos originários produziram e continuam produzindo conhecimentos complexos sobre território, sonho, palavra, corpo, cura, ancestralidade, natureza e comunicação com o invisível.
+
+Esses saberes ajudam a questionar uma ideia muito comum na sociedade moderna: a de que apenas aquilo que pode ser medido por instrumentos científicos deve ser considerado conhecimento.
+
+Para muitos povos originários, conhecer não significa apenas observar algo à distância. Conhecer também significa relacionar-se, escutar, sonhar, participar, cuidar e assumir responsabilidade diante daquilo que se conhece.
+
+O território não é apenas cenário. A floresta não é apenas um conjunto de recursos. Os rios não são somente volumes de água. Os animais não são apenas objetos de estudo.
+
+A existência acontece em uma rede viva de relações.
+
+Por isso, este módulo nos convida a compreender uma ideia central:
+
+> **Não somos os únicos seres que observam o mundo. O mundo também nos observa, responde às nossas ações e participa de nossa formação.**
+
+---
+
+### O que você estudará neste módulo
+
+O Módulo 5 acompanha os quatro capítulos da quinta parte do livro:
+
+1. **A ciência do invisível: território, palavra e comunicação ancestral**
+2. **Sonhos que sustentam o céu: xapiri, Bahsese e pedagogias do sensível**
+3. **Encantamento, retomada e visualidade: Toré, Jurema e arte ancestral**
+4. **Comparar sem reduzir**
+
+Esses capítulos apresentam formas de conhecimento nas quais corpo, território, sonho, palavra e espiritualidade não estão separados.
+
+O módulo também ensina como estabelecer diálogos entre Umbanda e pensamentos indígenas sem transformar tradições diferentes em uma única religião.
+
+---
+
+### Capítulo 16 — A ciência do invisível: território, palavra e comunicação ancestral
+
+Quando utilizamos a palavra ciência, normalmente pensamos em laboratórios, universidades, equipamentos e métodos escritos.
+
+Entretanto, a ideia de conhecimento é muito mais ampla.
+
+Durante milhares de anos, os povos originários desenvolveram conhecimentos detalhados sobre:
+- plantas;
+- ciclos da chuva;
+- animais;
+- rios;
+- estrelas;
+- alimentação;
+- agricultura;
+- cura;
+- nascimento;
+- morte;
+- comportamento;
+- território;
+- convivência;
+- espiritualidade.
+
+Esses saberes não foram produzidos por observações rápidas. Eles nasceram de longas relações entre comunidades, ambientes e gerações.
+
+Uma planta não é conhecida apenas por sua aparência. Seu conhecimento pode envolver:
+- onde nasce;
+- em qual época deve ser colhida;
+- como deve ser preparada;
+- quem pode utilizá-la;
+- quais cuidados são necessários;
+- em quais situações ela é indicada;
+- quais histórias estão associadas a ela;
+- como se relaciona com outras plantas;
+- qual é seu lugar no território;
+- qual responsabilidade acompanha seu uso.
+
+Esse conhecimento une experiência, memória, observação e relação.
+
+#### A ciência do invisível
+
+A expressão “ciência do invisível” não significa rejeitar a ciência acadêmica.
+
+Ela aponta para conhecimentos que não se limitam àquilo que pode ser imediatamente visto ou medido.
+
+O invisível pode envolver:
+- relações;
+- intenções;
+- memórias;
+- sonhos;
+- presenças;
+- vínculos;
+- efeitos espirituais;
+- dimensões ancestrais;
+- forças que organizam a vida;
+- responsabilidades entre seres.
+
+Para muitas tradições, o invisível não é algo separado do mundo material.
+
+Ele participa do cotidiano.
+
+O sonho influencia uma decisão. A palavra modifica uma relação. O território responde ao modo como é tratado. Uma prática de cura envolve planta, corpo, canto, memória e orientação ancestral.
+
+O visível e o invisível formam uma mesma realidade relacional.
+
+#### Território não é apenas propriedade
+
+Na lógica moderna, o território costuma ser tratado como uma área delimitada que pode ser comprada, vendida ou explorada.
+
+Para muitos povos originários, o território é uma rede viva.
+
+Ele envolve:
+- memória;
+- parentesco;
+- alimentação;
+- espiritualidade;
+- história;
+- responsabilidade;
+- nascimento;
+- sepultamento;
+- identidade;
+- conhecimento.
+
+Uma comunidade não está apenas localizada em um território.
+
+Ela é formada por ele.
+
+Os caminhos, rios, árvores, montanhas e animais participam da construção da identidade coletiva.
+
+Por isso, quando um povo é retirado de seu território, não perde somente uma propriedade. Pode perder acesso a memórias, locais sagrados, formas de alimentação, práticas de cura e referências fundamentais para sua existência.
+
+#### Tekoha: lugar onde o modo de ser acontece
+
+Entre povos Guarani, a ideia de **tekoha** ajuda a compreender a relação entre território e existência.
+
+De maneira introdutória, tekoha pode ser entendido como o lugar onde um modo de viver, relacionar-se e realizar-se pode acontecer.
+
+Não se trata apenas de um espaço físico.
+
+O território permite:
+- cultivar alimentos;
+- realizar rituais;
+- manter relações comunitárias;
+- transmitir a língua;
+- educar as crianças;
+- preservar memórias;
+- estabelecer vínculos com os ancestrais;
+- viver segundo princípios próprios.
+
+Quando o território é destruído ou tomado, todo um modo de existência é ameaçado.
+
+Essa compreensão ensina que espiritualidade e território não podem ser completamente separados.
+
+#### O território como presença
+
+Para quem observa a floresta de fora, ela pode parecer um cenário.
+
+Para quem vive em relação com ela, a floresta comunica:
+- mudanças;
+- perigos;
+- períodos de abundância;
+- desequilíbrios;
+- movimentos de animais;
+- transformações do clima;
+- sinais relacionados ao território.
+
+Essa comunicação não acontece necessariamente por frases semelhantes à linguagem humana.
+
+Ela pode ser percebida por meio de:
+- sons;
+- silêncios;
+- rastros;
+- sonhos;
+- alterações na vegetação;
+- comportamentos animais;
+- sensações;
+- histórias transmitidas;
+- observação dos ciclos.
+
+Conhecer a floresta exige aprender a escutar.
+
+#### A palavra viva
+
+Em muitas tradições originárias, a palavra não é apenas um conjunto de sons utilizado para transmitir informação.
+
+Ela possui força.
+
+Uma palavra pode:
+- aconselhar;
+- curar;
+- proteger;
+- ensinar;
+- lembrar;
+- organizar;
+- fortalecer;
+- ferir;
+- romper vínculos;
+- estabelecer responsabilidades.
+
+A palavra pronunciada por um mais velho carrega não apenas uma opinião individual, mas a experiência acumulada da comunidade.
+
+Uma narrativa transmite conhecimentos sobre território, comportamento, parentesco, cuidado e espiritualidade.
+
+Por isso, ouvir uma história não significa apenas receber entretenimento.
+
+Significa entrar em contato com uma memória viva.
+
+#### Nhe’ẽ: palavra, voz e dimensão do ser
+
+Em algumas compreensões Guarani, a palavra **nhe’ẽ** pode estar relacionada à palavra, à voz, à linguagem e a dimensões profundas da existência.
+
+Esse conceito não deve ser reduzido a uma tradução simples.
+
+Ele ajuda a perceber que palavra e vida podem estar intimamente ligadas.
+
+A pessoa é formada também pelas palavras que recebe, aprende e transmite.
+
+O nome possui importância. O canto possui importância. A maneira de falar revela uma forma de estar no mundo.
+
+A palavra não serve apenas para descrever a realidade.
+
+Ela participa da criação das relações.
+
+#### Palavra e mediunidade
+
+Na mediunidade, a palavra possui uma responsabilidade semelhante.
+
+Uma mensagem não é apenas informação.
+
+Ela pode produzir:
+- esperança;
+- medo;
+- mudança;
+- dependência;
+- confiança;
+- reflexão;
+- fortalecimento;
+- sofrimento.
+
+Por isso, o médium precisa cuidar não apenas do conteúdo percebido, mas também da maneira como o comunica.
+
+A palavra mediúnica não deve ser lançada sem responsabilidade.
+
+Assim como uma semente, ela pode crescer no interior de quem a recebe.
+
+#### Comunicação ancestral
+
+A comunicação ancestral pode acontecer por diferentes caminhos:
+- sonhos;
+- cantos;
+- histórias;
+- rituais;
+- memórias;
+- sinais do território;
+- ensinamentos dos mais velhos;
+- experiências interpretadas espiritualmente;
+- gestos transmitidos por gerações.
+
+Nem toda comunicação precisa acontecer por incorporação ou por uma voz claramente percebida.
+
+A ancestralidade pode manifestar-se na continuidade de um conhecimento.
+
+Quando uma pessoa ensina algo que recebeu de seus avós, a memória ancestral está sendo atualizada.
+
+Quando uma comunidade preserva um canto, aqueles que vieram antes continuam participando da vida coletiva.
+
+---
+
+### Capítulo 17 — Sonhos que sustentam o céu: xapiri, Bahsese e pedagogias do sensível
+
+Na sociedade moderna, o sonho costuma ser tratado como algo separado da realidade.
+
+Ele pode ser entendido como produto da imaginação, da memória ou das emoções.
+
+Essas interpretações podem oferecer contribuições importantes, mas não representam todas as formas possíveis de compreender a experiência de sonhar.
+
+Para diferentes povos originários, o sonho pode ser:
+- forma de aprendizado;
+- espaço de encontro;
+- orientação;
+- comunicação;
+- memória;
+- deslocamento da percepção;
+- relação com seres espirituais;
+- preparação para decisões;
+- modo de compreender transformações no território.
+
+Isso não significa que todos os sonhos sejam mensagens ou que todas as culturas os interpretem da mesma maneira.
+
+O significado depende do povo, da pessoa, do contexto e da experiência.
+
+#### O sonho como conhecimento
+
+Sonhar pode ser uma maneira de perceber relações que não estavam claras durante a vigília.
+
+O sonho reorganiza:
+- imagens;
+- lembranças;
+- medos;
+- conhecimentos;
+- percepções;
+- histórias;
+- experiências do território.
+
+Em algumas tradições, determinados sonhos são compartilhados com pessoas mais experientes, que ajudam a compreendê-los.
+
+Isso mostra que o sonho não é interpretado somente pelo indivíduo.
+
+A comunidade participa do discernimento.
+
+Essa postura pode inspirar o desenvolvimento mediúnico.
+
+Um sonho não precisa ser transformado imediatamente em certeza espiritual. Ele pode ser observado, narrado, comparado com outros acontecimentos e acompanhado ao longo do tempo.
+
+#### Sonhos que sustentam o céu
+
+A ideia de “sustentar o céu” recorda que o equilíbrio do mundo depende das relações entre os seres.
+
+O céu não permanece no lugar apenas porque a natureza funciona mecanicamente.
+
+Sua sustentação também pode ser compreendida como responsabilidade espiritual, ritual e comunitária.
+
+Os conhecimentos, cantos e trabalhos dos especialistas tradicionais ajudam a manter relações equilibradas entre:
+- seres humanos;
+- animais;
+- espíritos;
+- floresta;
+- rios;
+- céu;
+- terra;
+- ancestrais.
+
+Quando essas relações são destruídas, o mundo adoece.
+
+Essa imagem amplia a noção de cuidado.
+
+Cuidar não é apenas resolver problemas individuais. Também é preservar as condições que tornam a vida coletiva possível.
+
+#### Os xapiri
+
+Na cosmologia Yanomami apresentada por Davi Kopenawa, os **xapiri** são seres-imagem que participam da vida, da cura e da sustentação do mundo.
+
+Eles não devem ser reduzidos à ideia genérica de “espíritos da natureza”.
+
+Os xapiri pertencem a uma cosmologia específica e são compreendidos em relação ao conhecimento dos xamãs Yanomami, à floresta e à continuidade da vida.
+
+Sua descrição envolve:
+- brilho;
+- canto;
+- dança;
+- movimento;
+- multiplicidade;
+- relação com os seres da floresta;
+- trabalho xamânico;
+- proteção do céu e do mundo.
+
+O xamã não inventa sozinho aquilo que vê.
+
+Seu conhecimento é formado por aprendizado, preparação, relação e experiência.
+
+#### Ver não significa apenas utilizar os olhos
+
+Na experiência com os xapiri, a visão não deve ser compreendida apenas como capacidade física dos olhos.
+
+Ver pode significar perceber relações que permanecem ocultas para quem não foi preparado.
+
+Essa ideia ajuda a compreender as pedagogias do sensível.
+
+O conhecimento não entra apenas por textos e explicações.
+
+Ele pode ser desenvolvido por meio de:
+- escuta;
+- sonho;
+- silêncio;
+- canto;
+- atenção;
+- experiência;
+- repetição;
+- transformação corporal;
+- convivência com os mais experientes.
+
+O corpo inteiro aprende a perceber.
+
+#### A floresta é quem olha de volta
+
+A sociedade moderna costuma observar a natureza como se estivesse diante de um objeto.
+
+A pessoa olha para a floresta, classifica plantas, mede o território e procura recursos.
+
+As cosmologias originárias podem inverter essa relação.
+
+A floresta também observa.
+
+Os animais percebem a presença humana. Os rios carregam as consequências das ações. O território guarda marcas. Os seres espirituais respondem ao modo como a vida é tratada.
+
+Essa ideia produz responsabilidade.
+
+Se o mundo também olha de volta, não podemos agir como se estivéssemos sozinhos.
+
+Toda ação participa de uma rede de consequências.
+
+#### Bahsese
+
+No contexto de povos do Alto Rio Negro, o termo **Bahsese** pode estar relacionado a práticas de cuidado, proteção, cura e organização das relações entre pessoas, alimentos, seres e ambientes.
+
+Bahsese não deve ser tratado apenas como uma oração ou uma técnica isolada.
+
+Ele faz parte de sistemas complexos de conhecimento.
+
+Esses sistemas envolvem:
+- palavra;
+- memória;
+- origem dos seres;
+- conhecimento dos perigos;
+- relações entre espécies;
+- alimentação;
+- proteção;
+- especialistas tradicionais;
+- equilíbrio do corpo e do território.
+
+A palavra pronunciada não atua sozinha.
+
+Sua eficácia está relacionada ao conhecimento, à preparação, ao contexto e à autoridade de quem a utiliza.
+
+#### Omerõ
+
+O conceito de **Omerõ**, dentro de contextos específicos do Alto Rio Negro, pode estar relacionado a conhecimentos transmitidos por meio de narrativas, ensinamentos e princípios que organizam a compreensão do mundo.
+
+Omerõ não é apenas uma coleção de histórias.
+
+As narrativas explicam relações entre:
+- seres;
+- territórios;
+- alimentos;
+- perigos;
+- origens;
+- comportamentos;
+- responsabilidades.
+
+Uma narrativa pode funcionar como mapa de existência.
+
+Ela ensina como agir, o que evitar, como cuidar e como interpretar acontecimentos.
+
+#### Kumu
+
+O **Kumu** é um especialista tradicional em determinados sistemas de conhecimento do Alto Rio Negro.
+
+Sua formação não acontece rapidamente.
+
+Ela pode envolver:
+- escuta dos mais velhos;
+- memorização;
+- disciplina;
+- conhecimento das narrativas;
+- domínio da palavra;
+- compreensão dos ciclos;
+- responsabilidade com a comunidade;
+- preparação para práticas de cuidado.
+
+O reconhecimento do Kumu não decorre apenas de uma declaração pessoal.
+
+Ele está relacionado a uma trajetória de formação e ao reconhecimento comunitário.
+
+Essa dimensão aproxima-se de um princípio importante para o terreiro: autoridade espiritual não deve nascer apenas da vontade de ocupar uma posição.
+
+Ela precisa estar ligada a preparo, responsabilidade e serviço.
+
+#### Waimahsã
+
+Em determinadas cosmologias do Alto Rio Negro, os **Waimahsã** são seres relacionados a diferentes domínios da existência.
+
+Eles não devem ser reduzidos a personagens folclóricos ou classificados simplesmente como espíritos segundo categorias externas.
+
+A relação com esses seres exige conhecimento, cuidado e respeito.
+
+Os rios, matas, animais e lugares possuem relações próprias.
+
+Nem todo espaço está disponível para qualquer ação humana.
+
+Essa compreensão questiona a ideia de que a natureza existe apenas para servir às necessidades das pessoas.
+
+#### Pedagogias do sensível
+
+Pedagogias do sensível são formas de aprendizagem que envolve todo o corpo e todos os sentidos.
+
+Aprende-se por meio de:
+- observar;
+- escutar;
+- acompanhar;
+- sentir;
+- repetir;
+- sonhar;
+- cantar;
+- caminhar;
+- silenciar;
+- participar;
+- cuidar.
+
+Nem todo conhecimento é entregue de uma só vez.
+
+Alguns ensinamentos dependem de maturidade.
+
+Outros só podem ser compreendidos depois de uma experiência.
+
+Isso também acontece no desenvolvimento mediúnico.
+
+Uma explicação sobre incorporação pode ser compreendida intelectualmente. Entretanto, certos aspectos só serão entendidos quando o médium aprender a reconhecer o próprio corpo, suas emoções e o ritmo da comunidade.
+
+#### Conhecimento e responsabilidade
+
+Nas tradições originárias, possuir conhecimento geralmente implica responsabilidade.
+
+Quem conhece uma planta precisa saber quando e como utilizá-la.
+
+Quem conhece uma narrativa precisa compreender seu contexto.
+
+Quem recebe determinado ensinamento não deve transformá-lo em instrumento de vaidade.
+
+Conhecimento não é apenas informação acumulada.
+
+É compromisso.
+
+---
+
+### Capítulo 18 — Encantamento, retomada e visualidade: Toré, Jurema e arte ancestral
+
+A história do Brasil foi marcada pela tentativa de apagar identidades indígenas.
+
+Muitos povos foram perseguidos, expulsos de seus territórios e obrigados a esconder práticas, línguas e formas de organização.
+
+Durante muito tempo, o Estado e a sociedade afirmaram que determinados povos haviam desaparecido.
+
+Entretanto, as comunidades continuaram existindo, resistindo, reorganizando-se e retomando suas identidades.
+
+Por isso, estudar as espiritualidades originárias também exige compreender:
+- resistência;
+- retomada;
+- território;
+- memória;
+- identidade;
+- luta;
+- reconstrução comunitária.
+
+#### Encantamento
+
+O encantamento não deve ser entendido apenas como algo fantasioso ou mágico.
+
+Ele pode expressar uma maneira de reconhecer que o mundo é vivo, relacional e capaz de produzir transformação.
+
+Um lugar encantado não é necessariamente um local imaginário.
+
+Pode ser um território no qual diferentes dimensões da existência se encontram.
+
+O encantamento rompe a ideia de que a realidade é formada apenas por objetos sem vida.
+
+Ele reconhece presenças, memórias, forças e relações.
+
+#### Os Encantados
+
+Em diferentes tradições indígenas e populares, os Encantados podem ser compreendidos de maneiras diversas.
+
+Eles não formam uma única categoria universal.
+
+Podem estar relacionados a:
+- ancestrais;
+- seres que passaram por transformações;
+- protetores;
+- donos de lugares;
+- forças do território;
+- presenças espirituais;
+- personagens de narrativas comunitárias.
+
+Sua identidade e seu papel dependem da tradição em que são reconhecidos.
+
+Por isso, não é correto afirmar que todos os Encantados são iguais ou que correspondem exatamente a entidades da Umbanda.
+
+Pode haver aproximações, mas também existem diferenças importantes.
+
+#### O Toré
+
+O **Toré** está presente em diferentes povos indígenas, especialmente no Nordeste brasileiro, assumindo formas e sentidos próprios em cada comunidade.
+
+Ele pode envolver:
+- canto;
+- dança;
+- movimento circular;
+- instrumentos;
+- participação coletiva;
+- espiritualidade;
+- memória;
+- afirmação identitária;
+- relação com os Encantados;
+- fortalecimento político e territorial.
+
+O Toré não deve ser tratado como simples apresentação folclórica.
+
+Ele pode ser uma prática de resistência e afirmação da existência de povos que foram historicamente declarados extintos ou invisibilizados.
+
+Dançar o Toré pode significar dizer:
+> “Nós continuamos aqui.”
+
+O corpo que dança torna-se corpo de memória, território e retomada.
+
+#### Dançar é afirmar existência
+
+Em determinadas práticas, a dança não representa apenas uma ideia.
+
+Ela realiza algo.
+
+O movimento reúne a comunidade. O canto atualiza a memória. O chão é marcado pelos passos. A identidade é fortalecida pela participação.
+
+Isso nos ajuda a compreender que um ritual não deve ser avaliado apenas por aquilo que representa.
+
+Ele também produz:
+- pertencimento;
+- união;
+- memória;
+- coragem;
+- visibilidade;
+- continuidade.
+
+O ritual transforma quem participa.
+
+#### Jurema Sagrada
+
+A Jurema Sagrada reúne tradições diversas, especialmente em regiões do Nordeste brasileiro.
+
+Ela possui relações históricas e culturais com povos indígenas, comunidades afro-indígenas e práticas religiosas populares.
+
+Não existe uma única forma de Jurema.
+
+Suas expressões podem envolver:
+- Mestres e Mestras;
+- Caboclos;
+- Encantados;
+- cidades espirituais;
+- árvores;
+- bebidas ritualizadas;
+- cantos;
+- pontos;
+- fumaças;
+- curas;
+- mesas;
+- terreiros;
+- práticas comunitárias.
+
+A Jurema não deve ser reduzida ao uso de uma planta ou bebida.
+
+Ela representa sistemas de conhecimento, espiritualidade e memória.
+
+#### A árvore da Jurema
+
+A árvore possui presença importante em diferentes compreensões da Jurema.
+
+Ela pode relacionar:
+- raiz;
+- território;
+- memória;
+- cura;
+- passagem;
+- ancestralidade;
+- encantamento;
+- ligação entre dimensões.
+
+A raiz conecta a existência ao chão.
+
+O tronco sustenta.
+
+Os galhos se abrem para diferentes caminhos.
+
+Essa imagem dialoga com a Árvore do Conhecimento do TUCPB, mas as duas tradições não devem ser tratadas como idênticas.
+
+A comparação pode produzir aprendizado, desde que preserve as diferenças.
+
+#### Retomada
+
+Retomada é uma palavra fundamental para compreender as lutas contemporâneas dos povos originários.
+
+Ela pode referir-se à recuperação de:
+- territórios;
+- identidades;
+- línguas;
+- práticas;
+- memórias;
+- formas de educação;
+- autonomia;
+- visibilidade.
+
+A retomada não é uma invenção recente de uma identidade.
+
+É a continuidade de uma existência que resistiu a processos de apagamento.
+
+Retomar também significa reconstruir aquilo que foi interrompido.
+
+Uma comunidade pode recuperar uma língua que deixou de ser ensinada abertamente. Pode voltar a realizar uma prática perseguida. Pode afirmar publicamente uma identidade que antes precisava esconder.
+
+#### A mediunidade como retomada de memória
+
+Na Umbanda, a presença de Caboclos pode ser compreendida como reconhecimento espiritual de forças indígenas e ancestrais.
+
+Entretanto, essa presença não substitui os povos indígenas vivos.
+
+É necessário evitar uma contradição:
+> homenagear Caboclos no terreiro e ignorar as lutas dos povos originários fora dele.
+
+Respeitar a ancestralidade indígena também significa reconhecer:
+- a existência atual desses povos;
+- seus direitos territoriais;
+- suas produções intelectuais;
+- suas lideranças;
+- suas artes;
+- suas diferenças;
+- suas lutas contra a violência e o apagamento.
+
+A espiritualidade não deve transformar o indígena apenas em figura do passado.
+
+#### Arte ancestral e visualidade
+
+A arte indígena não é apenas decoração.
+
+Pinturas corporais, grafismos, cantos, cerâmicas, objetos, filmes, fotografias e performances podem transmitir:
+- identidade;
+- parentesco;
+- território;
+- memória;
+- espiritualidade;
+- resistência;
+- conhecimento;
+- posicionamento político.
+
+A visualidade também é uma forma de pensamento.
+
+Um grafismo pode organizar relações e conhecimentos que não seriam expressos da mesma maneira em um texto.
+
+A pintura corporal pode afirmar pertencimento e presença.
+
+Uma fotografia pode denunciar violência e, ao mesmo tempo, preservar memória.
+
+Um filme produzido por cineastas indígenas pode inverter o olhar colonial.
+
+Em vez de serem apenas observados, os povos originários passam a produzir e controlar suas próprias imagens.
+
+#### Quem olha e quem é olhado?
+
+Durante muito tempo, povos indígenas foram fotografados, descritos e classificados por pessoas externas.
+
+Essas imagens frequentemente apresentavam os povos como:
+- figuras do passado;
+- curiosidades;
+- objetos de estudo;
+- grupos sem voz;
+- populações destinadas ao desaparecimento.
+
+A produção artística indígena contemporânea transforma essa relação.
+
+Agora, o olhar parte das próprias comunidades.
+
+O artista indígena não apenas aparece na imagem. Ele escolhe:
+- o que mostrar;
+- como mostrar;
+- o que esconder;
+- qual história contar;
+- quem pode olhar;
+- qual mensagem transmitir.
+
+Essa inversão possui grande importância.
+
+Ela ensina que conhecer alguém exige reconhecer sua capacidade de falar por si.
+
+---
+
+### Capítulo 19 — Comparar sem reduzir
+
+Ao longo do livro, aproximamos diferentes formas de compreender a mediunidade.
+
+Falamos sobre:
+- religião;
+- psicologia;
+- neurociência;
+- filosofias africanas;
+- ancestralidade;
+- conhecimentos indígenas;
+- corpo;
+- território;
+- sonho;
+- comunidade.
+
+Essa aproximação pode produzir um diálogo rico.
+
+Entretanto, existe um risco: transformar tradições diferentes em versões da mesma coisa.
+
+Comparar sem reduzir significa reconhecer aproximações sem apagar diferenças.
+
+#### Comparar não é igualar
+
+Podemos perceber semelhanças entre:
+- incorporação e determinados estados de transe;
+- guias espirituais e seres reconhecidos por outras tradições;
+- pontos cantados e cantos rituais;
+- sonhos mediúnicos e sonhos considerados formas de conhecimento;
+- ancestralidade africana e comunicação ancestral indígena;
+- floresta e terreiro como espaços de relação.
+
+Essas aproximações ajudam a pensar.
+
+Entretanto, não podemos concluir que os conceitos são idênticos.
+
+Um xapiri não é simplesmente uma entidade de Umbanda.
+Um Encantado da Jurema não corresponde automaticamente a qualquer espírito.
+O Toré não é uma gira de Umbanda.
+Bahsese não é apenas um passe.
+Tekoha não é somente um local sagrado.
+Exu não é o mesmo que qualquer figura de comunicação existente em outra cultura.
+
+Cada conceito pertence a uma história, a uma língua e a uma comunidade.
+
+#### O perigo das traduções rápidas
+
+Quando encontramos um conceito novo, procuramos algo conhecido para compreendê-lo.
+
+Essa comparação inicial pode ser útil.
+
+Por exemplo:
+> “Tekoha parece estar relacionado ao território.”
+
+Entretanto, se encerrarmos a explicação aí, perderemos sua profundidade.
+
+O território moderno pode ser compreendido como propriedade. Tekoha envolve um lugar no qual um modo de existência comunitária pode acontecer.
+
+Da mesma forma, traduzir axé apenas como energia pode apagar suas dimensões de relação, transmissão, realização e fundamento.
+
+A tradução deve abrir o estudo, não encerrá-lo.
+
+#### Diálogo sem apropriação
+
+Dialogar com um conhecimento não significa apropriar-se dele.
+
+A apropriação acontece quando alguém retira um elemento de seu contexto e o utiliza sem reconhecer:
+- sua origem;
+- seu significado;
+- seus guardiões;
+- seus limites;
+- sua história;
+- sua dimensão comunitária.
+
+Um terreiro pode estudar conhecimentos indígenas e reconhecer aproximações com sua prática.
+
+Entretanto, não deve afirmar possuir iniciações, títulos ou autoridades pertencentes a outros povos sem vínculo legítimo.
+
+Respeitar uma tradição também significa reconhecer que nem tudo está disponível para ser utilizado.
+
+#### O Caboclo e os povos indígenas vivos
+
+Na Umbanda, os Caboclos possuem grande importância.
+
+Eles podem representar:
+- força;
+- cura;
+- firmeza;
+- conhecimento das matas;
+- ancestralidade;
+- proteção;
+- resistência;
+- orientação.
+
+Entretanto, o Caboclo religioso não deve substituir a diversidade dos povos indígenas reais.
+
+A imagem genérica do “índio da mata” pode apagar:
+- diferenças entre povos;
+- línguas;
+- histórias;
+- territórios;
+- experiências urbanas;
+- produções acadêmicas;
+- lutas contemporâneas;
+- identidades específicas.
+
+O respeito aos Caboclos precisa caminhar junto com o respeito aos povos originários vivos.
+
+#### Ciência e tradição
+
+Comparar sem reduzir também se aplica ao diálogo com a ciência.
+
+Uma pesquisa pode observar mudanças cerebrais durante o transe.
+Isso não significa que a neurociência tenha explicado completamente a mediunidade.
+
+Uma tradição pode interpretar a experiência como comunicação espiritual.
+Isso não significa que esteja autorizada a desprezar todo conhecimento psicológico ou médico.
+
+O diálogo responsável não exige que uma linguagem destrua a outra.
+
+Ele exige que cada uma reconheça:
+- suas perguntas;
+- seus métodos;
+- suas contribuições;
+- seus limites.
+
+#### Pontes não são fusões
+
+Uma ponte conecta dois lugares, mas não transforma os dois lados em um único território.
+
+O estudo comparativo deve funcionar dessa maneira.
+
+Podemos construir pontes entre:
+- Umbanda e ciência;
+- Umbanda e filosofias africanas;
+- Umbanda e conhecimentos indígenas;
+- experiência religiosa e saúde mental;
+- corpo e espiritualidade;
+- tradição e transformação.
+
+A ponte permite trânsito e diálogo.
+Ela não apaga as margens.
+
+#### Perguntas antes de comparar
+
+Antes de afirmar que dois conceitos são semelhantes, devemos perguntar:
+- De qual povo ou tradição esse conceito vem?
+- Em qual língua ele foi formado?
+- Qual é seu contexto religioso ou comunitário?
+- Quem possui autoridade para ensiná-lo?
+- Qual é sua função?
+- Que diferenças existem em relação ao conceito que já conhecemos?
+- A comparação ajuda a compreender ou apaga particularidades?
+- Estamos reconhecendo a origem?
+- Estamos utilizando o conhecimento com respeito?
+- A comunidade de origem concordaria com esse uso?
+
+Essas perguntas evitam comparações superficiais.
+
+---
+
+### Povos originários e a formação da Umbanda
+
+A Umbanda possui relações históricas e simbólicas com imagens indígenas, especialmente por meio da presença dos Caboclos.
+
+Entretanto, essa relação precisa ser estudada com profundidade.
+
+Durante a formação da sociedade brasileira, os povos indígenas foram frequentemente representados por imagens idealizadas.
+
+O indígena aparecia como:
+- herói do passado;
+- habitante genérico da floresta;
+- símbolo nacional;
+- figura distante da sociedade contemporânea.
+
+Essas representações escondiam a existência real de centenas de povos diferentes.
+
+Na Umbanda, o estudo responsável deve procurar superar essa generalização.
+
+Isso significa:
+- aprender os nomes dos povos;
+- reconhecer suas diferenças;
+- acompanhar suas produções;
+- respeitar suas lutas;
+- evitar fantasias ofensivas;
+- não imitar línguas;
+- não inventar títulos;
+- não utilizar símbolos sem conhecimento;
+- não tratar todo indígena como Caboclo;
+- não tratar todo Caboclo como representação fiel de um povo específico.
+
+A presença espiritual do Caboclo possui seu lugar religioso.
+A existência dos povos indígenas possui seu lugar histórico, político, cultural e contemporâneo.
+
+Essas dimensões podem dialogar, mas não devem ser confundidas.
+
+---
+
+### Território e mediunidade na visão do TUCPB
+
+Na visão do Templo Umbandista Caboclo Pena Branca, o território não é apenas o espaço físico onde o terreiro foi construído.
+
+Ele reúne:
+- chão;
+- memória;
+- comunidade;
+- natureza;
+- relações;
+- forças;
+- histórias;
+- responsabilidades;
+- seres visíveis e invisíveis.
+
+O terreiro precisa aprender a relacionar-se com o lugar que ocupa.
+
+Isso envolve:
+- cuidar do espaço;
+- evitar desperdícios;
+- respeitar plantas e elementos naturais;
+- manter limpeza;
+- reconhecer a história do território;
+- observar os impactos da comunidade;
+- utilizar recursos com responsabilidade;
+- compreender que o sagrado não está separado da vida.
+
+Não faz sentido louvar as matas e destruir a natureza.
+Não faz sentido saudar os Caboclos e ignorar a violência contra os povos indígenas.
+Não faz sentido falar em cura enquanto se contamina água, solo e relações.
+
+A espiritualidade precisa produzir responsabilidade territorial.
+
+---
+
+### A pedagogia da escuta
+
+Uma das principais lições deste módulo é aprender a escutar.
+
+Escutar não significa apenas permanecer em silêncio enquanto outra pessoa fala.
+
+Escutar envolve permitir que o outro apresente sua própria compreensão do mundo.
+
+Para escutar os povos originários, é necessário evitar a pressa de traduzir tudo para conceitos já conhecidos.
+
+A escuta exige:
+- paciência;
+- respeito;
+- reconhecimento da diferença;
+- disposição para aprender;
+- cuidado com generalizações;
+- abertura para rever ideias;
+- valorização das vozes indígenas;
+- reconhecimento da própria ignorância.
+
+O estudante não precisa sair deste módulo acreditando que compreendeu completamente cada tradição.
+
+Ele precisa sair sabendo que existe muito mais a aprender.
+
+---
+
+### Cuidados no estudo das tradições originárias
+
+**Não tratar todos os povos como iguais**
+Cada povo possui história, língua e cosmologia próprias.
+
+**Não transformar conhecimentos em decoração**
+Grafismos, cantos, pinturas e objetos possuem contextos e significados.
+
+**Não inventar traduções**
+Uma palavra indígena não deve ser traduzida apenas pela semelhança com um conceito da Umbanda.
+
+**Não utilizar títulos indevidamente**
+Termos como pajé, xamã, Kumu e outras funções possuem contextos específicos.
+
+**Não romantizar**
+Os povos originários não vivem fora da história ou da sociedade contemporânea.
+
+**Não ignorar as lutas atuais**
+Território, saúde, educação, violência e racismo fazem parte da realidade.
+
+**Não separar espiritualidade de responsabilidade**
+Respeitar a espiritualidade também exige respeitar os direitos e a existência dos povos.
+
+**Não falar pelos povos originários**
+Sempre que possível, estudar autores, artistas, lideranças e pesquisadores indígenas.
+
+---
+
+### Objetivos de aprendizagem
+
+Ao concluir este módulo, o estudante deverá ser capaz de:
+- reconhecer a diversidade dos povos originários;
+- evitar a ideia de uma única espiritualidade indígena;
+- compreender território como relação, memória e existência;
+- diferenciar território de simples propriedade;
+- compreender a ideia de tekoha de maneira introdutória;
+- reconhecer a palavra como força e responsabilidade;
+- compreender a comunicação ancestral para além da incorporação;
+- reconhecer o sonho como possível forma de conhecimento;
+- compreender que sonhos precisam de discernimento e contexto;
+- apresentar de maneira respeitosa o conceito de xapiri;
+- compreender a relação entre floresta, seres e responsabilidade;
+- reconhecer Bahsese como parte de sistemas complexos de conhecimento;
+- compreender o papel formativo do Kumu;
+- reconhecer os Waimahsã dentro de contextos específicos;
+- compreender as pedagogias do sensível;
+- reconhecer o encantamento como relação viva com o mundo;
+- compreender o Toré como prática espiritual, comunitária e política;
+- reconhecer a diversidade da Jurema Sagrada;
+- compreender o sentido da retomada;
+- valorizar a produção artística e intelectual indígena;
+- comparar tradições sem igualá-las;
+- evitar apropriação de conceitos e práticas;
+- diferenciar Caboclos de representações dos povos indígenas vivos;
+- relacionar espiritualidade com responsabilidade territorial.
+
+---
+
+### Conceitos centrais do módulo
+
+**Território**
+Rede de relações que reúne espaço, memória, comunidade, espiritualidade, identidade e responsabilidade.
+
+**Tekoha**
+Conceito Guarani relacionado ao lugar onde um modo de ser e viver comunitariamente pode realizar-se.
+
+**Nhe’ẽ**
+Conceito presente em contextos Guarani relacionado à palavra, à voz, à linguagem e a dimensões profundas da existência.
+
+**Ciência do invisível**
+Expressão utilizada para reconhecer conhecimentos sobre relações, presenças e dimensões que não se limitam à observação material imediata.
+
+**Comunicação ancestral**
+Transmissão de conhecimentos, orientações e memórias por meio de sonhos, histórias, cantos, rituais, sinais, gestos e relações.
+
+**Xapiri**
+Seres-imagem da cosmologia Yanomami, relacionados ao trabalho xamânico, à cura, à floresta e à sustentação do mundo.
+
+**Bahsese**
+Conjunto de práticas e conhecimentos de determinados povos do Alto Rio Negro ligados ao cuidado, à proteção e à organização das relações.
+
+**Omerõ**
+Conhecimentos e narrativas que organizam compreensões sobre origens, seres, comportamentos e responsabilidades em contextos específicos do Alto Rio Negro.
+
+**Kumu**
+Especialista tradicional ligado à transmissão e aplicação de determinados conhecimentos em povos do Alto Rio Negro.
+
+**Waimahsã**
+Seres reconhecidos em determinadas cosmologias do Alto Rio Negro, relacionados a diferentes domínios e territórios da existência.
+
+**Pedagogia do sensível**
+Forma de aprendizagem que envolve corpo, sentidos, sonho, participação, observação, silêncio e experiência.
+
+**Encantamento**
+Compreensão do mundo como realidade viva, relacional e atravessada por presenças e transformações.
+
+**Encantados**
+Seres reconhecidos em diferentes tradições indígenas e populares, com sentidos que variam conforme cada comunidade.
+
+**Toré**
+Prática de canto, dança, espiritualidade, memória e afirmação identitária presente em diferentes povos indígenas.
+
+**Jurema Sagrada**
+Conjunto diverso de tradições religiosas afro-indígenas e populares relacionadas a Mestres, Caboclos, Encantados, árvores, territórios e práticas de cura.
+
+**Retomada**
+Processo de recuperação e fortalecimento de territórios, identidades, línguas, memórias, práticas e autonomia.
+
+**Visualidade**
+Produção de conhecimentos e identidades por meio de imagens, grafismos, corpos, pinturas, filmes, fotografias e performances.
+
+**Apropriação**
+Retirada de um conhecimento ou prática de seu contexto, sem reconhecimento de origem, autoridade, responsabilidade ou limites.
+
+**Comparação responsável**
+Aproximação entre conceitos que reconhece semelhanças sem apagar diferenças.
+
+---
+
+### Questões para reflexão
+
+1. Por que não existe uma única espiritualidade indígena?
+2. Qual é a diferença entre território e propriedade?
+3. Como o território participa da identidade de uma comunidade?
+4. O que a ideia de tekoha ajuda a compreender?
+5. Por que a palavra pode ser considerada uma força?
+6. Como a comunicação ancestral pode acontecer sem incorporação?
+7. Qual é o lugar dos sonhos na produção de conhecimento?
+8. Por que nem todo sonho deve ser interpretado imediatamente como mensagem?
+9. Quem são os xapiri dentro da cosmologia Yanomami?
+10. Por que não devemos chamar os xapiri apenas de espíritos da natureza?
+11. O que significa dizer que a floresta também olha para nós?
+12. Como Bahsese relaciona palavra, cuidado e conhecimento?
+13. Por que a formação de um Kumu envolve responsabilidade comunitária?
+14. O que são pedagogias do sensível?
+15. Como o corpo participa da aprendizagem?
+16. O que o encantamento ensina sobre nossa relação com o mundo?
+17. Por que o Toré não deve ser tratado como apresentação folclórica?
+18. O que a dança pode realizar dentro de uma comunidade?
+19. Por que a Jurema Sagrada não pode ser reduzida a uma planta?
+20. O que significa retomada?
+21. Como a arte indígena pode funcionar como conhecimento e resistência?
+22. Qual é a diferença entre aproximar conceitos e afirmar que são idênticos?
+23. Como evitar a apropriação de saberes originários?
+24. Por que o Caboclo da Umbanda não representa toda a diversidade indígena?
+25. Como o TUCPB pode transformar o respeito aos Caboclos em responsabilidade com os povos indígenas vivos?
+
+---
+
+### Atividade de observação do território
+
+Escolha o território no qual você vive ou frequenta.
+
+Observe:
+- quais plantas existem;
+- quais animais aparecem;
+- como a água circula;
+- onde há lixo;
+- quais sons são percebidos;
+- quais mudanças ocorreram nos últimos anos;
+- quem cuidou desse lugar;
+- quem foi retirado dele;
+- quais histórias estão associadas ao espaço;
+- quais impactos sua comunidade produz.
+
+Depois, responda:
+1. Eu trato esse território como cenário ou como relação?
+2. O que recebo desse lugar?
+3. O que devolvo a ele?
+4. Minhas práticas religiosas contribuem para seu cuidado?
+5. Quais responsabilidades espirituais surgem dessa relação?
+
+---
+
+### Atividade sobre sonhos
+
+Durante algumas semanas, mantenha um registro de sonhos.
+
+Anote:
+- data;
+- imagens principais;
+- sensações;
+- pessoas ou seres presentes;
+- relação com acontecimentos recentes;
+- elementos do território;
+- repetições;
+- efeitos ao acordar.
+
+Não transforme o sonho imediatamente em previsão ou ordem espiritual.
+Primeiro, observe.
+
+Depois, pergunte:
+- O sonho pode estar relacionado a emoções?
+- Ele repete uma preocupação?
+- Existe algum símbolo cultural?
+- O conteúdo apareceu outras vezes?
+- Preciso compartilhá-lo com alguém mais experiente?
+- A interpretação produz equilíbrio ou medo?
+- Há motivos para esperar antes de concluir?
+
+Essa prática desenvolve discernimento.
+
+---
+
+### Atividade de comparação responsável
+
+Escolha dois conceitos estudados, por exemplo:
+- território e terreiro;
+- xapiri e guia espiritual;
+- Toré e gira;
+- Encantado e entidade;
+- Bahsese e passe;
+- sonho e experiência mediúnica.
+
+Construa duas colunas:
+**Aproximações**
+Registre elementos que podem dialogar.
+
+**Diferenças**
+Registre aquilo que pertence ao contexto específico de cada tradição.
+
+Ao final, responda:
+> A comparação ajudou a compreender ou transformou conceitos diferentes em uma única coisa?
+
+---
+
+### Estudo de situações
+
+**Situação 1 — A fantasia genérica**
+Durante uma atividade, todas as culturas indígenas são representadas por uma única fantasia, com palavras inventadas e gestos considerados “tribais”.
+*Reflexão*: Essa prática reduz centenas de povos a um estereótipo. O respeito exige reconhecer diferenças, evitar imitações ofensivas e estudar contextos reais.
+
+**Situação 2 — O Caboclo como prova de autoridade**
+Uma pessoa afirma que, por incorporar um Caboclo, possui autoridade para falar em nome de todos os povos indígenas.
+*Reflexão*: A experiência religiosa não concede representação política ou cultural sobre povos diferentes. A entidade possui lugar na Umbanda, mas os povos originários falam por si.
+
+**Situação 3 — O ritual retirado do contexto**
+Um elemento de uma tradição indígena é copiado e comercializado sem autorização ou reconhecimento de sua origem.
+*Reflexão*: Essa prática pode representar apropriação. Nem todo conhecimento está disponível para uso externo, principalmente quando envolve práticas restritas ou sagradas.
+
+**Situação 4 — A floresta como recurso**
+Uma comunidade louva as matas durante os rituais, mas descarta materiais de maneira irresponsável e utiliza recursos naturais sem cuidado.
+*Reflexão*: A espiritualidade torna-se contraditória quando a celebração não produz responsabilidade. Respeitar a mata também significa mudar práticas cotidianas.
+
+**Situação 5 — O sonho transformado em ordem**
+Uma pessoa sonha com determinado integrante e, sem buscar orientação, afirma que recebeu autorização espiritual para interferir em sua vida.
+*Reflexão*: O sonho precisa de discernimento. Ele pode conter elementos pessoais, simbólicos ou emocionais. Nenhuma experiência autoriza invasão da autonomia de outra pessoa.
+
+**Situação 6 — A comparação que apaga**
+Um estudante afirma que xapiri, Orixás, guias, Encantados e ancestrais são apenas nomes diferentes para a mesma coisa.
+*Reflexão*: Essa conclusão apaga cosmologias, histórias e diferenças. Pode haver aproximações, mas cada conceito precisa ser estudado em seu próprio contexto.
+
+---
+
+### A responsabilidade com a imagem do indígena
+
+A imagem do indígena dentro do terreiro precisa ser tratada com cuidado.
+
+É necessário evitar representações que apresentem todos os povos como:
+- habitantes de um passado distante;
+- pessoas sem tecnologia;
+- seres naturalmente puros;
+- figuras infantis;
+- personagens exóticos;
+- guerreiros genéricos;
+- seres exclusivamente espirituais.
+
+Povos indígenas vivem em aldeias, cidades, universidades, territórios retomados e diferentes espaços sociais.
+
+Há indígenas que são:
+- professores;
+- escritores;
+- cineastas;
+- médicos;
+- advogados;
+- artistas;
+- pesquisadores;
+- lideranças;
+- agricultores;
+- comunicadores;
+- religiosos;
+- estudantes.
+
+A identidade indígena não desaparece quando a pessoa utiliza tecnologia, frequenta uma universidade ou vive em uma cidade.
+
+Respeitar os povos originários também significa abandonar a exigência de que eles correspondam a uma imagem criada pelos não indígenas.
+
+---
+
+### Síntese do Módulo 5
+
+Os povos originários nos ensinam que o conhecimento não nasce apenas da observação distante.
+
+Ele nasce da relação.
+
+Conhecer o território significa viver com ele, perceber seus ciclos, respeitar seus seres e assumir responsabilidade por nossas ações.
+
+A palavra não é somente informação. Ela pode carregar memória, orientação, cura e compromisso.
+
+O sonho não é necessariamente uma fantasia sem importância. Em determinadas tradições, ele participa da aprendizagem, da comunicação e da organização da vida.
+
+Os xapiri, Bahsese, Omerõ, Kumu e Waimahsã apresentam sistemas complexos de conhecimento que não podem ser reduzidos a categorias genéricas da Umbanda ou do pensamento ocidental.
+
+O Toré mostra que canto e dança podem afirmar existência, memória e retomada.
+
+A Jurema Sagrada revela caminhos afro-indígenas de encantamento, cura, ancestralidade e resistência.
+
+A arte indígena mostra que imagens, corpos, grafismos e filmes também pensam, ensinam e enfrentam o apagamento.
+
+O capítulo “Comparar sem reduzir” ensina que o diálogo verdadeiro não depende de afirmar que todas as tradições são iguais.
+
+Pelo contrário, o diálogo começa quando reconhecemos que o outro não precisa tornar-se uma versão de nós para ser respeitado.
+
+Na visão do TUCPB, reverenciar os Caboclos exige mais do que cantar pontos e realizar rituais.
+
+Exige reconhecer os povos originários vivos, respeitar seus conhecimentos, cuidar dos territórios e combater as formas de violência e apagamento que ainda enfrentam.
+
+A floresta não é apenas aquilo que observamos.
+
+Ela também guarda nossa passagem, responde às nossas ações e revela a qualidade de nossa relação com a vida.
+
+No próximo módulo, estudaremos a visão do TUCPB sobre a mediunidade como Árvore do Conhecimento, compreendendo a terra, as raízes, o tronco, a seiva, a poda, a copa, as flores e os frutos como etapas do amadurecimento mediúnico.
+
+---
+
+*Obra de referência: Mediunidade — fundamentos, experiência e desenvolvimento na Umbanda*
+*Autor: Bàbá Aláàrìnrin Àjò / Pai Felipe de Oxaguian*
+*Instituição: Templo Umbandista Caboclo Pena Branca — TUCPB*`,
+    duration: "Módulo 5",
+    instructor: "Babá Felipe",
+    date: "24 de Julho de 2026",
+    videoUrl: "https://www.youtube.com/embed/ZMKyLnox94Q",
+    imageUrl: "https://img.youtube.com/vi/ZMKyLnox94Q/hqdefault.jpg",
+    pdfUrl: "https://drive.google.com/file/d/1UJTPo2Wwcm3d280MCkHD8zAkSozG-3Yk/view?usp=drive_link",
+    level: "Todos",
+    tags: ["Mediunidade", "Módulo 5"]
+  },
+
+  {
     id: "les-t1-0",
     title: "O Simbolismo da Árvore e Sua Aplicação no Desenvolvimento Mediúnico na Umbanda De Caboclo",
     category: "TRILHA I: A RAIZ",
