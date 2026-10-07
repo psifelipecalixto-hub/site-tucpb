@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Perfil de membro ou administrador do terreiro TUCPB",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "ID único do membro" },
+        "name": { "type": "string", "description": "Nome completo ou de batismo" },
+        "email": { "type": "string", "description": "E-mail de acesso" },
+        "role": { "type": "string", "enum": ["admin", "membro"], "description": "Papel de permissão" },
+        "cargoTerreiro": { "type": "string", "description": "Cargo ou função no terreiro" },
+        "photoUrl": { "type": "string", "description": "URL da foto de perfil" },
+        "status": { "type": "string", "enum": ["pendente", "aprovado", "recusado"], "description": "Status de aprovação" }
+      },
+      "required": ["id", "name", "email", "role"]
+    },
+    "MemberTask": {
+      "title": "MemberTask",
+      "description": "Tarefa ritualística ou de apoio do terreiro",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "ID da tarefa" },
+        "task": { "type": "string", "description": "Título/descrição da tarefa" },
+        "assignedTo": { "type": "string", "description": "Nome ou ID do integrante encarregado" },
+        "area": { "type": "string", "description": "Setor de atuação" },
+        "status": { "type": "string", "enum": ["Pendente", "Em Andamento", "Concluido"], "description": "Status da tarefa" },
+        "date": { "type": "string", "description": "Data limite ou agendada" }
+      },
+      "required": ["id", "task", "status"]
+    }
+  },
+  "firestore": {
+    "/membros/{memberId}": {
+      "schema": "UserProfile",
+      "description": "Coleção de membros ativos, pendentes e líderes do terreiro"
+    },
+    "/tarefas/{taskId}": {
+      "schema": "MemberTask",
+      "description": "Coleção de tarefas e escalas do terreiro"
+    }
+  }
+}

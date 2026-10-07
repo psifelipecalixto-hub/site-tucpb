@@ -1,10 +1,12 @@
 import { useState, FormEvent, useEffect, useRef, ChangeEvent } from "react";
-import { Lock, Unlock, Users, ClipboardList, BookOpen, Bell, CheckCircle, Search, PlayCircle, TreePine, X, GraduationCap, Upload, Shield, User as UserIcon, Calendar as CalendarIcon, LogOut, Plus, Check, Clock, Trash2, Edit2, Eye, EyeOff, Headphones, Download, FileText } from "lucide-react";
+import { Lock, Unlock, Users, ClipboardList, BookOpen, Bell, CheckCircle, Search, PlayCircle, TreePine, X, GraduationCap, Upload, Shield, User as UserIcon, Calendar as CalendarIcon, LogOut, Plus, Check, Clock, Trash2, Edit2, Eye, EyeOff, Headphones, Download, FileText, Sparkles, RotateCcw } from "lucide-react";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { initialPoints, initialLessons, initialHerbs, initialTasks, initialArticles, initialPlaylists } from "../data";
+import { initialPoints, initialLessons, initialHerbs, initialTasks, initialArticles, initialPlaylists, initialMembers } from "../data";
 import { MemberTask, CurimbaPoint, Lesson, Herb, UserProfile, BlogArticle, CurimbaPlaylist } from "../types";
-import { supabase, DEFAULT_ADMIN_USER } from "../lib/supabase";
+import { supabase, DEFAULT_ADMIN_USER, purgeGarbageMembers, resetToOfficialHouseMembers } from "../lib/supabase";
+import { parseUniversalBackup } from "../lib/backupParser";
+import { sanitizeMemberList } from "../lib/memberValidation";
 
 // (Empty for cleanup)
 
@@ -172,17 +174,24 @@ export default function Integrantes() {
         if (stored) {
           const parsed = JSON.parse(stored);
           if (Array.isArray(parsed) && parsed.length > 0) {
-            setUsers(parsed);
-            return parsed;
+            const { valid, removedCount } = sanitizeMemberList(parsed);
+            if (removedCount > 0) {
+              localStorage.setItem("tucpb_members", JSON.stringify(valid));
+            }
+            const existingEmails = new Set(valid.map((u: any) => u.email?.toLowerCase().trim()));
+            const missing = initialMembers.filter(def => !existingEmails.has(def.email.toLowerCase().trim()));
+            const merged = [...valid, ...missing];
+            setUsers(merged);
+            localStorage.setItem("tucpb_members", JSON.stringify(merged));
+            return merged;
           }
         }
       } catch (e) {
         console.warn("Erro ao ler tucpb_members:", e);
       }
-      const initialList = [DEFAULT_ADMIN_USER];
-      setUsers(initialList);
-      localStorage.setItem("tucpb_members", JSON.stringify(initialList));
-      return initialList;
+      setUsers(initialMembers);
+      localStorage.setItem("tucpb_members", JSON.stringify(initialMembers));
+      return initialMembers;
     };
 
     const fetchUsers = async () => {
@@ -191,9 +200,10 @@ export default function Integrantes() {
       try {
         const { data, error } = await supabase.from('membros').select('*');
         if (!error && data && data.length > 0) {
-          setUsers(data as UserProfile[]);
-          currentUsers = data as UserProfile[];
-          localStorage.setItem("tucpb_members", JSON.stringify(data));
+          const { valid } = sanitizeMemberList(data as UserProfile[]);
+          setUsers(valid);
+          currentUsers = valid;
+          localStorage.setItem("tucpb_members", JSON.stringify(valid));
         }
       } catch (err) {
         console.warn("Supabase membros offline ou inacessível, usando banco local:", err);
@@ -393,6 +403,11 @@ export default function Integrantes() {
       const localUser = users.find(u => u.email?.trim().toLowerCase() === cleanEmail);
       if (localUser) {
         if (!localUser.password || localUser.password === authPassword || cleanEmail === DEFAULT_ADMIN_USER.email.toLowerCase()) {
+          if (!localUser.password && authPassword) {
+            localUser.password = authPassword;
+            localStorage.setItem("tucpb_members", JSON.stringify(users));
+            supabase.from('membros').update({ password: authPassword }).eq('id', localUser.id);
+          }
           setCurrentUser(localUser);
           setPhotoPreview(localUser.photoUrl || null);
           localStorage.setItem("tucpb_logged_in_user", localUser.id);
@@ -714,6 +729,103 @@ export default function Integrantes() {
     setMemberToDelete(null);
   };
 
+  const handleExportMembers = () => {
+    try {
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(users, null, 2));
+      const downloadAnchor = document.createElement("a");
+      const dateStr = new Date().toISOString().split("T")[0];
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", `tucpb_membros_backup_${dateStr}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+    } catch (e: any) {
+      alert("Erro ao exportar backup: " + e.message);
+    }
+  };
+
+  const handleCleanGarbageMembers = async () => {
+    try {
+      const { removedCount, remainingCount } = await purgeGarbageMembers();
+      const local = localStorage.getItem("tucpb_members");
+      if (local) {
+        setUsers(JSON.parse(local));
+      }
+      if (removedCount > 0) {
+        alert(`🧹 Limpeza concluída!\n\nForam removidos ${removedCount} cadastros inválidos gerados por erros de backup (como códigos "23fc7" ou registros de sistema).\n\nA casa agora tem ${remainingCount} membros legítimos ativos.`);
+      } else {
+        alert(`✨ Nenhum cadastro inválido encontrado. Todos os ${remainingCount} membros cadastrados são legítimos.`);
+      }
+    } catch (e: any) {
+      alert("Erro na limpeza: " + e.message);
+    }
+  };
+
+  const handleResetOfficialMembers = async () => {
+    const ok = window.confirm(
+      "Deseja restaurar a lista com apenas os membros oficiais e fundadores do terreiro (Pai Felipe, etc.)? Qualquer cadastro estranho de backups anteriores será removido."
+    );
+    if (!ok) return;
+
+    try {
+      const resetList = await resetToOfficialHouseMembers();
+      setUsers(resetList);
+      alert(`🔄 Lista restaurada com os ${resetList.length} membros oficiais da casa!`);
+    } catch (e: any) {
+      alert("Erro ao restaurar: " + e.message);
+    }
+  };
+
+  const handleImportMembers = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    try {
+      const result = await parseUniversalBackup(file);
+      const parsed = result.members;
+      if (parsed.length > 0) {
+        const { valid: cleanedCurrent } = sanitizeMemberList(users);
+        const merged = [...cleanedCurrent];
+        for (const p of parsed) {
+          const pEmail = (p.email || '').toLowerCase().trim();
+          const foundIdx = merged.findIndex(m => (pEmail && m.email.toLowerCase().trim() === pEmail) || m.id === p.id);
+          if (foundIdx >= 0) {
+            merged[foundIdx] = { ...merged[foundIdx], ...p };
+          } else {
+            merged.push(p);
+          }
+        }
+        const { valid: finalMerged } = sanitizeMemberList(merged);
+        localStorage.setItem("tucpb_members", JSON.stringify(finalMerged));
+        setUsers(finalMerged);
+        // Sync to Firebase Firestore cloud database
+        await supabase.from("membros").insert(finalMerged);
+        if (result.tasks && result.tasks.length > 0) {
+          await supabase.from("tarefas").insert(result.tasks);
+        }
+
+        const formatLabel =
+          result.sourceFormat === "pg_custom_dump"
+            ? "arquivo .backup do Supabase"
+            : result.sourceFormat === "gzip_dump"
+            ? "arquivo compactado (.gz)"
+            : result.sourceFormat === "sql_dump"
+            ? "script SQL (.sql)"
+            : result.sourceFormat === "csv"
+            ? "planilha CSV"
+            : "arquivo JSON";
+
+        alert(`✅ Sucesso!\n\n${parsed.length} integrantes legítimos foram recuperados do seu ${formatLabel} e sincronizados com a nuvem do terreiro (${finalMerged.length} no total da casa). Códigos de log e registros vazios foram descartados.`);
+      } else {
+        alert("Não foi possível identificar integrantes válidos neste arquivo. Nenhuma linha continha nomes de pessoas reais.");
+      }
+    } catch (err: any) {
+      alert("Erro ao ler backup: " + (err.message || String(err)));
+    } finally {
+      if (e.target) e.target.value = "";
+    }
+  };
+
   // --- Admin Curimba Handlers ---
   const handleAddPoint = (e: FormEvent, overrideOrixa?: string) => {
     e.preventDefault();
@@ -1016,10 +1128,15 @@ export default function Integrantes() {
                 <button type="submit" className="w-full bg-verde-mata text-white py-2.5 rounded-lg text-sm font-semibold hover:bg-verde-folha transition flex justify-center items-center gap-2">
                   Entrar <Unlock className="h-4 w-4" />
                 </button>
-                <div className="text-center pt-2">
-                  <button type="button" onClick={() => { setAuthMode("register"); setAuthError(""); }} className="text-xs text-verde-folha font-semibold hover:underline">
+                <div className="text-center pt-2 space-y-2.5">
+                  <button type="button" onClick={() => { setAuthMode("register"); setAuthError(""); }} className="text-xs text-verde-folha font-semibold hover:underline block mx-auto">
                     Não tem conta? Solicite cadastro.
                   </button>
+                  <label className="cursor-pointer text-[11px] text-amber-800 hover:text-amber-900 font-medium inline-flex items-center gap-1.5 py-1.5 px-3 rounded-lg bg-amber-50 hover:bg-amber-100/70 border border-amber-200 transition">
+                    <Upload className="h-3.5 w-3.5 text-amber-700" />
+                    <span>Restaurar dados do terreiro (.backup / .sql)</span>
+                    <input type="file" accept=".backup,.dump,.sql,.json,.csv,.gz,.tar,.bin,application/octet-stream,*/*" onChange={handleImportMembers} className="hidden" />
+                  </label>
                 </div>
               </form>
             ) : (
@@ -1538,8 +1655,27 @@ export default function Integrantes() {
 
               {activeAdminTab === "membros" && (
                 <div className="bg-white rounded-2xl border border-areia-escura shadow-sm overflow-hidden">
-                  <div className="bg-marrom-terra px-6 py-4 text-white">
+                  <div className="bg-marrom-terra px-6 py-4 text-white flex flex-wrap items-center justify-between gap-3">
                     <h2 className="font-serif font-bold flex items-center gap-2"><Users className="h-5 w-5"/> Filhos Ativos na Casa ({users.filter(u => u.status !== "pendente").length})</h2>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <label className="cursor-pointer bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1.5 rounded flex items-center gap-1.5 transition">
+                        <Upload className="h-3.5 w-3.5" />
+                        <span>Restaurar Backup</span>
+                        <input type="file" accept=".backup,.dump,.sql,.json,.csv,.gz,.tar,.bin,application/octet-stream,*/*" onChange={handleImportMembers} className="hidden" />
+                      </label>
+                      <button onClick={handleCleanGarbageMembers} className="bg-rose-700/80 hover:bg-rose-700 text-white text-xs px-3 py-1.5 rounded flex items-center gap-1.5 transition" title="Excluir códigos e registros inválidos trazidos pelo backup">
+                        <Sparkles className="h-3.5 w-3.5" />
+                        <span>Limpar Inválidos (Ex: 23fc7)</span>
+                      </button>
+                      <button onClick={handleResetOfficialMembers} className="bg-white/10 hover:bg-white/20 text-white text-xs px-3 py-1.5 rounded flex items-center gap-1.5 transition" title="Restaurar membros originais fundadores">
+                        <RotateCcw className="h-3.5 w-3.5" />
+                        <span>Restaurar Oficiais</span>
+                      </button>
+                      <button onClick={handleExportMembers} className="bg-white/20 hover:bg-white/30 text-white text-xs px-3 py-1.5 rounded flex items-center gap-1.5 transition">
+                        <Download className="h-3.5 w-3.5" />
+                        <span>Exportar JSON</span>
+                      </button>
+                    </div>
                   </div>
                   <div className="divide-y divide-gray-100 max-h-[500px] overflow-y-auto">
                     {users.filter(u => u.status !== "pendente").map(user => (
