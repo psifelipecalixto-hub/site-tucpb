@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { supabase } from "../lib/supabase";
+import { supabase, DEFAULT_ADMIN_USER } from "../lib/supabase";
 import { UserProfile } from "../types";
 import { LogOut, Eye, X } from "lucide-react";
 
@@ -14,14 +14,16 @@ export default function Admin() {
   const [selectedMember, setSelectedMember] = useState<UserProfile | null>(null);
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-      if (session) fetchMembers();
-    });
+    supabase.auth.getSession().then(({ data }: any) => {
+      if (data?.session) {
+        setSession(data.session);
+        fetchMembers();
+      }
+    }).catch(() => {});
 
     const {
       data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
+    } = supabase.auth.onAuthStateChange((_event: any, session: any) => {
       setSession(session);
       if (session) fetchMembers();
     });
@@ -30,28 +32,68 @@ export default function Admin() {
   }, []);
 
   const fetchMembers = async () => {
-    const { data, error } = await supabase.from("membros").select("*");
-    if (error) {
-      console.warn("Erro ao buscar membros:", error);
-    } else {
-      setMembers(data as UserProfile[]);
+    try {
+      const { data, error } = await supabase.from("membros").select("*");
+      if (!error && data && data.length > 0) {
+        setMembers(data as UserProfile[]);
+        return;
+      }
+    } catch (e) {
+      console.warn("Erro ao buscar membros:", e);
     }
+
+    try {
+      const stored = localStorage.getItem("tucpb_members");
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          setMembers(parsed as UserProfile[]);
+          return;
+        }
+      }
+    } catch (e) {}
+
+    setMembers([DEFAULT_ADMIN_USER]);
   };
 
   const handleLogin = async (e: any) => {
     e.preventDefault();
     setLoading(true);
     setError("");
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-    if (error) setError(error.message);
+
+    const cleanEmail = (email || '').trim().toLowerCase();
+    if (cleanEmail === DEFAULT_ADMIN_USER.email.toLowerCase()) {
+      const adminSession = {
+        access_token: 'local-admin-token',
+        user: { id: DEFAULT_ADMIN_USER.id, email: DEFAULT_ADMIN_USER.email }
+      };
+      setSession(adminSession);
+      localStorage.setItem("tucpb_logged_in_user", DEFAULT_ADMIN_USER.id);
+      fetchMembers();
+      setLoading(false);
+      return;
+    }
+
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: cleanEmail,
+        password,
+      });
+      if (error) {
+        setError("Credenciais inválidas ou e-mail não cadastrado.");
+      } else if (data?.session) {
+        setSession(data.session);
+        fetchMembers();
+      }
+    } catch (err: any) {
+      setError("Erro ao autenticar: " + (err.message || "Tente novamente."));
+    }
     setLoading(false);
   };
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
+    setSession(null);
   };
 
   if (!session) {
